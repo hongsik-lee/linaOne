@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lineone-test</title>
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            height: 100%;
+            overflow: auto;
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        * { 
+            margin: 0;
+        }
+        .visual-sec {
+            width: 100%;
+            height: 100vh;
+            background-color: beige;
+        }
+
+        .visual-sec .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            font-size: 56px;
+        }
+
+        .intro-sec-01 {
+            position: relative;
+        }
+
+        .intro-sec-01 .bg {
+            width: 100%;
+            height: 100vh;
+            background: url('./img/linaone_bg_02.png') 50% 50% no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+
+        .intro-sec-01 .bg-02 {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            background-color: #261F18;
+        }
+
+        .intro-sec-01 .inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            font-size: 56px;
+        }
+
+        .intro-sec-01 .text-area {
+            
+        }
+
+        .intro-sec-02 {
+           position: relative;
+        }
+
+        .intro-sec-02 .bg {
+            width: 100%;
+            height: 100vh;
+            background: url('./img/linaone_bg_03.png') 50% 50% no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .intro-sec-02 .inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            font-size: 56px;
+        }
+
+        .intro-sec-03 {
+           position: relative;
+        }
+
+        .intro-sec-03 .bg {
+            width: 100%;
+            height: 100vh;
+            background: url('./img/linaone_bg_04.png') 50% 50% no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .intro-sec-03 .inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            color: #fff;
+            font-size: 56px;
+        }
+
+        .business-sec {
+           position: relative;
+        }
+
+        .business-sec .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 300vh;
+            background-color: beige;
+            font-size: 56px;
+        }
+
+        .recruit-sec {
+           position: relative;
+        }
+
+        .recruit-sec .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(105, 197, 255);
+            font-size: 56px;
+        }
+
+        .footer {
+           position: relative;
+        }
+
+        footer .inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgb(160, 253, 129);
+            font-size: 56px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="contents">
+            <section class="visual-sec" style="background:url(img/section1.png)">
+                <div class="inner">
+                    <h1 style="color:#fff">visual-sec</h1>
+                </div>
+            </section>
+            
+            <section class="intro-sec-01">
+                <div class="bg">
+                </div>
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>intro-sec-01</h2>
+                    </div>
+                </div>
+                <div class="bg-02">
+
+                </div>
+            </section>
+
+            <section class="intro-sec-02">
+                <div class="bg">
+                </div>
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>intro-sec-02</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="intro-sec-03">
+                <div class="bg">
+                </div>
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>intro-sec-03</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="business-sec">
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>business-sec</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recruit-sec">
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>recruit-sec</h2>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="inner">
+                    <div class="text-area">
+                        <h2>footer</h2>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+        
+        $(document).ready(() => {
+            // screenOverElemAnimation('.intro-sec-01');
+            const $introSec01 = $('.intro-sec-01').find('.bg-02')
+                , introSecOffsetTop = $introSec01.offset().top
+
+            // const prevScrollHeight = 937;
+            const scrollHeight = $(window).innerHeight();
+
+            $('body').on('scroll', () => {
+                const yOffset = $('body').scrollTop();
+                const currentYOffset = yOffset - scrollHeight;
+                let scrollRatio = parseFloat((currentYOffset / scrollHeight).toFixed(4), 10);
+                // let allScrollRatio = 1 - ($('body').scrollTop() / ($(document).height() - $(window).height())) * 1
+                
+                if(scrollRatio >= 0 && scrollRatio <= 1) {
+                    // console.log(1 - scrollRatio)
+                    $introSec01.css('opacity', scrollRatio);
+                    // $introSec01.css('opacity', scrollRatio);
+                    // $introSec01.css('opacity', 1- scrollRatio);
+                }
+            });
+
+            // ($('body').scrollTop() / ($(document).height() - $(window).height())) * 100; // 전체 비율
+        });
+
+        const screenOverElemAnimation = (elem) => {
+            let options = {
+                threshold: [0, 0.25, 0.5, 0.75, 1]
+            }
+
+            let observer = new IntersectionObserver((items) => {
+                $(items).each((index, item) => {
+                    // console.log(item.intersectionRatio)
+                    if(item.isIntersecting) {
+                        console.log(item)
+                    }
+                });
+            }, options);
+
+            $(elem).each((index, item) => {
+                observer.observe(item)
+            });
+        }
+        
+    </script>
+</body>
+</html>
