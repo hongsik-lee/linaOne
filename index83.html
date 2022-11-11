@@ -5,286 +5,287 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lineone-test</title>
-    <style>
-        html {
-            height: 100%;
-            overflow: hidden;
-        }
-        body {
-            height: 100%;
-            overflow: auto;
-        }
-        html,body {
-            margin: 0;
-            padding: 0;
-        }
-        * { 
-            margin: 0;
-        }
-        .visual-sec {
-            width: 100%;
-            height: 100vh;
-            background-color: beige;
-        }
-
-        .visual-sec .inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            font-size: 56px;
-        }
-
-        .intro-sec-01 {
-            position: relative;
-        }
-
-        .intro-sec-01 .bg {
-            width: 100%;
-            height: 100vh;
-            background: url('./img/linaone_bg_02.png') 50% 50% no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-
-        .intro-sec-01 .bg-02 {
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            background-color: #261F18;
-        }
-
-        .intro-sec-01 .inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            color: #fff;
-            font-size: 56px;
-        }
-
-        .intro-sec-01 .text-area {
-            
-        }
-
-        .intro-sec-02 {
-           position: relative;
-        }
-
-        .intro-sec-02 .bg {
-            width: 100%;
-            height: 100vh;
-            background: url('./img/linaone_bg_03.png') 50% 50% no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .intro-sec-02 .inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            color: #fff;
-            font-size: 56px;
-        }
-
-        .intro-sec-03 {
-           position: relative;
-        }
-
-        .intro-sec-03 .bg {
-            width: 100%;
-            height: 100vh;
-            background: url('./img/linaone_bg_04.png') 50% 50% no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .intro-sec-03 .inner {
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100vh;
-            color: #fff;
-            font-size: 56px;
-        }
-
-        .business-sec {
-           position: relative;
-        }
-
-        .business-sec .inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 300vh;
-            background-color: beige;
-            font-size: 56px;
-        }
-
-        .recruit-sec {
-           position: relative;
-        }
-
-        .recruit-sec .inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 100vh;
-            background-color: rgb(105, 197, 255);
-            font-size: 56px;
-        }
-
-        .footer {
-           position: relative;
-        }
-
-        footer .inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 100vh;
-            background-color: rgb(160, 253, 129);
-            font-size: 56px;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="main">
+        <header>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="#">
+                        <img src="./assets/images/linaone_logo.png" alt="라이나 ONE A Chubb Company">
+                    </a>
+                </h1>
+                <nav>
+                    <ul class="gnb">
+                        <li class="gnb-info">
+                            <a href="#">회사소개</a>
+                            <ul class="lnb">
+                                <li><a href="#">CEO메시지</a></li>
+                                <li><a href="#">비전&미션</a></li>
+                                <li><a href="#">CI</a></li>
+                                <li><a href="#">브랜드영상</a></li>
+                                <li><a href="#">언론보도자료</a></li>
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">제휴문의</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-business">
+                            <a href="#">사업영역</a>
+                            <ul class="lnb ">
+                                <li><a href="#">Business&Service</a></li>
+                                <li><a href="#">Sales&Marketing</a></li>
+                                <li><a href="#">IT</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-recruit">
+                            <a href="#">인재채용</a>
+                            <ul class="lnb">
+                                <li><a href="#">채용프로세스</a></li>
+                                <li><a href="#">복리후생제도</a></li>
+                                <li><a href="#">인재상</a></li>
+                                <li><a href="#">채용지원안내</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb-notice">
+                            <a href="#">공지사항</a>
+                            <ul class="lnb">
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="site-group-list">
+                    <li>
+                        <a href="#">
+                            라이나생명
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            다이렉트보험
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
         <div id="contents">
-            <section class="visual-sec" style="background:url(img/section1.png)">
+            <section class="visual-sec">
                 <div class="inner">
-                    <h1 style="color:#fff">visual-sec</h1>
-                </div>
-            </section>
-            
-            <section class="intro-sec-01">
-                <div class="bg">
-                </div>
-                <div class="inner">
+                    <h2 class="page-tit">
+                        <span><span>INITIATIVE</span></span>
+                        <span><span>FOR</span></span>
+                        <span><span>EVERYONE</span></span>
+                    </h2>
                     <div class="text-area">
-                        <h2>intro-sec-01</h2>
-                    </div>
-                </div>
-                <div class="bg-02">
-
-                </div>
-            </section>
-
-            <section class="intro-sec-02">
-                <div class="bg">
-                </div>
-                <div class="inner">
-                    <div class="text-area">
-                        <h2>intro-sec-02</h2>
+                        <p class="desc">
+                            새로운 생각의 패러타임으로
+                            <br>
+                            세상에 없던 보험 문화를
+                            <br>
+                            주도해나갑니다.
+                        </p>
                     </div>
                 </div>
             </section>
-
-            <section class="intro-sec-03">
-                <div class="bg">
-                </div>
+            <section class="intro-sec sec01">
+                <p class="point-area">
+                    <span>Core Value</span>
+                </p>
                 <div class="inner">
+                    <h3 class="tit">
+                        <span><span>하나된</span></span>
+                        <span><span>자신감</span></span>
+                    </h3>
                     <div class="text-area">
-                        <h2>intro-sec-03</h2>
+                        <p class="desc">
+                            처브와 라이나가 함께하는 라이나 원은
+                            <br>
+                            효율을 극대화하는 시너지로
+                            <br>
+                            새로운 혁신의 점들을 찍어나갑니다.
+                        </p>
                     </div>
                 </div>
+                <div class="bg"></div>
+                <div class="dimmed"></div>
             </section>
-
+            <section class="intro-sec sec02">
+                <p class="point-area">
+                    <span>Core Value</span>
+                </p>
+                <div class="inner">
+                    <h3 class="tit">
+                        <span><span>진정성 있는</span></span>
+                        <span><span>소통</span></span>
+                    </h3>
+                    <div class="text-area">
+                        <p class="desc">
+                            라이나 원은
+                            <br>
+                            고객과 소통하는 접점으로써
+                            <br>
+                            고객의 건강, 행복, 사람의
+                            <br>
+                            관계를 이어갑니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg"></div>
+                <div class="dimmed"></div>
+            </section>
+            <section class="intro-sec sec03">
+                <p class="point-area">
+                    <span>Core Value</span>
+                </p>
+                <div class="inner">
+                    <h3 class="tit">
+                        <span><span>한계 없는</span></span>
+                        <span><span>도전</span></span>
+                    </h3>
+                    <div class="text-area">
+                        <p class="desc">
+                            보험의 경계를 허무는
+                            <br>
+                            고객 경험의 혁신으로 한계를 넘어
+                            <br>
+                            보험 시장의 새로운 면을 제시하는
+                            <br>
+                            리더로 서겠습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg"></div>
+                <div class="dimmed"></div>
+            </section>
             <section class="business-sec">
-                <div class="inner">
-                    <div class="text-area">
-                        <h2>business-sec</h2>
-                    </div>
+                <p class="point-area">
+                    서비스
+                </p>
+                <div class="inner invert">
+                    <ul class="business-list">
+                        <li class="business-list-item sevice">
+                            <div class="info">
+                                <h3 class="tit fadeIn">
+                                    Business,
+                                    <br>
+                                    Service
+                                </h3>
+                                <p class="desc fadeIn">
+                                    두 보험사의 장점을 결합하여 생명과 손해 모두에게 가치 제안을
+                                    <br>
+                                    제공하는 국내 최초의 보험서비스 사업이 될 것입니다.
+                                </p>
+                            </div>
+                            <div class="thumb fadeIn">
+                                <span>01</span>
+                                <img src="./assets/images/business_list_item_01.jpg" alt="">
+                            </div>
+                        </li>
+                        <li class="business-list-item marketing">
+                            <div class="thumb fadeIn">
+                                <span>02</span>
+                                <img src="./assets/images/business_list_item_02.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <h3 class="tit fadeIn">
+                                    Sales,
+                                    <br>
+                                    Marketing
+                                </h3>
+                                <p class="desc fadeIn">
+                                    고객 가치 기반의 서비스를 제공하며
+                                    <br>
+                                    손생보 확장 가능한 디지털 프로세스의 발굴로
+                                    <br>
+                                    시너지 확대합니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="business-list-item it">
+                            <div class="thumb fadeIn">
+                                <span>03</span>
+                                <img src="./assets/images/business_list_item_03.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <h3 class="tit fadeIn">
+                                    IT
+                                </h3>
+                                <p class="desc fadeIn">
+                                    TM에 특화된 인프라와 시스템을 구축하여 파트너사의
+                                    <br>
+                                    판매 경쟁력에 이바지합니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
-
             <section class="recruit-sec">
-                <div class="inner">
-                    <div class="text-area">
-                        <h2>recruit-sec</h2>
+                <div class="inner invert">
+                    <div class="info">
+                        <h3 class="tit">
+                            <span><span>일상의 모든 순간에</span></span>
+                            <span><span>안심을 더하고</span></span>
+                            <span><span>건강과 행복, 사람의</span></span>
+                            <span><span>관계을 잇다.</span></span>
+                        </h3>
+                    </div>
+                    <div class="recruit-list-container">
+                        <ul class="recruit-list">
+                            <li class="recruit-list-item">
+                                <div>
+                                    <p class="desc">
+                                        라이나 원과 함께
+                                        <br>
+                                        당신의 변화된 삶을
+                                        <br>
+                                        시작해보세요!
+                                        <br>
+                                        여러분의 도약을 응원하고
+                                        <br>
+                                        함께 합니다.
+                                    </p>
+                                    <a href="#" class="more-btn">
+                                        인재채용
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="recruit-list-item">
+                                <div>
+                                    <p class="desc">
+                                        항상 고객님의 목소리에
+                                        <br>
+                                        귀를 기울이며
+                                        <br>
+                                        최상의 고객 서비스를
+                                        <br>
+                                        제공하기 위해
+                                        <br>
+                                        노력하겠습니다.
+                                    </p>
+                                    <a href="#" class="more-btn">
+                                        Contact US
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
-
-            <footer>
-                <div class="inner">
-                    <div class="text-area">
-                        <h2>footer</h2>
-                    </div>
-                </div>
-            </footer>
         </div>
+        <footer>
+            <div class="inner invert">
+                <div class="text-area">
+                    <h2>footer</h2>
+                </div>
+            </div>
+        </footer>
     </div>
 
-    <script src="./js/jquery-3.6.1.min.js"></script>
-    <script>
-        
-        $(document).ready(() => {
-            // screenOverElemAnimation('.intro-sec-01');
-            const $introSec01 = $('.intro-sec-01').find('.bg-02')
-                , introSecOffsetTop = $introSec01.offset().top
-
-            // const prevScrollHeight = 937;
-            const scrollHeight = $(window).innerHeight();
-
-            $('body').on('scroll', () => {
-                const yOffset = $('body').scrollTop();
-                const currentYOffset = yOffset - scrollHeight;
-                let scrollRatio = parseFloat((currentYOffset / scrollHeight).toFixed(4), 10);
-                // let allScrollRatio = 1 - ($('body').scrollTop() / ($(document).height() - $(window).height())) * 1
-                
-                if(scrollRatio >= 0 && scrollRatio <= 1) {
-                    // console.log(1 - scrollRatio)
-                    $introSec01.css('opacity', scrollRatio);
-                    // $introSec01.css('opacity', scrollRatio);
-                    // $introSec01.css('opacity', 1- scrollRatio);
-                }
-            });
-
-            // ($('body').scrollTop() / ($(document).height() - $(window).height())) * 100; // 전체 비율
-        });
-
-        const screenOverElemAnimation = (elem) => {
-            let options = {
-                threshold: [0, 0.25, 0.5, 0.75, 1]
-            }
-
-            let observer = new IntersectionObserver((items) => {
-                $(items).each((index, item) => {
-                    // console.log(item.intersectionRatio)
-                    if(item.isIntersecting) {
-                        console.log(item)
-                    }
-                });
-            }, options);
-
-            $(elem).each((index, item) => {
-                observer.observe(item)
-            });
-        }
-        
-    </script>
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <script src="./assets/js/common.js"></script>
 </body>
 </html>
