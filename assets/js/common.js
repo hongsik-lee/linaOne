@@ -1,17 +1,22 @@
 $(document).ready(() => {
+    $('header').css('left', -($(window).innerWidth() - $('body').width()));
+    $('.lnb-blur-bg').css('left', -($(window).innerWidth() - $('body').width()));
 
     $('header').hover(
         function() {
+            
         },
         function() {
             $(this).removeClass('active');
             $(this).find('li.active').removeClass('active');
+            $('.lnb-blur-bg').removeClass('active');
         }
     );
 
     $('.gnb > li').hover(
         function() {
             $('header').addClass('active');
+            $('.lnb-blur-bg').addClass('active');
             $(this).addClass('active').siblings().removeClass('active');
         }
     );
@@ -20,20 +25,23 @@ $(document).ready(() => {
         setScreenOverElem(item);
     });
 
-    $('body').on('scroll', () => {
-        const $target = $('#contents section.ani-obj').filter(':first')
-        const yOffset = $('body').scrollTop();
+    document.body.addEventListener(
+        "scroll",
+        optimizeAnimation(() => {
+            yOffset = $('body').scrollTop();
 
-        $('#contents section').each((index, item) => {
-            setScreenOverElem(item);
-        });
-    
-        backgroundDrakAnimation($target, yOffset);
-        fadeInElemAnimation();
+            $('#contents section').each((index, item) => {
+                setScreenOverElem(item, yOffset);
+            });
 
-    });
+            textFadeoutAnimation();
+            fadeInElemAnimation();
+        }),
+        { passive: true }
+    );
 });
 
+let yOffset = 0;
 const getPrevScrollHeight = (elem) => {
     let prevScrollHeight = 0;
     const $target = elem
@@ -47,32 +55,57 @@ const getPrevScrollHeight = (elem) => {
     return prevScrollHeight;
 }
 
-const backgroundDrakAnimation = (elem, yOffset) => {
-    const $target = $(elem)
+const getElemScrollRatio = (elem) => {
+    const $target = elem
         , scrollHeight = $(window).innerHeight()
         , prevScrollHeight = getPrevScrollHeight($target)
         , currentYOffset = yOffset - prevScrollHeight;
-    
-    // let allScrollRatio = 1 - ($('body').scrollTop() / ($(document).height() - $(window).height())) * 1 전체 비율
-    let scrollRatio = parseFloat((currentYOffset / scrollHeight).toFixed(4), 10);
 
-    if(scrollRatio >= 0 && scrollRatio <= 1) {
-        $target.find('.dimmed').css('opacity', scrollRatio  - 0.2);
+    return parseFloat((currentYOffset / scrollHeight).toFixed(4), 10);
+}
+
+const backgroundDrakAnimation = (item) => {
+    const $target = $(item.target)
+        , scrollRatio = getElemScrollRatio($target);
+
+    if(scrollRatio <= 0.3) {
+        if(item.intersectionRatio > 0.1) $target.find('.dimmed').css('opacity', 0.9);
+        if(item.intersectionRatio > 0.2) $target.find('.dimmed').css('opacity', 0.7);
+        if(item.intersectionRatio > 0.3) $target.find('.dimmed').css('opacity', 0.5);
+        if(item.intersectionRatio > 0.4) $target.find('.dimmed').css('opacity', 0.3);
+        if(item.intersectionRatio > 0.5) $target.find('.dimmed').css('opacity', 0);
+    }
+}
+
+const textFadeoutAnimation = (elem) => {
+    const $target = $('#contents section.ani-obj').filter(':first')
+        , scrollRatio = getElemScrollRatio($target);
+
+    if(scrollRatio > 0 && scrollRatio < 1) {
+        if($target.hasClass('intro-sec') || $target.hasClass('visual-sec')) {
+            $target.find('.page-tit').css('opacity', 1 - scrollRatio);
+            $target.find('.tit').css('opacity', 1 - scrollRatio);
+            $target.find('.text-area').css('opacity', 1- scrollRatio);
+        }
     }
 }
 
 const setScreenOverElem = (elem) => {
-    let options = {
-        threshold: 0
-    }
-
+    let options = { rootMargin: '200px', threshold: 0 }
     let observer = new IntersectionObserver((items) => {
         $(items).each((index, item) => {
-            if(item.intersectionRatio > 0.3) {
-                $(item.target).addClass('ani-obj');
-            } else if(item.intersectionRatio === 0.0)  {
-                $(item.target).removeClass('ani-obj');
+
+            if(item.isIntersecting) {
+                backgroundDrakAnimation(item);
             }
+
+            if(item.intersectionRatio === 0.0)  {
+                $(item.target).removeClass('ani-obj');
+            } else if(item.intersectionRatio > 0.3) {
+                $(item.target).addClass('ani-obj');
+            }
+
+            observer.unobserve(item.target);
         });
     }, options);
 
@@ -89,10 +122,10 @@ const isScreenUnderElem = (elem, triggerDiff) => {
 }
 
 const fadeInElemAnimation = () => {
-    const elems = $('.fadeIn');
+    const $elems = $('.fadeIn');
 
-    $(elems).each((index, item) => {
-        if (isScreenUnderElem(item, -200)) {
+    $elems.each((index, item) => {
+        if (isScreenUnderElem(item, -150)) {
             $(item).css({
                 'opacity': 0,
                 'transform': 'translateY(150px)'
@@ -103,5 +136,20 @@ const fadeInElemAnimation = () => {
                 'transform': 'translateY(0)'
             });
         }
-    })
+    });
+}
+
+function optimizeAnimation(callback) {
+    let ticking = false;
+
+    return () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(() => {
+                callback();
+
+                ticking = false;
+            });
+        }
+    };
 }

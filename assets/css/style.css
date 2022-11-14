@@ -6,24 +6,27 @@ html {
 }
 body {
     height: 100%;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     font-family: "Pretendard", sans-serif;
     font-weight: 400;
     font-size: 1.4rem;
 }
 
 header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 12.2rem;
+    height: 10.2rem;
     color: #fff;
     z-index: 200;
+    border-bottom: 1px solid transparent;
+    box-sizing: border-box;
 }
 
 header.active {
+    border-bottom: 1px solid rgb(255 255 255 / 10%);
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(8px);
 }
@@ -115,10 +118,24 @@ header .lnb {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10rem;
+    height: 7.8rem;
     box-sizing: border-box;
+}
+
+.lnb-blur-bg {
+    position: absolute;
+    top: 10.2rem;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 7.8rem;
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(8px);
+    z-index: 102;
+}
+
+.lnb-blur-bg.active {
+    display: block;
 }
 
 header .gnb-info .lnb li:nth-of-type(1) { width: 9.4rem; }
@@ -154,14 +171,14 @@ header .lnb a {
     border-bottom: 0 !important;
     color: #E5E5E5;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 1.8rem;
 }
 
 header .lnb a:hover {
     color: #fff;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 header .site-group-list {
@@ -211,11 +228,11 @@ footer .inner {
 
 /* -------- main -------- */
 .main header {
-    position: relative;
+    /* position: relative; */
 }
 
 .main #contents {
-    margin-top: -12.2rem;
+    /* margin-top: -12.2rem; */
 }
 
 .main section {
@@ -242,13 +259,14 @@ footer .inner {
 
 .main section .dimmed {
     width: 100%;
-    height: 135vh;
+    height: 120vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
+    opacity: 1;
     background-color: #000;
     transition: opacity .5s ease;
+    z-index: 101;
 }
 
 /* visual */
@@ -357,8 +375,8 @@ footer .inner {
 /* intro-sec */
 
 .main .intro-sec .inner {
-    height: 135vh;
-    padding-top: 20rem;
+    height: 120vh;
+    padding-top: 26vh;
 }
 
 .main .intro-sec .tit > span {
@@ -408,7 +426,7 @@ footer .inner {
 
 .main .intro-sec .point-area {
     position: absolute;
-    top: 10rem;
+    top: 27vh;
     left: 16.2rem;
     overflow: hidden;
     font-weight: 800;
@@ -434,7 +452,7 @@ footer .inner {
 
 .main .intro-sec .text-area {
     position: absolute;
-    top: 80.8rem;
+    top: 80vh;
     right: 0;
     overflow: hidden;
     text-align: right;
@@ -442,38 +460,38 @@ footer .inner {
 
 .main .intro-sec.sec01 .bg {
     width: 100%;
-    height: 135vh;
-    transform: scale(1.1);
+    height: 120vh;
+    /* transform: scale(1.1); */
     background: url('../images/intro_bg_01.jpg') 50% 50% no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    transition: transform 3s ease-in-out;
+    /* transition: transform 3s ease-in-out; */
 }
 
 .main .intro-sec.sec02 .bg {
     width: 100%;
-    height: 135vh;
-    transform: scale(1.1);
+    height: 120vh;
+    /* transform: scale(1.1); */
     background: url('../images/intro_bg_02.jpg') 50% 50% no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    transition: transform 3s ease-in-out;
+    /* transition: transform 3s ease-in-out; */
 }
 
 .main .intro-sec.sec03 .bg {
     width: 100%;
-    height: 135vh;
-    transform: scale(1.1);
+    height: 120vh;
+    /* transform: scale(1.1); */
     background: url('../images/intro_bg_03.jpg') 50% 50% no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    transition: transform 3s ease-in-out;
+    /* transition: transform 3s ease-in-out; */
 }
 
 .main .intro-sec.sec01.ani-obj .bg,
 .main .intro-sec.sec02.ani-obj .bg,
 .main .intro-sec.sec03.ani-obj .bg {
-    transform: scale(1.0);
+    /* transform: scale(1.0); */
 }
 
 .main .intro-sec.sec01 .tit > span:nth-of-type(2) {
@@ -689,7 +707,7 @@ footer .inner {
 
 .main .recruit-sec.ani-obj .recruit-list-item:nth-of-type(2):before {
     width: 100%;
-    transition-delay: .7s;
+    transition-delay: .9s;
 }
 
 .main .recruit-sec .recruit-list-item > div {
@@ -701,11 +719,11 @@ footer .inner {
 }
 
 .main .recruit-sec .recruit-list-item:nth-of-type(1) > div {
-    transition-delay: .6s;
+    transition-delay: .7s;
 }
 
 .main .recruit-sec .recruit-list-item:nth-of-type(2) > div {
-    transition-delay: .8s;
+    transition-delay: 1.1s;
 }
 
 .main .recruit-sec.ani-obj .recruit-list-item > div {
