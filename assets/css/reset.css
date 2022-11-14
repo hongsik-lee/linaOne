@@ -1,49 +1,62 @@
-/* Reset Asll Element */
+@charset "UTF-8";
+
+/* Webfont setup */
+@font-face {
+font-family: '웹폰트-네임';
+    font-style:normal;
+    font-weight:normal;
+    src:local('웹폰트-네임'), url('/assets/font/'웹폰트-네임'.woff') format('woff'); 
+}
+
+/* CSS Document */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
 del, dfn, em, img, ins, kbd, q, samp,
 small, strong, sub, sup, var,
-b, i, hr,
+b, i,
 dl, dt, dd, ol, ul, li,
-form, fieldset, legend, label, button, input,
+form, fieldset, legend, label,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
-main, menu, nav, footer, header, hgroup, section, summary,
+footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video{
-	margin:0;
-	padding:0;
-	border:0;
-	outline:0;
-	font-size:inherit;
-	background:transparent;
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font-family:inherit;
+    vertical-align:baseline;
+    background:transparent;
 }
-main, header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block;}
-ul, ol {list-style:none;} 
-em, address, i {font-style:normal;}
-a {text-decoration:none; color: #000;}
-img {vertical-align:top}
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block}
+
+ul, ol{list-style:none} 
+em, address, i{font-style:normal}
+a{text-decoration:none}
+
+/* Root Font Style */
+:root{
+    기본(대표) 폰트 스타일 정의
+}
+
+/* Hidden Text */
+.blind{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+
+/* Clear Fixed */
+.clearfix, .clearfix:after{content:'';display:block;clear:both;}
 
 /* Form */
-legend {position: absolute;overflow: hidden;width: 1px;height: 1px;border: 0;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);} 
-select, textarea, input, label {vertical-align:middle;}
-select, textarea, input {-webkit-appearance: none;-moz-appearance: none;-o-appearance: none;appearance: none;}
-input[type=checkbox], input[type=radio] {box-sizing:border-box;padding:0;margin:0;}
-button::-moz-focus-inner, input::-moz-focus-inner {border:0;padding:0}
-select:-moz-focusring {color:transparent;text-shadow:0 0 0 #000;}
-select::-ms-expand {display:none}
-:focus {outline: none;}
+legend{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+select, textarea, input, label{vertical-align:middle;}
+select, textarea, input{-webkit-appearance:none;-moz-appearance:none;-o-appearance:none;appearance:none}
+input[type=search]{-webkit-appearance:textfield}
+input[type=checkbox], input[type=radio]{box-sizing:border-box;padding:0;margin:0;}
+button::-moz-focus-inner, input::-moz-focus-inner{border:0;padding:0}
+select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}
+select::-ms-expand{display:none}
 
 /* Table */
-table {border-collapse:collapse;}
-
-:root {
-    color: #000;
-	font-size:.625rem;
-    word-break: keep-all;
-    word-wrap: break-word;
-}
-
-div {
-	box-sizing: border-box;
-}
+table{border-collapse:collapse}
+caption{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
