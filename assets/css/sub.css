@@ -1,3 +1,21 @@
 @import url(common/reset.css);
 @import url(common/common.css);
-@import url(main.css);
+
+/* 사업영역 */
+.business main {padding-top:11.3rem;width: 100%;height: 50rem;background:url(../images/common/bu_visual.png) no-repeat;background-size: auto 28.1rem;background-position:bottom right;}
+.business .visual_txt {display: inline-block;margin-left:20rem;}
+.business .visual_txt span {display:block;font-size:12.4rem;line-height: 10.8rem;font-weight:700;}
+.business .desc {font-weight:700;font-size:3.2rem;line-height:4.4rem;word-break: keep-all;}
+.business .inner {margin:12.8rem auto 30rem;}
+.business .content {margin:30rem 0 10rem;padding-bottom:10rem;text-align:center;border-bottom: 1px solid #c8c8c8;}
+.business .cont_tit {margin-bottom: 2.4rem;font-size: 2.8rem;line-height:3.9rem;font-weight:700;text-align: center;}
+.business .cont_tit.blue {color:#150F96}
+.business .content ul {display: flex;justify-content: center;padding:3.6rem 2.8rem 3rem 3.2rem;background: linear-gradient(180deg, rgba(241, 240, 246, 0) 0%, rgba(241, 240, 247, 0.7) 100%);border-radius: 4rem;}
+.business .content ul li {width:24rem;margin:0 20px;padding:2.4rem 0;background:#FF0198;color:#fff;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
+.business .cont_img {position:relative;margin-top:16.5rem;}
+.business .cont_img::before {position: absolute;background: url(../images/common/bu_img02.png);width: 6.5rem;height: 6.5rem;background-size: cover;top: -115px;left: 50%;transform: translateX(-50%);content: '';}
+.business .cont_img img {width:67.3rem;margin:0 auto;}
+.business .cont_col {margin-top:8rem;display: flex;justify-content: center;gap: 10rem;}
+.business .cont_col div {width: 38.5rem;border-top:2px solid #000;padding-top:3rem;}
+.business .cont_col .cont_tit {margin-bottom: 1.6rem;}
+.business .cont_col .cont_desc {font-size:2rem;font-weight:500;line-height:2.8rem;}
