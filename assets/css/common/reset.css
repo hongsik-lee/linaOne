@@ -82,11 +82,7 @@ time, mark, audio, video{
     padding:0;
     border:0;
     outline:0;
-<<<<<<< HEAD
     font-size: 10px;
-=======
-    font-size:10px;
->>>>>>> eb5b36b7ef5cd4b953846b6ade77c92b9d724a2c
     font-family:var(--body-fonts);
     vertical-align:baseline;
     background:transparent;

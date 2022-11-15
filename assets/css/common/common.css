@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-.inner {
-    width: 127.4rem;
-    margin: 0 auto;
-=======
-body {
-    font-family: var(--body-fonts);
-    color: #000;
-	font-size:.625rem;
-    word-break: keep-all;
-    word-wrap: break-word;
->>>>>>> eb5b36b7ef5cd4b953846b6ade77c92b9d724a2c
-}
+body {font-family: var(--body-fonts);color: #000;}
+.inner {width: 127.4rem;margin: 0 auto;}
 
 /* header area */
 .sub_wrap header {padding:4rem 6rem;display: flex;justify-content: space-between;}
@@ -23,7 +12,6 @@ body {
 
 /* sub content 공통부분 */
 .sub_wrap .inner {width:100%;margin:0 auto;max-width:1274px;}
-
 
 /* footer area */
 .sub_wrap footer {border-top: 1px solid #ebebeb;padding:10rem 0 12rem;}
