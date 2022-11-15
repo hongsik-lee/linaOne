@@ -1,7 +1,37 @@
-body {
-    font-family: var(--body-fonts);
-    color: #000;
-	font-size:.625rem;
-    word-break: keep-all;
-    word-wrap: break-word;
+.inner {
+    width: 127.4rem;
+    margin: 0 auto;
 }
+
+/* header area */
+.sub_wrap header {padding:4rem 6rem;display: flex;justify-content: space-between;}
+.sub_wrap header .logo {height:28px;}
+.sub_wrap header img {display: block;height: 100%;}
+.sub_wrap header nav ul {display: flex;}
+.sub_wrap header nav li {margin:0 0 0 40px}
+.sub_wrap header nav li:first-child {margin: 0;}
+.sub_wrap header nav a {font-size:2rem;line-height: 2.4rem;font-weight:700;text-align:center;color:#000}
+
+/* sub content 공통부분 */
+.sub_wrap .inner {width:100%;margin:0 auto;max-width:1274px;}
+
+
+/* footer area */
+.sub_wrap footer {border-top: 1px solid #ebebeb;padding:10rem 0 12rem;}
+.sub_wrap footer .inner {margin: 0 auto;display: flex;justify-content: space-between;
+    gap: 25.2rem ;}
+.sub_wrap footer .inner > div {display: flex;flex-direction: column;}
+.sub_wrap footer .logo  {height:3.2rem;margin-bottom:7rem;}
+.sub_wrap footer .logo img {height:100%;}
+.sub_wrap footer .list_priv {display: flex;gap: 2rem;margin-bottom: 2rem;}
+.sub_wrap footer .list_priv a {font-size: 1.6rem;line-height:1.9rem;font-weight:600;color:#000;}
+.sub_wrap footer .list_corp ul {display: flex;gap:2rem;margin-bottom:0.8rem;}
+.sub_wrap footer .list_corp li,
+.sub_wrap footer .list_corp p {font-size: 1.4rem;font-weight:400;line-height:1.6rem;color:#000;}
+.sub_wrap footer .notice .number {margin-bottom:0.8rem;font-size:4rem;font-weight:700;line-height: 4.8rem;letter-spacing: 0.16px;}
+.sub_wrap footer .notice .time {font-size: 1.8rem;font-weight:500;letter-spacing: 0.32px;line-height: 2.2rem;}
+.sub_wrap footer .family_site {position:relative;margin-top: 8.4rem;width:29rem;border-bottom: 2px solid #000;}
+.sub_wrap footer .family_site > li {position:relative;padding:1.2rem 0 1.7rem;font-size: 1.6rem;font-weight: 400;cursor: pointer;}
+.sub_wrap footer .family_site > li::before {position: absolute;width: 14px;height: 7px;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 1rem;top: auto;bottom:2.2rem;content: '';}
+.sub_wrap footer .family_site > .link_site {position:absolute;width:100%;display:none;}
+.sub_wrap footer .family_site > .link_site li {padding:1.2rem 0 1.7rem;font-size: 1.6rem;}
