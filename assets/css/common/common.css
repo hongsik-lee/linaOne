@@ -1,5 +1,5 @@
 body {font-family: var(--body-fonts);color: #000;}
-/* .inner {width: 127.4rem;margin: 0 auto;} */
+#contents {margin-bottom: 40rem;}
 
 /* header area */
 .sub_wrap header {padding:4rem 6rem;display: flex;justify-content: space-between;}
