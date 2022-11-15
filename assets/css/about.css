@@ -18,7 +18,7 @@
 .overview .definition-sec .info-wrap {margin-left: 18.1rem;}
 .overview .definition-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .overview .definition-sec .desc {margin-top: 8rem;color: #666;font-weight: 400;font-size: 2rem;line-height: 2.8rem;}
-.overview .definition-sec .desc strong {display: block;color: #000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+.overview .definition-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .overview .definition-sec .total-data {margin-top: 15rem;}
 .overview .definition-sec .total-data dd {font-weight: 700;font-size: 4rem;line-height: 6rem;letter-spacing: -0.02em;}
 .overview .definition-sec .total-data .info {display: flex;flex-wrap: wrap;}
@@ -30,4 +30,34 @@
 
 /* vision&mission */
 .vision .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.vision .visual-sec .page-tit:last-child{margin-left: 14rem;}
+.vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
+
+.vision .page-desc-sec .inner {padding-left: 0;}
+.vision .page-desc-sec .sub-tit {padding-left: 32.3rem;}
+.vision .page-desc-sec img {display: block;width: 107.2rem;margin: 15rem auto 0;}
+
+.vision .concept-sec {padding-top: 18.8rem;padding-bottom: 30rem}
+.vision .concept-sec .inner {display: flex;}
+.vision .concept-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
+.vision .concept-sec .text-area {margin-left: 16.6rem;}
+.vision .concept-sec .tit {font-weight: 700;font-size: 5.4rem;line-height: 8.1rem;}
+.vision .concept-sec .desc {margin-top: .8rem;color: #666;font-weight:500;font-size: 2rem;line-height: 2.8rem;}
+
+.vision .bhr-vision-sec {height: 48rem; background: url(../images/ab_vision_bhr_bg.png) 50% 50% no-repeat; background-size: cover;color: #fff;}
+.vision .bhr-vision-sec .inner {display: flex;height: 100%;padding-top:15.2rem;}
+.vision .bhr-vision-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
+.vision .bhr-vision-sec .text-area {margin-left: 13.7rem;}
+.vision .bhr-vision-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+.vision .bhr-vision-sec .desc {margin-top: 1.6rem;color: rgba(255,255,255,0.5);font-weight:500;font-size: 1.7rem;line-height: 2.38rem;}
+
+.vision .brand-behavior-sec {padding-top: 30rem;}
+.vision .brand-behavior-sec .inner {display: flex;}
+.vision .brand-behavior-sec .tit {margin-top:6.7rem;white-space: nowrap;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
+.vision .brand-behavior-sec .brand-behavior-list {displaY:flex;flex-wrap: wrap;margin-left: 15.1rem;}
+.vision .brand-behavior-sec .brand-behavior-item {width: 47.5rem;height: 19.4rem;box-sizing: border-box;}
+.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(1) {border-right: 1px solid #C8C8C8;border-bottom: 1px solid #C8C8C8;}
+.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(2) {border-bottom: 1px solid #C8C8C8;}
+.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(3) {border-right: 1px solid #C8C8C8;}
+.vision .brand-behavior-sec .brand-behavior-item p {display: flex;align-items: center;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;}
+.vision .brand-behavior-sec .brand-behavior-item p .num {margin-top: 1.7rem;color:#000;font-weight: 700;font-size: 1.7rem;line-height: 2.38rem;}
+.vision .brand-behavior-sec .brand-behavior-item p strong {margin: 1rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
