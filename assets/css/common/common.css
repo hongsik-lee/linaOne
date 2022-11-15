@@ -15,8 +15,8 @@ body {font-family: var(--body-fonts);color: #000;}
 
 /* visual area */
 .visual-sec {position: relative;min-height: 34rem; padding-top: 30.4rem;}
-.visual-sec .page-tit {position: absolute;top: 22.7rem;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;}
-.visual-sec .page-tit.type2 {top: 11.3rem;}
+.visual-sec .page-tit {position: absolute;top: 22.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;}
+.visual-sec .page-tit.type2 {top: 11.3rem;left: 8.7%;}
 .visual-sec .page-tit.type2 span {display: block;font-size: inherit;}
 
 /* page desc area */
