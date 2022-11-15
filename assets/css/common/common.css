@@ -1,5 +1,5 @@
 body {font-family: var(--body-fonts);color: #000;}
-.inner {width: 127.4rem;margin: 0 auto;}
+/* .inner {width: 127.4rem;margin: 0 auto;} */
 
 /* header area */
 .sub_wrap header {padding:4rem 6rem;display: flex;justify-content: space-between;}
@@ -11,12 +11,24 @@ body {font-family: var(--body-fonts);color: #000;}
 .sub_wrap header nav a {font-size:2rem;line-height: 2.4rem;font-weight:700;text-align:center;color:#000}
 
 /* sub content 공통부분 */
-.sub_wrap .inner {width:100%;margin:0 auto;max-width:1274px;}
+.sub_wrap .inner {width:127.4rem;margin:0 auto;box-sizing: border-box;}
+
+/* visual area */
+.visual-sec {position: relative;min-height: 34rem; padding-top: 30.4rem;}
+.visual-sec .page-tit {position: absolute;top: 22.7rem;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem}
+.visual-sec .page-tit.type2 {top: 11.3rem}
+
+/* page desc area */
+.page-desc-sec {padding-top: 10rem;padding-bottom: 13.2rem; }
+.page-desc-sec .inner {padding-left: 32.3rem;}
+.page-desc-sec .text-area {margin-top: 44rem;margin-left: 32.3rem;}
+.page-desc-sec .sub-tit {font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
+.page-desc-sec .desc {margin-top: 8rem;color: #666;font-weight: 500;font-size: 2rem;line-height: 2.8rem;}
+.page-desc-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
 
 /* footer area */
 .sub_wrap footer {border-top: 1px solid #ebebeb;padding:10rem 0 12rem;}
-.sub_wrap footer .inner {margin: 0 auto;display: flex;justify-content: space-between;
-    gap: 25.2rem ;}
+.sub_wrap footer .inner {margin: 0 auto;display: flex;justify-content: space-between;gap: 25.2rem ;}
 .sub_wrap footer .inner > div {display: flex;flex-direction: column;}
 .sub_wrap footer .logo  {height:3.2rem;margin-bottom:7rem;}
 .sub_wrap footer .logo img {height:100%;}
