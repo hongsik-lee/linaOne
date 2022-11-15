@@ -1,6 +1,9 @@
 @import url(common/reset.css);
 @import url(common/common.css);
+<<<<<<< HEAD
 @import url(about.css);
+=======
+>>>>>>> eb5b36b7ef5cd4b953846b6ade77c92b9d724a2c
 
 /* 사업영역 */
 .business main {padding-top:11.3rem;width: 100%;height: 50rem;background:url(../images/common/bu_visual.png) no-repeat;background-size: auto 28.1rem;background-position:bottom right;}
