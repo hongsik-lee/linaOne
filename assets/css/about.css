@@ -3,7 +3,6 @@
 
 /* overview */
 .overview .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-
 .overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec .inner {display: flex;}
@@ -11,9 +10,7 @@
 .overview .introduction-sec .text-area {margin-left: 18.1rem;}
 .overview .introduction-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .overview .introduction-sec .desc {margin-top: 1.6rem;color: #666;font-weight: 400;font-size: 2rem;line-height: 2.8rem;}
-
 .overview .definition-sec {padding-top: 31.8rem;}
-/* .overview .definition-sec {padding-top: 31.8rem;padding-bottom: 41rem;} */
 .overview .definition-sec .inner {display: flex;}
 .overview .definition-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .overview .definition-sec .info-wrap {margin-left: 18.1rem;}
@@ -32,25 +29,21 @@
 /* vision&mission */
 .vision .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
-
 .vision .page-desc-sec .inner {padding-left: 0;}
 .vision .page-desc-sec .sub-tit {padding-left: 32.3rem;}
 .vision .page-desc-sec img {display: block;width: 107.2rem;margin: 15rem auto 0;}
-
 .vision .concept-sec {padding-top: 18.8rem;padding-bottom: 30rem}
 .vision .concept-sec .inner {display: flex;}
 .vision .concept-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .vision .concept-sec .text-area {margin-left: 16.6rem;}
 .vision .concept-sec .tit {font-weight: 700;font-size: 5.4rem;line-height: 8.1rem;}
 .vision .concept-sec .desc {margin-top: .8rem;color: #666;font-weight:500;font-size: 2rem;line-height: 2.8rem;}
-
 .vision .bhr-vision-sec {height: 48rem; background: url(../images/ab_vision_bhr_bg.png) 50% 50% no-repeat; background-size: cover;color: #fff;}
 .vision .bhr-vision-sec .inner {display: flex;height: 100%;padding-top:15.2rem;}
 .vision .bhr-vision-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .vision .bhr-vision-sec .text-area {margin-left: 13.7rem;}
 .vision .bhr-vision-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .vision .bhr-vision-sec .desc {margin-top: 1.6rem;color: rgba(255,255,255,0.5);font-weight:500;font-size: 1.7rem;line-height: 2.38rem;}
-
 .vision .brand-behavior-sec {padding-top: 30rem;}
 .vision .brand-behavior-sec .inner {display: flex;}
 .vision .brand-behavior-sec .tit {margin-top:6.7rem;white-space: nowrap;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
@@ -62,6 +55,34 @@
 .vision .brand-behavior-sec .brand-behavior-item p {display: flex;align-items: center;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 .vision .brand-behavior-sec .brand-behavior-item p .num {margin-top: 1.7rem;color:#000;font-weight: 700;font-size: 1.7rem;line-height: 2.38rem;}
 .vision .brand-behavior-sec .brand-behavior-item p strong {margin: 1rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+
+/* corporate identity */
+.ci .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.ci .visual-sec .page-tit span:last-child{margin-left: 35.8rem;}
+.ci .identity-guide-sec {padding-top: 6.8rem;}
+.ci .identity-guide-sec .identity-list li {display: flex;}
+.ci .identity-guide-sec .identity-list li .label {width: 14.2rem;margin-right: 18.2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
+.ci .identity-guide-sec .identity-list li .info {display: flex;align-items: center;justify-content:center;flex-direction: column;width: calc(100% - 32.2rem);height: 24.5rem;border: 1px solid #C8C8C8;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(3) .info {height: auto; border: 0;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(n+2) {margin-top: 15rem;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(1) img { width: 23.2rem;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(2) img { width: 38.7rem;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(3) img { width: 100%;}
+.ci .identity-guide-sec .identity-list li:nth-of-type(3) img:last-child {margin-top: -.2rem;}
+
+/* promotional video */
+.pv .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.pv .visual-sec .page-tit span:last-child{margin-left: 52.8rem;}
+.pv .page-desc-sec {padding-top: 17rem;padding-bottom: 0;}
+.pv .page-desc-sec .inner {display: flex;padding: 0;}
+.pv .page-desc-sec .video-area {width: 78.9rem}
+.pv .page-desc-sec .video-area img {width: inherit;}
+.pv .page-desc-sec .text-area {margin: 0; padding-left: 7rem;}
+.pv .page-desc-sec .text-area .tit {padding-bottom: 2rem;border-bottom: .2rem solid #000;font-weight: 700;font-size: 3.4rem;line-height: 4.76rem;}
+.pv .page-desc-sec .text-area .desc {height: 29.8rem;padding-right: 2rem;overflow-y: auto;margin-top: 3rem;box-sizing: border-box;color: #000;font-weight: 500;font-size: 2rem;line-height: 2.8rem;}
+.pv .page-desc-sec .text-area .desc::-webkit-scrollbar {width: .6rem;height: .6rem}
+.pv .page-desc-sec .text-area .desc::-webkit-scrollbar-thumb {background-color: #c8c8c8;background-clip: padding-box;border: 0.1rem solid #c8c8c8;}
+.pv .page-desc-sec .text-area .desc::-webkit-scrollbar-track {background-color: #ebebeb;border: 0.2rem solid transparent;background-clip: padding-box;}
 
 /* News - list */
 .news .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_news_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
