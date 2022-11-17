@@ -9,14 +9,26 @@
 .recruit .ico_list li img {display:block;width:9rem;}
 .recruit .ico_list li h4 {margin:4rem 0 1rem;font-size: 2.8rem;font-weight:700;line-height: 3.92rem;}
 .recruit .ico_list li p {font-size:2rem;line-height: 2.8rem;font-weight: 500;color:#666}
+.recruit .btn {display:block;width:26rem;height:6.4rem;line-height:6.4rem;color:#fff;font-size:1.7rem;font-weight:500;text-align: center;background:#000;}
 
-.recruit .accor {margin-top:24.2rem;display:flex;justify-content:flex-end;}
-.recruit .accor ul {width:100%;max-width: 95rem;border-top:2px solid #000;}
-.recruit .accor li {display: flex;flex-direction: column;padding:4.2rem 0;border-bottom: 1px solid #ebebeb;}
-.recruit .accor .tit_area {display: flex;align-items: center;}
-.recruit .accor .category {width: 14.1rem;margin-right: 2rem;font-size: 2rem;line-height: 3rem;font-weight: 500;}
-.recruit .accor .title {font-size:2.4rem;font-weight: 700;line-height:3.6rem;cursor:pointer}
-.recruit .accor .cont {padding-left:16.1rem;padding-top:4.2rem;padding-right:4.6rem;font-size:2rem;line-height:3rem;font-weight:500;word-break: keep-all;}
+/* 채용프로세스 process */
+.recruit .re_process .page-desc-sec {padding-bottom:25rem;}
+.recruit .re_process .ico_list {row-gap: 7rem;column-gap:13rem;margin-bottom: 13rem;}
+.recruit .re_process .ico_list li {position:relative;width:23rem;text-align: center;}
+.recruit .re_process .ico_list li:after {position:absolute;width:2.5rem;height:4rem;top:2.7rem;right:-4.8rem;background:url(../../assets/images/icons/icon_arrow_right.png);content: '';background-size:cover;}
+.recruit .re_process .ico_list li:nth-child(3n):after {display: none;}
+.recruit .re_process .ico_list li img {margin: auto;}
+.recruit .re_process .ico_list li h4 {margin:2rem 0;}
+.recruit .re_process .notice {padding:4.2rem 0;font-size: 2rem;line-height:3rem;font-weight:500;color:#666;border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb;}
+.recruit .re_process .btn {margin-top: 10rem;}
+
+/* 복리후생 benefits */
+.recruit .re_benefits .col_2 {display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:8rem;width: 122.2rem;margin-top: 17rem;}
+.recruit .re_benefits .col_2 li {display: flex;flex:50%;height:9.93rem}
+.recruit .re_benefits .col_2 li img {height: 7.2rem;margin-right: 4rem;}
+.recruit .re_benefits .col_2 li .txt {}
+.recruit .re_benefits .col_2 li h3 {margin-bottom:1rem;font-size: 2.4rem;line-height:3.36rem;font-weight:600;}
+.recruit .re_benefits .col_2 li p {font-size: 2rem;line-height: 3rem;font-weight:500;color:#666}
 
 /* TRM Recurit  */
 .tmr_recruit .visual-sec::after {content: '';position: absolute;top: 30.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/tmr_re_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
@@ -62,8 +74,8 @@
 .tmr_recruit .col-2 .info_wrap li {display: flex; align-items:center;padding:4.2rem 0;border-bottom: 1px solid #ebebeb;}
 .tmr_recruit .col-2 .info_wrap p {font-size: 2rem;line-height:3rem;font-weight: 500;color:#666}
 .tmr_recruit .col-2 .info_wrap p.tit {width:30.3rem;padding-left:4.2rem;margin-right:2rem;font-weight: 700;color:#000;background-size: 24px;background-repeat: no-repeat;background-position: center left;}
-.tmr_recruit .col-2 .info_wrap li:first-child p.tit {background-image:url(../../assets/images/icon_time.png);}
-.tmr_recruit .col-2 .info_wrap li:last-child p.tit  {background-image:url(../../assets/images/icon_location.png);}
+.tmr_recruit .col-2 .info_wrap li:first-child p.tit {background-image:url(../../assets/images/icons/icon_time.png);}
+.tmr_recruit .col-2 .info_wrap li:last-child p.tit  {background-image:url(../../assets/images/icons/icon_location.png);}
 
 /* TMR 인재채용 소식플러스 */
 .tmr_recruit .thumbs_wrap {margin-top: 20.2rem;}

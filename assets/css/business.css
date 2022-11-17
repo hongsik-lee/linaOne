@@ -11,7 +11,7 @@
 .business .content ul {display: flex;justify-content: center;padding:3.6rem 2.8rem 3rem 3.2rem;background: linear-gradient(180deg, rgba(241, 240, 246, 0) 0%, rgba(241, 240, 247, 0.7) 100%);border-radius: 4rem;}
 .business .content ul li {width:24rem;margin:0 20px;padding:2.4rem 0;background:#FF0198;color:#fff;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
 .business .cont_img {position:relative;margin-top:16.5rem;}
-.business .cont_img::before {position: absolute;background: url(../images/bu_img02.png);width: 6.5rem;height: 6.5rem;background-size: cover;top: -115px;left: 50%;transform: translateX(-50%);content: '';}
+.business .cont_img::before {position: absolute;background:url(../images/icons/bu_img02.png);width: 6.5rem;height: 6.5rem;background-size: cover;top: -115px;left: 50%;transform: translateX(-50%);content: '';}
 .business .cont_img img {width:67.3rem;margin:0 auto;}
 .business .cont_col {margin-top:8rem;display: flex;justify-content: center;gap: 10rem;}
 .business .cont_col div {width: 38.5rem;border-top:2px solid #000;padding-top:3rem;}

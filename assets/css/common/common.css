@@ -25,6 +25,15 @@ header nav a {font-size:2rem;line-height: 2.4rem;font-weight:700;text-align:cent
 .sub_wrap .col_wrap .col:first-of-type {width:14.2rem;}
 .sub_wrap .col_wrap .title {font-size:2.4rem;font-weight: 700;line-height: 3.6rem;}
 
+/* 아코디언형식 리스트 */
+.sub_wrap .accor {margin-top:24.2rem;display:flex;justify-content:flex-end;}
+.sub_wrap .accor ul {width:100%;max-width: 95rem;border-top:2px solid #000;}
+.sub_wrap .accor li {display: flex;flex-direction: column;padding:4.2rem 0;border-bottom: 1px solid #ebebeb;}
+.sub_wrap .accor .tit_area {display: flex;align-items: center;}
+.sub_wrap .accor .category {width: 14.1rem;margin-right: 2rem;font-size: 2rem;line-height: 3rem;font-weight: 500;}
+.sub_wrap .accor .title {font-size:2.4rem;font-weight: 700;line-height:3.6rem;cursor:pointer}
+.sub_wrap .accor .cont {padding-left:16.1rem;padding-top:4.2rem;padding-right:4.6rem;font-size:2rem;line-height:3rem;font-weight:500;word-break: keep-all;}
+
 /* 상세페이지  */
 .detail_view .inner {display: flex;margin-top:19.4rem;gap:24rem;}
 .detail_view .col:first-of-type {min-width: 8.3rem;}

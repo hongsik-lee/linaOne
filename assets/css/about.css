@@ -121,11 +121,11 @@
 .contact .workplace-sec  dl:last-child{border-bottom: .1rem solid #ebebeb;}
 .contact .workplace-sec  dd {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
 .contact .workplace-sec  dd::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
-.contact .workplace-sec  dd.corp-name::before {background: url(../images/icon_company.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.location::before {background: url(../images/icon_location.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.key-number::before {background: url(../images/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.service-number::before {background: url(../images/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.tm-service::before {background: url(../images/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.traffic-guide::before {background: url(../images/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.location::before {background: url(../images/icons/icon_location.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.key-number::before {background: url(../images/icons/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.service-number::before {background: url(../images/icons/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.tm-service::before {background: url(../images/icons/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec  dd.traffic-guide::before {background: url(../images/icons/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
 .contact .workplace-sec  dt {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 
