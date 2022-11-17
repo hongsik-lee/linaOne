@@ -25,6 +25,16 @@ body {font-family: var(--body-fonts);color: #000;}
 .sub_wrap .col_wrap .col:first-of-type {width:14.2rem;}
 .sub_wrap .col_wrap .title {font-size:2.4rem;font-weight: 700;line-height: 3.6rem;}
 
+/* 상세페이지  */
+.detail_view .inner {display: flex;margin-top:19.4rem;gap:24rem;}
+.detail_view .col:first-of-type {min-width: 8.3rem;}
+.detail_view .title {font-size: 2.4rem;font-weight: 700;line-height: 3.6rem;}
+.detail_view .detail_tit {margin-bottom:1rem;font-size: 4rem;line-height: 5.6rem;font-weight: 700;}
+.detail_view .date {font-size: 1.7rem;font-weight:500;line-height: 2.5rem;color:#999;}
+.detail_view .content {margin:6rem 0 10rem;padding-bottom: 4.2rem;border-bottom:1px solid #ebebeb}
+.detail_view .content pre {font-size: 2rem;line-height: 3rem;font-weight: 500;color:#000;white-space:pre-line}
+.detail_view .btn {display:block;width:26rem;height:6.4rem;line-height:6.4rem;color:#fff;font-size:1.7rem;font-weight:500;text-align: center;background:#000;}
+
 /* visual area */
 .visual-sec {position: relative;min-height: 34rem; padding-top: 30.4rem;}
 .visual-sec .page-tit {position: absolute;top: 22.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;}

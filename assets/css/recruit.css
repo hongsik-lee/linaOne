@@ -40,7 +40,7 @@
 .tmr_recruit .center_info .txt_wrap .row:last-child .desc {font-size:2.4rem;line-height:2.4rem;font-weight:700;}
 .tmr_recruit .center_info .txt_wrap .row:last-child .time {display:inline-block;margin-left:1.6rem;font-size: 4rem;font-weight: 700;line-height: 4rem;vertical-align: sub;}
 .tmr_recruit .center_info .txt_wrap .row:last-child .notice {margin-top:1.6rem;font-size: 2rem;line-height: 2rem;font-weight:500;color:#666;}
-.tmr_recruit .col_box {display: flex;margin-top: 24.8rem;gap:2rem}
+.tmr_recruit .col_box {display: flex;margin-top: 25rem;gap:2rem}
 .tmr_recruit .col_box .col {display:flex;justify-content:space-between;width: 62.7rem;padding:3.5rem 5rem;background:#F9F9F9;border-radius: 1.4rem;}
 .tmr_recruit .col_box .title {font-size:2rem;font-weight: 700;line-height: 2rem;}
 .tmr_recruit .col_box .info {display: flex;flex-direction: column;text-align: right;justify-content: space-between;}
@@ -50,3 +50,50 @@
 .tmr_recruit .col_box .info .info_list span:last-child {margin-right:0;}
 .tmr_recruit .col_box .info .info_list span:after {position:absolute;width: 0.4rem;height:0.4rem;top:50%;transform:translateY(-50%);right:-14px;border-radius:50%;background:#dcdcdc;content: '';}
 .tmr_recruit .col_box .info .info_list span:last-child:after {display: none;}
+
+/* 선택라이나 맞춤 */
+.tmr_recruit .col_wrap_box {margin-top: 24.2rem;}
+.tmr_recruit .col_wrap_box .col_wrap + .col_wrap {margin-top:11rem;}
+.tmr_recruit .col-2 {flex:1;}
+.tmr_recruit .col-2 .info_title {margin-bottom: 5rem;}
+.tmr_recruit .col-2 .info_title h3 {font-size: 2.8rem;line-height: 140%;font-weight: 700;}
+.tmr_recruit .col-2 .info_title p {margin-top:2rem;font-size: 2rem;line-height: 150%;font-weight: 500;color:#666}
+.tmr_recruit .col-2 .info_wrap {border-top:1px solid #000}
+.tmr_recruit .col-2 .info_wrap li {display: flex; align-items:center;padding:4.2rem 0;border-bottom: 1px solid #ebebeb;}
+.tmr_recruit .col-2 .info_wrap p {font-size: 2rem;line-height:3rem;font-weight: 500;color:#666}
+.tmr_recruit .col-2 .info_wrap p.tit {width:30.3rem;padding-left:4.2rem;margin-right:2rem;font-weight: 700;color:#000;background-size: 24px;background-repeat: no-repeat;background-position: center left;}
+.tmr_recruit .col-2 .info_wrap li:first-child p.tit {background-image:url(../../assets/images/icon_time.png);}
+.tmr_recruit .col-2 .info_wrap li:last-child p.tit  {background-image:url(../../assets/images/icon_location.png);}
+
+/* TMR 인재채용 소식플러스 */
+.tmr_recruit .thumbs_wrap {margin-top: 20.2rem;}
+.tmr_recruit .thumbs_wrap ul {display: flex; flex-wrap: wrap; justify-content: space-between;row-gap:10rem}
+.tmr_recruit .thumbs_wrap li {width: 55.6rem;}
+.tmr_recruit .thumbs_wrap li img {display:block;width:100%;height:36.9rem;object-fit: contain;border:1px solid #D7D7D7}
+.tmr_recruit .thumbs_wrap li .txt {margin-top:4rem;height: 17.2rem;}
+.tmr_recruit .thumbs_wrap li h3 {font-size: 2.8rem;line-height:3.9rem;font-weight:700;}
+/* 썸네일 제목 한줄처리 해야할때 쓰면 됨 */
+/* .tmr_recruit .thumbs_wrap li h3 {font-size: 2.8rem;line-height:3.9rem;font-weight:700;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;} */
+.tmr_recruit .thumbs_wrap li p {margin-top:1rem;font-size: 2rem;line-height: 2.8rem;font-weight: 500;}
+
+/* TMR 인재채용 지원서작성하기 */
+.tmr_recruit .vacancy_list .list_wrap > h3 {margin-bottom:13rem;padding-left: 32.3rem;font-size:6rem;line-height: 140%;font-weight: 900;color:#150F96}
+.tmr_recruit .vacancy_list .list_wrap .col:nth-of-type(2) {flex:1;}
+.tmr_recruit .vacancy_list .list {width: 100%;}
+.tmr_recruit .vacancy_list .list th, td {padding:2.5rem 0;font-size:2rem;border-bottom: 1px solid;text-align: left;}
+.tmr_recruit .vacancy_list .list th {border-top: 2px solid #000;}
+.tmr_recruit .vacancy_list .list th:last-child {text-align: center;}
+.tmr_recruit .vacancy_list .list .tit {font-weight:500;}
+.tmr_recruit .vacancy_list .list .tit a {color:#000}
+.tmr_recruit .vacancy_list .list .date {font-weight:500;color:#666}
+.tmr_recruit .vacancy_list .list .btn a {display:inline-block;width: 12.2rem;height: 5rem;background:#000;color:#fff;line-height:5rem;text-align: center;}
+.tmr_recruit .vacancy_list .col_box.type3 {flex-wrap: wrap;}
+.tmr_recruit .vacancy_list .col_box.type3 .col {flex-direction: column;width: 62.7rem;box-sizing: border-box;justify-content: flex-start;}
+.tmr_recruit .vacancy_list .col_box.type3 .badge {display: block;width: 8.4rem;height: 3.1rem;line-height:3.1rem;border-radius: 0.6rem;text-align: center;color:#fff;font-size:1.5rem;font-weight:600;}
+.tmr_recruit .vacancy_list .col_box.type3 .badge.blue {background:#01C1D6;}
+.tmr_recruit .vacancy_list .col_box.type3 .badge.green {background:#7ACB00;}
+.tmr_recruit .vacancy_list .col_box.type3 h4 {margin:2.5rem 0 3rem;font-size: 3.4rem;line-height: 4.76rem;font-weight: 700;}
+.tmr_recruit .vacancy_list .col_box.type3 .txt_box + .txt_box {margin-top: 3rem;}
+.tmr_recruit .vacancy_list .col_box.type3 .txt_box .tit {font-size: 2.4rem;line-height: 3.6rem;font-weight: 700;color:#000}
+.tmr_recruit .vacancy_list .col_box.type3 .txt_box .desc {margin-top:1rem;font-size: 2rem;line-height: 3rem;font-weight: 500;color:#666}
+.tmr_recruit .vacancy_list .col_box.type3 .notice {display: block;margin-top:1rem;width: 100%;font-size: 1.7rem;font-weight: 500;color:#999;text-align: right;}
