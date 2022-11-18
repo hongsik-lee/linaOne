@@ -26,6 +26,41 @@
 .overview .definition-sec .total-data dt {color: #999;font-weight: 500;font-size: 1.7rem;line-height: 2.38rem;}
 .overview .definition-sec .total-data .extra-info {margin-top: 8rem;text-align: right;color: #999;font-weight: 400;font-size: 1.7rem;line-height: 2.38rem;}
 
+/* CEO Interview */
+.interview #contents {margin-bottom: 0;}
+.interview .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;}
+.interview .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:9rem;}
+.interview .page-desc-sec {padding-bottom:25rem}
+.interview .page-desc-sec .sub-tit {font-size:4rem;line-height: 5.6rem;}
+.interview .page-desc-sec .sub-tit span {display:block;margin-bottom:1.6rem;font-size: 2.4rem;font-weight:500;line-height:3.36rem;}
+.interview .page-desc-sec .desc {display:flex;margin-top: 7rem;align-items: center; color: #000;font-size: 2.4rem;line-height: 3.36rem;font-weight: 700;}
+.interview .page-desc-sec .desc strong {margin:0;margin-left:2.6rem;font-size: 4rem;line-height:5.6rem;font-weight:700;}
+.interview .page-sec01 {padding:17.8rem 0 17.7rem;background:url(../images/ab_interview_img01.png);background-size:cover}
+.interview .page-sec01 .inner {padding-left: 32.3rem;}
+.interview .page-sec01 .desc {font-size:3.2rem;line-height:4.4rem;font-weight:700;color:#fff}
+.interview .page-sec01 .desc + .desc {margin-top: 8rem;}
+.interview .page-sec01 span {display:block;margin-top:1.6rem;font-size: 2.4rem;line-height: 3.36rem;letter-spacing:-0.03em;font-weight:500;color:rgba(255,255,255,.6)}
+.interview .page-interview {margin-top: 25rem;}
+.interview .page-interview .col + .col {margin-top: 25rem;}
+.interview .page-interview .right {display:flex;column-gap:16.2rem;}
+.interview .page-interview .right .subject {width: 16.2rem;font-size: 2.4rem;font-weight:700;line-height: 3.6rem;}
+.interview .page-interview .right img {width: 95rem;}
+.interview .page-interview li + li {margin-top: 6rem;}
+.interview .page-interview p {position: relative}
+.interview .page-interview .question {padding-left:6rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
+.interview .page-interview .answer {padding-left:6rem;font-size: 2rem;line-height: 3rem;font-weight: 500;letter-spacing: 0.02em;}
+.interview .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
+.interview .page-interview .question:after {content: "Q.";}
+.interview .page-interview .answer:after {content: "A.";}
+.interview .page-interview .left img {width: 62.7rem;}
+.interview .page-interview .left .txt {margin-top:6rem;padding-left: 32.4rem;}
+.interview .page-sec02 {margin-top:25rem;padding:24rem 0;background:url(../../assets/images/ab_interview_img04.png);background-size: cover;}
+.interview .page-sec02 .inner {display: flex;column-gap: 16.2rem;}
+.interview .page-sec02 .subect {font-size: 2.6rem;line-height: 3.9rem;font-weight:700;color:#fff;}
+.interview .page-sec02 .tit {font-size: 4rem;line-height: 5.6rem;font-weight: 700;color:#fff}
+.interview .page-sec02 .desc {margin-top: 1.6rem;font-size: 2rem;line-height: 2.8rem;font-weight:500;color:rgba(255,255,255,.6)}
+
 /* vision&mission */
 .vision .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
@@ -88,27 +123,40 @@
 .news .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_news_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .news .page-desc-sec {padding-bottom:8.4rem;}
 
-
 /* contact us */
 .contact .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_cu_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .contact .visual-sec .page-tit span:last-child{margin-left: 35rem;}
 .contact .page-tab-sec {margin: 10rem 0 0;}
 .contact .page-tab-sec.type2 {padding-bottom: 7.2rem;}
 .contact .workplace-sec {padding-top: 13rem;}
-.contact .workplace-sec  img {width: 100%;}
-.contact .workplace-sec  .info-wrap {width: 95rem;margin-top: 10rem;margin-left: auto;}
-.contact .workplace-sec  .desc {color: #666;font-weight: 500;font-size:2rem;line-height: 3rem;}
-.contact .workplace-sec  .desc strong {display: block;margin-bottom: 2rem;color: #000;font-weight: 700;font-size:2.8rem;line-height: 3.92rem;}
-.contact .workplace-sec  .location-area {margin-top: 5rem;}
-.contact .workplace-sec  dl {display: flex;align-items: center;padding: 4.2rem 0;border-top: .1rem solid #ebebeb;}
-.contact .workplace-sec  dl:last-child{border-bottom: .1rem solid #ebebeb;}
-.contact .workplace-sec  dd {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
-.contact .workplace-sec  dd::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
-.contact .workplace-sec  dd.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.location::before {background: url(../images/icons/icon_location.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.key-number::before {background: url(../images/icons/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.service-number::before {background: url(../images/icons/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.tm-service::before {background: url(../images/icons/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dd.traffic-guide::before {background: url(../images/icons/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec  dt {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
+.contact .workplace-sec img {width: 100%;}
+.contact .workplace-sec .info-wrap {width: 95rem;margin-top: 10rem;margin-left: auto;}
+.contact .workplace-sec .desc {color: #666;font-weight: 500;font-size:2rem;line-height: 3rem;}
+.contact .workplace-sec .desc strong {display: block;margin-bottom: 2rem;color: #000;font-weight: 700;font-size:2.8rem;line-height: 3.92rem;}
+.contact .workplace-sec .location-area {margin-top: 5rem;}
+.contact .workplace-sec dl {display: flex;align-items: center;padding: 4.2rem 0;border-top: .1rem solid #ebebeb;}
+.contact .workplace-sec dl:last-child{border-bottom: .1rem solid #ebebeb;}
+.contact .workplace-sec dd {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
+.contact .workplace-sec dd::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
+.contact .workplace-sec dd.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd.location::before {background: url(../images/icons/icon_location.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd.key-number::before {background: url(../images/icons/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd.service-number::before {background: url(../images/icons/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd.tm-service::before {background: url(../images/icons/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd.traffic-guide::before {background: url(../images/icons/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 
+/* Associate & Proposal 제휴 제안 */
+.associate .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_ass_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.associate .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:38.3rem;}
+.associate .col-3.inner {display:flex;flex-direction: column;}
+.associate .col-3 .col {display: flex;column-gap:18.2rem;}
+.associate .col-3 .col + .col {margin-top: 25rem;}
+.associate .col-3 .col .subject {width:14.2rem;font-size: 2.4rem;line-height:3.6rem;font-weight:700;white-space:nowrap;}
+.associate .col-3 .partner .tit {font-size: 2.8rem;line-height: 3.92rem;font-weight:700;}
+.associate .col-3 .partner .desc {margin-top:2rem;font-size: 2rem;line-height: 3rem;font-weight:500;color:#666}
+.associate .col-3 .partner .icons {margin-top: 11rem;display:flex;flex-wrap: wrap;border-top: 1px solid #c8c8c8;}
+.associate .col-3 .partner .icons span {width:25%;height: 14rem;display: flex;justify-content: center;align-items: center;border-left: 1px solid #c8c8c8;border-bottom:1px solid #c8c8c8;box-sizing: border-box;}
+.associate .col-3 .partner .icons span.line,
+.associate .col-3 .partner .icons span:nth-child(4n) {border-right: 1px solid #c8c8c8;}
+.associate .col-3 .partner img {object-fit: contain;transform: scale(0.5);}    
