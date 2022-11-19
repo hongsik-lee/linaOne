@@ -159,4 +159,19 @@
 .associate .col-3 .partner .icons span {width:25%;height: 14rem;display: flex;justify-content: center;align-items: center;border-left: 1px solid #c8c8c8;border-bottom:1px solid #c8c8c8;box-sizing: border-box;}
 .associate .col-3 .partner .icons span.line,
 .associate .col-3 .partner .icons span:nth-child(4n) {border-right: 1px solid #c8c8c8;}
-.associate .col-3 .partner img {object-fit: contain;transform: scale(0.5);}    
+.associate .col-3 .partner img {object-fit: contain;transform: scale(0.5);}
+.associate .rule_wrap {display: flex;flex-direction: column;row-gap: 11rem;}
+.associate .rule_wrap .tit span {font-weight:700;font-size:2.4rem;line-height: 150%;}
+.associate .rule_wrap .tit p {margin-top:1.6rem;font-weight:700;font-size:3.2rem;line-height: 150%;}
+.associate .rule_wrap .cont {display: flex;column-gap:4rem;}
+.associate .rule_wrap .cont .img {position:relative;width: 9rem;}
+.associate .rule_wrap .cont img {display:block;width:100%;}
+.associate .rule_wrap .txt p {font-weight: 500;font-size: 20px;line-height: 150%;color:#666}
+.associate .rule_wrap .txt p + p {margin-top:2rem;}
+.associate .rule_wrap .txt strong {display:block;margin-bottom:4rem;font-weight:500;font-size:24px;line-height:150%;}
+.associate .rule_wrap .list {display: flex;flex-wrap: wrap;column-gap:5rem;row-gap:1.6rem;}
+.associate .rule_wrap .list li {width:20.6rem;margin-left:2rem;font-weight: 500;font-size: 20px;line-height:150%;color:#666;list-style: disc;}
+.associate .mail_box {display:flex;justify-content:space-between;margin-top:25rem;padding:5rem;background: #F9F9F9;border-radius: 14px;}
+.associate .mail_box .subject {font-weight:700;font-size:20px;line-height:170%;}
+.associate .mail_box .desc {text-align:right;font-Weight:500;font-size:2rem;line-height:3.2rem;}
+.associate .mail_box .desc a {display:block;font-Weight:500;font-size:1.7rem;line-height:2.72rem;color:#000;text-decoration: underline;}
