@@ -19,14 +19,8 @@ accor_tit.forEach((accorTit) => {
 // Get the button:
 var scrollToTopBtn = document.getElementById("goTop");
 var rootElement = document.documentElement;
-
-
-
 // window.onscroll = function() {scrollToTop()};
-
 function scrollToTop() {
-
-
   rootElement.scrollTo({
     top: 0,
     behavior: "smooth"
@@ -34,3 +28,22 @@ function scrollToTop() {
 }
 
 scrollToTopBtn.addEventListener("click", scrollToTop);
+
+function getCurrentURL () {
+  return window.location.href
+}
+const url = getCurrentURL()
+
+window.onload = function() { 
+  var all_links = document.getElementById("gnb").getElementsByTagName("a"),
+      i=0, len=all_links.length,
+      full_path = location.href.split('#')[0]; //Ignore hashes?
+      console.log(full_path)
+  // Loop through each link.
+  for(; i<len; i++) {
+      if(all_links[i].href.split("#")[0] == full_path) {
+        console.log(all_links[i].href.split("#")[0] )
+          all_links[i].className += " active";
+      }
+  }
+}
