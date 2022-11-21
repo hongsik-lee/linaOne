@@ -3,13 +3,13 @@
 
 /* 사업영역 */
 .business .visual-sec .page-tit {text-align: right;left: 20.2rem;}
-.business .visual-sec {background:url(../images/bu_visual.png)no-repeat;background-size:auto 28.1rem;background-position:bottom right}
+.business .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/bu_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .business .page-desc-sec {padding-bottom: 0;}
 .business .content {margin:30rem 0 10rem;padding-bottom:10rem;text-align:center;border-bottom: 1px solid #c8c8c8;}
 .business .cont_tit {font-size: 2.8rem;line-height:3.9rem;font-weight:700;text-align: center;}
 .business .cont_tit.blue {color:#150F96}
 .business .content ul {display: flex;justify-content: center;padding:3.6rem 2.8rem 3rem 3.2rem;background: linear-gradient(180deg, rgba(241, 240, 246, 0) 0%, rgba(241, 240, 247, 0.7) 100%);border-radius: 4rem;}
-.business .content ul li {width:24rem;margin:0 20px;padding:2.4rem 0;background:#FF0198;color:#fff;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
+.business .content ul li {width:24rem;margin:0 20px;padding:2.4rem 0;background:#fff;color:#01C1D6;border:1px solid #01C1D6;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
 .business .cont_img {position:relative;margin-top:16.5rem;}
 .business .cont_img::before {position: absolute;background:url(../images/icons/bu_img02.png);width: 6.5rem;height: 6.5rem;background-size: cover;top: -115px;left: 50%;transform: translateX(-50%);content: '';}
 .business .cont_img img {width:67.3rem;margin:0 auto;}
@@ -17,3 +17,48 @@
 .business .cont_col div {width: 38.5rem;border-top:2px solid #000;padding-top:3rem;}
 .business .cont_col .cont_tit {margin-bottom: 1.6rem;}
 .business .cont_col .cont_desc {font-size:2rem;font-weight:500;line-height:2.8rem;}
+
+/* Sales & Marketing */
+.sales .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/sales_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.sales .circle_wrap01 {padding-bottom:13rem;}
+.sales .circle_wrap01 .title {font-weight: 700;font-size:3.2rem;line-height: 140%;}
+.sales .circle_wrap01 .desc {margin-top:2rem;font-weight: 500;font-size: 2.4rem;line-height: 140%;color:#666}
+.sales .circle {position:relative;margin-top:13rem;display: flex;justify-content: space-between;}
+.sales .circle li:not(.served) {position:relative;width:21rem;height:21rem;border:4px solid;border-radius: 50%;display: flex;justify-content: center;align-items: center;font-size: 2rem;font-weight: 700;line-height: 2.8rem;text-align: center;background:#fff;}
+.sales .circle:last-child li:not(.served) {width: 19rem;height:19rem;}
+.sales .circle li.served {position: absolute;left: 50%;bottom:-10.1rem;transform:translateX(-50%);font-weight: 700;font-size: 24px;line-height: 140%;color: #150F96;}
+.sales .circle_wrap02 +.circle li.served {left: 54.5%;transform:none;}
+.sales .circle li.served::after {position: absolute;left: 50%;background: url(../images/sales_line.png);top: -4.5rem; width: 0.6rem;height: 4.5rem;background-repeat: no-repeat;background-size: contain;content: '';}
+.sales .circle_wrap02 +.circle li.served::after {top: -5.8rem; }
+.sales .circle li::before {position:absolute;width:100%;right: -60px;height:0.1rem;
+background:#bcb9c2;z-index: -1;content: '';}
+.sales .circle li:nth-last-child(-n+2):before {display: none;}
+.sales .circle_wrap01 .bg {position: absolute;width:49.6rem;height: 25rem;left: 116%;content: url(../images/sales_list_bg01.png);z-index: -2;}
+.sales .circle_wrap02 +.circle .bg {position: absolute;width:65.4rem;height: 22.2rem;left:217.5%;content: url(../images/sales_list_bg02.png);z-index: -2;}
+.sales .circle li.purple {border-color:#905ECD;color:#905ECD}
+.sales .circle li.blue {border-color:#01C1D6;color:#01C1D6}
+.sales .circle li.green {border-color:#7ACB00;color:#7ACB00}
+.sales .circle li.yellow {border-color:#FFB617;color:#FFB617}
+.sales .circle li.pink {border-color:#FF0198;color:#FF0198}
+.sales .circle li.yellow {border-color:#FFB617;color:#FFB617}
+.sales .circle li.orange {border-color:#FF6600;color:#FF6600}
+.sales .circle li.bg {position:relative}
+.sales .col_wrap + .col_wrap {margin-top:25rem;}
+.sales .circle_wrap02 .title{font-weight: 700;font-size: 3.2rem;line-height: 140%;}
+.sales .circle_wrap02 .desc {margin-top:2rem;font-weight: 500;font-size: 2.4rem;line-height: 140%;color:#666}
+.sales .col_wrap {flex-wrap: wrap;}
+.sales .col_wrap .col.circle_wrap01,
+.sales .col_wrap .col.circle_wrap02 {width: 95rem;}
+
+/* IT */
+.it .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/it_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.it .list_wrap {display: flex;margin-top:11.8rem;justify-content: space-between;}
+.it .list_wrap li {position: relative;}
+.it .list_wrap .list_head {text-align: center;}
+.it .list_wrap .list_head img {width:12rem}
+.it .list_wrap .list_head p {margin-top:3rem;font-weight: 700;font-size: 28px;line-height: 140%;}
+.it .list_wrap .list_cont {position:relative;display:flex;flex-direction:column;margin-top: 17.2rem;padding:5rem 4rem;text-align: center;background:#F8F7FA;border-radius: 2rem}
+.it .list_wrap .list_cont span {display:block;width:25.5rem;padding:2rem 0;margin-bottom:4rem;font-size: 2rem;font-weight: 500;line-height:3rem;color:#150F96;border:1px solid #150F9666;border-radius:10rem;}
+.it .list_wrap li:nth-of-type(2) span {width: 32.3rem;}
+.it .list_wrap .list_cont:after {position: absolute;border-left: 1px dotted #CFCFCF;top: -14rem;left: 50%;transform: translateX(-50%);width: 0.2rem;height:14rem;content: '';}
+.it .list_wrap .list_cont::before {position:absolute;background:#6E27C5;width:1rem;height: 1rem;top:-15rem;transform: translateX(-54%);left:50%;border-radius:50%;content: '';}
