@@ -1,8 +1,7 @@
-body {font-family: var(--body-fonts);color: #000;}
+body {overflow-x:hidden;font-family: var(--body-fonts);color: #000;}
 #contents {margin-bottom: 40rem;}
 
-/* header area */
-header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;box-sizing: border-box;background:#fff;z-index:100;}
+/* header area */header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;box-sizing: border-box;background:#fff;z-index:1000;}
 header .logo {height:2.6rem;flex:1}
 header img {display: block;height: 100%;}
 header nav > ul {display: flex;}
