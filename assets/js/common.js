@@ -1,3 +1,8 @@
+// 컨텐츠 scroll 공통 효과
+AOS.init({
+  easing: 'ease-in-out-sine'
+});
+
 // 아코디언 공통 스크립트
 const accor_tit = document.querySelectorAll(".acc_tit_area");
 accor_tit.forEach((accorTit) => {
@@ -15,35 +20,30 @@ accor_tit.forEach((accorTit) => {
 });
 
 // scroll top button 공통 스크립트
+const showOnPx = 100;
+const goTop = document.querySelector("#goTop");
 
-// Get the button:
-var scrollToTopBtn = document.getElementById("goTop");
-var rootElement = document.documentElement;
-// window.onscroll = function() {scrollToTop()};
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+const goToTop = () => {
+  document.body.scrollIntoView({
     behavior: "smooth"
   });
-}
+};
+document.addEventListener("scroll", () => {
+  // console.log("Scroll Height: ", scrollContainer().scrollHeight);
+  // console.log("Client Height: ", scrollContainer().clientHeight);
 
-scrollToTopBtn.addEventListener("click", scrollToTop);
+  const scrolledPercentage =
+    (scrollContainer().scrollTop / (scrollContainer().scrollHeight - scrollContainer().clientHeight)) * 100;
 
-function getCurrentURL () {
-  return window.location.href
-}
-const url = getCurrentURL()
-
-window.onload = function() { 
-  var all_links = document.getElementById("gnb").getElementsByTagName("a"),
-      i=0, len=all_links.length,
-      full_path = location.href.split('#')[0]; //Ignore hashes?
-      console.log(full_path)
-  // Loop through each link.
-  for(; i<len; i++) {
-      if(all_links[i].href.split("#")[0] == full_path) {
-        console.log(all_links[i].href.split("#")[0] )
-          all_links[i].className += " active";
-      }
+  if (scrollContainer().scrollTop > showOnPx) {
+    goTop.classList.remove("hidden");
+  } else {
+    goTop.classList.add("hidden");
   }
-}
+});
+
+goTop.addEventListener("click", goToTop);

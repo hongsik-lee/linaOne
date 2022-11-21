@@ -23,7 +23,8 @@ header .sub_menu_wrap .sub_menu li:hover a {color:#000;font-weight: 600;}
 header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 
 /* goTop 버튼  */
-#goTop {position:fixed;bottom:0;right:0;width:5.6rem;height:5.6rem;bottom:13%;right:3.2%;cursor: pointer;z-index:100;}
+#goTop {position:fixed;display:block;bottom:0;right:0;width:5.6rem;height:5.6rem;bottom:13%;right:3.2%;cursor: pointer;z-index:100;}
+#goTop.hidden img {display: none}
 #goTop img {display: block;width: 100%;}
 /* sub content 공통부분 */
 .sub_wrap .inner {width:127.4rem;margin:0 auto;box-sizing: border-box;}

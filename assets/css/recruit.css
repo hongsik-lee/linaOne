@@ -37,7 +37,7 @@
 .tmr_recruit .txt_wrap {position:relative;padding-top:2.8rem;margin-bottom:7rem;}
 .tmr_recruit .txt_wrap:last-child {margin-bottom:0;}
 .tmr_recruit .txt_wrap .title {font-size:3.2rem;line-height: 3.2rem;font-weight:700;}
-.tmr_recruit .txt_wrap .title .point {position:absolute;display:flex;top:0;left:0.9rem;}
+.tmr_recruit .txt_wrap .title .point {position:absolute;display:flex;top:-60%;left:0.9rem;}
 .tmr_recruit .txt_wrap .title .point span {display:inline-block;margin-right:1.6rem;width:0.8rem;height:0.8rem;background:#ff0198;border-radius:50%;}
 .tmr_recruit .txt_wrap .cont {margin-top: 2rem;font-size: 2.4rem;line-height:3.36rem;font-weight: 500;color:#666;word-break: keep-all;}
 .tmr_recruit .txt_wrap .cont:last-child {margin-bottom:0;}
