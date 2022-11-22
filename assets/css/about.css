@@ -5,7 +5,7 @@
 /* overview */
 .overview .visual-sec::after {background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec::after {background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
+.overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec .inner {display: flex;}
 .overview .introduction-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .overview .introduction-sec .text-area {margin-left: 18.1rem;}
