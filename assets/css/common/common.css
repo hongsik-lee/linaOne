@@ -25,6 +25,10 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 
 /* visual area */
 .visual-sec {position: relative;min-height: 34rem; padding-top: 35.4rem;}
+
+.visual-sec::after {width: 60%;left: 50%;transform: translateX(-50%);position: absolute;height: 34rem;background-size: cover;transition:.5s;content: '';z-index: -1;}
+.visual-sec.active::after {width: 100%;transition-duration:0.8s;}
+
 .visual-sec .page-tit {position: absolute;top: 27.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;overflow: hidden;}
 .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
 .visual-sec .page-tit.type2 {top: 14.3rem;left: 8.7%;}

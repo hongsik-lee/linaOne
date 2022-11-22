@@ -1,10 +1,11 @@
 @import url(common/reset.css);
 @import url(common/common.css);
+/* visual  */
 
 /* overview */
-.overview .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.overview .visual-sec::after {background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
+.overview .introduction-sec::after {background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec .inner {display: flex;}
 .overview .introduction-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .overview .introduction-sec .text-area {margin-left: 18.1rem;}
@@ -28,7 +29,7 @@
 
 /* CEO Interview */
 .interview #contents {margin-bottom: 0;}
-.interview .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.interview .visual-sec::after {background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;}
 .interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;}
 .interview .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:9rem;}
 .interview .page-desc-sec {padding-bottom:25rem}
@@ -62,7 +63,7 @@
 .interview .page-sec02 .desc {margin-top: 1.6rem;font-size: 2rem;line-height: 2.8rem;font-weight:500;color:rgba(255,255,255,.6)}
 
 /* vision&mission */
-.vision .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.vision .visual-sec::after {background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
 .vision .page-desc-sec .inner {padding-left: 0;}
 .vision .page-desc-sec .sub-tit {padding-left: 32.3rem;}
@@ -92,7 +93,7 @@
 .vision .brand-behavior-sec .brand-behavior-item p strong {margin: 1rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 
 /* corporate identity */
-.corporate .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.corporate .visual-sec::after {background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .corporate .visual-sec .page-tit-line:last-child span {margin-left: 35.8rem;}
 .corporate .identity-guide-sec {padding-top: 6.8rem;}
 .corporate .identity-guide-sec .identity-list li {display: flex;}
@@ -106,7 +107,7 @@
 .corporate .identity-guide-sec .identity-list li:nth-of-type(3) img:last-child {margin-top: -.2rem;}
 
 /* promotional video */
-.promational .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.promational .visual-sec::after {background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .promational .visual-sec .page-tit-line:last-child span {margin-left: 52.8rem;}
 .promational .page-desc-sec {padding-top: 17rem;padding-bottom: 0;}
 .promational .page-desc-sec .inner {display: flex;padding: 0;}
@@ -120,11 +121,11 @@
 .promational .page-desc-sec .text-area .desc::-webkit-scrollbar-track {background-color: #ebebeb;border: 0.2rem solid transparent;background-clip: padding-box;}
 
 /* News - list */
-.news .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_news_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.news .visual-sec::after {background: url(../images/ab_news_visual.png) 50% 50% no-repeat;background-size: cover;}
 .news .page-desc-sec {padding-bottom:8.4rem;}
 
 /* contact us */
-.contact .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_cu_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.contact .visual-sec::after {background: url(../images/ab_cu_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .contact .visual-sec .page-tit-line:last-child span {margin-left: 38.7rem;}
 .contact .page-tab-sec {margin: 10rem 0 0;}
 .contact .page-tab-sec.type2 {padding-bottom: 7.2rem;}
@@ -148,7 +149,7 @@
 .contact .workplace-sec dt {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 
 /* Associate & Proposal 제휴 제안 */
-.associate .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_ass_visual.png) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.associate .visual-sec::after {background: url(../images/ab_ass_visual.png) 50% 50% no-repeat;background-size: cover;}
 .associate .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:38.3rem;}
 .associate .col-3.inner {display:flex;flex-direction: column;}
 .associate .col-3 .col {display: flex;column-gap:18.2rem;}
