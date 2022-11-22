@@ -72,6 +72,34 @@ $(window).scroll(function () {
     }
 });
 
+const increaseNumberAnimation = (elem, duration) => {
+    let startTimeStamp;
+    const $target = $(elem)
+        , start = $target.data("start-count")
+        , end = $target.data("end-count");
+
+    $target.addClass('count-finished');
+    const step = (timestamp) => {
+        if (!startTimeStamp) startTimeStamp = timestamp;
+        
+        const progress = Math.min((timestamp - startTimeStamp) / duration);
+        let value = Math.floor(progress * (end - start) + start);
+
+        if(value > end) $target.text(setNumberComma(end));
+        else $target.text(setNumberComma(value));
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
+
+const setNumberComma = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 
 // Tab Content 
 const parentTabs = document.querySelectorAll('[data-tab-target]')
