@@ -93,7 +93,7 @@
 
 /* corporate identity */
 .corporate .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.corporate .visual-sec .page-tit span:last-child{margin-left: 35.8rem;}
+.corporate .visual-sec .page-tit-line:last-child span {margin-left: 35.8rem;}
 .corporate .identity-guide-sec {padding-top: 6.8rem;}
 .corporate .identity-guide-sec .identity-list li {display: flex;}
 .corporate .identity-guide-sec .identity-list li .label {width: 14.2rem;margin-right: 18.2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
@@ -107,7 +107,7 @@
 
 /* promotional video */
 .promational .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.promational .visual-sec .page-tit span:last-child{margin-left: 52.8rem;}
+.promational .visual-sec .page-tit-line:last-child span {margin-left: 52.8rem;}
 .promational .page-desc-sec {padding-top: 17rem;padding-bottom: 0;}
 .promational .page-desc-sec .inner {display: flex;padding: 0;}
 .promational .page-desc-sec .video-area {width: 78.9rem}
@@ -125,10 +125,11 @@
 
 /* contact us */
 .contact .visual-sec::after {content: '';position: absolute;top: 35.4rem;left: 0;width: 100%;height: 34rem;background: url(../images/ab_cu_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.contact .visual-sec .page-tit span:last-child{margin-left: 35rem;}
+.contact .visual-sec .page-tit-line:last-child span {margin-left: 38.7rem;}
 .contact .page-tab-sec {margin: 10rem 0 0;}
 .contact .page-tab-sec.type2 {padding-bottom: 7.2rem;}
-.contact .workplace-sec {padding-top: 13rem;}
+.contact .workplace-sec {display:none;padding-top:5.8rem;}
+.contact .workplace-sec.active {display: block;}
 .contact .workplace-sec img {width: 100%;}
 .contact .workplace-sec .info-wrap {width: 95rem;margin-top: 10rem;margin-left: auto;}
 .contact .workplace-sec .desc {color: #666;font-weight: 500;font-size:2rem;line-height: 3rem;}

@@ -1,3 +1,4 @@
+
 // 컨텐츠 scroll 공통 효과
 AOS.init({
   easing: 'ease-in-out-sine'
@@ -7,14 +8,14 @@ AOS.init({
 const accor_tit = document.querySelectorAll(".acc_tit_area");
 accor_tit.forEach((accorTit) => {
   accorTit.addEventListener("click", () => {
-    if (accorTit.classList.contains("active")) {
-      accorTit.classList.remove("active");
+    if (accorTit.classList.contains("acc-active")) {
+      accorTit.classList.remove("acc-active");
     } else {
-      const accor_active = document.querySelectorAll(".active");
+      const accor_active = document.querySelectorAll(".acc-active");
       accor_active.forEach((active) => {
-        active.classList.remove("active");
+        active.classList.remove("acc-active");
       });
-      accorTit.classList.add("active");
+      accorTit.classList.add("acc-active");
     }
   });
 });
@@ -48,7 +49,20 @@ document.addEventListener("scroll", () => {
 
 goTop.addEventListener("click", goToTop);
 
+
+// 서브페이지 비쥬얼 글자 에니메이션
+window.addEventListener('DOMContentLoaded', function(){
+  const titleAnim = document.querySelectorAll(".page-tit-line");
+  titleAnim.forEach((e) => {
+    if(e.classList.contains("active")){
+      console.log("d")
+    }else{
+      e.classList.add("active")
+    }
+  })
+});
 // OVERVIEW 숫자 카운팅
+/*
 var counted = 0;
 $(window).scroll(function() {
 
@@ -62,9 +76,7 @@ $(window).scroll(function() {
       }).animate({
           countNum: countTo
         },
-
         {
-
           duration: 2000,
           easing: 'swing',
           step: function() {
@@ -72,7 +84,6 @@ $(window).scroll(function() {
           },
           complete: function() {
             $this.text(this.countNum);
-            //alert('finished');
           }
 
         });
@@ -81,3 +92,46 @@ $(window).scroll(function() {
   }
 
 });
+ */
+
+// Tab Content 
+const parentTabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
+
+
+const childTabs = document.querySelectorAll('[data-sub-target]')
+const subContents = document.querySelectorAll('[data-sub-content]')
+
+parentTabs.forEach(tab => {
+tab.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let target = document.querySelector(tab.dataset.tabTarget)
+
+    tabContents.forEach(tabContent => {
+    tabContent.classList.remove('active')
+    });
+    parentTabs.forEach(tab => {
+    tab.classList.remove('active')
+    });
+    target.classList.add('active')
+    tab.classList.add('active')
+    })
+})
+
+childTabs.forEach(tab => {
+tab.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let target = document.querySelector(tab.dataset.subTarget)
+    console.log(target);
+    subContents.forEach(tabContent => {
+        tabContent.classList.remove('active')
+    });
+    childTabs.forEach(tab => {
+    tab.classList.remove('active')
+    });
+    target.classList.add('active')
+    tab.classList.add('active')
+    })
+})

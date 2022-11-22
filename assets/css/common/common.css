@@ -1,7 +1,9 @@
 body {overflow-x:hidden;font-family: var(--body-fonts);color: #000;}
 #contents {margin-bottom: 40rem;}
 
-/* header area */header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;box-sizing: border-box;background:#fff;z-index:1000;}
+/* header area */
+header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;min-width:151rem;box-sizing: border-box;background:none;z-index:1000;}
+header:hover {background:#fff;}
 header .logo {height:2.6rem;flex:1}
 header img {display: block;height: 100%;}
 header nav > ul {display: flex;}
@@ -21,8 +23,25 @@ header .sub_menu_wrap .sub_menu li:last-child {margin:0}
 header .sub_menu_wrap .sub_menu li:hover a {color:#000;font-weight: 600;}
 header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 
+/* visual area */
+.visual-sec {position: relative;min-height: 34rem; padding-top: 35.4rem;}
+.visual-sec .page-tit {position: absolute;top: 27.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;overflow: hidden;}
+.visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
+.visual-sec .page-tit.type2 {top: 14.3rem;left: 8.7%;}
+.visual-sec .page-tit.type2 span {display: block;font-size: inherit;font-family: var(--poppins-fonts);}
+.visual-sec .page-tit-line > span {position: relative;bottom: -130px;transition:0.8s}
+.visual-sec .page-tit-line.active > span {bottom:0;}
+
+/* page desc area */
+.page-desc-sec {padding-top: 10rem;padding-bottom: 13.2rem; }
+.page-desc-sec .inner {padding-left: 32.3rem;}
+.page-desc-sec .text-area {margin-top: 44rem;margin-left: 32.3rem;}
+.page-desc-sec .sub-tit {font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
+.page-desc-sec .desc {margin-top: 8rem;color: #666;font-weight: 500;font-size: 2rem;line-height: 2.8rem;}
+.page-desc-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
+
 /* goTop 버튼  */
-#goTop {position:fixed;display:block;bottom:0;right:0;width:5.6rem;height:5.6rem;bottom:13%;right:3.2%;cursor: pointer;z-index:100;}
+#goTop {position:absolute;display:block;bottom:12rem;right:0;width:5.6rem;height:5.6rem;right:3.2%;cursor: pointer;z-index:100;}
 #goTop.hidden img {display: none}
 #goTop img {display: block;width: 100%;}
 /* sub content 공통부분 */
@@ -31,7 +50,8 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 .sub_wrap .page-tab-sec > ul {position:relative;display:flex;gap:5rem;}
 .sub_wrap .page-tab-sec li a {position:relative;padding-bottom:0.6rem;font-size: 2.4rem;font-weight:600;line-height: 2.9rem;color:#000}
 .sub_wrap .page-tab-sec li a.active {border-bottom:4px solid #000;}
-.sub_wrap .page-tab-sec li .sub_menu_t {position:absolute; left:0;top:7rem;display:flex;gap:6.6rem}
+.sub_wrap .page-tab-sec li .sub_menu_t {display:none;position:absolute; left:0;top:7rem;gap:6.6rem}
+.sub_wrap .page-tab-sec li a.active + .sub_menu_t {display: flex;}
 .sub_wrap .page-tab-sec li .sub_menu_t a {position:relative;padding:0;font-size:2.2rem;font-weight:700;line-height:2.64rem;}
 .sub_wrap .page-tab-sec li .sub_menu_t a.active {border:none;color:#FF0198}
 .sub_wrap .page-tab-sec li .sub_menu_t li:last-child a:after {display: none;}
@@ -79,9 +99,9 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 .sub_wrap .accor .category {width: 14.1rem;margin-right: 2rem;font-size: 2rem;line-height: 3rem;font-weight: 500;}
 .sub_wrap .accor .title {font-size:2.4rem;font-weight: 700;line-height:3.6rem;cursor:pointer}
 .sub_wrap .accor .cont {padding:0;height: 0;padding-right:4.6rem;padding-left:16.1rem;font-size:2rem;line-height:3rem;font-weight:500;word-break: keep-all;opacity:0;transition:0.3s ease;}
-.sub_wrap .accor .acc_tit_area.active + .cont {opacity: 1;transition:0;padding-top:4.2rem;height: auto;}
+.sub_wrap .accor .acc_tit_area.acc-active + .cont {opacity: 1;transition:0;padding-top:4.2rem;height: auto;}
 .sub_wrap .accor .acc_tit_area::after {position: absolute;right: 0;background: url(../../images/icons/icon_arrow_down.png); width: 24px;height: 24px;background-size: contain;top: 50%;transform: translateY(-50%);content: '';}
-.sub_wrap .accor .acc_tit_area.active::after {transform: rotate(180deg);top: 18%;}
+.sub_wrap .accor .acc_tit_area.acc-active::after {transform: rotate(180deg);top: 18%;}
 
 /* 상세페이지  */
 .detail_view .inner {display: flex;margin-top:19.4rem;gap:24rem;}
@@ -93,22 +113,8 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 .detail_view .content pre {font-size: 2rem;line-height: 3rem;font-weight: 500;color:#000;white-space:pre-line}
 .detail_view .btn {display:block;width:26rem;height:6.4rem;line-height:6.4rem;color:#fff;font-size:1.7rem;font-weight:500;text-align: center;background:#000;}
 
-/* visual area */
-.visual-sec {position: relative;min-height: 34rem; padding-top: 35.4rem;}
-.visual-sec .page-tit {position: absolute;top: 27.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;}
-.visual-sec .page-tit.type2 {top: 14.3rem;left: 8.7%;}
-.visual-sec .page-tit.type2 span {display: block;font-size: inherit;}
-
-/* page desc area */
-.page-desc-sec {padding-top: 10rem;padding-bottom: 13.2rem; }
-.page-desc-sec .inner {padding-left: 32.3rem;}
-.page-desc-sec .text-area {margin-top: 44rem;margin-left: 32.3rem;}
-.page-desc-sec .sub-tit {font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
-.page-desc-sec .desc {margin-top: 8rem;color: #666;font-weight: 500;font-size: 2rem;line-height: 2.8rem;}
-.page-desc-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
-
 /* footer area */
-footer {border-top: 1px solid #ebebeb;padding:10rem 0 12rem;}
+footer {position:relative;border-top: 1px solid #ebebeb;padding:10rem 0 12rem;}
 footer .inner {width:127.4rem;margin: 0 auto;display: flex;justify-content: space-between;gap: 25.2rem ;}
 footer .inner > div {display: flex;flex-direction: column;}
 footer .logo  {height:3.2rem;margin-bottom:7rem;}
