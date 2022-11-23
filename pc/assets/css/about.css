@@ -38,8 +38,8 @@
 .interview .page-desc-sec .desc {display:flex;margin-top: 7rem;align-items: center; color: #000;font-size: 2.4rem;line-height: 3.36rem;font-weight: 700;}
 .interview .page-desc-sec .desc strong {margin:0;margin-left:2.6rem;font-size: 4rem;line-height:5.6rem;font-weight:700;}
 .interview .page-sec01 {padding:17.8rem 0 17.7rem;background:url(../images/ab_interview_img01.png);background-size:cover}
-.interview .page-sec01 .inner {padding-left: 32.3rem;}
-.interview .page-sec01 .desc {font-size:3.2rem;line-height:4.4rem;font-weight:700;color:#fff}
+.interview .page-sec01 .inner {padding-left: 32.4rem;}
+.interview .page-sec01 .desc {font-size:3.2rem;line-height:4.4rem;font-weight:700;color:#fff;letter-spacing: -0.03em;}
 .interview .page-sec01 .desc + .desc {margin-top: 8rem;}
 .interview .page-sec01 span {display:block;margin-top:1.6rem;font-size: 2.4rem;line-height: 3.36rem;letter-spacing:-0.03em;font-weight:500;color:rgba(255,255,255,.6)}
 .interview .page-interview {margin-top: 25rem;}
@@ -47,6 +47,7 @@
 .interview .page-interview .right {display:flex;column-gap:16.2rem;}
 .interview .page-interview .right .subject {width: 16.2rem;font-size: 2.4rem;font-weight:700;line-height: 3.6rem;}
 .interview .page-interview .right img {width: 95rem;}
+.interview .page-interview .right .cont {width: calc(100% - 32.4rem);}
 .interview .page-interview li + li {margin-top: 6rem;}
 .interview .page-interview p {position: relative}
 .interview .page-interview .question {padding-left:6rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
@@ -57,7 +58,8 @@
 .interview .page-interview .left img {width: 62.7rem;}
 .interview .page-interview .left .txt {margin-top:6rem;padding-left: 32.4rem;}
 .interview .page-sec02 {margin-top:25rem;padding:24rem 0;background:url(../../assets/images/ab_interview_img04.png);background-size: cover;}
-.interview .page-sec02 .inner {display: flex;column-gap: 16.2rem;}
+.interview .page-sec02 .inner {display: flex;}
+.interview .page-sec02 .col:last-child {width: calc(100% - 32.4rem);margin-left: auto;}
 .interview .page-sec02 .subect {font-size: 2.6rem;line-height: 3.9rem;font-weight:700;color:#fff;}
 .interview .page-sec02 .tit {font-size: 4rem;line-height: 5.6rem;font-weight: 700;color:#fff}
 .interview .page-sec02 .desc {margin-top: 1.6rem;font-size: 2rem;line-height: 2.8rem;font-weight:500;color:rgba(255,255,255,.6)}
@@ -66,7 +68,7 @@
 .vision .visual-sec::after {background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
 .vision .page-desc-sec .inner {padding-left: 0;}
-.vision .page-desc-sec .sub-tit {padding-left: 32.3rem;}
+.vision .page-desc-sec .sub-tit {padding-left: 32.4rem;}
 .vision .page-desc-sec img {display: block;width: 107.2rem;margin: 15rem auto 0;}
 .vision .concept-sec {padding-top: 18.8rem;padding-bottom: 30rem}
 .vision .concept-sec .inner {display: flex;}
@@ -138,15 +140,15 @@
 .contact .workplace-sec .location-area {margin-top: 5rem;}
 .contact .workplace-sec dl {display: flex;align-items: center;padding: 4.2rem 0;border-top: .1rem solid #ebebeb;}
 .contact .workplace-sec dl:last-child{border-bottom: .1rem solid #ebebeb;}
-.contact .workplace-sec dd {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
-.contact .workplace-sec dd::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
-.contact .workplace-sec dd.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dd.location::before {background: url(../images/icons/icon_location.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dd.key-number::before {background: url(../images/icons/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dd.service-number::before {background: url(../images/icons/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dd.tm-service::before {background: url(../images/icons/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dd.traffic-guide::before {background: url(../images/icons/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
-.contact .workplace-sec dt {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
+.contact .workplace-sec dt {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
+.contact .workplace-sec dt::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
+.contact .workplace-sec dt.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt.location::before {background: url(../images/icons/icon_location.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt.key-number::before {background: url(../images/icons/icon_key_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt.service-number::before {background: url(../images/icons/icon_service_number.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt.tm-service::before {background: url(../images/icons/icon_tm_service.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dt.traffic-guide::before {background: url(../images/icons/icon_traffic_guide.png) 50% 50% no-repeat;background-size: cover;}
+.contact .workplace-sec dd {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 
 /* Associate & Proposal 제휴 제안 */
 .associate .visual-sec::after {background: url(../images/ab_ass_visual.png) 50% 50% no-repeat;background-size: cover;}

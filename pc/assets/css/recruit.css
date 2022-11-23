@@ -96,7 +96,7 @@
 /* TMR 인재채용 지원서작성하기 */
 .tmr_recruit .vacancy_list .page-desc-sec {padding-bottom: 8rem;}
 .tmr_recruit .vacancy_list .list {width: 100%;margin-bottom: 6rem;}
-.tmr_recruit .vacancy_list .txt_wrap {padding-left: 32.3rem;padding-top: 0;margin-bottom: 0;}
+.tmr_recruit .vacancy_list .txt_wrap {padding-left: 32.4rem;padding-top: 0;margin-bottom: 0;}
 .tmr_recruit .vacancy_list .txt_wrap > h3 {margin-bottom:10rem;font-size:6rem;line-height: 140%;font-weight: 900;color:#150F96}
 .tmr_recruit .vacancy_list .txt_wrap .btn {display:inline-block;width:26rem;height:6.8rem;background:#000;color:#fff;line-height:6.8rem;text-align: center;font-size: 2rem;}
 .tmr_recruit .vacancy_list .list_wrap .col:nth-of-type(2) {flex:1;}

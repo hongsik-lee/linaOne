@@ -46,8 +46,8 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 
 /* page desc area */
 .page-desc-sec {padding-top: 10rem;padding-bottom: 13.2rem; }
-.page-desc-sec .inner {padding-left: 32.3rem;}
-.page-desc-sec .text-area {margin-top: 44rem;margin-left: 32.3rem;}
+.page-desc-sec .inner {padding-left: 32.4rem;}
+.page-desc-sec .text-area {margin-top: 44rem;margin-left: 32.4rem;}
 .page-desc-sec .sub-tit {font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
 .page-desc-sec .desc {margin-top: 8rem;color: #666;font-weight: 500;font-size: 2rem;line-height: 2.8rem;}
 .page-desc-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
@@ -93,12 +93,15 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 .news_list .list_wrap .list li {display:flex;justify-content:space-between;padding:4.2rem 0;border-bottom:1px solid #ebebeb;align-items: center;}
 .news_list .list_wrap .list li a {margin-right: 2rem;font-size: 2rem;line-height:3rem;font-weight:700;color:#000;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .news_list .list_wrap .list li span {font-size:1.5rem;line-height:2.2rem;font-weight: 500;color:#999}
+
 /* 뉴스/공지사항 detail  */
 .news_detail .inner {display: flex;margin-top:19.4rem;gap:24rem;}
 .news_detail .col:first-of-type {min-width: 8.3rem;}
 .news_detail .title {font-size: 2.4rem;font-weight: 700;line-height: 3.6rem;}
 .news_detail .detail_tit {margin-bottom:1rem;font-size: 4rem;line-height: 5.6rem;font-weight: 700;}
 .news_detail .date {font-size: 1.7rem;font-weight:500;line-height: 2.5rem;color:#999;}
+.news_detail .thumb {margin-top: 6rem;margin-bottom: 3.8rem;}
+.news_detail .thumb img {width: 100%;}
 .news_detail .content {margin:6rem 0 10rem;padding-bottom: 4.2rem;border-bottom:1px solid #ebebeb}
 .news_detail .content pre {font-size: 2rem;line-height: 3rem;font-weight: 500;color:#000;white-space:pre-line}
 .news_detail .btn {display:block;width:26rem;height:6.4rem;line-height:6.4rem;color:#fff;font-size:1.7rem;font-weight:500;text-align: center;background:#000;}
