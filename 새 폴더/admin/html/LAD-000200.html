@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인페이지</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- login-wrapper -->
+        <div class="login-wrapper">
+            <h2>비밀번호 변경</h2>
+            <p class="tit">영문+숫자+특수기호 조합으로 8~20자리 입력해주세요.</p>
+            <form method="post" action="서버의url" id="login-form">
+                <input type="password" name="userPassword" placeholder="기존 비밀번호">
+                <input type="password" name="newPassword" placeholder="변경 비밀번호">
+                <input type="password" name="confirmPassword" placeholder="비밀번호 확인">
+                <div class="btn-group">
+                    <button type="reset" class="btn">취소</button>
+                    <button type="submit" class="btn bg-primary">변경</button>
+                </div>
+            </form>
+        </div>
+        <!-- // login-wrapper -->
+    </div>
+
+</body>
+
+</html>
