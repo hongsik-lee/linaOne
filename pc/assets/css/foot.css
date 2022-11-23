@@ -17,7 +17,7 @@
 .privacy_popup .list .sub_list {margin-top: .8rem;padding-left: 1.505rem;}
 .privacy_popup table {margin-top: 3rem;}
 .privacy_popup table thead th {height: 6rem;padding: 2rem;text-align: left;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;box-sizing: border-box;background-color: #F9F9F9;}
-.privacy_popup table tbody td {padding:2rem;}
+.privacy_popup table tbody td {height: 10rem;padding:2rem;border-bottom: 1px solid #ebebeb;box-sizing: border-box;}
 .privacy_popup table th,td {vertical-align: middle;word-break: keep-all;font-weight: 500;font-size: 1.4rem;line-height: 1.96rem;}
 
 /* 이메일무단수집거부 */
