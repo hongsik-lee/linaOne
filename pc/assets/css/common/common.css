@@ -142,9 +142,13 @@ footer .list_corp ul {display: flex;gap:2rem;margin-bottom:0.8rem;}
 footer .list_corp li,
 footer .list_corp p {font-size: 1.4rem;font-weight:400;line-height:1.6rem;color:#000;}
 footer .notice .number {margin-bottom:0.8rem;font-size:4rem;font-weight:700;line-height: 4.8rem;letter-spacing: 0.16px;}
-footer .notice .time {font-size: 1.8rem;font-weight:500;letter-spacing: 0.32px;line-height: 2.2rem;}
-footer .family_site {position:relative;margin-top: 8.4rem;width:29rem;border-bottom: 2px solid #000;}
+footer .notice .time {margin-bottom:6rem;font-size: 1.8rem;font-weight:500;letter-spacing: 0.32px;line-height: 2.2rem;}
+footer .family_site {position:relative;padding-top:2.4rem;width:29rem;border-bottom: 2px solid #000;}
 footer .family_site > li {position:relative;padding:1.2rem 0 1.7rem;font-size: 1.6rem;font-weight: 400;cursor: pointer;}
-footer .family_site > li::before {position: absolute;width: 14px;height: 7px;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 1rem;top: auto;bottom:2.2rem;content: '';}
-footer .family_site > .link_site {position:absolute;width:100%;display:none;}
-footer .family_site > .link_site li {padding:1.2rem 0 1.7rem;font-size: 1.6rem;}
+footer .family_site > li::before {position: absolute;width: 14px;height: 7px;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 1rem;top: auto;bottom:2.2rem;transition:.3s;content: '';}
+footer .family_site > .link_site {position:absolute;width:100%;padding:1.2rem 0;bottom: 5.8rem;background: #fff;border:0.6px solid #000;transition:.3s;opacity: 0;bottom:0;z-index:-1;}
+footer .family_site > .link_site li {padding-left:2rem;height:4.8rem;transition:.3s;}
+footer .family_site > .link_site li:hover {background:#F4F4F4}
+footer .family_site > .link_site li a {font-size:1.6rem;line-height:4.8rem;font-weight: 400;color:#000}
+footer .family_site:hover li::before {transform: rotate(180deg);}
+footer .family_site:hover .link_site {opacity: 1;bottom:5.8rem;z-index: 1;}
