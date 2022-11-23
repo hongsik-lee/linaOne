@@ -83,6 +83,8 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 .sub_wrap .pagination li.pgLL {margin-right: 1.4rem;}
 .sub_wrap .pagination li.pgL {margin-right: 3rem;}
 .sub_wrap .pagination li.pgR {margin-right: 1.4rem;margin-left:-1rem;}
+.sub_wrap .pagination li.disable a {cursor:default;opacity:0.4;}
+
 
 /* 뉴스/공지사항 리스트  */
 .news_list .list_wrap {display:flex; justify-content: flex-end;}
@@ -143,7 +145,7 @@ footer .list_corp li,
 footer .list_corp p {font-size: 1.4rem;font-weight:400;line-height:1.6rem;color:#000;}
 footer .notice .number {margin-bottom:0.8rem;font-size:4rem;font-weight:700;line-height: 4.8rem;letter-spacing: 0.16px;}
 footer .notice .time {margin-bottom:6rem;font-size: 1.8rem;font-weight:500;letter-spacing: 0.32px;line-height: 2.2rem;}
-footer .family_site {position:relative;padding-top:2.4rem;width:29rem;border-bottom: 2px solid #000;}
+footer .family_site {display:none;position:relative;padding-top:2.4rem;width:29rem;border-bottom: 2px solid #000;}
 footer .family_site > li {position:relative;padding:1.2rem 0 1.7rem;font-size: 1.6rem;font-weight: 400;cursor: pointer;}
 footer .family_site > li::before {position: absolute;width: 14px;height: 7px;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 1rem;top: auto;bottom:2.2rem;transition:.3s;content: '';}
 footer .family_site > .link_site {position:absolute;width:100%;padding:1.2rem 0;bottom: 5.8rem;background: #fff;border:0.6px solid #000;transition:.3s;opacity: 0;bottom:0;z-index:-1;}
