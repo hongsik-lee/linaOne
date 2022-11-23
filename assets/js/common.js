@@ -60,15 +60,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // OVERVIEW 숫자 카운팅
 $(window).scroll(function () {
-    const oTop = $("#counter").offset().top - window.innerHeight;
-    if ($(window).scrollTop() > oTop) {
-        const $countNum = $('.count-num');
-        
-        $countNum.each((index, elem) => {
-            if(!$(elem).hasClass('count-finished')) {
-                increaseNumberAnimation(elem, 1000);
-            }
-        });
+    const $counter = $("#counter");
+
+    if($counter.length > 0) {
+        const oTop = $("#counter").offset().top - window.innerHeight;
+
+        if ($(window).scrollTop() > oTop) {
+            const $countNum = $('.count-num');
+            
+            $countNum.each((index, elem) => {
+                if(!$(elem).hasClass('count-finished')) {
+                    increaseNumberAnimation(elem, 1000);
+                }
+            });
+        }
     }
 });
 

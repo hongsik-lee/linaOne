@@ -405,7 +405,7 @@
             });
 
             $('#contents > div').each((index, item) => {
-                setScreenOverElem(item);
+                textMotionAnimation(item);
             });
 
             $(document).on('click', '.indicator-group', (e) => {
@@ -449,7 +449,7 @@
                 objLifeSectionAnimation();
 
                 $('#contents > div').each((index, item) => {
-                    setScreenOverElem(item);
+                    textMotionAnimation(item);
                 });
 
                 $(contents).each((index, elem) => {
@@ -473,27 +473,6 @@
                 ScrollTrigger.refresh();
             }
         });
-
-        // const getPrevScrollHeight = (elem) => {
-        //     let prevScrollHeight = 0;
-        //     const $target = elem
-        //         , targetPrevAll = $target.prevAll();
-
-        //     for(let i = 0; i < targetPrevAll.length; i++) { 
-        //         let $prev = $(targetPrevAll[i]);
-        //         prevScrollHeight += $prev.prop('scrollHeight');
-        //     }
-        //     return prevScrollHeight;
-        // }
-
-        // const getElemScrollRatio2 = (elem) => {
-        //     const $target = elem
-        //         , scrollHeight = $(window).innerHeight()
-        //         , prevScrollHeight = getPrevScrollHeight($target)
-        //         , currentYOffset = yOffset - prevScrollHeight;
-        //         // console.log(prevScrollHeight)
-        //     return parseFloat((currentYOffset / scrollHeight).toFixed(4), 10);
-        // }
 
         const changeIndicatorStatus = () => {
             const $currentScene = $('#contents').find('.seen-sec').last()
@@ -578,12 +557,6 @@
                     $target.find('.circle02').addClass('activeMotion');
                     $target.find('.line').addClass('activeMotion');
                 }
-                if(ratio < 0) {
-                    // console.log(ratio)
-                    // $target.find('.inner').addClass('fixed');
-                } else {
-                    // $target.find('.inner').removeClass('fixed');
-                }
             } else {
                 $target.find('.img').removeClass('activeMotion');
                 $target.find('.circle02').removeClass('activeMotion');
@@ -636,47 +609,25 @@
         }
 
         const textMotionAnimation = (item) => {
-            if(item) {
-                const $target = $(item.target)
-                    , isScreen = isElemOverScreen($target)
-                    , ratio = getElemScrollRatio($target);
+            const $target = $(item)
+                , isScreen = isElemOverScreen($target)
+                , ratio = getElemScrollRatio($target);
 
-                if(!isScreen) {
-                    if($target.hasClass('visual-sec')) {
-                        $target.find('.page-tit').addClass('activeMotion');
-                        $target.find('.desc').addClass('activeMotion');
-                    };
-                    if(ratio > 0 && 0.4 > ratio) {
-                        $target.find('.page-tit').addClass('activeMotion');
-                        $target.find('.tit').addClass('activeMotion');
-                        $target.find('.desc').addClass('activeMotion');
-                    }
-                } else {
-                    $target.find('.page-tit').removeClass('activeMotion');
-                    $target.find('.tit').removeClass('activeMotion');
-                    $target.find('.desc').removeClass('activeMotion');
+            if(!isScreen) {
+                if($target.hasClass('visual-sec')) {
+                    $target.find('.page-tit').addClass('activeMotion');
+                    $target.find('.desc').addClass('activeMotion');
+                };
+                if(ratio > 0 && 0.4 > ratio) {
+                    $target.find('.page-tit').addClass('activeMotion');
+                    $target.find('.tit').addClass('activeMotion');
+                    $target.find('.desc').addClass('activeMotion');
                 }
+            } else {
+                $target.find('.page-tit').removeClass('activeMotion');
+                $target.find('.tit').removeClass('activeMotion');
+                $target.find('.desc').removeClass('activeMotion');
             }
-        }
-        
-        const setScreenOverElem = (elem) => {
-            let options = { rootMargin: '50px', threshold: 0 }
-            let observer = new IntersectionObserver((items) => {
-                $(items).each((index, item) => {
-
-                    if(item.isIntersecting) {
-                        textMotionAnimation(item);
-                    } else {
-                        textMotionAnimation(item);
-                    }
-
-                    observer.unobserve(item.target);
-                });
-            }, options);
-
-            $(elem).each((index, item) => {
-                observer.observe(item)
-            });
         }
 
         const getElemScrollRatio = (elem) => {
@@ -701,7 +652,7 @@
                 breakpoints: {
                     1921: { slidesPerView: 2 }
                 },
-                speed: 800, // 속도
+                speed: 800,
                 simulateTouch: false,
                 navigation: {
                     nextEl: ".control-next",
