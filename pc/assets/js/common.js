@@ -144,3 +144,13 @@ childTabs.forEach(tab => {
         tab.classList.add('active')
     });
 });
+
+function openPopup(width, height, link) {
+    const popupWidth = width
+        , popupHeight = height
+        , popupX = (window.screen.width / 2) - (popupWidth / 2)
+        , popupY = (window.screen.height / 2) - (popupHeight / 2)
+        , options = 'width='+popupWidth+', height='+popupHeight+', top='+popupY+', left='+popupX+', resizable=yes, scrollbars=yes';
+    
+    window.open('./pages/foot/'+ link +'.html', '_blank', options);
+}

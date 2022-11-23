@@ -1,6 +1,11 @@
 body {overflow-x:hidden;font-family: var(--body-fonts);color: #000;}
 #contents {margin-bottom: 40rem;}
 
+/* scroll-custom */
+.scroll-custom::-webkit-scrollbar {width: 0.6rem;height:0.6rem;}
+.scroll-custom::-webkit-scrollbar-thumb {background-color: #c8c8c8;background-clip: padding-box;border: 0.1rem solid #c8c8c8;}
+.scroll-custom::-webkit-scrollbar-track {background-color: #ebebeb;}
+
 /* header area */
 header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;min-width:151rem;box-sizing: border-box;background:none;z-index:1000;}
 header:hover {background:#fff;}
