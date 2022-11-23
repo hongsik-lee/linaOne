@@ -20,27 +20,12 @@ accor_tit.forEach((accorTit) => {
     });
 });
 
-// scroll top button 공통 스크립트
-const showOnPx = 100;
-const goTop = document.querySelector("#goTop");
 
-const scrollContainer = () => {
-  return document.documentElement || document.body;
-};
-
-const goToTop = () => {
-    document.body.scrollIntoView({
-        behavior: "smooth"
-    });
-}
-
-goTop.addEventListener("click", goToTop);
-
-// 서브페이지 비쥬얼 글자 에니메이션
 window.addEventListener("DOMContentLoaded", function () {
     const titleAnim = document.querySelectorAll(".page-tit-line");
     const visualBgAnim = document.querySelectorAll(".visual-sec");
 
+    // 서브페이지 비쥬얼 글자 에니메이션
     titleAnim.forEach((e) => {
         if (e.classList.contains("active")) {
             console.log("d");
@@ -55,6 +40,13 @@ window.addEventListener("DOMContentLoaded", function () {
         } else {
             e.classList.add("active");
         }
+    });
+
+    //  scroll top button 공통 스크립트
+    $(document).on('click', '#goTop', () => {
+        document.body.scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
 
@@ -145,7 +137,9 @@ childTabs.forEach(tab => {
     });
 });
 
-function openPop(url, title, w, h) {
+
+// popup
+function openPopup(url, w, h) {
     var screenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
     var screenTop = window.screenTop != undefined ? window.screenTop : screen.top;
 
@@ -155,5 +149,5 @@ function openPop(url, title, w, h) {
     var left = ((width / 2) - (w / 2)) + screenLeft;
     var top = ((height / 2) - (h / 2)) + screenTop;
 
-    window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+    window.open(url, '', 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
 }
