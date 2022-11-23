@@ -3,3 +3,4 @@
 
 /* list */
 .infomation .visual-sec::after {background: url(../images/in_visual.png) 50% 50% no-repeat;background-size: cover;}
+.infomation .tit_wrap {padding-bottom:6rem;border-bottom: 2px solid #000;}
