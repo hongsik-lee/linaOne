@@ -653,6 +653,7 @@
 
             swiper = new Swiper(".brand-goal-swiper", {
                 slidesPerView: 'auto',
+                slidesOffsetAfter: 600,
                 breakpoints: {
                     1921: { slidesPerView: 2 }
                 },
@@ -672,10 +673,11 @@
 
                         $texts.children().eq(index).addClass('active').siblings().removeClass('active');
                         $('.current-index').html(index + 1);
+
                         if(index == 2) {
-                            $('.control-next').addClass('disabled')
+                            $('.control-next').addClass('disabled');
                         } else {
-                            $('.control-next').removeClass('disabled')
+                            $('.control-next').removeClass('disabled');
                         }
                     },
                 }
