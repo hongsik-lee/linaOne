@@ -1,0 +1,5 @@
+@import url(common/reset.css);
+@import url(common/common.css);
+
+/* list */
+.infomation .visual-sec::after {background: url(../images/in_visual.png) 50% 50% no-repeat;background-size: cover;}
