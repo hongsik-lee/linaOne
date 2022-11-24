@@ -5,20 +5,21 @@
 .business .visual-sec::after {background: url(../images/bu_visual.png) 50% 50% no-repeat;background-size: cover;}
 .business .visual-sec .page-tit.type2 .page-tit-line:last-child span{padding-left: 27.6rem;}
 .business .page-desc-sec {padding-bottom: 0;}
-.business .content {margin:30rem 0 10rem;padding-bottom:10rem;text-align:center;border-bottom: 1px solid #c8c8c8;}
+.business .content {margin:25rem 0 10rem;padding-bottom:10rem;text-align:center;border-bottom: 1px solid #c8c8c8;}
 .business .cont_tit {font-size: 2.8rem;line-height:3.9rem;font-weight:700;text-align: center;}
 .business .cont_tit.blue {color:#150F96}
-.business .content ul {display: flex;justify-content: center;padding:3.6rem 2.8rem 3rem 3.2rem;background: linear-gradient(180deg, rgba(241, 240, 246, 0) 0%, rgba(241, 240, 247, 0.7) 100%);border-radius: 4rem;}
-.business .content ul li {width:24rem;margin:0 20px;padding:2.4rem 0;background:#fff;color:#01C1D6;border:1px solid #01C1D6;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
+.business .content ul {display: flex;justify-content: center;padding:6rem 2rem 3rem 2rem;background: linear-gradient(180deg, rgba(241, 240, 246, 0) 0%, rgba(241, 240, 247, 0.7) 100%);border-radius: 4rem;margin:0 auto;max-width: 108rem;}
+.business .content ul li {width:24rem;margin:0 10px;padding:2.4rem 0;background:#fff;color:#01C1D6;border:3px solid #01C1D6;border-radius:2rem;font-weight:700;font-size: 2rem;line-height:2.6rem;}
 .business .cont_img {position:relative;margin-top:16.5rem;}
 .business .cont_img::before {position: absolute;background:url(../images/icons/bu_img02.png);width: 6.5rem;height: 6.5rem;background-size: cover;top: -115px;left: 50%;transform: translateX(-50%);content: '';}
-.business .cont_img img {width:67.3rem;margin:0 auto;}
+.business .cont_img img {width:67.3rem;margin:0 auto;padding-left: 2.4rem;}
 .business .cont_col {margin-top:8rem;display: flex;justify-content: center;gap: 10rem;}
 .business .cont_col div {width: 38.5rem;border-top:2px solid #000;padding-top:3rem;}
 .business .cont_col .cont_tit {margin-bottom: 1.6rem;}
 .business .cont_col .cont_desc {font-size:2rem;font-weight:500;line-height:2.8rem;}
 
 /* Sales & Marketing */
+.sales .page-desc-sec {padding-bottom: 25rem;}
 .sales .visual-sec::after {background: url(../images/sales_visual.png) 50% 50% no-repeat;background-size: cover;}
 .sales .visual-sec .page-tit.type2 .page-tit-line:last-child span {padding-left: 17.8rem;padding-bottom: 2rem;}
 .sales .circle_wrap01 {padding-bottom:13rem;}
@@ -44,12 +45,13 @@ background:#bcb9c2;z-index: -1;content: '';}
 .sales .circle li.yellow {border-color:#FFB617;color:#FFB617}
 .sales .circle li.orange {border-color:#FF6600;color:#FF6600}
 .sales .circle li.bg {position:relative}
-.sales .col_wrap + .col_wrap {margin-top:25rem;}
+.sales .col_wrap + .col_wrap {margin-top:25rem;padding-bottom: 9.8rem;}
 .sales .circle_wrap02 .title{font-weight: 700;font-size: 3.2rem;line-height: 140%;}
 .sales .circle_wrap02 .desc {margin-top:2rem;font-weight: 500;font-size: 2.4rem;line-height: 140%;color:#666}
 .sales .col_wrap {flex-wrap: wrap;}
 .sales .col_wrap .col.circle_wrap01,
 .sales .col_wrap .col.circle_wrap02 {width: 95rem;}
+.sales .circle_wrap02 + .circle li::before {display: none;}
 
 /* IT */
 .it .visual-sec::after {background: url(../images/it_visual.png) 50% 50% no-repeat;background-size: cover;}
@@ -57,7 +59,7 @@ background:#bcb9c2;z-index: -1;content: '';}
 .it .list_wrap li {position: relative;}
 .it .list_wrap .list_head {text-align: center;}
 .it .list_wrap .list_head img {width:12rem}
-.it .list_wrap .list_head p {margin-top:3rem;font-weight: 700;font-size: 28px;line-height: 140%;}
+.it .list_wrap .list_head p {margin-top:3rem;font-weight: 700;font-size:2.4rem;line-height: 3.36rem;}
 .it .list_wrap .list_cont {position:relative;display:flex;flex-direction:column;margin-top: 17.2rem;padding:5rem 4rem;text-align: center;background:#F8F7FA;border-radius: 2rem}
 .it .list_wrap .list_cont span {display:block;width:25.5rem;padding:2rem 0;margin-bottom:4rem;font-size: 2rem;font-weight: 500;line-height:3rem;color:#150F96;border:1px solid #150F9666;border-radius:10rem;}
 .it .list_wrap li:nth-of-type(2) span {width: 32.3rem;}
