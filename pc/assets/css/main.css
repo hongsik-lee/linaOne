@@ -20,7 +20,7 @@ div { box-sizing: border-box;}
 .main .indicator-group .dot.active {opacity: 1;background-color: #000;}
 .main .goTop {position: fixed;right: 6rem;bottom:  6rem;z-index: 300;}
 .main .goTop.up button {transform: rotate(0);}
-.main .goTop button {transform: rotate(-180deg);transition: transform .6s ease;width:5.6rem;height:5.6rem;padding:0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background:url(../images/icons/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;}
+.main .goTop button {transform: rotate(-180deg);transition: transform .6s ease;width:5.6rem;height:5.6rem;padding:0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background:url(../images/icons/arrow_top.svg) 50% 50% no-repeat;background-size: cover;cursor: pointer;}
 
 /* visual-sec */
 .main .visual-sec {min-height: 0;padding-top: 75vh;}
