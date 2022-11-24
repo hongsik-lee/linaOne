@@ -4,6 +4,11 @@
 div { box-sizing: border-box;}
 .main #contents{margin-bottom: 0;overflow: hidden;}
 .main .inner{width:127.4rem;margin: 0 auto;}
+@media screen and (max-width:1580px) {
+    .main .inner{width: 70%;}
+    .main .bhr-quote-sec {height: 56.9rem;padding-top: 30rem;}
+    .main footer .inner {width: 127.4rem;}
+}
 
 .page-tit.activeMotion > span.txtLine span, .tit.activeMotion > span.txtLine span {transform: translate3d(0, 0, 0);}
 .page-tit span.txtLine, .tit span.txtLine  {display: block;overflow: hidden;}

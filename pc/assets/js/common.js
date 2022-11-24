@@ -1,8 +1,31 @@
 
 // 컨텐츠 scroll 공통 효과
-AOS.init({
-  easing: 'ease-in-out-sine'
-});
+$(function(){
+    AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+
+    onElementHeightChange(document.body, function(){
+        AOS.refresh();
+      });
+})
+function onElementHeightChange(elm, callback) {
+    var lastHeight = elm.clientHeight
+    var newHeight;
+    
+    (function run() {
+        newHeight = elm.clientHeight;      
+        if (lastHeight !== newHeight) callback();
+        lastHeight = newHeight;
+
+        if (elm.onElementHeightChangeTimer) {
+          clearTimeout(elm.onElementHeightChangeTimer); 
+        }
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+  }
+
 
 // 아코디언 공통 스크립트
 const accor_tit = document.querySelectorAll(".acc_tit_area");

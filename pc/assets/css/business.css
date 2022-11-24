@@ -52,8 +52,33 @@ background:#bcb9c2;z-index: -1;content: '';}
 .sales .col_wrap .col.circle_wrap01,
 .sales .col_wrap .col.circle_wrap02 {width: 95rem;}
 .sales .circle_wrap02 + .circle li::before {display: none;}
-
+/* Interview */
+.sales .page-interview {display:flex;flex-direction: column;row-gap: 26rem;}
+.sales .page-interview .col {max-width: 95rem;}
+.sales .page-interview .col.right {align-self:flex-end;}
+.sales .page-interview .cont img {display:block;width:100%;}
+.sales .page-interview .left li + li {margin-top: 6rem;}
+.sales .page-interview p {position: relative}
+.sales .page-interview .question {padding-left:5.7rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
+.sales .page-interview .answer {padding-left:5.7rem;font-size: 2.4rem;line-height: 140%;font-weight: 500;letter-spacing: 0.02em;}
+.sales .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.6rem;font-weight:700;line-height: 4.48rem;}
+.sales .page-interview .question:after {content: "Q.";}
+.sales .page-interview .answer:after {content: "A.";}
+.sales .page-interview .right .txt {margin-top: 6rem;}
+.sales .page-interview .right ul {margin-top:2.6rem;}
+.sales .page-interview .right li {position:relative;padding-left:8rem;font-weight: 500;font-size: 24px;line-height: 140%;}
+.sales .page-interview .right li:after {position:absolute;left:5.7rem;top:0;font-weight: 500;font-size: 24px;line-height: 140%;content: '-';}
+.sales .page-interview .right strong {padding-left:5.7rem;display:block;margin-top:6rem;font-weight: 700;font-size: 32px;line-height: 150%;}
+.sales .interview .col_wrap {margin-top: 25rem;column-gap: 11.1rem;flex-wrap: nowrap;}
+.sales .interview .col_wrap .col:first-of-type {width:21.3rem}
+.sales .interview .col_wrap .box {display:inline-block;width: 38rem;height: 28rem;vertical-align: text-top;margin-bottom:10rem;}
+.sales .interview .col_wrap .box:first-of-type {margin-right:10.6rem;}
+.sales .interview .col_wrap .box:last-of-type {margin-bottom:0;}
+.sales .interview .col_wrap .box .subject {font-size: 3.2rem;line-height: 4.48rem;font-weight:700;}
+.sales .interview .col_wrap .box .desc {margin-top:2rem;font-size: 2.4rem;line-height: 3.36rem;font-weight:500;color:#666}
 /* IT */
+.it .tab-section {display: none;}
+.it .tab-section.active {display: block;}
 .it .visual-sec::after {background: url(../images/it_visual.png) 50% 50% no-repeat;background-size: cover;}
 .it .list_wrap {display: flex;margin-top:11.8rem;justify-content: space-between;}
 .it .list_wrap li {position: relative;}
@@ -65,3 +90,25 @@ background:#bcb9c2;z-index: -1;content: '';}
 .it .list_wrap li:nth-of-type(2) span {width: 32.3rem;}
 .it .list_wrap .list_cont:after {position: absolute;border-left: 1px dotted #CFCFCF;top: -14rem;left: 50%;transform: translateX(-50%);width: 0.2rem;height:14rem;content: '';}
 .it .list_wrap .list_cont::before {position:absolute;background:#6E27C5;width:1rem;height: 1rem;top:-15rem;transform: translateX(-54%);left:50%;border-radius:50%;content: '';}
+.it .interview .page-desc-sec {padding-bottom: 25rem;}
+.it .page-interview {display:flex;flex-direction: column;row-gap: 25rem;}
+.it .page-interview .col {max-width: 95rem;}
+.it .page-interview .col.right {align-self:flex-end;}
+.it .page-interview .cont img {display:block;width:100%;}
+.it .page-interview .left li + li {margin-top: 6rem;}
+.it .page-interview .left li:last-child {margin-top: 11rem;}
+.it .page-interview p {position: relative}
+.it .page-interview .question {padding-left:5.7rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
+.it .page-interview .answer {padding-left:5.7rem;font-size: 2.4rem;line-height: 140%;font-weight: 500;letter-spacing: 0.02em;}
+.it .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.6rem;font-weight:700;line-height: 4.48rem;}
+.it .page-interview .question:after {content: "Q.";}
+.it .page-interview .answer:after {content: "A.";}
+.it .page-interview .right .txt {margin-top: 6rem;}
+.it .page-interview .right strong {padding-left:5.7rem;display:block;margin-top:6rem;font-weight: 700;font-size: 32px;line-height: 150%;}
+.it .interview .col_wrap {margin-top: 25rem;column-gap: 11.1rem;flex-wrap: nowrap;}
+.it .interview .col_wrap .col:first-of-type {width:21.3rem}
+.it .interview .col_wrap .box {display:inline-block;width: 38rem;min-height:21.1rem;vertical-align: text-top;margin-bottom:10rem;}
+.it .interview .col_wrap .box:first-of-type {margin-right:10.6rem;}
+.it .interview .col_wrap .box:last-of-type {margin-bottom:0;}
+.it .interview .col_wrap .box .subject {font-size: 3.2rem;line-height: 4.48rem;font-weight:700;}
+.it .interview .col_wrap .box .desc {margin-top:2rem;font-size: 2.4rem;line-height: 3.36rem;font-weight:400;color:#666}
