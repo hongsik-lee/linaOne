@@ -4,17 +4,22 @@
 
 /* overview */
 .overview .visual-sec::after {background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
+.overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;box-sizing: border-box;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
+/* .overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;} */
 .overview .introduction-sec .inner {display: flex;}
 .overview .introduction-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.overview .introduction-sec .text-area {margin-left: 18.1rem;}
+.overview .introduction-sec .info-wrap {width:calc(100% - 32.4rem);margin-left: auto;}
+/* .overview .introduction-sec .text-area {} */
 .overview .introduction-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .overview .introduction-sec .desc {margin-top: 1.6rem;color: #666;font-weight: 400;font-size: 2rem;line-height: 2.8rem;}
+.overview .introduction-sec .img-wrap {position:relative;display:flex;align-items:center;justify-content: space-between;width: 84rem;margin-top: 15rem;margin-left: -7.5rem;}
+.overview .introduction-sec .img-wrap .circle {width:36rem;height:36rem;border-radius: 50%;box-shadow: 30px 34px 174px -33px rgba(21, 15, 150, 0.2);}
+.overview .introduction-sec .img-wrap .circle02 {box-shadow: 30px 34px 174px -33px rgb(0 0 0 / 20%);}
+.overview .introduction-sec .img-wrap .line {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width:12.5rem;}
 .overview .definition-sec {padding-top: 31.8rem;}
 .overview .definition-sec .inner {display: flex;}
 .overview .definition-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.overview .definition-sec .info-wrap {margin-left: 18.1rem;}
+.overview .definition-sec .info-wrap {width:calc(100% - 32.4rem);margin-left: auto;}
 .overview .definition-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 .overview .definition-sec .desc {margin-top: 8rem;color: #666;font-weight: 400;font-size: 2rem;line-height: 2.8rem;}
 .overview .definition-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
@@ -23,7 +28,7 @@
 .overview .definition-sec .total-data .info {display: flex;flex-wrap: wrap;}
 .overview .definition-sec .total-data dl {width: 50%;}
 .overview .definition-sec .total-data dl:nth-child(n+3) {margin-top: 8rem;}
-.overview .definition-sec .total-data dd strong {font-weight: 700;font-size: 12rem;line-height: 18rem;}
+.overview .definition-sec .total-data dd strong {display: inline-block;margin-right: .4rem;font-weight: 700;font-size: 12rem;line-height: 18rem;}
 .overview .definition-sec .total-data dt {color: #999;font-weight: 500;font-size: 1.7rem;line-height: 2.38rem;}
 .overview .definition-sec .total-data .extra-info {margin-top: 8rem;text-align: right;color: #999;font-weight: 400;font-size: 1.7rem;line-height: 2.38rem;}
 

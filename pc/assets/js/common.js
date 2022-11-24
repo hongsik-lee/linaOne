@@ -72,18 +72,27 @@ $(window).scroll(function () {
 const increaseNumberAnimation = (elem, duration) => {
     let startTimeStamp;
     const $target = $(elem)
-        , start = $target.data("start-count")
-        , end = $target.data("end-count");
+        , start = $target.data('start-count')
+        , end = $target.data('end-count')
+        , type = $target.data('type')
 
     $target.addClass('count-finished');
     const step = (timestamp) => {
         if (!startTimeStamp) startTimeStamp = timestamp;
-        
         const progress = Math.min((timestamp - startTimeStamp) / duration);
-        let value = Math.floor(progress * (end - start) + start);
+        let value;
 
-        if(value > end) $target.text(setNumberComma(end));
-        else $target.text(setNumberComma(value));
+        if(type === 'reverse') {
+            value = Math.floor(progress * (end - start) + start);
+
+            if(value > end) $target.text(setNumberComma(value));
+            else $target.text(setNumberComma(end));
+        } else {
+            value = Math.floor(progress * (end - start) + start);
+            
+            if(value > end) $target.text(setNumberComma(end));
+            else $target.text(setNumberComma(value));
+        }
 
         if (progress < 1) {
             requestAnimationFrame(step);
