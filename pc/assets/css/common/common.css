@@ -8,6 +8,8 @@ body {overflow-x:hidden;font-family: var(--body-fonts);color: #000;}
 
 /* header area */
 header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;min-width:151rem;box-sizing: border-box;background:none;z-index:1000;}
+/* header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width:clamp(108rem, 0.0000rem + 100.0000vw, 192rem);box-sizing: border-box;background:none;z-index:1000;} */
+
 header:hover {background:#fff;}
 header .logo {height:2.6rem;flex:1}
 header img {display: block;height: 100%;}
@@ -39,6 +41,7 @@ header .sub_menu_wrap .sub_menu li.on a {color:#000;font-weight: 600;}
 
 .visual-sec .page-tit {position: absolute;top: 27.7rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;overflow: hidden;}
 .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
+/* .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: clamp(6.977rem, 0.0046rem + 6.4560vw, 12.4rem);line-height:clamp(0.745rem, -0.0110rem + 0.7000vw, 1.333rem);font-family: var(--poppins-fonts);overflow: hidden;} */
 .visual-sec .page-tit.type2 {top: 14.3rem;left: 8.7%;}
 .visual-sec .page-tit.type2 span {display: block;font-size: inherit;font-family: var(--poppins-fonts);}
 .visual-sec .page-tit-line > span {position: relative;bottom: -130px;transition:0.8s}

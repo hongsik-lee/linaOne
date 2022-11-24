@@ -66,7 +66,7 @@
 
 /* vision&mission */
 .vision .visual-sec::after {background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.vision .visual-sec .page-tit span:last-child{margin-left: 14rem;}
+.vision .visual-sec .page-tit-line:last-child span{margin-left: 14rem;}
 .vision .page-desc-sec .inner {padding-left: 0;}
 .vision .page-desc-sec .sub-tit {padding-left: 32.4rem;}
 .vision .page-desc-sec img {display: block;width: 107.2rem;margin: 15rem auto 0;}

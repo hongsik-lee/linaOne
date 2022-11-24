@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판관리</title>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- Header -->
+        <header>
+            <div class="info-area">
+                <img src="../assets/images/ic-header-thumb.png" alt="" class="thumb">
+                <span class="nickname">라인하님</span>
+                <span class="date">2022-11-14 15:23 접속</span>
+                <div class="btn-group-end">
+                    <button type="button" class="btn">비밀번호변경</button>
+                    <button type="button" class="btn" aria-haspopup="dialog" aria-controls="modalDialog"
+                        onclick="showModal(this)">로그아웃</button>
+                </div>
+            </div>
+        </header>
+        <!-- // Header -->
+
+        <!-- Local Navigation Bar -->
+        <nav id="nav">
+            <a href="/" class="logo">라이나원 관리시스템</a>
+            <ul class="lnb">
+                <li><a href="#">관리자 목록</a>
+                    <ul class="sub-lnb">
+                        <li class="active"><a href="#">- 관리자 목록</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">공시관리</a>
+                    <ul class="sub-lnb">
+                        <li><a href="#">- 경영공시</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">게시판 관리</a>
+                    <ul class="sub-lnb">
+                        <li class="active"><a href="#">- 공지사항</a></li>
+                        <li><a href="#">- 보도자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">약관관리</a>
+                    <ul class="sub-lnb">
+                        <li><a href="#">- 개인정보처리방침</a></li>
+                        <li><a href="#">- 이메일무단수집거부</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">로그관리</a>
+                    <ul class="sub-lnb">
+                        <li><a href="#">- 접속로그</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- // Local Navigation Bar -->
+
+        <!-- Contents -->
+        <div id="contents">
+            <h2 class="page-title">보도자료</h2>
+            <div class="tbl-group">
+                <p>*표시는 필수 입력 항목입니다.</p>
+                <div class="inner">
+                    <table class="tbl col-type">
+                        <tbody>
+                            <tr>
+                                <th>제목*</th>
+                                <td class="full"><input type="text" value=""></td>
+                            </tr>
+                            <tr class="editor">
+                                <td colspan="3" class="full">웹에디터 영역</td>
+                            </tr>
+                            <tr>
+                                <th>첨부파일*</th>
+                                <td class="full">
+                                    <fieldset>
+                                        <legend>첨부파일</legend>
+                                        <input type="file" id="uploadFile" onchange="uploadFile(this)">
+                                        <input type="text" class="upload-file" placeholder="" disabled="">
+                                        <button type="button" class="btn upload-btn primary">
+                                            <label for="uploadFile">파일찾기</label>
+                                        </button>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="tbl-toolbar-group-end">
+                        <button type="button" class="btn">목록</button>
+                        <button type="button" class="btn bg-primary" aria-haspopup="dialog" aria-controls="modalSave"
+                            onclick="showModal(this)">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Contents -->
+
+    </div>
+    <!-- modal -->
+    <div id="modalDialog" class="modal" role="dialog" aria-labelledby="modalDialogLabel" aria-hidden="true">
+        <div class="modal-dialog small">
+            <div class="modal-container">
+                <h5>로그아웃 하시겠습니까?</h5>
+                <button type="button" class="btn medium bg-primary" aria-label="close"
+                    onclick="hideModal(this)">확인</button>
+                <button type="button" class="btn medium" aria-label="close" onclick="hideModal(this)">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalSave" class="modal" role="dialog" aria-labelledby="modalDialogLabel" aria-hidden="true">
+        <div class="modal-dialog small">
+            <div class="modal-container">
+                <h5>작성한 내용을 등록하시겠습니까?</h5>
+                <button type="button" class="btn medium bg-primary" aria-label="close"
+                    onclick="hideModal(this)">확인</button>
+                <button type="button" class="btn medium" aria-label="close" onclick="hideModal(this)">취소</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalConfirm" class="modal" role="dialog" aria-labelledby="modalDialogLabel" aria-hidden="true">
+        <div class="modal-dialog small two">
+            <div class="modal-container">
+                <h5>작성을 완료하지 않고 페이지를 벗어나면<br>작성한 글이 삭제될 수 있습니다.<br>그래도 진행하시겠습니까?</h5>
+                <button type="button" class="btn medium bg-primary" aria-label="close"
+                    onclick="hideModal(this)">확인</button>
+                <button type="button" class="btn medium" aria-label="close" onclick="hideModal(this)">취소</button>
+            </div>
+        </div>
+    </div>
+    <!-- // modal -->
+</body>
+
+</html>
