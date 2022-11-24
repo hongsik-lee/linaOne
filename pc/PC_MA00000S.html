@@ -580,12 +580,10 @@
                 
             if(!isScreen) {
                 if(ratio > 0) {
-                    $('.foundation02-sec').css({
-                        'position': 'fixed',
-                        'top': $('.foundation02-sec').get(0).getBoundingClientRect().y + 'px'
-                    })
+                    setSectionFixedAnimation();
                     $target.css("transform",  'scale('+ (1 - ratio / splitValue) +')');
                 } else {
+                    isFixedAni = false;
                     $('.foundation02-sec').css({
                         'position': 'relative',
                         'top': 'auto'
@@ -594,11 +592,27 @@
                 }
             } else {
                 if(ratio > 1) {
+                    currentFixedY = '';
+                    isFixedAni = false;
                     $('.foundation02-sec').css({
                         'position': 'relative',
                         'top': 'auto'
                     })
                 }
+            }
+        }
+
+        let isFixedAni = false, currentFixedY;
+        const setSectionFixedAnimation = () => {
+            if(!isFixedAni) {
+                const fixedY = $('.foundation02-sec').get(0).getBoundingClientRect().y + 'px'
+                $('.foundation02-sec').css({
+                    'position': 'fixed',
+                    'top': currentFixedY || fixedY
+                });
+
+                currentFixedY = currentFixedY || fixedY;
+                isFixedAni = true;
             }
         }
 
@@ -725,6 +739,18 @@
                     },
                 }
             });
+        }
+
+        const once = (fn, context) => {
+            let result;
+            return () => {
+                if(fn) {
+                    console.log(fn)
+                    result = fn.apply(context || this, arguments);
+                    fn = null;
+                }
+                return result;
+            }
         }
 
         const optimizeAnimation = (cb) => {
