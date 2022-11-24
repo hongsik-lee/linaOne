@@ -4,8 +4,8 @@
 
 /* overview */
 .overview .visual-sec::after {background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.overview .introduction-sec::after {content: '';position: absolute;top: 52.4rem;left: 50%;transform: translateX(-50%);width: 84rem;height: 36rem;background: url(../images/ab_over_lina_chubb_with.png) 50% 50% no-repeat;background-size: cover;}
+.overview .introduction-sec {position: relative;height: 136rem;padding-top: 21.8rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;box-sizing: border-box;}
+.overview .introduction-sec img {display:block;margin:0 auto;height:70.8rem;}
 .overview .introduction-sec .inner {display: flex;}
 .overview .introduction-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .overview .introduction-sec .text-area {margin-left: 18.1rem;}
@@ -23,12 +23,13 @@
 .overview .definition-sec .total-data .info {display: flex;flex-wrap: wrap;}
 .overview .definition-sec .total-data dl {width: 50%;}
 .overview .definition-sec .total-data dl:nth-child(n+3) {margin-top: 8rem;}
-.overview .definition-sec .total-data dd strong {font-weight: 700;font-size: 12rem;line-height: 18rem;}
+.overview .definition-sec .total-data dd strong {margin-right:0.4rem;font-weight: 700;font-size: 12rem;line-height: 18rem;}
 .overview .definition-sec .total-data dt {color: #999;font-weight: 500;font-size: 1.7rem;line-height: 2.38rem;}
 .overview .definition-sec .total-data .extra-info {margin-top: 8rem;text-align: right;color: #999;font-weight: 400;font-size: 1.7rem;line-height: 2.38rem;}
 
 /* CEO Interview */
 .interview #contents {margin-bottom: 0;}
+.interview #contents .visual-sec {height: 38rem;}
 .interview .visual-sec::after {height: 38rem;background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;}
 .interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;}
 .interview .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:9rem;}
@@ -41,7 +42,7 @@
 .interview .page-sec01 .inner {padding-left: 32.4rem;}
 .interview .page-sec01 .desc {font-size:3.2rem;line-height:4.4rem;font-weight:700;color:#fff;letter-spacing: -0.03em;}
 .interview .page-sec01 .desc + .desc {margin-top: 8rem;}
-.interview .page-sec01 span {display:block;margin-top:1.6rem;font-size: 2.4rem;line-height: 3.36rem;letter-spacing:-0.03em;font-weight:500;color:rgba(255,255,255,.6)}
+.interview .page-sec01 .desc span {display:block;margin-top:1.6rem;font-size: 2.4rem;line-height: 3.36rem;letter-spacing:-0.03em;font-weight:500;color:rgba(255,255,255,.6)}
 .interview .page-interview {margin-top: 25rem;}
 .interview .page-interview .col + .col {margin-top: 25rem;}
 .interview .page-interview .right {display:flex;column-gap:16.2rem;}
@@ -52,7 +53,7 @@
 .interview .page-interview p {position: relative}
 .interview .page-interview .question {padding-left:6rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
 .interview .page-interview .answer {padding-left:6rem;font-size: 2rem;line-height: 3rem;font-weight: 500;letter-spacing: 0.02em;}
-.interview .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
+.interview .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.6rem;font-weight:700;line-height: 4.48rem;}
 .interview .page-interview .question:after {content: "Q.";}
 .interview .page-interview .answer:after {content: "A.";}
 .interview .page-interview .left img {width: 62.7rem;}
@@ -67,15 +68,16 @@
 /* vision&mission */
 .vision .visual-sec::after {background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 .vision .visual-sec .page-tit-line:last-child span{margin-left: 14rem;}
+.vision .page-desc-sec {padding-bottom:0;}
 .vision .page-desc-sec .inner {padding-left: 0;}
 .vision .page-desc-sec .sub-tit {padding-left: 32.4rem;}
-.vision .page-desc-sec img {display: block;width: 107.2rem;margin: 15rem auto 0;}
-.vision .concept-sec {padding-top: 18.8rem;padding-bottom: 30rem}
+.vision .page-desc-sec img {display: block;width: 107.2rem;margin:0 auto;}
+.vision .concept-sec {padding-top: 16.6rem;padding-bottom: 30rem}
 .vision .concept-sec .inner {display: flex;}
 .vision .concept-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .vision .concept-sec .text-area {margin-left: 16.6rem;}
 .vision .concept-sec .tit {font-weight: 700;font-size: 5.4rem;line-height: 8.1rem;}
-.vision .concept-sec .desc {margin-top: .8rem;color: #666;font-weight:500;font-size: 2rem;line-height: 2.8rem;}
+.vision .concept-sec .desc {margin-top:2rem;font-weight:500;font-size:3rem;line-height: 2.8rem;}
 .vision .bhr-vision-sec {height: 48rem; background: url(../images/ab_vision_bhr_bg.png) 50% 50% no-repeat; background-size: cover;color: #fff;}
 .vision .bhr-vision-sec .inner {display: flex;height: 100%;padding-top:15.2rem;}
 .vision .bhr-vision-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
@@ -90,8 +92,8 @@
 .vision .brand-behavior-sec .brand-behavior-item:nth-of-type(1) {border-right: 1px solid #C8C8C8;border-bottom: 1px solid #C8C8C8;}
 .vision .brand-behavior-sec .brand-behavior-item:nth-of-type(2) {border-bottom: 1px solid #C8C8C8;}
 .vision .brand-behavior-sec .brand-behavior-item:nth-of-type(3) {border-right: 1px solid #C8C8C8;}
-.vision .brand-behavior-sec .brand-behavior-item p {display: flex;align-items: center;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;}
-.vision .brand-behavior-sec .brand-behavior-item p .num {margin-top: 1.7rem;color:#000;font-weight: 700;font-size: 1.7rem;line-height: 2.38rem;}
+.vision .brand-behavior-sec .brand-behavior-item p {display: flex;align-items: center;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;justify-content: center;}
+.vision .brand-behavior-sec .brand-behavior-item p .num {color:#000;font-weight: 700;font-size: 1.7rem;line-height: 2.38rem;}
 .vision .brand-behavior-sec .brand-behavior-item p strong {margin: 1rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 
 /* corporate identity */
@@ -102,7 +104,7 @@
 .corporate .identity-guide-sec .identity-list li .label {width: 14.2rem;margin-right: 18.2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
 .corporate .identity-guide-sec .identity-list li .info {display: flex;align-items: center;justify-content:center;flex-direction: column;width: calc(100% - 32.2rem);height: 24.5rem;border: 1px solid #C8C8C8;}
 .corporate .identity-guide-sec .identity-list li:nth-of-type(3) .info {height: auto; border: 0;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(n+2) {margin-top: 15rem;}
+.corporate .identity-guide-sec .identity-list li:nth-of-type(n+2) {margin-top: 13rem;}
 .corporate .identity-guide-sec .identity-list li:nth-of-type(1) img { width: 23.2rem;}
 .corporate .identity-guide-sec .identity-list li:nth-of-type(2) img { width: 38.7rem;}
 .corporate .identity-guide-sec .identity-list li:nth-of-type(3) img { width: 100%;}
@@ -151,9 +153,11 @@
 .contact .workplace-sec dd {color: #666;font-weight: 500;font-size: 2rem;line-height: 3rem;}
 
 /* Associate & Proposal 제휴 제안 */
+.associate .page-desc-sec {padding-bottom: 20rem;}
 .associate .visual-sec::after {background: url(../images/ab_ass_visual.png) 50% 50% no-repeat;background-size: cover;}
 .associate .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:38.3rem;}
 .associate .col-3.inner {display:flex;flex-direction: column;}
+.associate .partner {max-width:95rem;}
 .associate .col-3 .col {display: flex;column-gap:18.2rem;}
 .associate .col-3 .col + .col {margin-top: 25rem;}
 .associate .col-3 .col .subject {width:14.2rem;font-size: 2.4rem;line-height:3.6rem;font-weight:700;white-space:nowrap;}
@@ -164,15 +168,15 @@
 .associate .col-3 .partner .icons span.line,
 .associate .col-3 .partner .icons span:nth-child(4n) {border-right: 1px solid #c8c8c8;}
 .associate .col-3 .partner img {object-fit: contain;transform: scale(0.5);}
-.associate .rule_wrap {display: flex;flex-direction: column;row-gap: 11rem;}
+.associate .rule_wrap {display: flex;flex-direction: column;row-gap: 11rem;max-width: 95rem;}
 .associate .rule_wrap .tit span {font-weight:700;font-size:2.4rem;line-height: 150%;}
 .associate .rule_wrap .tit p {margin-top:1.6rem;font-weight:700;font-size:3.2rem;line-height: 150%;}
 .associate .rule_wrap .cont {display: flex;column-gap:4rem;}
 .associate .rule_wrap .cont .img {position:relative;width: 9rem;}
-.associate .rule_wrap .cont img {display:block;width:100%;}
+.associate .rule_wrap .cont img {display:block;width:100%;width: 9rem;}
 .associate .rule_wrap .txt p {font-weight: 500;font-size: 20px;line-height: 150%;color:#666}
 .associate .rule_wrap .txt p + p {margin-top:2rem;}
-.associate .rule_wrap .txt strong {display:block;margin-bottom:4rem;font-weight:500;font-size:24px;line-height:150%;}
+.associate .rule_wrap .txt strong {display:block;margin-bottom:4rem;font-weight:500;font-size:24px;line-height:150%;color:#000}
 .associate .rule_wrap .list {display: flex;flex-wrap: wrap;column-gap:5rem;row-gap:1.6rem;}
 .associate .rule_wrap .list li {width:20.6rem;margin-left:2rem;font-weight: 500;font-size: 20px;line-height:150%;color:#666;list-style: disc;}
 .associate .mail_box {display:flex;justify-content:space-between;margin-top:25rem;padding:5rem;background: #F9F9F9;border-radius: 14px;}
