@@ -293,7 +293,7 @@
                                 </p>
                             </div>
                             <span class="hint">
-                                진행 중인 채용공고<span class="recruit-count">6</span>
+                                채용공고 보러가기<span class="recruit-count">6</span>
                             </span>
                         </a>
                     </div>
@@ -565,6 +565,10 @@
                     $target.find('.circle02').addClass('activeMotion');
                     $target.find('.line').addClass('activeMotion');
                 }
+                
+                if(ratio < -0.2) {
+                    sectionFixedAnimation();
+                }
             } else {
                 $target.find('.img-wrap').removeClass('activeMotion');
                 $target.find('.circle02').removeClass('activeMotion');
@@ -580,7 +584,6 @@
                 
             if(!isScreen) {
                 if(ratio > 0) {
-                    setSectionFixedAnimation();
                     $target.css("transform",  'scale('+ (1 - ratio / splitValue) +')');
                 } else {
                     isFixedAni = false;
@@ -603,7 +606,7 @@
         }
 
         let isFixedAni = false, currentFixedY;
-        const setSectionFixedAnimation = () => {
+        const sectionFixedAnimation = () => {
             if(!isFixedAni) {
                 const fixedY = $('.foundation02-sec').get(0).getBoundingClientRect().y + 'px'
                 $('.foundation02-sec').css({
