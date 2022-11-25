@@ -37,7 +37,7 @@ div { box-sizing: border-box;}
 .main .visual-sec .desc {margin-top: 6rem;margin-left: 16rem;}
 .main .visual-sec .desc span {font-weight: 500;font-size:2.8rem;line-height: 3.92rem;}
 .main .video-wrap {display:flex;justify-content: center;width: 100%;}
-.main .video-wrap .video-inner {transform:scale(0.7);box-sizing: border-box;}
+.main .video-wrap .video-inner {width: 159.6rem;box-sizing: border-box;}
 .main .video-wrap video {width: 100%;}
 
 /* balance-promise-sec */

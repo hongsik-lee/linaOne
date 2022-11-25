@@ -399,7 +399,7 @@
         let yOffset = 0;
         $(document).ready(() => {
             setSwipter();
-            getVisualSectionSrcollInfo();
+            // getVisualSectionSrcollInfo();
             
             // gsap.registerPlugin(ScrollTrigger);
 
@@ -447,9 +447,10 @@
 
             const contents  = $('#contents > div');
             $(window).on('scroll', optimizeAnimation(() => {
+                console.log(pageYOffset)
                 yOffset = $(window).scrollTop();
 
-                videoSectionScrollAnimation();
+                // videoSectionScrollAnimation();
                 foundation01SectionAnimation();
                 foundation02SectionAnimation();
                 foundation03SectionAnimation();

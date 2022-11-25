@@ -9,12 +9,13 @@ $(function(){
         AOS.refresh();
       });
 })
+
 function onElementHeightChange(elm, callback) {
     var lastHeight = elm.clientHeight
     var newHeight;
     
     (function run() {
-        newHeight = elm.clientHeight;      
+        newHeight = elm.clientHeight;
         if (lastHeight !== newHeight) callback();
         lastHeight = newHeight;
 
@@ -24,8 +25,7 @@ function onElementHeightChange(elm, callback) {
 
         elm.onElementHeightChangeTimer = setTimeout(run, 200);
     })();
-  }
-
+}
 
 // 아코디언 공통 스크립트
 const accor_tit = document.querySelectorAll(".acc_tit_area");
@@ -43,26 +43,45 @@ accor_tit.forEach((accorTit) => {
     });
 });
 
-
 window.addEventListener("DOMContentLoaded", function () {
-    const titleAnim = document.querySelectorAll(".page-tit-line");
-    const visualBgAnim = document.querySelectorAll(".visual-sec");
+    subPageVisualAnimation();
 
-    // 서브페이지 비쥬얼 글자 에니메이션
-    titleAnim.forEach((e) => {
-        if (e.classList.contains("active")) {
-            console.log("d");
-        } else {
-            e.classList.add("active");
-        }
+    // Tab Content 
+    const parentTabs = document.querySelectorAll('[data-tab-target]');
+    const tabContents = document.querySelectorAll('[data-tab-content]');
+    const childTabs = document.querySelectorAll('[data-sub-target]');
+    const subContents = document.querySelectorAll('[data-sub-content]');
+
+    $('[data-tab-target]').each((index , tab) => {
+        $(tab).on('click', (e) => {
+            e.preventDefault();
+
+            let target = document.querySelector(tab.dataset.tabTarget);
+            tabContents.forEach(tabContent => {
+                tabContent.classList.remove('active')
+            });
+            parentTabs.forEach(tab => {
+                tab.classList.remove('active')
+            });
+            target.classList.add('active')
+            tab.classList.add('active')
+        })
     });
 
-    visualBgAnim.forEach((e) => {
-        if (e.classList.contains("active")) {
+    $('[data-sub-target]').each((index , tab) => {
+        $(tab).on('click', (e) => {
+            e.preventDefault();
 
-        } else {
-            e.classList.add("active");
-        }
+            let target = document.querySelector(tab.dataset.subTarget);
+            subContents.forEach(tabContent => {
+                tabContent.classList.remove('active')
+            });
+            childTabs.forEach(tab => {
+                tab.classList.remove('active')
+            });
+            target.classList.add('active')
+            tab.classList.add('active')
+        })
     });
 
     //  scroll top button 공통 스크립트
@@ -73,7 +92,31 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// OVERVIEW 숫자 카운팅
+// 서브페이지 비쥬얼 글자 에니메이션
+const subPageVisualAnimation = () => {
+    const $subWarp = $('.sub_wrap')
+        , $titleAnim = $('.page-tit-line')
+        , $visualBgAnim = $('.visual-sec');
+
+    if($subWarp.length > 0) {
+        $titleAnim.each((index, item) => {
+            const $target = $(item);
+    
+            if(!$target.hasClass('active')) {
+                $target.addClass('active')
+            }
+        })
+    
+        $visualBgAnim.each((index, item) => {
+            const $target = $(item);
+    
+            if(!$target.hasClass('active')) {
+                $target.addClass('active')
+            }
+        });
+    }
+}
+
 $(window).scroll(function () {
     const $counter = $("#counter");
 
@@ -92,6 +135,7 @@ $(window).scroll(function () {
     }
 });
 
+// OVERVIEW 숫자 카운팅 에니메이션
 const increaseNumberAnimation = (elem, duration) => {
     let startTimeStamp;
     const $target = $(elem)
@@ -129,49 +173,8 @@ const setNumberComma = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-
-// Tab Content 
-const parentTabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
-
-const childTabs = document.querySelectorAll('[data-sub-target]')
-const subContents = document.querySelectorAll('[data-sub-content]')
-
-parentTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        let target = document.querySelector(tab.dataset.tabTarget)
-        tabContents.forEach(tabContent => {
-            tabContent.classList.remove('active')
-        });
-        parentTabs.forEach(tab => {
-            tab.classList.remove('active')
-        });
-        target.classList.add('active')
-        tab.classList.add('active')
-    });
-});
-
-childTabs.forEach(tab => {
-    tab.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        let target = document.querySelector(tab.dataset.subTarget);
-        subContents.forEach(tabContent => {
-            tabContent.classList.remove('active')
-        });
-        childTabs.forEach(tab => {
-            tab.classList.remove('active')
-        });
-        target.classList.add('active')
-        tab.classList.add('active')
-    });
-});
-
-
 // popup
-function openPopup(url, w, h) {
+const openPopup = (url, w, h) => {
     var screenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
     var screenTop = window.screenTop != undefined ? window.screenTop : screen.top;
 
