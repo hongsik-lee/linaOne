@@ -80,6 +80,8 @@
                         <video muted loop>
                             <source src="./assets/images/line_main_video.mov">
                         </video>
+                        <div class="cut-off left"></div>
+                        <div class="cut-off right"></div>
                     </div>
                 </div>
             </div>
@@ -452,24 +454,8 @@
             $(window).on('scroll', optimizeAnimation(() => {
                 yOffset = $(window).scrollTop();
 
-                if(yOffset > 0) {
-                    $('.video-wrap').css({
-                        'transform': 'translate3d(0, -'+visualPosInfo.point+'px, 0)'
-                    });
-                    $('.video-wrap').addClass('activeMotion');
-                }
-
-                if(yOffset == 0) {
-                    $('.video-wrap').removeClass('activeMotion');
-                    $('.video-wrap').css({
-                        'transform': 'translate3d(0, 0, 0)'
-                    });
-                }
-                
-                // videoSectionScrollAnimation();
-                videoSectionScrollAnimation2();
-                
-                
+           
+                videoSectionScrollAnimation();
                 foundation01SectionAnimation();
                 foundation02SectionAnimation();
                 foundation03SectionAnimation();
@@ -527,40 +513,31 @@
             visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2
             visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
         }
-        let videoWrapY, txtLineY, descY
-        const videoSectionScrollAnimation2 = () => {
-             videoWrapY = $('.video-wrap').get(0).getBoundingClientRect().y
-             txtLineY = $('.page-tit').find('.txtLine').eq(1).get(0).getBoundingClientRect().y + $('.page-tit').find('.txtLine').eq(1).get(0).getBoundingClientRect().height / 2
-             descY = $('.visual-sec').find('.desc').get(0).getBoundingClientRect().y
-        }
 
         const videoSectionScrollAnimation = () => {
             const textY = visualPosInfo.endY + visualPosInfo.height
                 , videoY = $('.visual-sec').find('.video-wrap').get(0).getBoundingClientRect().y
                 , diff = videoY - textY
-                , diffRatio = (10 - (diff / visualPosInfo.point * 100) / 33.33) / 10;
+                , diffRatio = diff / visualPosInfo.point * 100
 
             if(diff > 0) {
-                $('.visual-sec').find('.video-inner').css('transform', 'scale('+ diffRatio +')');
                 $('.visual-sec').find('video').get(0).pause();
-
-                if($('.visual-sec').hasClass('invert')) {
-                    $('.visual-sec').removeClass('invert');
-                    $('.visual-sec').find('.text-area').css('top', visualPosInfo.endY);
-                }
+                $('.visual-sec').find('.text-area').css({
+                    'position': 'fixed',
+                    'top': visualPosInfo.endY
+                });
+                $('.cut-off.left').css('transform', 'translate3d(-'+ (100 - diffRatio) +'%, 0px, 0px)');
+                $('.cut-off.right').css('transform', 'translate3d('+ (100 - diffRatio) +'%, 0px, 0px)');
             }
+            
             if(diff < 0) {
-                $('.visual-sec').find('.video-inner').css('transform', 'scale(1)');
+                $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
+                $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
                 $('.visual-sec').find('video').get(0).play();
-
-                if(!$('.visual-sec').hasClass('invert')) {
-                    $('.visual-sec').find('.text-area').css('top', Math.min(visualPosInfo.endY * 2 - 12, yOffset + visualPosInfo.endY));
-                    $('.visual-sec').addClass('invert');
-                    
-                    if(yOffset + visualPosInfo.endY - visualPosInfo.endY * 2 - 12 > 30) {
-                        $('.visual-sec').find('.text-area').css('top', visualPosInfo.endY * 2 + 70)
-                    }
-                }
+                $('.visual-sec').find('.text-area').css({
+                    'position': 'absolute',
+                    'top': visualPosInfo.startY - $('.visual-sec').find('.page-tit').innerHeight() / 2 - $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2
+                });
             }
         }
         
