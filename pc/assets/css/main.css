@@ -185,7 +185,7 @@ div { box-sizing: border-box;}
 .main .related-info-sec .cont-box a:hover h4::after{width: 100%;}
 .main .related-info-sec .cont-box.recruit h4 {font-weight: 700;font-size: 5.2rem;line-height: 6.76rem;letter-spacing: 0.06em;}
 .main .related-info-sec .cont-box.contact h4 {font-family: var(--poppins-fonts);font-weight: 700;font-size:5.2rem;line-height: 6.76rem;}
-.main .related-info-sec .cont-box.contact .hint::after{content:'';display:inline-block;width:7.2rem;height: 7.2rem;margin-left:4.5rem;background:url(../images/icons/icon_diagonal_arrow.png) 50% 50% no-repeat;background-size:cover;}
+.main .related-info-sec .cont-box .hint::after{content:'';display:inline-block;width:7.2rem;height: 7.2rem;margin-left:4.5rem;background:url(../images/icons/icon_diagonal_arrow.png) 50% 50% no-repeat;background-size:cover;}
 .main .related-info-sec .cont-box .hint {display: flex;align-items:center;font-weight: 500;font-size: 2.5rem;line-height: 3.12rem;}
 .main .related-info-sec .cont-box .recruit-count {display:flex;justify-content: center;width:7.2rem;margin-left:4.5rem;font-weight: 600;font-size:7.2rem;line-height: 7.92rem;}
 .main .related-info-sec .line {position: absolute;top:0;left:0;width:150%;height: 0.06rem;background-color:#191919;}
