@@ -174,7 +174,7 @@
 .associate .rule_wrap .cont {display: flex;column-gap:4rem;}
 .associate .rule_wrap .cont .img {position:relative;width: 9rem;}
 .associate .rule_wrap .cont img {display:block;width:100%;width: 9rem;}
-.associate .rule_wrap .txt p {font-weight: 500;font-size: 20px;line-height: 150%;color:#666}
+.associate .rule_wrap .txt p {font-weight: 500;font-size: 2rem;line-height: 150%;color:#666}
 .associate .rule_wrap .txt p + p {margin-top:2rem;}
 .associate .rule_wrap .txt strong {display:block;margin-bottom:4rem;font-weight:500;font-size:24px;line-height:150%;color:#000}
 .associate .rule_wrap .list {display: flex;flex-wrap: wrap;column-gap:5rem;row-gap:1.6rem;}
