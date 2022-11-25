@@ -28,7 +28,7 @@ div { box-sizing: border-box;}
 .main .goTop button {transform: rotate(-180deg);transition: transform .6s ease;width:5.6rem;height:5.6rem;padding:0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background:url(../images/icons/arrow_top.svg) 50% 50% no-repeat;background-size: cover;cursor: pointer;}
 
 /* visual-sec */
-.main .visual-sec {min-height: 0;padding-top: 75vh;}
+.main .visual-sec {min-height: 0;padding-top: 82.9rem;}
 .main .visual-sec.invert .text-area{position: absolute;}
 .main .visual-sec .text-area {position:fixed;top:28.6rem;left:16.2rem;z-index: 100;}
 .main .visual-sec .page-tit {position: static;top: 0;left: 0;}
@@ -36,8 +36,9 @@ div { box-sizing: border-box;}
 .main .visual-sec .page-tit > span:last-child {margin-left: 16rem;white-space: nowrap;}
 .main .visual-sec .desc {margin-top: 6rem;margin-left: 16rem;}
 .main .visual-sec .desc span {font-weight: 500;font-size:2.8rem;line-height: 3.92rem;}
-.main .video-wrap {display:flex;justify-content: center;width: 100%;}
-.main .video-wrap .video-inner {width: 159.6rem;box-sizing: border-box;}
+.main .video-wrap {display:flex;justify-content: center;width: 100%;transition: all .5s ease;}
+.main .video-wrap.activeMotion .video-inner {width: 100%;}
+.main .video-wrap .video-inner {width: 159.6rem;box-sizing: border-box;transition: all .5s ease; transform: translate3d(0, 0, 0)}
 .main .video-wrap video {width: 100%;}
 
 /* balance-promise-sec */

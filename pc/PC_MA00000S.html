@@ -402,7 +402,7 @@
         let yOffset = 0;
         $(document).ready(() => {
             setSwipter();
-            // getVisualSectionSrcollInfo();
+            getVisualSectionSrcollInfo();
             
             // gsap.registerPlugin(ScrollTrigger);
 
@@ -450,10 +450,26 @@
 
             const contents  = $('#contents > div');
             $(window).on('scroll', optimizeAnimation(() => {
-                console.log(pageYOffset)
                 yOffset = $(window).scrollTop();
 
+                if(yOffset > 0) {
+                    $('.video-wrap').css({
+                        'transform': 'translate3d(0, -'+visualPosInfo.point+'px, 0)'
+                    });
+                    $('.video-wrap').addClass('activeMotion');
+                }
+
+                if(yOffset == 0) {
+                    $('.video-wrap').removeClass('activeMotion');
+                    $('.video-wrap').css({
+                        'transform': 'translate3d(0, 0, 0)'
+                    });
+                }
+                
                 // videoSectionScrollAnimation();
+                videoSectionScrollAnimation2();
+                
+                
                 foundation01SectionAnimation();
                 foundation02SectionAnimation();
                 foundation03SectionAnimation();
@@ -510,6 +526,12 @@
             visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top
             visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2
             visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
+        }
+        let videoWrapY, txtLineY, descY
+        const videoSectionScrollAnimation2 = () => {
+             videoWrapY = $('.video-wrap').get(0).getBoundingClientRect().y
+             txtLineY = $('.page-tit').find('.txtLine').eq(1).get(0).getBoundingClientRect().y + $('.page-tit').find('.txtLine').eq(1).get(0).getBoundingClientRect().height / 2
+             descY = $('.visual-sec').find('.desc').get(0).getBoundingClientRect().y
         }
 
         const videoSectionScrollAnimation = () => {
