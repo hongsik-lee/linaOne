@@ -5,30 +5,37 @@
 .privacy_popup #contents {margin: 0;padding: 10.2rem 5.3rem 0;color: #000;}
 .privacy_popup .page_tit {margin-bottom: 5rem;text-align: center;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
 .privacy_popup .page_desc {margin-bottom:16.6rem;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-
 .privacy_popup .sec {margin-bottom: 20rem;}
 .privacy_popup .tit {margin-bottom: 2.1rem;color: #150F96;font-weight: 400;font-size: 3rem;line-height: 3.601rem;}
-.privacy_popup .desc {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-.privacy_popup .list h3, .privacy_popup .list li {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
+.privacy_popup  h3, .privacy_popup h4, .privacy_popup  li, .privacy_popup p {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
 .privacy_popup .list .desc {padding-left: 1.505rem;}
 .privacy_popup .list .sub_list {margin-top: 1.7rem;padding-left: 3.9rem;}
-
 .privacy_popup .sec01 .list > li {margin-top: 3rem;}
-.privacy_popup .sec02 .list {margin-top: 3.6rem;padding-left: 3.9rem;}
 .privacy_popup .sec04 table {margin-top: 3.6rem;margin-bottom: 3.17rem;}
 .privacy_popup .sec04 tbody td {height: auto;}
 .privacy_popup .sec05 .sub_list {margin-top:2.5rem;margin-bottom: 4.7rem;}
 .privacy_popup .sec05 .sub_list li:nth-of-type(n+2) {margin-top: 5.6rem;}
-.privacy_popup .sec06 .list {margin-top:2.6rem;padding-left: 3.9rem;}
 .privacy_popup .sec06 .sub_list {margin: 0;padding:0;}
-.privacy_popup .sec06 .sub_list h4 {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-.privacy_popup .sec06 .sub_list >  li {margin-bottom: 5.4rem;}
-
+.privacy_popup .sec06 .sub_list > li {margin-bottom: 5.6rem;}
+.privacy_popup .sec07 .list li:nth-of-type(n+2) {margin-top: 5.6rem;}
+.privacy_popup .sec08 .list {margin-top: 5.6rem;}
+.privacy_popup .sec10 .sub_list {margin: 0;padding: 0;}
+.privacy_popup .sec10 thead th {height: 10rem;}
+.privacy_popup .sec10 tbody td {height:8rem;text-align: center;}
+.privacy_popup .sec10 div {display: flex;height: 100%;}
+.privacy_popup .sec10 div span {padding: 2rem;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
+.privacy_popup .sec10 div span:first-child {width: 30%;border-right: 1px solid #000;}
+.privacy_popup .sec11 thead th {height: 10rem;}
+.privacy_popup .sec11 tbody td {height:8rem;text-align: center;}
+.privacy_popup .sec12 a, .privacy_popup .sec13 a {color: #000;}
+.privacy_popup .sec12 a span {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;text-decoration: underline;}
 .privacy_popup table {width: 100%;margin-top: 3rem;}
 .privacy_popup table thead th {height: 16.6rem;padding: 2rem;text-align: left;border-bottom: 1px solid #000;box-sizing: border-box;vertical-align: middle;background-color: #F9F9F9;text-align: center;}
 .privacy_popup table tbody td {height: 15rem;padding:2rem;border-bottom: 1px solid #000;border-right: 1px solid #000;box-sizing: border-box;}
 .privacy_popup table tbody tr > td:last-child {border-right: none;}
 .privacy_popup table th,td {word-break: keep-all;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
+.privacy_popup .sec02 .list, .privacy_popup .sec06 .list, .privacy_popup .sec07 .list, .privacy_popup .sec09 .list,  .privacy_popup .sec10 .list, .privacy_popup .sec11 .list {margin-top:2.6rem;padding-left: 3.9rem;}
+.privacy_popup .sec09 .list li:nth-of-type(n+2), .privacy_popup .sec10 .list li:nth-of-type(n+2), .privacy_popup .sec11 .list li:nth-of-type(n+2) {margin-top: 5.6rem;}
 
 /* 이메일무단수집거부 */
 .email_collect_refuse #contents {margin:0; padding: 10rem 8rem;}
