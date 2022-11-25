@@ -19,6 +19,8 @@
 .business .cont_col .cont_desc {font-size:2rem;font-weight:500;line-height:2.8rem;}
 
 /* Sales & Marketing */
+.sales-tab {display: none;}
+.sales-tab.active {display: block;}
 .sales .page-desc-sec {padding-bottom: 25rem;}
 .sales .visual-sec::after {background: url(../images/sales_visual.png) 50% 50% no-repeat;background-size: cover;}
 .sales .visual-sec .page-tit.type2 .page-tit-line:last-child span {padding-left: 17.8rem;padding-bottom: 2rem;}

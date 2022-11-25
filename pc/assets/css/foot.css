@@ -76,6 +76,28 @@
 .disclosure .list_wrap.type2 li span {display:inline-block;flex-basis:16%;margin-left:2rem;font-size: 2rem;line-height:3rem;font-weight:500;color:#999;}
 .disclosure .list_wrap.type2 li .btn {flex-basis:16%;max-width:12.2rem;}
 
-
-
+/* 공시실 */
+.disclosure-table, .disclosure-table > * {box-sizing: border-box;}
+.disclosure-table {padding:11.1rem 8rem 10.6rem 6.3rem}
+.disclosure-table h1 {font-size:3.9rem;line-height: 3.9rem;font-weight: 400;text-align: center;}
+.disclosure-table .flexbox {margin-top: 8.9rem;display: flex;justify-content: flex-end;}
+.disclosure-table select {width: 41.8rem;height:8.3rem;padding:2.2rem 4.6rem; border:1px solid #808080; color:#949494;border-radius:.3rem;font-size: 2.5rem;font-weight:400;background: url(../../assets/images/icons/icon_arrow_down.png)no-repeat;background-position: right 24px center;
+background-size: 4rem;}
+.disclosure-table section:first-of-type {margin-top: 13.4rem;}
+.disclosure-table section h2 {font-weight: 700;font-size: 2.5rem;line-height: 3.9rem;}
+.disclosure-table section h2 + h2 {margin-top: 2.5rem;}
+.disclosure-table section h2 + table {margin-top: 3.4rem;}
+.disclosure-table section table {table-layout: fixed;width:100%}
+.disclosure-table section table td, th {padding:2.4rem;font-size: 2.5rem;line-height:3.9rem;font-weight: 400;border-bottom: 1px solid #000;border-collapse: collapse;}
+.disclosure-table section table tr:first-child td, th {border-top: 1px solid #000;}
+.disclosure-table section + section {margin-top: 14.2rem;}
+.disclosure-table section table.type1 td:first-child {background:#eee;text-align: center;}
+.disclosure-table section table.type3 tr:first-child th {background:#eee;text-align: center;}
+.disclosure-table section table.type3 th, 
+.disclosure-table section table.type3 td {border-right: 1px solid #000;text-align: center;}
+.disclosure-table section table.type3 th:last-child,
+.disclosure-table section table.type3 td:last-child {border-right: 0;}
+.disclosure-table section table td.head {background:#eee;text-align: center;}
+.disclosure-table section p {font-size: 2.5rem;font-weight: 400;line-height: 3.9rem;}
+.disclosure-table section table td a {color:#000}
 
