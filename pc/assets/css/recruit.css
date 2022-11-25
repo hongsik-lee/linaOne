@@ -2,6 +2,8 @@
 @import url(common/common.css);
 
 /* recruit */
+.recruit .recruitTab {display: none;}
+.recruit .recruitTab.active {display: block;}
 .recruit .col_wrap .title.type3 {padding-top: 2.6rem;}
 .recruit .visual-sec::after {background: url(../images/re_visual.png) 50% 50% no-repeat;background-size: cover;}
 .recruit .page-desc-sec .inner {padding-left:26.1rem;}
@@ -17,7 +19,7 @@
 .recruit .re_process .ico_list {row-gap: 7rem;column-gap:13rem;margin-bottom: 13rem;}
 .recruit .re_process .col_wrap .title.type2 {padding-top: 3.3rem;}
 .recruit .re_process .ico_list li {position:relative;width:23rem;text-align: center;}
-.recruit .re_process .ico_list li:after {position:absolute;width:2.5rem;height:4rem;top:2.7rem;right:-4.8rem;background:url(../../assets/images/icons/icon_arrow_right.png);content: '';background-size:cover;}
+.recruit #recruitTab1 .re_process .ico_list li:after {position:absolute;width:2.5rem;height:4rem;top:2.7rem;right:-4.8rem;background:url(../../assets/images/icons/icon_arrow_right.png);content: '';background-size:cover;}
 .recruit .re_process .ico_list li:nth-child(3n):after {display: none;}
 .recruit .re_process .ico_list li img {margin: auto;}
 .recruit .re_process .ico_list li h4 {margin:2rem 0;}
