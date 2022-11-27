@@ -2,7 +2,8 @@
 // 컨텐츠 scroll 공통 효과
 $(function(){
     AOS.init({
-        easing: 'ease-in-out-sine'
+        easing: 'ease-in-out-sine',
+        duration:500
       });
 
     onElementHeightChange(document.body, function(){

@@ -142,6 +142,8 @@
 .contact .workplace-sec .location-area {margin-top: 5rem;}
 .contact .workplace-sec dl {display: flex;align-items: center;padding: 4.2rem 0;border-top: .1rem solid #ebebeb;}
 .contact .workplace-sec dl:last-child{border-bottom: .1rem solid #ebebeb;}
+/* height 값 임의지정위한 dumy class */
+.contact .workplace-sec dl.dumy {padding-bottom:0.1rem;}
 .contact .workplace-sec dt {display:flex;align-items:center;width: 30.3rem;font-weight: 700;font-size: 2rem;line-height: 3rem;}
 .contact .workplace-sec dt::before {content: ''; display: inline-block;width: 2.4rem;height: 2.4rem;margin-top: -.1rem;margin-right: 1.8rem;}
 .contact .workplace-sec dt.corp-name::before {background: url(../images/icons/icon_company.png) 50% 50% no-repeat;background-size: cover;}
