@@ -38,7 +38,7 @@ div { box-sizing: border-box;}
 .main .video-wrap {display:flex;justify-content: center;width: 100%;}
 .main .video-wrap .video-inner {position: relative;box-sizing: border-box;}
 .main .video-wrap video {width: 100%;}
-.main .video-wrap .cut-off {position: absolute;top: 0;width: calc((100vw - 1596px) / 2);height: 100%;background-color: #fff;transform: translate3d(0, 0, 0)}
+.main .video-wrap .cut-off {position: absolute;top: 0;width: calc((100vw - 83.1250vw) / 2);height: 100%;background-color: #fff;transform: translate3d(0, 0, 0)}
 .main .video-wrap .cut-off.left {left: 0;}
 .main .video-wrap .cut-off.right {right: 0;}
 
