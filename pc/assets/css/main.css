@@ -104,7 +104,6 @@ div { box-sizing: border-box;}
 .main .foundation03-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
 .main .foundation03-sec .desc {margin-top: 2.6042vw;}
 .main .foundation03-sec .desc .txtLine span {transition: transform .8s ease .8s;font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
-
 .main .foundation03-sec .img-wrap {position: relative;margin-right: -10.5729vw;}
 .main .foundation03-sec .img-wrap > div {width: 19.7917vw; height: 19.7917vw;}
 .main .foundation03-sec .img-wrap > div.img {position: relative;overflow: hidden;border-radius: 50%;opacity: 0;transform: translateY(7.8125vw);transition: transform .8s ease, opacity 1s ease;}
@@ -112,12 +111,11 @@ div { box-sizing: border-box;}
 .main .foundation03-sec .img-wrap > div.img.activeMotion {opacity: 1;transform: translateY(0);}
 .main .foundation03-sec .img-wrap > div.img.activeMotion img {transform: scale(1.1);}
 .main .foundation03-sec .img-wrap img {position:relative;top: -100px;width: 100%;}
-
 .main .foundation03-sec .circle {position: absolute;right: 0;transition:transform .8s ease .4s, opacity 1.2s linear .4s;display: flex;align-items: center;justify-content: center;background:url(../images/main_circle_img.jpg) 50% 50% no-repeat;background-size: cover;opacity: 0;z-index: -1;}
 .main .foundation03-sec .circle circle {opacity: 0;}
 .main .foundation03-sec .circle.activeMotion {opacity: 1;transform: translate3d(-17.1875vw, 0, 0);}
-
 .main .foundation03-sec .circle.activeMotion circle {animation: circle-show-ani-1 .8s forwards ease 1.9s;}
+.main .foundation03-sec .circle .line svg {width: 28.1771vw; height: 28.1771vw;}
 .main .foundation03-sec .circle line {stroke-dasharray: 343.4;stroke-dashoffset: 343.4;}
 .main .foundation03-sec .circle line line:nth-of-type(2),.main .foundation03-sec .circle line line:nth-of-type(3) {stroke-dashoffset: 0;}
 .main .foundation03-sec .circle.activeMotion line:nth-of-type(1) {animation: stroke-ani-1 .8s forwards ease 1.2s;}
@@ -144,7 +142,7 @@ div { box-sizing: border-box;}
 }
 
 /* foundation04-sec */
-.main .foundation04-sec {position:relative;height: 56.2500vw;}
+.main .foundation04-sec {position:relative;height: 56.2500vw;overflow:hidden;}
 .main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(1);transition: all 1s linear;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .main .foundation04-sec .bg.activeMotion {animation: foundation04-ani 1s forwards linear;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
@@ -172,14 +170,14 @@ div { box-sizing: border-box;}
 .main .brand-goal-sec .desc.active{opacity: 1;}
 .main .brand-goal-sec .swiper-controller {position: relative;display: flex;align-items: center;justify-content: center;width: 10.1042vw;height: 4.1667vw;margin-left: auto;margin-right: 9.3750vw;}
 .main .brand-goal-sec .swiper-controller button {position:absolute;top:50%;transform:translateY(-50%);width: 1.6667vw;height: 1.6667vw;padding:0;border:none;background-color: transparent;cursor: pointer;}
-.main .brand-goal-sec .swiper-controller button svg {width: 10.1042vw;height: 4.1667vw;}
+.main .brand-goal-sec .swiper-controller button svg {width: 100%;height: 100%;}
 .main .brand-goal-sec .swiper-controller button.control-prev {left:0;}
 .main .brand-goal-sec .swiper-controller button.swiper-button-disabled svg{opacity: .2;cursor: not-allowed;}
 .main .brand-goal-sec .swiper-controller button.control-next {right: 0;}
 .main .brand-goal-sec .swiper-controller button.control-next.disabled {pointer-events: none;}
 .main .brand-goal-sec .swiper-controller button.control-next.disabled svg{opacity: .2;cursor: not-allowed;}
 .main .brand-goal-sec .index-wrap {display: flex;align-items: center;}
-.main .brand-goal-sec .index-wrap svg {margin: 0 0.4167vw;}
+.main .brand-goal-sec .index-wrap svg {width:2.6042vw; margin: 0 0.4167vw;}
 .main .brand-goal-sec .index-wrap span {font-weight: 500;font-size: 1.0417vw; line-height: 1.3542vw;letter-spacing: 0.06em;}
 .main .brand-goal-sec .swiper {position: absolute;top: 11.1458vw;width: 100vw;overflow: initial;}
 .main .brand-goal-sec .swiper-wrapper {display: flex;}
