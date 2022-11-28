@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const $childTabs = $('[data-sub-target]');
     $childTabs.each(function(index, item) {
         $(item).on('click' , function(e) {
-            handleChildTabClick(e);
+            handleChildTabClick(item);
         });
     });
 
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const $accTitArea = $('.acc_tit_area');
     $accTitArea.each(function(index, item) {
         $(item).on('click', function(e) {
-            handleAccTitAreaClick(e);
+            handleAccTitAreaClick(item);
         })
     });
 
