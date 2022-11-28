@@ -357,6 +357,18 @@
                                 인터뷰는 대면 또는 비대면으로 진행되며, 비대면 면접 진행 시 별도의 화상미팅 Tool에 접속하거나 모바일 앱설치가 필요합니다.
                             </div>
                         </li>
+                        <li class="filter-item empty" data-category="select2">
+                            <div class="acc_tit_area">
+                                <span class="category">지원서 작성</span>
+                                <h3 class="title">등록된 게시물이 없습니다.</h3>
+                            </div>
+                        </li>
+                        <li class="filter-item empty" data-category="select3">
+                            <div class="acc_tit_area">
+                                <span class="category">지원 이후</span>
+                                <h3 class="title">등록된 게시물이 없습니다.</h3>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="mail_box inner" data-aos="fade-up" data-aos-duration="300">
@@ -417,6 +429,10 @@
     </div>
     <script src="../../assets/js/aos.js"></script>
     <script src="../../assets/js/common.js"></script>
+    <style>
+        .sub_wrap .accor li.empty {display: none;}
+        .sub_wrap .accor li.empty .acc_tit_area::after {display: none;}
+    </style>
     <script>
         $('.sub_filter a').click(function(e){
             e.preventDefault();
@@ -424,7 +440,7 @@
             $(this).addClass('active')
             $filter = $(this).data('filter');
             if($filter == 'all'){
-                $('.filter-item').fadeIn();
+                $('.filter-item').not('.empty').fadeIn();
             }else {
                 $('.filter-item').hide();
                 $('.filter-item[data-category="'+ $filter + '"]').fadeIn();
