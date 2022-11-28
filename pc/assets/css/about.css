@@ -14,18 +14,20 @@
 .overview .definition-sec {padding-top: 31.8rem;}
 .overview .definition-sec .inner {display: flex;}
 .overview .definition-sec .sub-tit {font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.overview .definition-sec .info-wrap {width:calc(100% - 32.4rem);margin-left: auto;}
+.overview .definition-sec .col-wrap {width:calc(100% - 32.4rem);margin-left: auto;}
+.overview .definition-sec .col-cont:first-child {margin-bottom: 13rem;padding-bottom: 13rem;border-bottom: .1rem solid #EBEBEB;}
+.overview .definition-sec .col-cont:first-child dl:last-child dd strong:nth-of-type(2) {margin-left: 4rem;}
 .overview .definition-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
-.overview .definition-sec .desc {margin-top: 8rem;color: #666;font-weight: 400;font-size: 2rem;line-height: 2.8rem;}
-.overview .definition-sec .desc strong {display: block;margin-bottom: 1.6rem;color: #000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
-.overview .definition-sec .total-data {margin-top: 15rem;}
-.overview .definition-sec .total-data dd {font-weight: 700;font-size: 4rem;line-height: 6rem;letter-spacing: -0.02em;}
+.overview .definition-sec .total-data {margin-top: 13rem;}
+.overview .definition-sec .total-data dd {font-weight: 700;font-size: 2.8rem;line-height: 4.2rem;letter-spacing: -0.02em;}
 .overview .definition-sec .total-data .info {display: flex;flex-wrap: wrap;}
 .overview .definition-sec .total-data dl {width: 50%;}
 .overview .definition-sec .total-data dl:nth-child(n+3) {margin-top: 8rem;}
-.overview .definition-sec .total-data dd strong {margin-right:0.4rem;font-weight: 700;font-size: 12rem;line-height: 18rem;}
-.overview .definition-sec .total-data dt {color: #999;font-weight: 500;font-size: 1.7rem;line-height: 2.38rem;}
-.overview .definition-sec .total-data .extra-info {margin-top: 8rem;text-align: right;color: #999;font-weight: 400;font-size: 1.7rem;line-height: 2.38rem;}
+.overview .definition-sec .total-data dl:last-child {width: 100%;}
+.overview .definition-sec .total-data dd strong {margin-right:0.4rem;font-weight: 700;font-size: 9rem;line-height: 13.5rem;}
+.overview .definition-sec .total-data dd strong:nth-of-type(2) {margin-left: 1rem;}
+.overview .definition-sec .total-data dt {margin-top: .4rem;color: #999;font-weight: 500;font-size: 1.7rem;line-height: 2.38rem;}
+.overview .definition-sec .total-data .extra-info {margin-top: 6rem;text-align: right;color: #999;font-weight: 400;font-size: 1.7rem;line-height: 2.38rem;}
 
 /* CEO Interview */
 .interview #contents {margin-bottom: 0;}

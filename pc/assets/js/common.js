@@ -45,19 +45,22 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 $(window).scroll(function () {
-    const $counter = $("#counter");
-    if($counter.length > 0) {
-        const oTop = $("#counter").offset().top - window.innerHeight;
+    const $counters = $(".counter");
+    if($counters.length > 0) {
 
-        if ($(window).scrollTop() > oTop) {
-            const $countNum = $('.count-num');
-            
-            $countNum.each((index, elem) => {
-                if(!$(elem).hasClass('count-finished')) {
-                    increaseNumberAnimation(elem, 1000);
-                }
-            });
-        }
+        $counters.each(function(index, item) {
+            const counterTop = $(item).offset().top - window.innerHeight;
+
+            if ($(window).scrollTop() > counterTop) {
+                const $countNum = $(item).find('.count-num');
+
+                $countNum.each((index, elem) => {
+                    if(!$(elem).hasClass('count-finished')) {
+                        increaseNumberAnimation(elem, 1000);
+                    }
+                });
+            }
+        });
     }
 });
 
@@ -172,9 +175,14 @@ const increaseNumberAnimation = function(elem, duration) {
             else $target.text(setNumberComma(end));
         } else {
             value = Math.floor(progress * (end - start) + start);
-            
-            if(value > end) $target.text(setNumberComma(end));
-            else $target.text(setNumberComma(value));
+
+            if(type === 'percent') {
+                if(value > end) $target.text(setPercentComma(end));
+                else $target.text(setPercentComma(value));
+            } else {
+                if(value > end) $target.text(setNumberComma(end));
+                else $target.text(setNumberComma(value));
+            }
         }
 
         if (progress < 1) {
@@ -187,6 +195,10 @@ const increaseNumberAnimation = function(elem, duration) {
 
 const setNumberComma = function(num) {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+const setPercentComma = function(num) {
+    return num.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ".");
 }
 
 // window popup
