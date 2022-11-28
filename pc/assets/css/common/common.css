@@ -72,7 +72,7 @@ header .sub_menu_wrap .sub_menu li:hover a {color:#000;}
 
 .sub_wrap .page-tab-sec li .sub_menu_t {display:none;position:absolute;left:0;top:100%;padding-top: 5rem;}
 .sub_wrap .page-tab-sec li a.active + .sub_menu_t {display: flex;}
-.sub_wrap .page-tab-sec li .sub_menu_t li {width: 16rem;}
+.sub_wrap .page-tab-sec li .sub_menu_t li {width: 17.3rem;}
 .sub_wrap .page-tab-sec li .sub_menu_t li:nth-of-type(n+2) {margin-left: 1rem;}
 .sub_wrap .page-tab-sec li .sub_menu_t a {position:relative;display:flex;align-items:center;justify-content: center;height:5.8rem;border-radius: .4rem;color: #000;font-weight:700;font-size:2.2rem;line-height:2.64rem;}
 .sub_wrap .page-tab-sec li .sub_menu_t a.active {color:#fff;background-color: #000;}

@@ -3,7 +3,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // 컨텐츠 scroll 공통 효과
     AOS.init({
-        easing: 'ease-in-out-sine',
+        easing: 'linear',
         duration:500
     });
 
