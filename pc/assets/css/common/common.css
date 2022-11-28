@@ -107,8 +107,9 @@ header .sub_menu_wrap .sub_menu li:hover a {color:#000;}
 .news_list .list_wrap .list li span {font-size:1.5rem;line-height:2.2rem;font-weight: 500;color:#999}
 
 /* 뉴스/공지사항 detail  */
-.news_detail .inner {display: flex;margin-top:30.2rem;gap:24rem;}
+.news_detail > .inner {display: flex;margin-top:30.2rem;gap:24rem;}
 .news_detail .col:first-of-type {min-width: 8.3rem;}
+.news_detail .col:last-of-type {min-width: 78.9rem;flex:1;}
 .news_detail .title {font-size: 2.4rem;font-weight: 700;line-height: 3.6rem;}
 .news_detail .detail_tit {margin-bottom:1rem;font-size: 4rem;line-height: 5.6rem;font-weight: 700;}
 .news_detail .date {font-size: 1.7rem;font-weight:500;line-height: 2.5rem;color:#999;}
