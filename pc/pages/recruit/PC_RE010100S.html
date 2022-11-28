@@ -423,11 +423,14 @@
             $('.sub_filter a').removeClass('active');
             $(this).addClass('active')
             $filter = $(this).data('filter');
+            console.log($filter)
             if($filter == 'all'){
                 $('.filter-item').fadeIn();
             }else {
                 $('.filter-item').hide();
                 $('.filter-item[data-category="'+ $filter + '"]').fadeIn();
+
+                // if($filter.length)
             }
         });
     </script>
