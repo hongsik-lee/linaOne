@@ -78,23 +78,21 @@
 .vision .concept-sec .text-area {margin-left: 16.6rem;}
 .vision .concept-sec .tit {font-weight: 700;font-size: 5.4rem;line-height: 8.1rem;}
 .vision .concept-sec .desc {margin-top:2rem;font-weight:500;font-size:3rem;line-height: 2.8rem;}
-.vision .bhr-vision-sec {height: 48rem; background: url(../images/ab_vision_bhr_bg.png) 50% 50% no-repeat; background-size: cover;color: #fff;}
-.vision .bhr-vision-sec .inner {display: flex;height: 100%;padding-top:15.2rem;}
-.vision .bhr-vision-sec .sub-tit {display:block;padding-top: 2.5rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.vision .bhr-vision-sec .text-area {margin-left: 13.7rem;}
-.vision .bhr-vision-sec .tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
-.vision .bhr-vision-sec .desc {margin-top: 1.6rem;color: rgba(255,255,255,0.5);font-weight:500;font-size: 1.7rem;line-height: 2.38rem;}
+.vision .bhr-vision-sec {padding:25rem 0;background: url(../images/ab_vision_bhr_bg.png) 50% 50% no-repeat; background-size: cover;color: #fff;}
+.vision .bhr-vision-sec .inner {display: flex;justify-content: space-between;}
+.vision .bhr-vision-sec .inner > div {width:56.1rem}
+.vision .bhr-vision-sec .sub-tit {display:block;padding-bottom: 2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;border-bottom:2px solid #fff;}
+.vision .bhr-vision-sec .subject {margin-top:6rem;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+.vision .bhr-vision-sec .desc {display:block;margin-top: 1.6rem;color: rgba(255,255,255,0.5);font-weight:500;font-size: 2rem;line-height: 2.8rem;}
 .vision .brand-behavior-sec {padding-top: 30rem;}
-.vision .brand-behavior-sec .inner {display: flex;}
-.vision .brand-behavior-sec .tit {margin-top:6.7rem;white-space: nowrap;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.vision .brand-behavior-sec .brand-behavior-list {displaY:flex;flex-wrap: wrap;margin-left: 15.1rem;}
+.vision .brand-behavior-sec .inner {display: flex;flex-wrap: wrap;}
+.vision .brand-behavior-sec .tit {white-space: nowrap;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
+.vision .brand-behavior-sec .tit + p {margin-left: 18.2rem;font-weight: 700;font-size: 3.2rem;line-height:4.48rem;}
+.vision .brand-behavior-sec .brand-behavior-list {display:flex;flex-wrap: wrap;margin-left: 32.4rem;margin-top: 12rem;}
 .vision .brand-behavior-sec .brand-behavior-item {width: 47.5rem;height: 19.4rem;box-sizing: border-box;}
-.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(1) {border-right: 1px solid #C8C8C8;border-bottom: 1px solid #C8C8C8;}
-.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(2) {border-bottom: 1px solid #C8C8C8;}
-.vision .brand-behavior-sec .brand-behavior-item:nth-of-type(3) {border-right: 1px solid #C8C8C8;}
-.vision .brand-behavior-sec .brand-behavior-item p {display: flex;align-items: center;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;justify-content: center;}
-.vision .brand-behavior-sec .brand-behavior-item p .num {color:#000;font-weight: 700;font-size: 1.7rem;line-height: 2.38rem;}
-.vision .brand-behavior-sec .brand-behavior-item p strong {margin: 1rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+.vision .brand-behavior-sec .brand-behavior-item p {display: flex;text-align: left;flex-direction: column;width: 100%;height: 100%;color:#999;font-weight: 500;font-size: 2rem;line-height: 3rem;justify-content: center;}
+.vision .brand-behavior-sec .brand-behavior-item p .num {color:#150F96;font-weight: 700;font-size: 2rem;line-height:3rem;}
+.vision .brand-behavior-sec .brand-behavior-item p strong {margin: 0.6rem 0;color:#000;font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
 
 /* corporate identity */
 .corporate .visual-sec::after {background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
@@ -102,13 +100,10 @@
 .corporate .identity-guide-sec {padding-top: 6.8rem;}
 .corporate .identity-guide-sec .identity-list li {display: flex;}
 .corporate .identity-guide-sec .identity-list li .label {width: 14.2rem;margin-right: 18.2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
-.corporate .identity-guide-sec .identity-list li .info {display: flex;align-items: center;justify-content:center;flex-direction: column;width: calc(100% - 32.2rem);height: 24.5rem;border: 1px solid #C8C8C8;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(3) .info {height: auto; border: 0;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(n+2) {margin-top: 13rem;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(1) img { width: 23.2rem;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(2) img { width: 38.7rem;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(3) img { width: 100%;}
-.corporate .identity-guide-sec .identity-list li:nth-of-type(3) img:last-child {margin-top: -.2rem;}
+.corporate .identity-guide-sec .identity-list li .info {display: flex;align-items: center;justify-content:center;flex-direction: column;width: calc(100% - 32.2rem);height: 24.5rem;}
+.corporate .identity-guide-sec .identity-list li + li {margin-top: 13rem;}
+.corporate .identity-guide-sec .identity-list li img {display:block;height: 25.5rem}
+.corporate .identity-guide-sec .identity-list li:last-of-type img {height: 31.9rem;}
 
 /* promotional video */
 .promational .visual-sec::after {background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
