@@ -626,20 +626,20 @@
 
             $fixedSec.css({
                 'display': 'block',
-                'width': childStyle.width,
-                'height': childStyle.height,
+                'width': (1903 / 1920 * 100).toFixed(4) + 'vw',
+                'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
                 // 'margin': childStyle.margin,
                 'padding': 0,
                 'box-sizing': 'border-box'
             });
 
             $child.css({
-                'width': childStyle.width,
-                'min-width': childStyle.width,
-                'height': childStyle.height,
-                'min-height': childStyle.height,
+                'width':  (1903 / 1920 * 100).toFixed(4) + 'vw',
+                'min-width':  (1903 / 1920 * 100).toFixed(4) + 'vw',
+                'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
+                'min-height': (1182 / 1920 * 100).toFixed(4) + 'vw',
                 'margin': 0,
-                'padding': childStyle.padding,
+                'padding-bottom': (167 / 1920 * 100).toFixed(4) + 'vw',
                 'transform:': 'translate(0px, 0px)'
             });
         }
