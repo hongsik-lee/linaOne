@@ -15,6 +15,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const $parentTabs = $('[data-tab-target]');
     $parentTabs.each(function(index, item) {
         $(item).on('click' , function(e) {
+            e.preventDefault();
             handleParentTabClick(e);
         });
     });
@@ -22,7 +23,8 @@ window.addEventListener("DOMContentLoaded", function () {
     const $childTabs = $('[data-sub-target]');
     $childTabs.each(function(index, item) {
         $(item).on('click' , function(e) {
-            handleChildTabClick(item);
+            e.preventDefault();
+            handleChildTabClick(e);
         });
     });
 
@@ -93,7 +95,6 @@ const handleAccTitAreaClick = function(item) {
 
 // 탭 공통 스크립트
 const handleParentTabClick = function(e) {
-    e.preventDefault();
     const $target = $(e.target)
         , dataTabTarget = $target.data('tab-target')
         , $tab = $(dataTabTarget)
@@ -110,7 +111,6 @@ const handleParentTabClick = function(e) {
 }
 
 const handleChildTabClick = function(e) {
-    e.preventDefault();
     const $target = $(e.target)
         , dataSubTabTarget = $target.data('sub-target')
         , $subTab = $(dataSubTabTarget)
