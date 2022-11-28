@@ -74,10 +74,18 @@
             </div>
             <div class="page-tab-sec">
                 <ul class="inner">
-                    <li><a href="PC_RE010100S.html" class="active" data-tab-target="#recruitTab1">채용 절차</a></li>
-                    <li><a href="PC_RE010200S.html" data-tab-target="#recruitTab2">복리후생제도</a></li>
-                    <li><a href="PC_RE010300S.html" data-tab-target="#recruitTab3">인재상</a></li>
-                    <!-- <li><a href="PC_RE010400S.html">자주하는 질문</a></li> -->
+                    <li><a href="#" class="active" data-tab-target="#recruitTab1">채용 절차</a></li>
+                    <li><a href="#" data-tab-target="#recruitTab2">복리후생제도</a></li>
+                    <li><a href="#" data-tab-target="#recruitTab3">인재상</a></li>
+                    <li>
+                        <a href="#"data-tab-target="#recruitTab4">자주하는 질문</a>
+                        <ul class="sub_menu_t sub_filter">
+                            <li><a href="#" data-filter="all" class="active">전체</a></li>
+                            <li><a data-filter="select1" href="#">지원 이전</a></li>
+                            <li><a data-filter="select2" href="#">지원서 작성</a></li>
+                            <li><a href="#" data-filter="select3">지원 이후</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -334,8 +342,32 @@
             </div>
             <!-- E : 인재상 -->
 
-            
-
+            <!-- S : 자주하는질문 -->
+            <div class="recruitTab" id="recruitTab4" data-tab-content>
+                <div class="accor inner">
+                    <ul data-aos="fade-up">
+                        <li class="filter-item" data-category="select1">
+                            <div class="acc_tit_area">
+                                <span class="category">지원 이전</span>
+                                <h3 class="title">라이나생명 직원 인재채용에 지원하고 싶습니다. 어떻게 해야하나요?</h3>
+                            </div>
+                            <div class="cont">
+                                상단 ‘채용 절차’에서 365일 24시간 언제든지 지원 가능합니다. 서류작성 > 1차인터뷰 > 2차인터뷰 > 고용심사 및 레퍼런스 체크 > 처우협상 > 최종합격 순서로 진행됩니다.
+                                경력 및 고용 형태에 따라 채용 절차가 추가되거나 생략될 수 있습니다.
+                                인터뷰는 대면 또는 비대면으로 진행되며, 비대면 면접 진행 시 별도의 화상미팅 Tool에 접속하거나 모바일 앱설치가 필요합니다.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mail_box inner" data-aos="fade-up" data-aos-duration="300">
+                    <p class="subject">채용지원문의</p>
+                    <p class="desc">
+                        라이나원 지원관련 궁금하신 점은 담당자에게 문의하시어 자세한 안내를 받으시기 바랍니다.
+                        <a href="#">e-mail : recruit.lina@linakorea.com</a>
+                    </p>
+                </div>
+            </div>
+            <!-- E : 자주하는질문 -->
         </div>
         <footer>
             <div class="inner">
@@ -357,15 +389,15 @@
                         <ul>
                             <li>사업자등록번호 : 101-86-82935</li>
                             <li>대리점등록번호 : 제2013098032호</li>
-                            <li>전화 : 02-6480-0000</li>
-                            <li>전화 : 02-6480-0000</li>
+                            <li>전화 : 02-6330-3418</li>
+                            <li>팩스 : 02-555-6991</li>
                         </ul>
                         <p>©LINA ONE Co., Ltd. All Rights Reserved.</p>
                     </div>
                 </div>
                 <div>
                     <div class="notice">
-                        <p class="number">02-6480-0000</p>
+                        <p class="number"> 02-6330-3418</p>
                         <p class="time">평일 09:00 ~ 17:00 (토요일/공휴일 휴무)</p>
                     </div>
                     <ul class="family_site">
@@ -385,5 +417,19 @@
     </div>
     <script src="../../assets/js/aos.js"></script>
     <script src="../../assets/js/common.js"></script>
+    <script>
+        $('.sub_filter a').click(function(e){
+            e.preventDefault();
+            $('.sub_filter a').removeClass('active');
+            $(this).addClass('active')
+            $filter = $(this).data('filter');
+            if($filter == 'all'){
+                $('.filter-item').fadeIn();
+            }else {
+                $('.filter-item').hide();
+                $('.filter-item[data-category="'+ $filter + '"]').fadeIn();
+            }
+        });
+    </script>
 </body>
 </html>

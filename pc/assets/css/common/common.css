@@ -100,6 +100,8 @@ header .sub_menu_wrap .sub_menu li:hover a {color:#000;}
 .news_list .list_wrap p {font-size: 1.7rem;font-weight:500;text-align: right;}
 .news_list .list_wrap p > span{font-size: 1.7rem;font-weight:500;text-align: right;}
 .news_list .list_wrap .list {margin-top:4rem;margin-bottom:6rem;border-top: 2px solid#000;}
+.news_list .list_wrap .list.empty {margin-bottom:10rem;}
+.news_list .list_wrap .list.empty li {font-size: 2rem;line-height:3rem;font-weight:700;color:#000;}
 .news_list .list_wrap .list li {display:flex;justify-content:space-between;padding:4.2rem 0;border-bottom:1px solid #ebebeb;align-items: center;}
 .news_list .list_wrap .list li a {position:relative;margin-right: 2rem;font-size: 2rem;line-height:3rem;font-weight:700;color:#000;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .news_list .list_wrap .list li a:after {position:absolute;bottom:0;left:0;width: 100%;transition:.3s;border-bottom: 2px solid #000;opacity:0;content: '';}
