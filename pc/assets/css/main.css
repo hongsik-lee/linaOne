@@ -4,11 +4,6 @@
 div { box-sizing: border-box;}
 .main #contents{margin-bottom: 0;overflow: hidden;}
 .main .inner{width: 66.3542vw;margin: 0 auto;}
-@media screen and (max-width:1580px) {
-    /* .main .inner{width: 70%;} */
-    /* .main .bhr-quote-sec {height: 56.9rem;padding-top: 30rem;} */
-    /* .main footer .inner {width: 127.4rem;} */
-}
 
 .page-tit.activeMotion > span.txtLine span, .tit.activeMotion > span.txtLine span {transform: translate3d(0, 0, 0);}
 .page-tit span.txtLine, .tit span.txtLine  {display: block;overflow: hidden;}
@@ -168,7 +163,7 @@ div { box-sizing: border-box;}
 .main .brand-goal-sec .text-area {height: 6.9792vw;}
 .main .brand-goal-sec .desc {position:absolute;top:0;opacity: 0;transition: opacity .5s ease-out;font-weight: 700;font-size: 1.6667vw;line-height: 2.3333vw;}
 .main .brand-goal-sec .desc.active{opacity: 1;}
-.main .brand-goal-sec .swiper-controller {position: relative;display: flex;align-items: center;justify-content: center;width: 10.1042vw;height: 4.1667vw;margin-left: auto;margin-right: 9.3750vw;}
+.main .brand-goal-sec .swiper-controller {position: relative;display: flex;align-items: center;justify-content: center;width: 10.1042vw;height: 4.1667vw;margin-left: auto;}
 .main .brand-goal-sec .swiper-controller button {position:absolute;top:50%;transform:translateY(-50%);width: 1.6667vw;height: 1.6667vw;padding:0;border:none;background-color: transparent;cursor: pointer;}
 .main .brand-goal-sec .swiper-controller button svg {width: 100%;height: 100%;}
 .main .brand-goal-sec .swiper-controller button.control-prev {left:0;}
@@ -178,7 +173,7 @@ div { box-sizing: border-box;}
 .main .brand-goal-sec .swiper-controller button.control-next.disabled svg{opacity: .2;cursor: not-allowed;}
 .main .brand-goal-sec .index-wrap {display: flex;align-items: center;}
 .main .brand-goal-sec .index-wrap svg {width:2.6042vw; margin: 0 0.4167vw;}
-.main .brand-goal-sec .index-wrap span {font-weight: 500;font-size: 1.0417vw; line-height: 1.3542vw;letter-spacing: 0.06em;}
+.main .brand-goal-sec .index-wrap span {font-weight: 500;font-size: 1.0417vw; line-height: 1.3542vw;letter-spacing: 0.06rem;}
 .main .brand-goal-sec .swiper {position: absolute;top: 11.1458vw;width: 100vw;overflow: initial;}
 .main .brand-goal-sec .swiper-wrapper {display: flex;}
 .main .brand-goal-sec .swiper-slide {position: relative;display: flex;width: 47.9167vw;height: 26.5625vw;margin-right: 3.1250vw;padding: 3.1250vw;border: 0.3125vw solid #000;box-sizing: border-box;background-color: #fff;transition: color .8s ease;}
@@ -203,12 +198,12 @@ div { box-sizing: border-box;}
 .main .related-info-sec .cont-box h4 {position:relative;display: inline-block;margin-bottom: 1.0417vw;}
 .main .related-info-sec .cont-box h4::after {content: '';position:absolute;left:0;bottom:0;display: block;width: 0;height: 0.2083vw;background-color: #000;transition: width 0.3s ease;}
 .main .related-info-sec .cont-box a:hover h4::after{width: 100%;}
-.main .related-info-sec .cont-box.recruit h4 {font-weight: 700;font-size: 2.7083vw;line-height: 3.5208vw;letter-spacing: 0.06em;}
+.main .related-info-sec .cont-box.recruit h4 {font-weight: 700;font-size: 2.7083vw;line-height: 3.5208vw;letter-spacing: 0.06rem;}
 .main .related-info-sec .cont-box.contact h4 {font-family: var(--poppins-fonts);font-weight: 700;font-size: 2.7083vw;line-height: 3.5208vw;}
 .main .related-info-sec .cont-box .hint::after{content:'';display:inline-block;width: 3.7500vw;height: 3.7500vw;margin-left: 2.3438vw;background:url(../images/icons/icon_diagonal_arrow.png) 50% 50% no-repeat;background-size:cover;}
-.main .related-info-sec .cont-box .hint {display: flex;align-items:center;font-weight: 500;font-size: 2.3438vw;line-height: 1.6250vw;}
+.main .related-info-sec .cont-box .hint {display: flex;align-items:center;font-weight: 500;font-size: 1.2500vw;line-height: 1.6250vw;}
 .main .related-info-sec .cont-box .recruit-count {display:flex;justify-content: center;width: 3.7500vw;margin-left: 2.3438vw;font-weight: 600;font-size: 3.7500vw;line-height: 4.1250vw;}
-.main .related-info-sec .line {position: absolute;top:0;left:0;width:150%;height: 0.06rem;background-color:#191919;}
+.main .related-info-sec .line {position: absolute;top: 0;left: 0;width: 150%;height: 0.0313vw;background-color:#191919;}
 .main .related-info-sec .line.line02 {top: 12.5000vw;}
 
 /* bhr-quote-sec */
