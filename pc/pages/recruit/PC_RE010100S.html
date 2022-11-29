@@ -61,7 +61,7 @@
             </nav>
             <div class="link_wrap">
                 <a href="#">라이나생명</a>
-                <a href="#">다이렉트보험</a>
+                <a href="https://www.chubb.com/kr-kr/" target="_black">다이렉트보험</a>
             </div>
         </header>
         <div id="contents">
@@ -78,8 +78,8 @@
                     <li><a href="#" data-tab-target="#recruitTab2">복리후생제도</a></li>
                     <li><a href="#" data-tab-target="#recruitTab3">인재상</a></li>
                     <li>
-                        <a href="#"data-tab-target="#recruitTab4">자주하는 질문</a>
-                        <ul class="sub_menu_t sub_filter">
+                        <a href="#" class="question" data-tab-target="#recruitTab4">자주하는 질문</a>
+                        <ul class="sub_menu_t sub_filter" id="recruitStep">
                             <li><a href="#" data-filter="all" class="active">전체</a></li>
                             <li><a data-filter="select1" href="#">지원 이전</a></li>
                             <li><a data-filter="select2" href="#">지원서 작성</a></li>
@@ -346,36 +346,15 @@
             <div class="recruitTab" id="recruitTab4" data-tab-content>
                 <div class="accor inner">
                     <ul data-aos="fade-up">
-                        <li class="filter-item" data-category="select1">
-                            <div class="acc_tit_area">
-                                <span class="category">지원 이전</span>
-                                <h3 class="title">라이나생명 직원 인재채용에 지원하고 싶습니다. 어떻게 해야하나요?</h3>
-                            </div>
-                            <div class="cont">
-                                상단 ‘채용 절차’에서 365일 24시간 언제든지 지원 가능합니다. 서류작성 > 1차인터뷰 > 2차인터뷰 > 고용심사 및 레퍼런스 체크 > 처우협상 > 최종합격 순서로 진행됩니다.
-                                경력 및 고용 형태에 따라 채용 절차가 추가되거나 생략될 수 있습니다.
-                                인터뷰는 대면 또는 비대면으로 진행되며, 비대면 면접 진행 시 별도의 화상미팅 Tool에 접속하거나 모바일 앱설치가 필요합니다.
-                            </div>
-                        </li>
-                        <li class="filter-item empty" data-category="select2">
-                            <div class="acc_tit_area">
-                                <span class="category">지원서 작성</span>
-                                <h3 class="title">등록된 게시물이 없습니다.</h3>
-                            </div>
-                        </li>
-                        <li class="filter-item empty" data-category="select3">
-                            <div class="acc_tit_area">
-                                <span class="category">지원 이후</span>
-                                <h3 class="title">등록된 게시물이 없습니다.</h3>
-                            </div>
-                        </li>
+            
                     </ul>
                 </div>
                 <div class="mail_box inner" data-aos="fade-up" data-aos-duration="300">
                     <p class="subject">채용지원문의</p>
                     <p class="desc">
                         라이나원 지원관련 궁금하신 점은 담당자에게 문의하시어 자세한 안내를 받으시기 바랍니다.
-                        <a href="#">e-mail : recruit.lina@linakorea.com</a>
+                        <!-- <a href="#">e-mail : recruit.lina@linakorea.com</a> -->
+                        <a href="mailto:recruit.lina@linakorea.com">e-mail : recruit.lina@linakorea.com</a>
                     </p>
                 </div>
             </div>
@@ -429,26 +408,5 @@
     </div>
     <script src="../../assets/js/aos.js"></script>
     <script src="../../assets/js/common.js"></script>
-    <style>
-        .sub_wrap .accor li.empty {display: none;}
-        .sub_wrap .accor li.empty .acc_tit_area::after {display: none;}
-    </style>
-    <script>
-        $('.sub_filter a').click(function(e){
-            e.preventDefault();
-            $('.sub_filter a').removeClass('active');
-            $(this).addClass('active')
-            $filter = $(this).data('filter');
-            console.log($filter)
-            if($filter == 'all'){
-                $('.filter-item').not('.empty').fadeIn();
-            }else {
-                $('.filter-item').hide();
-                $('.filter-item[data-category="'+ $filter + '"]').fadeIn();
-
-                // if($filter.length)
-            }
-        });
-    </script>
 </body>
 </html>
