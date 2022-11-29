@@ -391,5 +391,5 @@ const tmrRecruitText = [
 ];
 
 function openTmr(){
-    window.open('https://www.lina.co.kr/tmr/main/main.htm', 'TMR | 라이나생명', 'width=992px,height=926px,scrollbars=yes');
+    window.open('https://www.lina.co.kr/tmr/main/main.htm', 'TMR | 라이나생명', 'width=1100px, height=926px, scrollbars=yes');
 }
