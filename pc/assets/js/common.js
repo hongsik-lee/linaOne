@@ -44,12 +44,6 @@ window.addEventListener("DOMContentLoaded", function () {
         $(this).addClass('active');
     });
 
-    // 채용 절차 accordion
-    $(document).on('click', '#recruitStep', function(e) {
-        e.preventDefault();
-        handleRecruitStepClick(e);
-    });
-
     // 채용 절차 step accordion data
     $(document).on('click', '#recruitStep', function(e) {
         e.preventDefault();
@@ -59,7 +53,6 @@ window.addEventListener("DOMContentLoaded", function () {
     // tmr 인재채용 accordion data
     $(document).on('click', '#tmrRecruitStep', function(e) {
         e.preventDefault();
-        console.log(e.target);
         handleTmrRecruitStepClick(e);
     });
 
