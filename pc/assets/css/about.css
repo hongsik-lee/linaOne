@@ -34,6 +34,7 @@
 .interview #contents {margin-bottom: 0;}
 .interview #contents .visual-sec {height: 38rem;}
 .interview .visual-sec::after {height: 38rem;background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;}
+.interview .visual-sec.active::after {height: 38rem;}
 .interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;}
 .interview .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:9rem;}
 .interview .page-desc-sec {padding-bottom:25rem}
