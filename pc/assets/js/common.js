@@ -397,3 +397,7 @@ const tmrRecruitText = [
     },
 ];
 
+function openTmr(){
+    console.log('d')
+    let tmrPop = window.open('https://www.lina.co.kr/tmr/main/main.htm', 'TMR | 라이나생명', 'width=992px,height=926px,scrollbars=yes');
+}

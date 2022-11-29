@@ -44,7 +44,7 @@
                         <div class="sub_menu_wrap">
                             <ul class="sub_menu">
                                 <li><a href="pages/recruit/PC_RE010100S.html">직원 인재채용</a></li>
-                                <li><a href="pages/recruit/PC_RE020100T.html">TMR 인재채용</a></li>
+                                <li><a href="javascript:void(0);" target="_blank" onclick="openTmr()">TMR 인재채용</a></li>
                             </ul>
                         </div>
                     </li>
@@ -756,6 +756,9 @@
             var top = ((height / 2) - (h / 2)) + screenTop;
 
             window.open(url, '', 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+        }
+        function openTmr(){
+            let tmrPop = window.open('https://www.lina.co.kr/tmr/main/main.htm', 'TMR | 라이나생명', 'width=992px,height=926px,scrollbars=yes');
         }
     </script>
 </body>
