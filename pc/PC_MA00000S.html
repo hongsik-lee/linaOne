@@ -472,6 +472,18 @@
             }
         });
 
+
+        var delay = 300;
+        var timer = null;   
+        $(window).on('resize', function(){
+            clearTimeout(timer);
+            timer = setTimeout(function(){
+                getVisualSectionSrcollInfo();
+                console.log('resize is well done')
+            }, delay);
+        });
+
+
         const scrollMovePosition = function(index) {
             const $contents = $('#contents');
 
