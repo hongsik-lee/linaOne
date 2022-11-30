@@ -62,7 +62,7 @@ background:#bcb9c2;z-index: -1;content: '';}
 .sales .page-interview .left li + li {margin-top: 6rem;}
 .sales .page-interview p {position: relative}
 .sales .page-interview .question {padding-left:5.7rem;margin-bottom:2.55rem;font-size: 3.2rem;font-weight:700;line-height: 4.48rem;}
-.sales .page-interview .answer {padding-left:5.7rem;font-size: 2.4rem;line-height: 140%;font-weight: 500;letter-spacing: 0.02em;}
+.sales .page-interview .answer {padding-left:5.7rem;font-size: 2.4rem;line-height: 140%;font-weight: 500;letter-spacing: 0.01em;}
 .sales .page-interview p:after {position:absolute;left:0;top:0;font-size: 3.6rem;font-weight:700;line-height: 4.48rem;}
 .sales .page-interview .question:after {content: "Q.";}
 .sales .page-interview .answer:after {content: "A.";}
@@ -88,7 +88,7 @@ background:#bcb9c2;z-index: -1;content: '';}
 .it .list_wrap .list_head img {width:12rem}
 .it .list_wrap .list_head p {margin-top:3rem;font-weight: 700;font-size:2.4rem;line-height: 3.36rem;}
 .it .list_wrap .list_cont {position:relative;display:flex;flex-direction:column;margin-top: 17.2rem;padding:5rem 4rem;text-align: center;background:#F8F7FA;border-radius: 2rem}
-.it .list_wrap .list_cont span {display:block;width:25.5rem;padding:2rem 0;margin-bottom:4rem;font-size: 2rem;font-weight: 500;line-height:3rem;color:#150F96;border:1px solid #150F9666;border-radius:10rem;}
+.it .list_wrap .list_cont span {display:block;width:25.5rem;padding:2rem 0;margin-bottom:4rem;font-size: 2rem;font-weight: 500;line-height:3rem;color:#150F96;border:1px solid #150F9666;border-radius:10rem;background:#fff;}
 .it .list_wrap li:nth-of-type(2) span {width: 32.3rem;}
 .it .list_wrap .list_cont:after {position: absolute;border-left: 1px dotted #CFCFCF;top: -14rem;left: 50%;transform: translateX(-50%);width: 0.2rem;height:14rem;content: '';}
 .it .list_wrap .list_cont::before {position:absolute;background:#6E27C5;width:1rem;height: 1rem;top:-15rem;transform: translateX(-54%);left:50%;border-radius:50%;content: '';}
@@ -113,4 +113,4 @@ background:#bcb9c2;z-index: -1;content: '';}
 .it .interview .col_wrap .box:first-of-type {margin-right:10.6rem;}
 .it .interview .col_wrap .box:last-of-type {margin-bottom:0;}
 .it .interview .col_wrap .box .subject {font-size: 3.2rem;line-height: 4.48rem;font-weight:700;}
-.it .interview .col_wrap .box .desc {margin-top:2rem;font-size: 2.4rem;line-height: 3.36rem;font-weight:400;color:#666}
+.it .interview .col_wrap .box .desc {margin-top:2rem;font-size: 2.4rem;line-height: 3.36rem;font-weight:400;color:#666;letter-spacing: -0.01em;}
