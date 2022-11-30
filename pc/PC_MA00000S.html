@@ -148,6 +148,7 @@
                         <span class="txtLine"><span>한계를 넘어선 끝없는 도전을 이어 나갑니다.</span></span>
                     </p>
                 </div>
+                <div class="bg"></div>
             </div>
             <div class="foundation03-sec">
                 <div class="inner">
@@ -190,8 +191,7 @@
                         <span class="txtLine"><span>Expectations</span></span>
                     </h3>
                     <p class="desc">
-                        <span class="txtLine"><span>라이나원은 처브와 라이나가 만들어내는</span></span>
-                        <span class="txtLine"><span>시너지를 통해 남들이 시도하지 않는 도전을</span></span>
+                        <span class="txtLine"><span>라이나원은 남들이 시도하지 않는 도전을</span></span>
                         <span class="txtLine"><span>이어 나가며 예상을 뛰어넘는 결과를 만들어 냅니다.</span></span>
                     </p>
                 </div>
@@ -546,7 +546,7 @@
                 , ratio = getElemScrollRatio($target);
 
             if(!isScreen) {
-                if(ratio > 0 && 0.5 > ratio) {
+                if(ratio > 0 && 1 - ratio > 0.4) {
                     $target.find('.img-wrap').addClass('activeMotion');
                     $target.find('.circle02').addClass('activeMotion');
                     $target.find('.line').addClass('activeMotion');
@@ -564,6 +564,7 @@
 
         const foundation02SectionAnimation = function() {
             const $target = $('.foundation02-sec')
+                , $bg = $target.find('.bg')
                 , splitValue = 3.33
                 , isScreen = isElemOverScreen($target)
                 , ratio = getElemScrollRatio($target);
@@ -578,6 +579,10 @@
                         'top': 'auto'
                     })
                     $target.css("transform",  'scale(1)');
+                }
+                if(ratio > -1.5) {
+                    let scaleValue = 1 + (1 - ratio) / 5;
+                    $bg.css('transform', 'scale('+ scaleValue +')');
                 }
             } else {
                 if(ratio > 1) {
@@ -597,7 +602,7 @@
                 , ratio = getElemScrollRatio($target);
 
             if(!isScreen) {
-                if(ratio > 0 && 1 - ratio > 0.4) {
+                if(ratio > 0 && 0.5 > ratio) {
                     $target.find('.img').addClass('activeMotion');
                     $target.find('.circle').addClass('activeMotion');
                 }
@@ -609,15 +614,19 @@
 
         const foundation04SectionAnimation = function() {
             const $target = $('.foundation04-sec')
+                , $bg = $target.find('.bg')
                 , isScreen = isElemOverScreen($target)
                 , ratio = getElemScrollRatio($target);
                 
             if(!isScreen) {
                 if(ratio > 0 && 1 - ratio > 0.4) {
-                    $target.find('.bg').addClass('activeMotion');
+                    $bg.addClass('activeMotion');
+                }
+                if($bg.hasClass('activeMotion') && ratio > -1.5) {
+                   
                 }
             } else {
-                $target.find('.bg').removeClass('activeMotion');
+                $bg.removeClass('activeMotion');
             }
         }
 

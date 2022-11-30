@@ -84,7 +84,8 @@ div { box-sizing: border-box;}
 }
 
 /* foundation02-sec */
-.main .foundation02-sec {position:relative;transform: scale(0.7);height: 56.2500vw;background:url(../images/main_challenge_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: 100;}
+.main .foundation02-sec {position:relative;transform: scale(0.7);height: 56.2500vw;overflow: hidden;z-index: 100;}
+.main .foundation02-sec .bg {position:absolute;top: 0;left:0;width: 100%;height: 100%;background:url(../images/main_challenge_bg.jpg) 50% 50% no-repeat;background-size:cover;transition: transform .3s linear;z-index: -1;}
 .main .foundation02-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation02-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation02-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
@@ -146,7 +147,7 @@ div { box-sizing: border-box;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .3s;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
-.main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
+.main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
 .main .foundation04-sec .desc {margin-top: 2.6042vw;}
 .main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 @keyframes foundation04-ani {
