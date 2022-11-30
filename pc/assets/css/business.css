@@ -55,7 +55,7 @@ background:#bcb9c2;z-index: -1;content: '';}
 .sales .col_wrap .col.circle_wrap02 {width: 95rem;}
 .sales .circle_wrap02 + .circle li::before {display: none;}
 /* Interview */
-.sales .page-interview {display:flex;flex-direction: column;row-gap: 26rem;}
+.sales .page-interview {margin-top:13rem;display:flex;flex-direction: column;row-gap: 26rem;}
 .sales .page-interview .col {max-width: 95rem;}
 .sales .page-interview .col.right {align-self:flex-end;}
 .sales .page-interview .cont img {display:block;width:100%;}
@@ -93,7 +93,7 @@ background:#bcb9c2;z-index: -1;content: '';}
 .it .list_wrap .list_cont:after {position: absolute;border-left: 1px dotted #CFCFCF;top: -14rem;left: 50%;transform: translateX(-50%);width: 0.2rem;height:14rem;content: '';}
 .it .list_wrap .list_cont::before {position:absolute;background:#6E27C5;width:1rem;height: 1rem;top:-15rem;transform: translateX(-54%);left:50%;border-radius:50%;content: '';}
 .it .interview .page-desc-sec {padding-bottom: 25rem;}
-.it .page-interview {display:flex;flex-direction: column;row-gap: 25rem;}
+.it .page-interview {margin-top:13rem;display:flex;flex-direction: column;row-gap: 25rem;}
 .it .page-interview .col {max-width: 95rem;}
 .it .page-interview .col.right {align-self:flex-end;}
 .it .page-interview .cont img {display:block;width:100%;}
