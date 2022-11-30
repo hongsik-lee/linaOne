@@ -63,7 +63,7 @@ div { box-sizing: border-box;}
 .main .foundation01-sec .info-wrap {padding-top: 13.1771vw;padding-left: 9.3750vw;}
 .main .foundation01-sec .tit .txtLine span {display: block;transition: transform .8s ease .3s;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation01-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
-.main .foundation01-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height:4.2500vw;}
+.main .foundation01-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
 .main .foundation01-sec .desc {margin-top: 2.6042vw;}
 .main .foundation01-sec .desc .txtLine span {transition: transform .8s ease .6s;font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 .main .foundation01-sec .circle {position:absolute;right: 12.8646vw;bottom:calc(18.9583vw - 0.7813vw);display: block;width: 1.5625vw;height: 1.5625vw;z-index: 100;}
@@ -88,7 +88,7 @@ div { box-sizing: border-box;}
 .main .foundation02-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation02-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation02-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
-.main .foundation02-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
+.main .foundation02-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
 .main .foundation02-sec .desc {margin-top: 2.6042vw;}
 .main .foundation02-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 
@@ -99,7 +99,7 @@ div { box-sizing: border-box;}
 .main .foundation03-sec .inner {display:flex;align-items: center;justify-content: space-between;}
 .main .foundation03-sec .tit .txtLine span {display: block;transition: transform .8s ease .4s;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation03-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
-.main .foundation03-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
+.main .foundation03-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
 .main .foundation03-sec .desc {margin-top: 2.6042vw;}
 .main .foundation03-sec .desc .txtLine span {transition: transform .8s ease .8s;font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 .main .foundation03-sec .img-wrap {position: relative;margin-right: -10.5729vw;}
@@ -146,7 +146,7 @@ div { box-sizing: border-box;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .3s;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
-.main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
+.main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
 .main .foundation04-sec .desc {margin-top: 2.6042vw;}
 .main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 @keyframes foundation04-ani {

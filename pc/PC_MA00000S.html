@@ -416,11 +416,10 @@
                     , index = $target.index()
                     , nodeName = e.target.nodeName
                     , $contents = $('#contents').children();
-
+                
+                let posTop = 0;
                 if(nodeName === 'BUTTON') {
-                    const posTop = $('#contents').children().eq(index).offset().top;
-                    
-                    $('html, body').animate({scrollTop : posTop }, 800);
+                    scrollMovePosition(index)
                 }
             });
 
@@ -429,9 +428,9 @@
                     , index = $currentScene.index()
                     , $nextScene = $currentScene.next();
 
+                let posTop = 0;
                 if($nextScene.length > 0) {
-                    const posTop = $currentScene.next().offset().top;
-                    $('html, body').animate({scrollTop : posTop }, 800);
+                    scrollMovePosition(index + 1);
                 }
 
                 if($(e.currentTarget).hasClass('up')) {
@@ -472,6 +471,21 @@
                 window.scrollTo(0, window.pageYOffset + 1);
             }
         });
+
+        const scrollMovePosition = function(index) {
+            const $contents = $('#contents');
+
+            let posTop = 0;
+            if(index === 4) {
+                posTop = $('#contents').children().eq(index).offset().top + $('#contents').children().eq(index).innerHeight() / 4.7
+            } else if(index === 6) {
+                posTop = $('#contents').children().eq(index).offset().top + $('#contents').children().eq(index).innerHeight() / 4.1
+            } else {
+                posTop = $('#contents').children().eq(index).offset().top;
+            }
+            
+            $('html, body').animate({scrollTop : posTop }, 800);
+        }
 
         const changeIndicatorStatus = function() {
             const $currentScene = $('#contents').find('.seen-sec').last()
@@ -583,7 +597,7 @@
                 , ratio = getElemScrollRatio($target);
 
             if(!isScreen) {
-                if(ratio > 0 && 0.5 > ratio) {
+                if(ratio > 0 && 1 - ratio > 0.4) {
                     $target.find('.img').addClass('activeMotion');
                     $target.find('.circle').addClass('activeMotion');
                 }
@@ -599,7 +613,7 @@
                 , ratio = getElemScrollRatio($target);
                 
             if(!isScreen) {
-                if(ratio > 0) {
+                if(ratio > 0 && 1 - ratio > 0.4) {
                     $target.find('.bg').addClass('activeMotion');
                 }
             } else {

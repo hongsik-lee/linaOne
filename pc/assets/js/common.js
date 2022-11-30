@@ -275,7 +275,7 @@ const handleTmrRecruitStepClick = function(e) {
         , targetName = e.target.nodeName
         , dataFilter = $target.data('filter')
         , $accor = $('.tmr-tab').find('.accor ul')
-        , texts = tmrRecruitText;
+        , texts = tmrRecruitTexts;
 
     if(targetName === 'A') {
         let filtered, contents;
@@ -327,7 +327,7 @@ const recruitStepTexts = [
     },
 ];
 
-const tmrRecruitText = [
+const tmrRecruitTexts = [
     {
         category: "select1",
         title: "라이나생명 TMR에 지원하고 싶습니다. 어떻게 해야 하나요?",
