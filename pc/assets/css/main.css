@@ -142,14 +142,15 @@ div { box-sizing: border-box;}
 
 /* foundation04-sec */
 .main .foundation04-sec {position:relative;height: 56.2500vw;overflow:hidden;}
-.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(1);transition: all 1s linear;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(0.7);transition: all .3s linear;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
 .main .foundation04-sec .bg.activeMotion {animation: foundation04-ani 1s forwards linear;}
+.main .foundation04-sec .bg.invert {opacity: 1;animation: initial;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
-.main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .3s;}
+.main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .5s;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
 .main .foundation04-sec .desc {margin-top: 2.6042vw;}
-.main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
+.main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;transition-delay: .8s;}
 @keyframes foundation04-ani {
     50% {
         opacity: .5;
@@ -157,7 +158,7 @@ div { box-sizing: border-box;}
     }
     100% {
         opacity: 1;
-        transform: scale(1.1);
+        transform: scale(1);
     }
 }
 

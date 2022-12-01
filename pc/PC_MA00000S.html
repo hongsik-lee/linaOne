@@ -407,28 +407,26 @@
             setSectionFixed();
             getVisualSectionSrcollInfo();
 
-            $('#contents > div').each((index, item) => {
+            $('#contents > div').each(function(index, item) {
                 textMotionAnimation(item);
             });
 
-            $(document).on('click', '.indicator-group', (e) => {
+            $(document).on('click', '.indicator-group', function(e) {
                 const $target = $(e.target)
                     , index = $target.index()
                     , nodeName = e.target.nodeName
                     , $contents = $('#contents').children();
                 
-                let posTop = 0;
                 if(nodeName === 'BUTTON') {
                     scrollMovePosition(index)
                 }
             });
 
-            $(document).on('click', '.goTop', (e) => {
+            $(document).on('click', '.goTop', function(e) {
                 const $currentScene = $('#contents').find('.seen-sec').last()
                     , index = $currentScene.index()
                     , $nextScene = $currentScene.next();
 
-                let posTop = 0;
                 if($nextScene.length > 0) {
                     scrollMovePosition(index + 1);
                 }
@@ -439,7 +437,7 @@
             });
 
             const $contents  = $('#contents > div');
-            $(window).on('scroll', optimizeAnimation(() => {
+            $(window).on('scroll', optimizeAnimation(function() {
                 yOffset = $(window).scrollTop();
            
                 videoSectionScrollAnimation();
@@ -449,7 +447,7 @@
                 foundation04SectionAnimation();
                 bhrQuoteSectionAnimation();
 
-                $contents.each((index, elem) => {
+                $contents.each(function(index, elem) {
                     const $target = $(elem)
                         , ratio = getElemScrollRatio($target);
 
@@ -472,7 +470,6 @@
             }
         });
 
-
         var delay = 300;
         var timer = null;   
         $(window).on('resize', function(){
@@ -482,7 +479,6 @@
                 console.log('resize is well done')
             }, delay);
         });
-
 
         const scrollMovePosition = function(index) {
             const $contents = $('#contents');
@@ -504,16 +500,21 @@
                 , len = $('#contents').children().length
                 , index = $currentScene.index()
                 , $indicator = $('.indicator-group')
-                , ratio = getElemScrollRatio($currentScene);
+                , ratio = getElemScrollRatio($currentScene)
+                , $goTop = $('.goTop');
 
             if(1 - ratio > 0.2) {
                 $indicator.children().eq(index).addClass('active').siblings().removeClass('active');
             }
 
             if(index + 1 === len) {
-                $('.goTop').addClass('up');
+                $goTop.addClass('up');
+                $goTop.find('em').text('맨 위로 이동');
             } else {
-                $('.goTop').hasClass('up') ? $('.goTop').removeClass('up') : false;
+                if($goTop.hasClass('up')) {
+                    $goTop.removeClass('up');
+                    $goTop.find('em').text('다음 section 이동');
+                }
             }
         }
 
@@ -558,7 +559,7 @@
                 , ratio = getElemScrollRatio($target);
 
             if(!isScreen) {
-                if(ratio > 0 && 1 - ratio > 0.4) {
+                if(ratio > 0 && 1 - ratio > 0.3) {
                     $target.find('.img-wrap').addClass('activeMotion');
                     $target.find('.circle02').addClass('activeMotion');
                     $target.find('.line').addClass('activeMotion');
@@ -593,7 +594,7 @@
                     $target.css("transform",  'scale(1)');
                 }
                 if(ratio > -1.5) {
-                    let scaleValue = 1 + (1 - ratio) / 5;
+                    let scaleValue = 1 + (1 - ratio) / 7;
                     $bg.css('transform', 'scale('+ scaleValue +')');
                 }
             } else {
@@ -614,7 +615,7 @@
                 , ratio = getElemScrollRatio($target);
 
             if(!isScreen) {
-                if(ratio > 0 && 0.5 > ratio) {
+                if(ratio > 0 && 1 - ratio > 0.5) {
                     $target.find('.img').addClass('activeMotion');
                     $target.find('.circle').addClass('activeMotion');
                 }
@@ -635,9 +636,15 @@
                     $bg.addClass('activeMotion');
                 }
                 if($bg.hasClass('activeMotion') && ratio > -1.5) {
-                   
+                    let scaleValue = 1+ (1 - ratio) / 7;
+                    $bg.addClass('invert');
+                    $bg.css({
+                        'transform': 'scale('+ scaleValue +')'
+                    });
                 }
             } else {
+                $bg.css('transform', '')
+                $bg.removeClass('invert');
                 $bg.removeClass('activeMotion');
             }
         }
@@ -767,10 +774,10 @@
         const optimizeAnimation = function(cb) {
             let ticking = false;
 
-            return () => {
+            return function() {
                 if (!ticking) {
                     ticking = true;
-                    requestAnimationFrame(() => {
+                    requestAnimationFrame(function() {
                         cb();
 
                         ticking = false;
@@ -792,6 +799,7 @@
 
             window.open(url, '', 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
         }
+
         function openTmr(){
             window.open('https://www.lina.co.kr/tmr/main/main.htm', 'TMR | 라이나생명', 'width=1100px, height=992px, scrollbars=yes');
         }
