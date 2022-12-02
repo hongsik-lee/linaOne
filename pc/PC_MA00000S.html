@@ -523,9 +523,9 @@
 
         const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
         const getVisualSectionSrcollInfo = () => {
-            visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top;
-            visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top
-            visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2
+            visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 7
+            visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top;
+            visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2;
             visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
         }
 
@@ -674,7 +674,8 @@
             $fixedSec.css({
                 'display': 'block',
                 'width': (1903 / 1920 * 100).toFixed(4) + 'vw',
-                'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
+                // 'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
+                'height': (1500 / 1920 * 100).toFixed(4) + 'vw',
                 // 'margin': childStyle.margin,
                 'padding': 0,
                 'box-sizing': 'border-box'

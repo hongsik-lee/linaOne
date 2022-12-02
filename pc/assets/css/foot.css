@@ -1,54 +1,59 @@
 @import url(common/reset.css);
 @import url(common/common.css);
 @media screen and (max-width: 1500px) {
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, form, fieldset, legend, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
-    font-size: 43%;
-}
+    html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, form, fieldset, legend, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{
+        font-size: 43%;
+    }
 }
 /* 개인정보처리방침 */
-.privacy_popup #contents {margin: 0;padding: 10.2rem 5.3rem 0;color: #000;}
-.privacy_popup .page_tit {margin-bottom: 5rem;text-align: center;color: #000;font-weight: 700;font-size: 3.2rem;line-height: 4.48rem;}
-.privacy_popup .page_desc {margin-bottom:16.6rem;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-.privacy_popup .sec {margin-bottom: 20rem;}
-.privacy_popup .tit {margin-bottom: 2.1rem;color: #150F96;font-weight: 400;font-size: 3rem;line-height: 3.601rem;}
-.privacy_popup  h3, .privacy_popup h4, .privacy_popup  li, .privacy_popup p {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
+.privacy_popup #contents {margin: 0;padding: 60px 70px;color: #666;}
+.privacy_popup .page_tit {margin-bottom: 50px;text-align: center;color: #000;font-weight: 700;font-size: 32px;line-height: 44.8px;}
+.privacy_popup .page_desc {margin-bottom: 30px;font-weight: 500;font-size: 17px;line-height: 23.8px;}
+.privacy_popup .sec {margin-bottom: 60px;}
+.privacy_popup .tit {margin-bottom: 8px;color: #150F96;font-weight: 600;font-size: 24px;line-height: 36px;}
+.privacy_popup  h3, .privacy_popup h4, .privacy_popup  li, .privacy_popup p {font-weight: 500;font-size: 17px;line-height: 23.8px}
 .privacy_popup .list .desc {padding-left: 1.505rem;}
 .privacy_popup .list .sub_list {margin-top: 1.7rem;padding-left: 3.9rem;}
-.privacy_popup .sec01 .list > li {margin-top: 3rem;}
-.privacy_popup .sec04 table {margin-top: 3.6rem;margin-bottom: 3.17rem;}
+
+.privacy_popup .sec01 h3 {font-weight: 600;font-size:20px;line-height: 30px;}
+.privacy_popup .sec01 .list {margin-top: 30px;}
+.privacy_popup .sec01 .list > li {margin-bottom: 20px;}
+.privacy_popup .sec01 .list > li:last-child{margin: 0;}
+.privacy_popup .sec01 .sub_list {margin-top: 8px;padding-left: 15px;}
+.privacy_popup .sec04 table {margin-bottom: 31.7px;}
 .privacy_popup .sec04 tbody td {height: auto;}
-.privacy_popup .sec05 .sub_list {margin-top:2.5rem;margin-bottom: 4.7rem;}
-.privacy_popup .sec05 .sub_list li:nth-of-type(n+2) {margin-top: 5.6rem;}
+.privacy_popup .sec05 .sub_list {margin-top: 25px;margin-bottom: 47px;}
+.privacy_popup .sec05 .sub_list li:nth-of-type(n+2) {margin-top: 20px;}
 .privacy_popup .sec06 .sub_list {margin: 0;padding:0;}
-.privacy_popup .sec06 .sub_list > li {margin-bottom: 5.6rem;}
-.privacy_popup .sec07 .list li:nth-of-type(n+2) {margin-top: 5.6rem;}
-.privacy_popup .sec08 .list {margin-top: 5.6rem;}
+.privacy_popup .sec06 .sub_list > li {margin-bottom: 20px;}
+.privacy_popup .sec07 .list li:nth-of-type(n+2) {margin-top: 20px;}
+.privacy_popup .sec08 .list {margin-top: 20px;}
 .privacy_popup .sec10 .sub_list {margin: 0;padding: 0;}
-.privacy_popup .sec10 thead th {height: 10rem;}
-.privacy_popup .sec10 tbody td {height:8rem;text-align: center;}
+.privacy_popup .sec10 thead th {height: 60px;}
+.privacy_popup .sec10 tbody td {height: 60px;}
 .privacy_popup .sec10 div {display: flex;height: 100%;}
-.privacy_popup .sec10 div span {padding: 2rem;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-.privacy_popup .sec10 div span:first-child {width: 30%;border-right: 1px solid #000;}
-.privacy_popup .sec11 thead th {height: 10rem;}
-.privacy_popup .sec11 tbody td {height:8rem;text-align: center;}
-.privacy_popup .sec12 a, .privacy_popup .sec13 a {color: #000;}
-.privacy_popup .sec12 a span {font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;text-decoration: underline;}
-.privacy_popup table {width: 100%;margin-top: 3rem;}
-.privacy_popup table thead th {height: 16.6rem;padding: 2rem;text-align: left;border-bottom: 1px solid #000;box-sizing: border-box;vertical-align: middle;background-color: #F9F9F9;text-align: center;}
-.privacy_popup table tbody td {height: 15rem;padding:2rem;border-bottom: 1px solid #000;border-right: 1px solid #000;box-sizing: border-box;}
-.privacy_popup table tbody tr > td:last-child {border-right: none;}
-.privacy_popup table th,td {word-break: keep-all;font-weight: 400;font-size: 2.5rem;line-height: 3.9rem;}
-.privacy_popup .sec02 .list, .privacy_popup .sec06 .list, .privacy_popup .sec07 .list, .privacy_popup .sec09 .list,  .privacy_popup .sec10 .list, .privacy_popup .sec11 .list {margin-top:2.6rem;padding-left: 3.9rem;}
-.privacy_popup .sec09 .list li:nth-of-type(n+2), .privacy_popup .sec10 .list li:nth-of-type(n+2), .privacy_popup .sec11 .list li:nth-of-type(n+2) {margin-top: 5.6rem;}
+.privacy_popup .sec10 div span {padding: 20px;font-weight: 400;font-size: 14px;line-height: 19.6px}
+.privacy_popup .sec10 div span:first-child {width: 30%;border-right: 1px solid #ebebeb;}
+.privacy_popup .sec11 thead th {height: 60px;}
+.privacy_popup .sec11 tbody td {height: 60px;}
+.privacy_popup .sec11 p:nth-of-type(2) {margin-top: 20px}
+.privacy_popup .sec12 a, .privacy_popup .sec13 a {color: #666;}
+.privacy_popup .sec12 a span {font-weight: 400;font-size: 17px;line-height: 23.8px;text-decoration: underline;}
+.privacy_popup table {width: 100%;margin-top: 30px;}
+.privacy_popup table thead th {height: 60px;padding: 20px;text-align: left;border-top: 1px solid #d7d7d7;border-bottom: 1px solid #d7d7d7;box-sizing: border-box;vertical-align: middle;background-color: #F9F9F9;}
+.privacy_popup table tbody td {height: 100px;padding: 20px;border-bottom: 1px solid #ebebeb;box-sizing: border-box;}
+.privacy_popup table th,td {word-break: keep-all;font-weight: 500;font-size: 14px;line-height: 19.6px;}
+.privacy_popup .sec02 .list, .privacy_popup .sec06 .list, .privacy_popup .sec07 .list, .privacy_popup .sec09 .list,  .privacy_popup .sec10 .list, .privacy_popup .sec11 .list {margin-top: 26px;padding-left: 39px}
+.privacy_popup .sec09 .list li:nth-of-type(n+2), .privacy_popup .sec10 .list li:nth-of-type(n+2), .privacy_popup .sec11 .list li:nth-of-type(n+2) {margin-top: 20px;}
 
 /* 이메일무단수집거부 */
 .email_collect_refuse #contents {margin:0; padding: 10rem 8rem;}
-.email_collect_refuse .page_tit {font-weight: 700;font-size: 4rem;line-height: 5.6rem;}
+.email_collect_refuse .page_tit {font-weight: 700;font-size: 40px;line-height: 56px;}
 .email_collect_refuse .page_desc_sec {margin-top: 2rem;}
-.email_collect_refuse .sub_tit {margin-bottom: 4rem;font-weight: 700;font-size: 2.4rem;line-height: 3.36rem;}
+.email_collect_refuse .sub_tit {margin-bottom: 4rem;font-weight: 700;font-size: 24px;line-height: 33.6px;}
 .email_collect_refuse p {color: #666;}
-.email_collect_refuse .desc {margin-bottom: 4.8rem;font-weight: 500;font-size: 2rem;line-height: 3rem;}
-.email_collect_refuse .extra-info {text-align: right;font-weight: 500;font-size: 1.7rem;line-height: 2.55rem;}
+.email_collect_refuse .desc {margin-bottom: 48px;font-weight: 500;font-size: 20px;;line-height: 30px;}
+.email_collect_refuse .extra-info {text-align: right;font-weight: 500;font-size: 17px;line-height: 25.5px;}
 
 /* 경영공시실 */
 .disclosure .disclosure-sec {display: none;}
@@ -81,27 +86,27 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 .disclosure .list_wrap.type2 li .btn {flex-basis:16%;max-width:12.2rem;}
 
 /* 공시실 */
+.disclosure-table #contents {margin: 0;padding: 60px 70px;color: #666;}
 .disclosure-table, .disclosure-table > * {box-sizing: border-box;}
-.disclosure-table {padding:11.1rem 8rem 10.6rem 6.3rem}
-.disclosure-table h1 {font-size:3.9rem;line-height: 3.9rem;font-weight: 400;text-align: center;}
-.disclosure-table .flexbox {margin-top: 8.9rem;display: flex;justify-content: flex-end;}
-.disclosure-table select {width: 41.8rem;height:8.3rem;padding:2.2rem 4.6rem; border:1px solid #808080; color:#949494;border-radius:.3rem;font-size: 2.5rem;font-weight:400;background: url(../../assets/images/icons/icon_arrow_down.png)no-repeat;background-position: right 24px center;
-background-size: 4rem;}
-.disclosure-table section:first-of-type {margin-top: 13.4rem;}
-.disclosure-table section h2 {font-weight: 700;font-size: 2.5rem;line-height: 3.9rem;}
-.disclosure-table section h2 + h2 {margin-top: 2.5rem;}
-.disclosure-table section h2 + table {margin-top: 3.4rem;}
+.disclosure-table h1 {font-size: 32px;line-height: 44.8px;font-weight: 700;text-align: center;color: #000;}
+.disclosure-table .flexbox {margin-top: 50px;display: flex;justify-content: flex-end;}
+.disclosure-table select {width: 250px;height: 50px;padding: 13px 20px; border: 1px solid #C8C8C8;font-size: 17px;line-height:23.8px;font-weight:500;background: url(../../assets/images/icons/icon_arrow_down.png)no-repeat;background-position: right 12px center;
+background-size: 26px;}
+.disclosure-table section {margin-bottom: 50px;}
+.disclosure-table section:first-of-type {margin-top: 50px;}
+.disclosure-table section h2 {font-weight: 600;font-size: 24px;line-height: 36px;}
+.disclosure-table section h2 + h2 {margin-top: 25px;}
+.disclosure-table section h2 + table {margin-top: 30px;}
 .disclosure-table section table {table-layout: fixed;width:100%}
-.disclosure-table section table td, th {padding:2.4rem;font-size: 2.5rem;line-height:3.9rem;font-weight: 400;border-bottom: 1px solid #000;border-collapse: collapse;}
-.disclosure-table section table tr:first-child td, th {border-top: 1px solid #000;}
-.disclosure-table section + section {margin-top: 14.2rem;}
-.disclosure-table section table.type1 td:first-child {background:#eee;text-align: center;}
-.disclosure-table section table.type3 tr:first-child th {background:#eee;text-align: center;}
+.disclosure-table section table td, th {padding: 2.4rem;font-size: 17px;line-height:23.8px;font-weight: 500;border-bottom: 1px solid #d7d7d7;border-collapse: collapse;}
+.disclosure-table section table tr:first-child td, th {border-top: 1px solid #d7d7d7;}
+.disclosure-table section table.type1 td:first-child {background:#F9F9F9;text-align: center;}
+.disclosure-table section table.type3 tr:first-child th {background:#F9F9F9;text-align: center;}
 .disclosure-table section table.type3 th, 
 .disclosure-table section table.type3 td {border-right: 1px solid #000;text-align: center;}
 .disclosure-table section table.type3 th:last-child,
 .disclosure-table section table.type3 td:last-child {border-right: 0;}
-.disclosure-table section table td.head {background:#eee;text-align: center;}
-.disclosure-table section p {font-size: 2.5rem;font-weight: 400;line-height: 3.9rem;}
+.disclosure-table section table td.head {background:#F9F9F9;text-align: center;}
+.disclosure-table section p {font-size: 17px;line-height:23.8px;font-weight: 500;}
 .disclosure-table section table td a {color:#000}
 

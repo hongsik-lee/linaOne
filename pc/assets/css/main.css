@@ -32,8 +32,9 @@ div { box-sizing: border-box;}
 .main .visual-sec .page-tit > span:last-child {margin-left: 8.3333vw;}
 .main .visual-sec .text-area > span {display: block;margin-left: 8.3333vw;overflow: hidden;}
 .main .visual-sec .text-area > span.eng {margin: 3.1250vw 0 0.5208vw 8.4375vw;}
-.main .visual-sec .text-area > span span {display:block;transform: translate3d(0, 100%, 0);transition:transform .8s ease .5s;font-family: var(--poppins-fonts);font-weight: 700;font-size: 3.6458vw;line-height: 3.9193vw;}
-.main .visual-sec .text-area > span.eng span {font-weight: 500;font-size: 1.6667vw;line-height: 2.0000vw;}
+.main .visual-sec .text-area > span span {display:block;transform: translate3d(0, 100%, 0);transition:transform .8s ease .5s;font-family: var(--poppins-fonts);}
+.main .visual-sec .text-area > span.eng span {font-weight: 400;font-size: 1.6667vw;line-height: 2.0000vw;}
+.main .visual-sec .text-area > span:last-child span {font-weight: 700;font-size: 2.5000vw;line-height: 3.0000vw;transition-delay: .7s;}
 .main .visual-sec .text-area > span.activeMotion span {transform: translate3d(0, 0, 0);}
 .main .video-wrap {display:flex;justify-content: center;width: 100%;}
 .main .video-wrap .video-inner {position: relative;width: 100%;box-sizing: border-box;}
@@ -178,7 +179,7 @@ div { box-sizing: border-box;}
 .main .brand-goal-sec .swiper-controller button.control-next.disabled svg{opacity: .2;cursor: not-allowed;}
 .main .brand-goal-sec .index-wrap {display: flex;align-items: center;}
 .main .brand-goal-sec .index-wrap svg {width:2.6042vw; margin: 0 0.4167vw;}
-.main .brand-goal-sec .index-wrap span {font-weight: 500;font-size: 1.0417vw; line-height: 1.3542vw;letter-spacing: 0.06rem;}
+.main .brand-goal-sec .index-wrap span {width: 0.6250vw;text-align: center;font-weight: 500;font-size: 1.0417vw; line-height: 1.3542vw;letter-spacing: 0.06rem;}
 .main .brand-goal-sec .swiper {position: absolute;top: 11.1458vw;width: 100vw;overflow: initial;}
 .main .brand-goal-sec .swiper-wrapper {display: flex;}
 .main .brand-goal-sec .swiper-slide {position: relative;display: flex;width: 47.9167vw;height: 26.5625vw;margin-right: 3.1250vw;padding: 3.1250vw;border: 0.0313vw solid #000;box-sizing: border-box;background-color: #fff;transition: color .8s ease;}
@@ -216,5 +217,3 @@ div { box-sizing: border-box;}
 .main .bhr-quote-sec .inner {position:relative;box-sizing: border-box;}
 .main .bhr-quote-sec .tit span {display:block;color: #fff;font-weight: 700;font-size: 2.7083vw;line-height: 3.7917vw;letter-spacing: 0.02em;}
 .main .bhr-quote-sec .bg {position:absolute;top: 0;left:0;width: 100%;height: 100%;background:url(../images/main_bhr_quote_bg.jpg) 50% 50% no-repeat;background-size:cover;z-index: -1;}
-
-.main footer .inner {width: 127.4rem;}

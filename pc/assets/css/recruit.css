@@ -81,7 +81,7 @@
 .tmr_recruit .col-2 .img img {width: 8rem;height:8rem;}
 .tmr_recruit .col-2 .info_title {display:flex;margin-bottom: 5rem;}
 .tmr_recruit .col-2 .info_title h3 {font-size: 2.8rem;line-height: 140%;font-weight: 700;}
-.tmr_recruit .col-2 .info_title p {margin-top:2rem;font-size: 2rem;line-height: 150%;font-weight: 500;color:#666}
+.tmr_recruit .col-2 .info_title p {margin-top:.9rem;font-size: 2rem;line-height: 150%;font-weight: 500;color:#666}
 .tmr_recruit .col-2 .info_wrap {border-top:1px solid #000}
 .tmr_recruit .col-2 .info_wrap li {display: flex; align-items:center;padding:4.2rem 0;border-bottom: 1px solid #ebebeb;}
 .tmr_recruit .col-2 .info_wrap p {font-size: 2rem;line-height:3rem;font-weight: 500;color:#666}
@@ -90,7 +90,7 @@
 .tmr_recruit .col-2 .info_wrap li:last-child p.tit  {background-image:url(../../assets/images/icons/icon_location.png);}
 
 /* TMR 인재채용 소식플러스 */
-.tmr_recruit .thumbs_wrap {margin-top: 20.2rem;margin-bottom: 6rem;}
+.tmr_recruit .thumbs_wrap {margin-top: 23.8rem;margin-bottom: 6rem;}
 .tmr_recruit .thumbs_wrap ul {display: flex; flex-wrap: wrap; justify-content: space-between;row-gap:10rem}
 .tmr_recruit .thumbs_wrap li {width: 55.6rem;}
 .tmr_recruit .thumbs_wrap li img {display:block;width:100%;height:36.9rem;object-fit: contain;border:1px solid #D7D7D7}
@@ -116,11 +116,11 @@
 .tmr_recruit .vacancy_list .list .date {font-weight:500;color:#666}
 .tmr_recruit .vacancy_list .list .btn a {display:inline-block;width: 12.2rem;height: 5rem;background:#000;color:#fff;line-height:5rem;text-align: center;}
 .tmr_recruit .vacancy_list .col_box.type3 {flex-wrap: wrap;}
-.tmr_recruit .vacancy_list .col_box.type3 .col {flex-direction: column;width: 62.7rem;box-sizing: border-box;justify-content: flex-start;}
+.tmr_recruit .vacancy_list .col_box.type3 .col {flex-direction: column;width: 62.7rem;padding: 4rem;box-sizing: border-box;justify-content: flex-start;}
 .tmr_recruit .vacancy_list .col_box.type3 .badge {display: block;width: 8.4rem;height: 3.1rem;line-height:3.1rem;border-radius: 0.6rem;text-align: center;color:#fff;font-size:1.5rem;font-weight:600;}
 .tmr_recruit .vacancy_list .col_box.type3 .badge.blue {background:#01C1D6;}
 .tmr_recruit .vacancy_list .col_box.type3 .badge.green {background:#7ACB00;}
-.tmr_recruit .vacancy_list .col_box.type3 h4 {margin:2.5rem 0 3rem;font-size: 3.4rem;line-height: 4.76rem;font-weight: 700;}
+.tmr_recruit .vacancy_list .col_box.type3 h4 {margin:2.5rem 0 3rem;padding-bottom: 3rem;border-bottom: .2rem solid #000000;box-sizing: border-box;font-size: 3.4rem;line-height: 4.76rem;font-weight: 700;}
 .tmr_recruit .vacancy_list .col_box.type3 .txt_box + .txt_box {margin-top: 3rem;}
 .tmr_recruit .vacancy_list .col_box.type3 .txt_box .tit {font-size: 2.4rem;line-height: 3.6rem;font-weight: 700;color:#000}
 .tmr_recruit .vacancy_list .col_box.type3 .txt_box .desc {margin-top:1rem;font-size: 2rem;line-height: 3rem;font-weight: 500;color:#666}
