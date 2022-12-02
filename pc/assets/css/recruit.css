@@ -6,20 +6,20 @@
 .recruit .recruitTab.active {display: block;}
 .recruit .col_wrap .title.type3 {padding-top: 2.6rem;}
 .recruit .visual-sec::after {background: url(../images/re_visual.png) 50% 50% no-repeat;background-size: cover;}
-#recruitTab3 .page-desc-sec .inner {padding-left:26.1rem;}
-.recruit .ico_list {display: flex;flex-wrap: wrap;justify-content: space-between;row-gap:8rem;}
+.recruit .ico_list {display: flex;width:95rem;flex-wrap: wrap;justify-content: space-between;row-gap:8rem;}
 .recruit .ico_list li {width:41rem;}
 .recruit .ico_list li img {display:block;width:9rem;}
-.recruit .ico_list li h4 {margin:4rem 0 1rem;font-size: 2.8rem;font-weight:700;line-height: 3.92rem;}
-.recruit .ico_list li p {font-size:2rem;line-height: 2.8rem;font-weight: 500;color:#666}
+.recruit .ico_list li h4 {margin:4rem 0 1rem;font-size: 2.4rem;font-weight:700;line-height: 3.92rem;}
+.recruit .ico_list li p {font-size:1.7rem;line-height: 2.8rem;font-weight: 500;color:#666}
 .recruit .btn {display:block;width:26rem;height:6.4rem;line-height:6.4rem;color:#fff;font-weight:500;text-align: center;background:#000;}
+.recruit .recruitTab .page-desc-sec {padding-bottom:25rem;padding-top: 5rem;}
 
 /* 채용프로세스 process */
-.recruit .re_process .page-desc-sec {padding-bottom:25rem;}
-.recruit .re_process .ico_list {row-gap: 7rem;column-gap:13rem;margin-bottom: 13rem;}
+
+.recruit .re_process .ico_list {row-gap: 7rem;column-gap:13rem;margin-bottom: 15.9rem;}
 .recruit .re_process .col_wrap .title.type2 {padding-top: 3.3rem;}
 .recruit .re_process .ico_list li {position:relative;width:23rem;text-align: center;}
-.recruit .re_process .ico_list li:after {position:absolute;width:2.5rem;height:4rem;top:2.7rem;right:-4.8rem;background:url(../../assets/images/icons/icon_arrow_right.png);background-size:cover;content: '';}
+.recruit .re_process .ico_list li:after {position:absolute;width:2.5rem;height:4rem;top:2.7rem;right:-8.8rem;background:url(../../assets/images/icons/icon_arrow_right.png);background-size:cover;content: '';}
 .recruit .re_process .ico_list li:nth-child(3n):after {display: none;}
 .recruit .re_process .ico_list li img {margin: auto;}
 .recruit .re_process .ico_list li h4 {margin:2rem 0;}
@@ -27,7 +27,7 @@
 .recruit .re_process .btn {margin-top: 10rem;font-size:2rem;}
 
 /* 복리후생 benefits */
-.recruit .re_benefits .col_2 {display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:8rem;width: 122.2rem;margin-top: 17rem;}
+.recruit .re_benefits .col_2 {display:flex;flex-wrap:wrap;justify-content: space-between;row-gap:8rem;width: 122.2rem;margin-top: 13rem;}
 .recruit .re_benefits .col_2 li {display: flex;flex:50%;height:9.93rem}
 .recruit .re_benefits .col_2 li img {height: 7.2rem;margin-right: 4rem;}
 
