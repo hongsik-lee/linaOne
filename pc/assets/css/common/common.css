@@ -35,9 +35,12 @@ header nav li:nth-of-type(3) .sub_menu_wrap .sub_menu {padding: 1.4583vw 19.792v
 header nav li:nth-of-type(4) .sub_menu_wrap .sub_menu {padding: 1.4583vw 17.708vw 1.4583vw 0}
 
 /* visual area */
-.sub_wrap .visual-sec {position: relative;height: 17.7083vw; padding-top:21.4583vw;}
-.sub_wrap .visual-sec::after {width: 100%;position: absolute;height: 32rem;background-size: cover;transform:scale(0.9, 0.8);content: '';z-index: -1;}
-.sub_wrap .visual-sec.active::after {transition-duration:0.4s;transform: scale(1);height:17.7083vw;}
+.sub_wrap .visual-sec {position: relative;height:17.7083vw; padding-top:21.4583vw;}
+.sub_wrap .visual-sec.active {height: 17.7083vw;}
+.sub_wrap .visual-sec::after {width: 70%;position: absolute;height: 1vw;left:50%;bottom:0;transform:translateX(-50%);background-size: cover;content: '';z-index: -1;}
+.sub_wrap .visual-sec.active::after {height:17.7083vw;width:100%;transition-duration:0.6s;}
+
+
 .sub_wrap .visual-sec .page-tit {position: absolute;top: 17.4479vw;left: 17%;font-weight: 700;font-size: 6.4583vw;line-height: 6.924vw;overflow: hidden;}
 .sub_wrap .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
 .sub_wrap .visual-sec .page-tit.type2 {top:11.0104vw;left: 8.7%;line-height:5.5729vw}
