@@ -3,7 +3,7 @@
 
 /* 사업영역 */
 .business .visual-sec::after {background: url(../images/bu_visual.png) 50% 50% no-repeat;background-size: cover;}
-.business .visual-sec .page-tit.type2 .page-tit-line:last-child span{padding-left: 27.6rem;}
+.business .visual-sec .page-tit.type2 .page-tit-line:last-child span{padding-left: 14.3750vw;}
 .business .page-desc-sec {padding-bottom: 0;}
 .business .content {margin:25rem 0 10rem;padding-bottom:10rem;text-align:center;border-bottom: 1px solid #c8c8c8;}
 .business .cont_tit {font-size: 2.8rem;line-height:3.9rem;font-weight:700;text-align: center;}
@@ -23,7 +23,7 @@
 .sales-tab.active {display: block;}
 .sales .page-desc-sec {padding-bottom: 25rem;padding-top:5rem;}
 .sales .visual-sec::after {background: url(../images/sales_visual.png) 50% 50% no-repeat;background-size: cover;}
-.sales .visual-sec .page-tit.type2 .page-tit-line:last-child span {padding-left: 17.8rem;padding-bottom: 2rem;}
+.sales .visual-sec .page-tit.type2 .page-tit-line:last-child span {padding-left:9.2708vw;}
 .sales .circle_wrap01 {padding-bottom:13rem;}
 .sales .circle_wrap01 .title {font-weight: 700;font-size:3.2rem;line-height: 140%;}
 .sales .circle_wrap01 .desc {margin-top:2rem;font-weight: 500;font-size: 2.4rem;line-height: 140%;color:#666}

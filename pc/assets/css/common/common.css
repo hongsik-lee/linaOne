@@ -35,16 +35,17 @@ header nav li:nth-of-type(3) .sub_menu_wrap .sub_menu {padding: 1.4583vw 19.792v
 header nav li:nth-of-type(4) .sub_menu_wrap .sub_menu {padding: 1.4583vw 17.708vw 1.4583vw 0}
 
 /* visual area */
-.sub_wrap .visual-sec {position: relative;min-height: 34rem; padding-top: 41.2rem;}
+.sub_wrap .visual-sec {position: relative;height: 17.7083vw; padding-top:21.4583vw;}
 .sub_wrap .visual-sec::after {width: 100%;position: absolute;height: 32rem;background-size: cover;transform:scale(0.9, 0.8);content: '';z-index: -1;}
-.sub_wrap .visual-sec.active::after {transition-duration:0.6s;transform: scale(1);height: 34rem;}
-
-.sub_wrap .visual-sec .page-tit {position: absolute;top: 33.5rem;left: 17%;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;overflow: hidden;}
+.sub_wrap .visual-sec.active::after {transition-duration:0.4s;transform: scale(1);height:17.7083vw;}
+.sub_wrap .visual-sec .page-tit {position: absolute;top: 17.4479vw;left: 17%;font-weight: 700;font-size: 6.4583vw;line-height: 6.924vw;overflow: hidden;}
 .sub_wrap .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
-.sub_wrap .visual-sec .page-tit.type2 {top: 21.1rem;left: 8.7%;}
-.sub_wrap .visual-sec .page-tit.type2 span {display: block;font-size: inherit;font-family: var(--poppins-fonts);}
-.sub_wrap .visual-sec .page-tit-line > span {position: relative;bottom: -130px;transition:0.8s}
+.sub_wrap .visual-sec .page-tit.type2 {top:11.0104vw;left: 8.7%;line-height:5.5729vw}
+.sub_wrap .visual-sec .page-tit.type2 span {display: block;font-size: inherit;font-family: var(--poppins-fonts);line-height: 5.5729vw;}
+.sub_wrap .visual-sec .page-tit-line:last-child span {padding-top:1.3021vw;padding-bottom: 2vw;}
+.sub_wrap .visual-sec .page-tit-line > span {position: relative;bottom: -130px;transition:0.7s}
 .sub_wrap .visual-sec .page-tit-line.active > span {bottom:0;}
+.sub_wrap .visual-sec .page-tit.type2 .page-tit-line:first-child > span{padding-top: 0.5vw;}
 
 /* page desc area */
 .sub_wrap .page-desc-sec {padding-top: 10rem;padding-bottom: 15rem; }

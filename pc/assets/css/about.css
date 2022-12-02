@@ -32,11 +32,13 @@
 
 /* CEO Interview */
 .interview #contents {margin-bottom: 0;}
-.interview.sub_wrap .visual-sec {padding-top: 34.7rem;}
-.interview #contents .visual-sec {height: 40.5rem;}
+.interview.sub_wrap .visual-sec {padding-top:18.0729vw;}
+.interview #contents .visual-sec {height:21.0938vw;}
 .interview .visual-sec::after {height: 38rem;background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;}
-.interview .visual-sec.active::after {height: 40.5rem;}
-.interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;}
+.interview .visual-sec.active::after {height:21.0938vw;}
+/* .interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;} */
+.interview .visual-sec .page-tit.type2 {left:11.8750vw;}
+.interview .visual-sec .page-tit.type2 span {line-height:5.5990vw;}
 .interview .visual-sec .page-tit.type2 span:nth-child(2) {padding-left:9rem;}
 .interview .page-desc-sec {padding-bottom:25rem}
 .interview .page-desc-sec .sub-tit {font-size:4rem;line-height: 5.6rem;}
@@ -72,7 +74,7 @@
 
 /* vision&mission */
 .vision .visual-sec::after {background: url(../images/ab_vision_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.vision .visual-sec .page-tit-line:last-child span{margin-left: 14rem;}
+.vision .visual-sec .page-tit-line:last-child span{margin-left: 10.2083vw;}
 .vision .page-desc-sec {padding-bottom:0;}
 .vision .page-desc-sec .inner {padding-left: 0;}
 .vision .page-desc-sec .sub-tit {padding-left: 32.4rem;}
@@ -101,7 +103,7 @@
 
 /* corporate identity */
 .corporate .visual-sec::after {background: url(../images/ab_ci_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.corporate .visual-sec .page-tit-line:last-child span {margin-left: 35.8rem;}
+.corporate .visual-sec .page-tit-line:last-child span {margin-left:18.6458vw;padding-top: 1.3021vw;padding-bottom: 2vw;}
 .corporate .identity-guide-sec {padding-top: 10rem;}
 .corporate .identity-guide-sec .identity-list li {display: flex;}
 .corporate .identity-guide-sec .identity-list li .label {width: 14.2rem;margin-right: 18.2rem;font-weight: 700;font-size: 2.4rem;line-height: 3.6rem;}
@@ -113,7 +115,7 @@
 
 /* promotional video */
 .promational .visual-sec::after {background: url(../images/ab_pv_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.promational .visual-sec .page-tit-line:last-child span {margin-left: 52.8rem;}
+.promational .visual-sec .page-tit-line:last-child span {margin-left: 30.3125vw;}
 .promational .page-desc-sec {padding-top: 17rem;padding-bottom: 0;}
 .promational .page-desc-sec .inner {display: flex;padding: 0;}
 .promational .page-desc-sec .video-area {width: 78.9rem}
@@ -133,7 +135,7 @@
 /* contact us */
 .contact .workplace-sec#tab-cont2 {padding-top:16.6rem}
 .contact .visual-sec::after {background: url(../images/ab_cu_visual_bg.jpg) 50% 50% no-repeat;background-size: cover;}
-.contact .visual-sec .page-tit-line:last-child span {margin-left: 38.7rem;}
+.contact .visual-sec .page-tit-line:last-child span {margin-left: 20.1563vw;}
 .contact .page-tab-sec {margin: 10rem 0 0;}
 .contact .page-tab-sec.type2 {padding-bottom: 7.2rem;}
 .contact .workplace-sec {display:none;padding-top:5.8rem;}
