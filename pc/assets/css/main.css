@@ -86,7 +86,7 @@ div { box-sizing: border-box;}
 
 /* foundation02-sec */
 .main .foundation02-sec {position:relative;transform: scale(0.7);height: 56.2500vw;overflow: hidden;z-index: 100;}
-.main .foundation02-sec .bg {position:absolute;top: 0;left:0;width: 100%;height: 100%;background:url(../images/main_challenge_bg.jpg) 50% 50% no-repeat;background-size:cover;transition: transform .3s linear;z-index: -1;}
+.main .foundation02-sec .bg {position:absolute;top: 0;left:0;width: 100%;height: 100%;background:url(../images/main_challenge_bg.jpg) 50% 50% no-repeat;background-size:cover;transition: transform .8s ease;z-index: -1;}
 .main .foundation02-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation02-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation02-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
@@ -99,11 +99,11 @@ div { box-sizing: border-box;}
 .main .foundation03-sec::before{content:'';position: absolute;top: 50%;left:0;transform: translateY(-50%);width: 9.8438vw;height: 19.7917vw;background:url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;}
 .main .foundation03-sec::after{content:'';position: absolute;top: 50%;right:0;transform: translateY(-50%);width: 38.5417vw;height: 58.5417vw;background:url(../images/main_confidence_img_linear.jpg) 50% 50% no-repeat;background-size:cover;z-index: -1;}
 .main .foundation03-sec .inner {display:flex;align-items: center;justify-content: space-between;}
-.main .foundation03-sec .tit .txtLine span {display: block;transition: transform .8s ease .4s;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
+.main .foundation03-sec .tit .txtLine span {display: block;transition: transform .8s ease 1s;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
 .main .foundation03-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
 .main .foundation03-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.31vw;}
 .main .foundation03-sec .desc {margin-top: 2.6042vw;}
-.main .foundation03-sec .desc .txtLine span {transition: transform .8s ease .8s;font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
+.main .foundation03-sec .desc .txtLine span {transition: transform .8s ease 1.5s;font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;}
 .main .foundation03-sec .img-wrap {position: relative;margin-right: -10.5729vw;}
 .main .foundation03-sec .img-wrap > div {width: 19.7917vw; height: 19.7917vw;}
 .main .foundation03-sec .img-wrap > div.img {position: relative;overflow: hidden;border-radius: 50%;opacity: 0;transform: translateY(7.8125vw);transition: transform .8s ease, opacity 1s ease;}
@@ -111,17 +111,17 @@ div { box-sizing: border-box;}
 .main .foundation03-sec .img-wrap > div.img.activeMotion {opacity: 1;transform: translateY(0);}
 .main .foundation03-sec .img-wrap > div.img.activeMotion img {transform: scale(1.1);}
 .main .foundation03-sec .img-wrap img {position:relative;top: -100px;width: 100%;}
-.main .foundation03-sec .circle {position: absolute;right: 0;transition:transform .8s ease .4s, opacity 1.2s linear .4s;display: flex;align-items: center;justify-content: center;background:url(../images/main_circle_img.jpg) 50% 50% no-repeat;background-size: cover;opacity: 0;z-index: -1;}
+.main .foundation03-sec .circle {position: absolute;right: 0;transition:transform .8s ease 1s, opacity 1.2s linear 1s;display: flex;align-items: center;justify-content: center;background:url(../images/main_circle_img.jpg) 50% 50% no-repeat;background-size: cover;opacity: 0;z-index: -1;}
 .main .foundation03-sec .circle circle {opacity: 0;}
 .main .foundation03-sec .circle.activeMotion {opacity: 1;transform: translate3d(-17.1875vw, 0, 0);}
-.main .foundation03-sec .circle.activeMotion circle {animation: circle-show-ani-1 .8s forwards ease 1.9s;}
+.main .foundation03-sec .circle.activeMotion circle {animation: circle-show-ani-1 .8s forwards ease 2.4s;}
 .main .foundation03-sec .circle .line svg {width: 28.1771vw; height: 28.1771vw;}
 .main .foundation03-sec .circle line {stroke-dasharray: 343.4;stroke-dashoffset: 343.4;}
 .main .foundation03-sec .circle line line:nth-of-type(2),.main .foundation03-sec .circle line line:nth-of-type(3) {stroke-dashoffset: 0;}
-.main .foundation03-sec .circle.activeMotion line:nth-of-type(1) {animation: stroke-ani-1 .8s forwards ease 1.2s;}
-.main .foundation03-sec .circle.activeMotion line:nth-of-type(2) {animation: stroke-ani-2 .8s forwards ease 1.2s;}
-.main .foundation03-sec .circle.activeMotion line:nth-of-type(3) {animation: stroke-ani-2 .8s forwards ease 1.2s;}
-.main .foundation03-sec .circle.activeMotion line:nth-of-type(4) {animation: stroke-ani-1 .8s forwards ease 1.2s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(1) {animation: stroke-ani-1 .8s forwards ease 1.7s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(2) {animation: stroke-ani-2 .8s forwards ease 1.7s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(3) {animation: stroke-ani-2 .8s forwards ease 1.7s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(4) {animation: stroke-ani-1 .8s forwards ease 1.7s;}
 @keyframes circle-show-ani-1 { 
     100% {
         opacity: 1; 
@@ -143,8 +143,8 @@ div { box-sizing: border-box;}
 
 /* foundation04-sec */
 .main .foundation04-sec {position:relative;height: 56.2500vw;overflow:hidden;}
-.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(0.7);transition: all .3s linear;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.main .foundation04-sec .bg.activeMotion {animation: foundation04-ani 1s forwards linear;}
+.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(0.7);transition: all .8s ease;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.main .foundation04-sec .bg.activeMotion {animation: foundation04-ani 1s forwards ease;}
 .main .foundation04-sec .bg.invert {opacity: 1;animation: initial;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .5s;}
@@ -153,13 +153,9 @@ div { box-sizing: border-box;}
 .main .foundation04-sec .desc {margin-top: 2.6042vw;}
 .main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;transition-delay: .8s;}
 @keyframes foundation04-ani {
-    50% {
-        opacity: .5;
-        transform: translate3d(0, 0, 0);
-    }
     100% {
         opacity: 1;
-        transform: scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
     }
 }
 
@@ -202,12 +198,16 @@ div { box-sizing: border-box;}
 .main .related-info-sec .cont-box a {display: flex;align-items:center;justify-content: space-between;width:100%;color:#000;}
 .main .related-info-sec .cont-box .desc {font-weight: 400;font-size: 1.0417vw;line-height: 1.4583vw;}
 .main .related-info-sec .cont-box h4 {position:relative;display: inline-block;margin-bottom: 1.0417vw;}
-.main .related-info-sec .cont-box h4::after {content: '';position:absolute;left:0;bottom:0;display: block;width: 0;height: 0.2083vw;background-color: #000;transition: width 0.3s ease;}
+.main .related-info-sec .cont-box h4::after {content: '';position:absolute;left:0;bottom:0;display: block;width: 0;height: 0.2083vw;background-color: #000;transition: width 0.6s ease;}
 .main .related-info-sec .cont-box a:hover h4::after{width: 100%;}
+.main .related-info-sec .cont-box a:hover .ico-arrow {transform: translate3d(100%, -100%, 0px);}
 .main .related-info-sec .cont-box.recruit h4 {font-weight: 700;font-size: 2.7083vw;line-height: 3.5208vw;letter-spacing: 0.06rem;}
 .main .related-info-sec .cont-box.contact h4 {font-family: var(--poppins-fonts);font-weight: 700;font-size: 2.7083vw;line-height: 3.5208vw;}
-.main .related-info-sec .cont-box .hint::after{content:'';display:inline-block;width: 3.7500vw;height: 3.7500vw;margin-left: 2.3438vw;background:url(../images/icons/icon_diagonal_arrow.png) 50% 50% no-repeat;background-size:cover;}
 .main .related-info-sec .cont-box .hint {display: flex;align-items:center;font-weight: 500;font-size: 1.2500vw;line-height: 1.6250vw;}
+.main .related-info-sec .cont-box .ico-arrow-area {position:relative;display: inline-block;width: 3.7500vw;height: 3.7500vw;margin-left: 2.3438vw;overflow: hidden;}
+.main .related-info-sec .cont-box .ico-arrow {position: relative;width:100%;height:100%;transition: transform .6s ease;}
+.main .related-info-sec .cont-box .ico-arrow.hover{left: -100%;}
+.main .related-info-sec .cont-box .ico-arrow-area img {width: 100%;}
 .main .related-info-sec .cont-box .recruit-count {display:flex;justify-content: center;width: 3.7500vw;margin-left: 2.3438vw;font-weight: 600;font-size: 3.7500vw;line-height: 4.1250vw;}
 .main .related-info-sec .line {position: absolute;top: 0;left: 0;width: 150%;height: 0.0313vw;background-color:#191919;}
 .main .related-info-sec .line.line02 {top: 12.5000vw;}
