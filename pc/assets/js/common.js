@@ -29,8 +29,36 @@ window.addEventListener("DOMContentLoaded", function () {
         $(item).on('click' , function(e) {
             e.preventDefault();
             handleChildTabClick(e);
+
+            localStorage.setItem('tmrSubTabIndex', $(this).parent().index());
         });
     });
+
+    $(document).on('click', '#tab-cont3 a', function(e) {
+        localStorage.setItem('prevPageScrollTop', $(window).scrollTop());
+    });
+
+    window.onpageshow = function(event) {
+        if(event.persisted || (window.performance && window.performance.navigation.type == 2)) {
+            const stroageTmrSubTabIndex = localStorage.getItem('tmrSubTabIndex');
+            if(stroageTmrSubTabIndex) {
+                $childTabs.parent().eq(stroageTmrSubTabIndex).children('a').trigger('click');
+            }
+        }
+    }
+
+    const urlPathName = window.location.pathname;
+    if(urlPathName.includes('PC_RE020100T')) {
+        const storageTmrSubTabIndex = localStorage.getItem('tmrSubTabIndex')
+            , storagePrevPageScrollTop = localStorage.getItem('prevPageScrollTop');
+        if(storageTmrSubTabIndex) {
+            $childTabs.parent().eq(storageTmrSubTabIndex).children('a').trigger('click');
+
+            if(storagePrevPageScrollTop) {
+                $(window).scrollTop(storagePrevPageScrollTop)
+            }
+        }
+    }
 
     // accordion
     $(document).on('click', '.acc_tit_area', function(e) {
