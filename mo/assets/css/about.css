@@ -1,0 +1,23 @@
+@import url(common/common.css);
+
+/* OVERVIEW */
+.sub-wrap.overview .visual:before {background-image:url(../images/ab_overview_visual.png)}
+.overview .content {}
+.overview .content > .desc {padding:15rem 3rem 15rem 7.6rem;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
+.overview .introduction {padding:16rem 2rem 21.2rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
+
+.overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
+.overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
+.overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
+.overview .introduction .desc {font-size:var(--small-size);color:#666;line-height:140%;font-weight:500;}
+.overview .introduction img {display:block;margin-top:8rem;height: 36.111vw;}
+.overview .count-box {margin-top: 15rem;}
+.overview .count-box h2 {margin-bottom:5rem;font-size:var(--basic-size);font-weight:700;line-height: 140%;}
+.overview .count-box p {padding-left:5.6rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
+.overview .count-box ul {margin-top:5rem;padding-left:5.6rem;}
+.overview .count-box li  {font-size: var(--title-type2);font-weight:700;line-height: 140%;}
+.overview .count-box li + li {margin-top:4rem;}
+.overview .count-box li strong {margin-right:0.3rem;font-size:12.778vw;line-height:140%;font-weight:700;}
+.overview .count-box li strong:nth-of-type(2) {margin-left:1.2rem;}
+.overview .count-box li span {display: block;width:100%;font-size:var(--small-size);color:#999;font-weight: 500;line-height: 140%;}
+.overview .count-box li:last-child span {font-size:3.333vw;font-weight:400;}
