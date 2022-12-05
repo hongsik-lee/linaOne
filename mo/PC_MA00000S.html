@@ -11,6 +11,61 @@
 </head>
 <body>
     <div class="wrap main">
+        <!-- S : HEADER AREA -->
+        <header class="inner">
+            <a href="#"><img src="../mo/assets/images/common/logo_h.png" alt="라이나원 로고이미지"></a>
+            <a href="#" class="gnb-btn" onclick="openNav()"><img src="../mo/assets/images/common/menu_h.png"></a>
+        </header>
+        <div id="gnb-wrap" class="inner">
+            <header>
+                <a href="#"><img src="../mo/assets/images/common/logo_h.png" alt="라이나원 로고이미지"></a>
+                <a href="#" class="gnb-btn" onclick="closeNav()"><img src="../mo/assets/images/common/menu_close.png"></a>
+            </header>
+            <ul class="nav">
+                <li>
+                    회사소개
+                    <ul class="sub-nav">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">CEO인터뷰</a></li>
+                        <li><a href="#">비젼/미션</a></li>
+                        <li><a href="#">CI</a></li>
+                        <li><a href="#">브랜드영상</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">제휴/제안</a></li>
+                    </ul>
+                </li>
+                <li>
+                    사업영역
+                    <ul class="sub-nav">
+                        <li><a href="#">Business & Service</a></li>
+                        <li><a href="#">Sales & Marketing</a></li>
+                        <li><a href="#">IT</a></li>
+                    </ul>
+                </li>
+                <li>
+                    인재채용
+                    <ul class="sub-nav">
+                        <li><a href="#">직원 인재채용</a></li>
+                        <li><a href="#">TMR 인재채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    공지사항
+                    <ul class="sub-nav">
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="corp-wrap">
+                <p>
+                    <a href="#">라이나생명</a>
+                    <a href="#">에이스손해보험</a>
+                </p>
+                <p>©LINA ONE Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+        <!-- E : HEADER AREA -->
         <div id="contents">
             <div class="visual-fixed-sec">
                 <div class="text-area">
@@ -29,8 +84,8 @@
                         <div class="inner">
                             <div class="video-wrap">
                                 <div class="video-inner">
-                                    <video muted loop>
-                                        <source src="./assets/images/line_main_video.mov">
+                                    <video muted loop playsinline autoplay>
+                                        <source src="./assets/images/lina_main_video.mov">
                                     </video>
                                     <div class="cut-off left"></div>
                                     <div class="cut-off right"></div>
@@ -39,24 +94,28 @@
                         </div>
                     </div>
                     <div class="swiper-slide balance-promise-sec">
-                        2
-                        <!-- <div class="inner">
+                        <div class="inner">
                             <h3 class="tit">
                                 <span class="txtLine"><span>라이나원은 오직 고객만</span></span>
                                 <span class="txtLine"><span>바라봅니다.</span></span>
                             </h3>
                             <p class="desc">
                                 <strong>
-                                    <span class="txtLine"><span>우리가 하는 일은 누군가의 인생에</span></span>
-                                    <span class="txtLine"><span>힘을 더하는 일이기에 라이나원은 오직</span></span>
-                                    <span class="txtLine"><span>혁신만 생각합니다.</span></span>
-                                    <span class="txtLine"><span>우리가 가진 생각의 힘이 건강한 삶,</span></span>
-                                    <span class="txtLine"><span>더 나은 세상으로 향하기에 우리는 여기서</span></span>
-                                    <span class="txtLine"><span>멈추지 않고 다시 한번 변화를 찾습니다.</span></span>
+                                    <span class="txtLine"><span>우리가 하는 일은</span></span>
+                                    <span class="txtLine"><span>누군가의 인생에 힘을</span></span>
+                                    <span class="txtLine"><span>더하는 일이기에</span></span>
+                                    <span class="txtLine"><span>라이나원은 오직 혁신만</span></span>
+                                    <span class="txtLine"><span>생각합니다.</span></span>
+                                    <span class="txtLine"><span>우리가 가진 생각의 힘이</span></span>
+                                    <span class="txtLine"><span>건강함 삶, 더 나은</span></span>
+                                    <span class="txtLine"><span>세상으로 향하기에</span></span>
+                                    <span class="txtLine"><span>우리는 여기서 멈추지</span></span>
+                                    <span class="txtLine"><span>않고 다시 한번</span></span>
+                                    <span class="txtLine"><span>변화를 찾습니다.</span></span>
                                 </strong>
                                 <span class="txtLine depth02"><span>보험의 가능성을 넓히다 - 라이나원</span></span>
                             </p>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="swiper-slide foundation01-sec">
                         3
