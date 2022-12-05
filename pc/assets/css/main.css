@@ -73,7 +73,7 @@ div { box-sizing: border-box;}
 .main .foundation01-sec .circle02 svg {width: 79.7396vw;height: 53.5417vw;}
 .main .foundation01-sec .circle02 path {stroke-dasharray: 3908;stroke-dashoffset: 3908;}
 .main .foundation01-sec .circle02.activeMotion path {animation: stroke-ani-3 1.5s forwards .5s;}
-.main .foundation01-sec .line {position:absolute;left: 0;bottom: 18.9583vw;display: block;width: 0;height: 0.0677vw;background:linear-gradient(270deg, #000000 4.64%, rgba(0, 0, 0, 0.44) 98.49%);z-index: -1;transition: width 1.5s ease;}
+.main .foundation01-sec .line {position:absolute;left: 0;bottom: 18.9583vw;display: block;width: 0;height: 1px;background:linear-gradient(270deg, #000000 4.64%, rgba(0, 0, 0, 0.44) 98.49%);z-index: -1;transition: width 1.5s ease;}
 .main .foundation01-sec .line.activeMotion {width: 100%;}
 @keyframes stroke-ani-3 {
     0% {
@@ -143,21 +143,14 @@ div { box-sizing: border-box;}
 
 /* foundation04-sec */
 .main .foundation04-sec {position:relative;height: 56.2500vw;overflow:hidden;}
-.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0) scale(0.7);transition: all .8s ease;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
-.main .foundation04-sec .bg.activeMotion {animation: foundation04-ani 1s forwards ease;}
-.main .foundation04-sec .bg.invert {opacity: 1;animation: initial;}
+.main .foundation04-sec .bg {position: absolute;top:0;left:0;transform: translate3d(0, 30%, 0);transition: all .8s ease;width: 100%;height: 100%;opacity: 0;background:url(../images/main_excellent_bg.jpg) 50% 50% no-repeat;background-size: cover;z-index: -1;}
+.main .foundation04-sec .bg.activeMotion {opacity: 1;transform: translate3d(0, 0, 0);}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100%;color: #fff;}
 .main .foundation04-sec .tit .txtLine span {display: block;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;transition-delay: .5s;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 0.2083vw;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;line-height: 4.2500vw;}
 .main .foundation04-sec .desc {margin-top: 2.6042vw;}
 .main .foundation04-sec .desc .txtLine span {font-weight: 400;font-size: 1.4583vw;line-height: 2.0417vw;transition-delay: .8s;}
-@keyframes foundation04-ani {
-    100% {
-        opacity: 1;
-        transform: translate3d(0, 0, 0) scale(1);
-    }
-}
 
 /* brand-goal-sec */
 .main .brand-goal-sec {display:flex;align-items: center;height: 100.2604vw;}
