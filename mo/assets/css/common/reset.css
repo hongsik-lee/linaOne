@@ -162,11 +162,11 @@ a{text-decoration:none}
 :root{
     --body-fonts:"Pretendard", sans-serif;
     --poppins-fonts:"Poppins", sans-serif;
-    --title-type1:4.8rem;
-    --title-type2:2rem;
-    --title-type3:1.8rem;
-    --basic-size:1.6rem;
-    --small-size:1.4rem;
+    --title-type1:13.333vw;
+    --title-type2:5.556vw;
+    --title-type3:5vw;
+    --basic-size:4.444vw;
+    --small-size:3.889vw;
 } 
 
 /* Hidden Text */
