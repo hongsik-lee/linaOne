@@ -1,1 +1,24 @@
 @import url(reset.css);
+
+/* common */
+.sub_wrap {width: 100vw;overflow-x: hidden;}
+.inner {width:100%;padding:0 2rem;}
+
+/* header  */
+header {position:fixed;height:5.6rem;display: flex;justify-content: space-between;align-items: center;background:#fff;z-index:10;}
+header > a:first-child img {height: 2rem;}
+header > a:last-child img {height: 2.4rem;}
+#gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
+#gnb-wrap.on {width:100%;z-index: 100;right:0;}
+#gnb-wrap header {width:calc(100% - 4rem);}
+#gnb-wrap .nav {padding-top:11.2rem;}
+#gnb-wrap .nav > li {position:relative;font-size:var(--title-type2);font-weight:800;line-height:5.6rem;;height: 5.6rem;}
+#gnb-wrap .nav > li:after {position:absolute;top:50%;right:0.4rem;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);content:'';background-size:cover;transform:translateY(-50%)}
+#gnb-wrap .sub-nav {padding:1rem 0;transition:0.3s ease;height:0;opacity:0;}
+#gnb-wrap .sub-nav > li {height: 1.9rem;}
+#gnb-wrap .sub-nav > li + li {margin-top: 2rem;}
+#gnb-wrap .sub-nav > li a {display:block;font-size:var(--basic-size);color:#000;font-weight:500;}
+#gnb-wrap .corp-wrap {padding-bottom: 2rem;}
+#gnb-wrap .corp-wrap p + p {margin-top: 1.6rem;}
+#gnb-wrap .corp-wrap p a {font-size:var(--small-size);margin-right:2.4rem;font-weight: 700;color:rgba(0,0,0,.5)}
+#gnb-wrap .corp-wrap p {font-size:3.333vw;font-weight: 400;color:rgba(0,0,0,.3)}

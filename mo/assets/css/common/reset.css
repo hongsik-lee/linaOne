@@ -150,6 +150,7 @@ time, mark, audio, video{
     font-family:var(--body-fonts);
     vertical-align:baseline;
     background:transparent;
+    box-sizing: border-box;
 }
 
 header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption{display:block}

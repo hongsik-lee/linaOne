@@ -6,12 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>라이나원</title>
     <link rel="stylesheet" href="../../assets/css/common/common.css">
+    <style>
+        /* #gnb-wrap .nav > li{font-size: clamp(2.4rem, 5vw, 2.6rem)!important;} */
+    </style>
 </head>
 <body>
      <div class="sub-wrap">
-        <header></header>
+        <!-- S : header area -->
+        <header class="inner">
+            <a href="#"><img src="../../assets/images/common/logo_h.png" alt="라이나원 로고이미지"></a>
+            <a href="#" class="gnb-btn" onclick="openNav()"><img src="../../assets/images/common/menu_h.png"></a>
+        </header>
+        <div id="gnb-wrap" class="inner">
+            <header>
+                <a href="#"><img src="../../assets/images/common/logo_h.png" alt="라이나원 로고이미지"></a>
+                <a href="#" class="gnb-btn" onclick="closeNav()"><img src="../../assets/images/common/menu_close.png"></a>
+            </header>
+            <ul class="nav">
+                <li>
+                    회사소개
+                    <ul class="sub-nav">
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">CEO인터뷰</a></li>
+                        <li><a href="#">비젼/미션</a></li>
+                        <li><a href="#">CI</a></li>
+                        <li><a href="#">브랜드영상</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">제휴/제안</a></li>
+                    </ul>
+                </li>
+                <li>
+                    사업영역
+                    <ul class="sub-nav">
+                        <li><a href="#">Business & Service</a></li>
+                        <li><a href="#">Sales & Marketing</a></li>
+                        <li><a href="#">IT</a></li>
+                    </ul>
+                </li>
+                <li>
+                    인재채용
+                    <ul class="sub-nav">
+                        <li><a href="#">직원 인재채용</a></li>
+                        <li><a href="#">TMR 인재채용</a></li>
+                    </ul>
+                </li>
+                <li>
+                    공지사항
+                    <ul class="sub-nav">
+                        <li><a href="#">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="corp-wrap">
+                <p>
+                    <a href="#">라이나생명</a>
+                    <a href="#">에이스손해보험</a>
+                </p>
+                <p>©LINA ONE Co., Ltd. All Rights Reserved.</p>
+            </div>
+        </div>
+        <!-- E : header area -->
+        
         <div class="visual"></div>
-         
+        <div class="content"></div>
      </div>
+     <script src="../../assets/js/common.js"></script>
 </body>
 </html>
