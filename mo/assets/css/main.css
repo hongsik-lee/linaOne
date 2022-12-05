@@ -25,10 +25,25 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 .main .visual-sec .video-inner video {position:absolute;top:0;left:0;width:100%;height: 100%;object-fit: cover;}
 
 /* balance-promise-sec */
-.main .balance-promise-sec {padding-top: 33.3333vw;}
+.main .balance-promise-sec {padding: 33.3333vw 0;}
 .main .balance-promise-sec .tit {margin-bottom: 27.7778vw;padding-left: 5.5556vw;}
 .main .balance-promise-sec .tit .txtLine span {font-weight: 800;font-size: var(--title-type3);line-height: 7vw;}
 .main .balance-promise-sec .desc {padding-left: 15.5556vw;}
 .main .balance-promise-sec .desc strong {display: block;margin-bottom: 11.1111vw;overflow: hidden;}
 .main .balance-promise-sec .desc strong .txtLine span {font-weight: 500;font-size:6.6667vw;line-height: 9.3333vw;letter-spacing: -0.02rem;}
 .main .balance-promise-sec .desc > .txtLine.depth02 span {font-weight: 500;font-size: var(--basic-size);line-height: 6.2222vw;}
+
+/* foundation01-sec */
+.main .foundation01-sec {padding-top: 37.7778vw;}
+.main .foundation01-sec .inner {}
+.main .foundation01-sec .info-wrap {padding-left: 5.5556vw;}
+.main .foundation01-sec .tit {margin-bottom: 6.6667vw;}
+.main .foundation01-sec .tit .txtLine:first-child span {font-weight: 900;font-size: 10vw;line-height: 11vw;}
+.main .foundation01-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;font-size: 10vw;line-height: 12vw;}
+.main .foundation01-sec .desc .txtLine span {font-weight: 500;font-size: var(--basic-size);line-height: 6.2222vw;}
+.main .foundation01-sec .img-wrap {width: 63.3333vw;height: 111.1111vw;margin-top: 27.7778vw;}
+.main .foundation01-sec .img {width: 100%;height: 100%;background: url('../images/main_relationship_img.jpg') 50% 50% no-repeat;background-size: cover;}
+.main .foundation01-sec .circle {}
+.main .foundation01-sec .circle02 {position: absolute;top: 330px;left: 50%;transform: translateX(-50%);z-index: -1;}
+.main .foundation01-sec .circle02 svg {width: 186.6667vw;height: 138.0417vw;}
+.main .foundation01-sec .line {position: absolute;left: 0;}

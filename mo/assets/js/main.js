@@ -37,7 +37,7 @@ $(document).ready(function() {
 
     $('.visual-sec').on('scroll', function() {
         videoSectionScrollAnimation();
-    })
+    });
 });
 
 // header nav animation
