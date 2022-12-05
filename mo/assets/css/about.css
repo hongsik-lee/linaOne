@@ -35,6 +35,27 @@
 .interview .interview-box {margin-top: 15rem;}
 .interview .interview-box + .interview-box{margin-top: 12rem;}
 .interview .interview-box.right {padding-left: 2rem;}
-.interview .interview-box.left {padding-right: 2rem;}
+.interview .interview-box.left {padding-right:2rem;margin-bottom:15rem}
 .interview .interview-box h2 {margin-bottom:5rem;font-size: var(--basic-size);font-weight: 700;line-height: 140%;}
-.interview .interview-box > img {max-width: 28.4rem;}
+.interview .interview-box img {max-width:100%;}
+.interview .interview-box .box-wrap {padding-left:5.6rem;text-align: right;}
+.interview .interview-box .qna-box {margin-top:4rem;text-align: left;padding-right: 2rem;}
+.interview .interview-box .qna-box img {width: 2.4rem;}
+.interview .interview-box .qna-box + .qna-box {margin-top: 3.4rem;}
+.interview .interview-box .qna-box .question {margin-bottom: 0.6rem;}
+.interview .interview-box .qna-box:nth-of-type(1) .answer {font-size: var(--title-type3);font-weight:700;line: 0he;140%}
+.interview .interview-box .qna-box:nth-of-type(2) .answer {font-size:var(--small-size);line-height: 140%;font-weight: 500;}
+.interview .interview-box.left > img {max-width: 30rem;}
+.interview .interview-box.left .qna-box {padding-left: 5.6rem;padding-right: 1rem;}
+.interview .directivity {padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;}
+.interview .directivity h2 {font-size: var(--basic-size);color:#fff;font-weight: 700;line-height: 140%;}
+.interview .directivity .txt-box {margin-top:5rem;padding-left:5.6rem;}
+.interview .directivity .txt-box p {font-size: var(--title-type3);color:#fff;letter-spacing: -0.01em;font-weight:700;line-height: 140%;}
+.interview .directivity .txt-box span {display:block;margin-top:1.6rem;font-size: var(--small-size);color: rgba(255, 255, 255, 0.6);font-weight: 500;line-height: 140%;}
+
+/* Vision & Mission */
+.sub-wrap.vision .visual:before {background-image:url(../images/ab_vision_visual.png)}
+.sub-wrap.vision .content > .desc {margin:15rem 0;padding:0 2rem 0 7.6rem;font-size:var(--title-type2);line-height:140%;font-weight:700;}
+.sub-wrap.vision .vision-sec {padding:15rem 2rem;background: url(../images/ab_vision_bg.png);background-size: cover;}
+.vision .img-box {padding:0 3rem;}
+.vision .img-box img {display: block;width: 100%;}
