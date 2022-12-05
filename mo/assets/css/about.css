@@ -5,7 +5,6 @@
 .overview .content {}
 .overview .content > .desc {padding:15rem 3rem 15rem 7.6rem;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
 .overview .introduction {padding:16rem 2rem 21.2rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
-
 .overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
@@ -21,3 +20,21 @@
 .overview .count-box li strong:nth-of-type(2) {margin-left:1.2rem;}
 .overview .count-box li span {display: block;width:100%;font-size:var(--small-size);color:#999;font-weight: 500;line-height: 140%;}
 .overview .count-box li:last-child span {font-size:3.333vw;font-weight:400;}
+
+/* CEO INTERVIEW */
+.sub-wrap.interview .visual:before {background-image:url(../images/ab_interview_visual.png)}
+.interview .content > .desc {margin:15rem 0;padding-left: 7.6rem;}
+.interview .content > .desc span {font-size: var(--basic-size);color:#666;font-weight: 700;}
+.interview .content > .desc p {margin:1.8rem 0 5rem;font-size:var(--title-type2);font-weight:700;line-height:140%;}
+.interview .content > .desc p.sign {font-size:5.833vw;line-height: 2.94rem;}
+.interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000}
+.interview .interview-sec {padding:15rem 2rem;background:url(../images/ab_interview_bg.png);background-size:cover;}
+.interview .interview-sec p {padding-left:5.6rem;font-size: var(--title-type3);color:#fff;font-weight:700;line-height: 140%;letter-spacing:-0.01em;}
+.interview .interview-sec p + p {margin-top: 5rem;}
+.interview .interview-sec span {display: block;padding-left:5.6rem;margin-top:2rem;font-size: var(--small-size);line-height: 140%;color: rgba(255, 255, 255, 0.6);font-weight:500;}
+.interview .interview-box {margin-top: 15rem;}
+.interview .interview-box + .interview-box{margin-top: 12rem;}
+.interview .interview-box.right {padding-left: 2rem;}
+.interview .interview-box.left {padding-right: 2rem;}
+.interview .interview-box h2 {margin-bottom:5rem;font-size: var(--basic-size);font-weight: 700;line-height: 140%;}
+.interview .interview-box > img {max-width: 28.4rem;}
