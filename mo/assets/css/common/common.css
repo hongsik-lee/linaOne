@@ -30,6 +30,8 @@ header > a:last-child img {height: 2.4rem;}
 .sub-wrap .content {margin-bottom:20rem;}
 .sub-wrap .content > .desc {margin:15rem 0;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
 .sub-wrap .label {font-size: var(--basic-size);font-weight: 700;line-height: 140%;}
+.sub-wrap .btn {display:block;width:19.6rem;height: 4.9rem;line-height:4.9rem;font-size:var(--small-size);font-weight: 500;color:#000;text-align: center;}
+.sub-wrap .btn.btn-black {background:#000;color:#fff;}
 
 /* footer */
 footer {}
