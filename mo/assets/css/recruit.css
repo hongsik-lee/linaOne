@@ -2,5 +2,41 @@
 
 /* Business Service */
 .sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
-.sub-wrap.recruit .content > .desc {margin-bottom: 0;}
-.sub-wrap.recruit .content > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
+.sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;}
+.sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
+
+/* 채용절차 */
+.recruit-sec01 .process ul {padding-left: 5.6rem;margin-top: 5rem;}
+.recruit-sec01 .process li {position:relative;display: flex;flex-wrap: wrap;align-items: center;}
+.recruit-sec01 .process li::after {position:absolute;width:6.4rem;height:2.1rem;bottom:-6rem;background:url(../images/icon/step-arrow.png);background-size:contain;content: '';}
+.recruit-sec01 .process li:last-child:after {display: none;}
+.recruit-sec01 .process li + li {margin-top: 10.1rem;}
+.recruit-sec01 .process li div {padding:0.7rem 0;}
+.recruit-sec01 .process li img {width:6.4rem;margin-right: 2rem;}
+.recruit-sec01 .process li p {font-size: var(--title-type3);font-weight:700;line-height: 140%;}
+.recruit-sec01 .process li span {display: block;margin-top: 0.8rem;font-size: var(--small-size);font-weight: 500;color:#666}
+.recruit-sec01 .notice-box {width: calc(100% - 4rem);margin:8rem auto;padding:3rem 0;font-size: var(--small-size);font-weight:500;line-height: 140%;color:#666;border-top: 1px solid #ebebeb; border-bottom:1px solid #ebebeb}
+.recruit-sec01 .btn {margin:auto}
+
+/* 복리후생제도 */
+.recruit-sec02 ul {display: flex;flex-wrap: wrap;row-gap:7rem;column-gap: 4rem;}
+.recruit-sec02 li {width:calc(50% - 2rem);}
+.recruit-sec02 li img {display:block;width: 4.8rem;}
+.recruit-sec02 li p {font-size: var(--small-size);font-weight: 500;color:#666;line-height: 140%;}
+.recruit-sec02 li p.title {margin:2rem 0 0.6rem;font-size: var(--title-type3);font-weight:700;color:#000;}
+
+/* 인재상 */
+.recruit-sec03 .ico-box .ico {margin-top:7rem;text-align: center;}
+.recruit-sec03 .ico-box .ico + .ico {margin-top: 8rem;}
+.recruit-sec03 .ico-box .ico img {width: 7.2rem;}
+.recruit-sec03 .ico-box .ico p {font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#666;}
+.recruit-sec03 .ico-box .ico p.title {margin:2rem 0 0.8rem;font-size: var(--title-type3);font-weight:700;color:#000;}
+
+/* 자주하는질문 */
+.recruit-sec04 .acc-wrap {width:calc(100% - 4rem);margin:8rem auto 0;border-top: 2px solid #000;}
+.recruit-sec04 .acc-wrap li {padding:3.2rem 0;border-bottom: 1px solid #EBEBEB;}
+.recruit-sec04 .acc-wrap .txt {padding-right: 5.4rem;}
+.recruit-sec04 .acc-wrap .txt span {font-size: var(--small-size);font-weight: 500;line-height: 140%;}
+.recruit-sec04 .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
+.recruit-sec04 .acc-wrap .cont {margin-top:3rem;font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;}
+.recruit-sec04 .mail-box {margin:15rem auto 0;}
