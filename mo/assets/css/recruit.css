@@ -5,6 +5,17 @@
 .sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;}
 .sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
 
+/* 인터넷보험call TMR 지원문의 BOX */
+.recruit-box {margin:0 2rem;}
+.recruit-box .box + .box {margin-top: 2rem;}
+.recruit-box .box {padding:2rem; background:#f9f9f9;height:14rem;}
+.recruit-box .box .title {font-size: var(--small-size);font-weight: 700;white-space: pre;}
+.recruit-box .box .number-wrap {text-align: right;}
+.recruit-box .box .number-wrap p:first-child {font-size:7.222vw;line-height: 100%;font-weight:700;}
+.recruit-box .box .number-wrap p:nth-of-type(2) {margin-top:0.8rem;font-size:3.611vw;color:#666;font-weight:500;line-height: 100%;}
+.recruit-box .box .number-wrap ul {margin-top:2.1rem;display: flex;column-gap:1.6rem;justify-content: flex-end;}
+.recruit-box .box .number-wrap li {font-size:3.333vw;font-weight: 500;line-height: 100%;color:#666;white-space:pre;}
+
 /* 채용절차 */
 .recruit-sec01 .process ul {padding-left: 5.6rem;margin-top: 5rem;}
 .recruit-sec01 .process li {position:relative;display: flex;flex-wrap: wrap;align-items: center;}
@@ -40,3 +51,36 @@
 .recruit-sec04 .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
 .recruit-sec04 .acc-wrap .cont {margin-top:3rem;font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;}
 .recruit-sec04 .mail-box {margin:15rem auto 0;}
+
+/* TMR 인재채용 */
+.sub-wrap.tmr-recruit .visual:before {background-image:url(../images/re_tmr_visual.png)}
+.tmr-recruit .sub-content .desc {margin:8rem 0 15rem;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
+    /* 선택라이나 약속 */
+.sub-sec01 .text-box .text {padding-left:5.6rem;margin-top: 5rem;}
+.sub-sec01 .text-box .text + .text {margin-top: 8rem;}
+.sub-sec01 .text-box .text .point {display:inline-block;width:0.6rem;height:0.6rem;background:#FF0198;border-radius:50%;margin-left:0.5rem;margin-bottom:1.2rem;}
+.sub-sec01 .text-box .text .point + .point {margin-left:1.2rem;}
+.sub-sec01 .text-box .text p.title {font-size: var(--title-type3);font-weight:700;line-height: 140%;color:#000}
+.sub-sec01 .text-box .text p.desc {font-size: var(--small-size);font-weight: 500;line-height: 150%;color:#666;padding:0;margin:0;margin-top:1rem;}
+.sub-sec01 .info-box {margin-top: 17rem;margin-left: 7.6rem;}
+.sub-sec01 .info-box img {display: block;width: 100%;}
+.sub-sec01 .info-box .txt > span {display:block;margin:5rem 0 2rem;font-size: var(--basic-size);font-weight:700;line-height:140%;}
+.sub-sec01 .info-box .txt > p {padding-right:2rem;padding-bottom:7rem;font-size: var(--title-type3);font-weight:700;line-height: 140%;}
+.sub-sec01 .info-box .info {margin-right: 2rem;padding-top:2rem;border-top: 2px solid #000;}
+.sub-sec01 .info-box .info > span {font-size: var(--small-size);font-weight: 700;line-height: 100%;}
+.sub-sec01 .info-box .info > p {margin-top: 3rem;font-size: var(--title-type2);font-weight: 700;line-height: 100%;}
+.sub-sec01 .info-box .info > p strong {padding-left:1.2rem;font-size:9.444vw;font-weight: 700;}
+.sub-sec01 .info-box .info > p.noti {font-size: var(--small-size);font-weight: 500;line-height: 100%;color:#666}
+.sub-sec01 .recruit-box {margin-top: 15rem;}
+    /* 선택라이나 맞춤 */
+.sub-sec02 .center-box + .center-box {margin-top: 15rem;}
+.sub-sec02 .item {margin-left:5.6rem;margin-top: 5rem;}
+.sub-sec02 .icon {padding-bottom: 4rem;border-bottom:1px solid #000;}
+.sub-sec02 .icon img {display:block;width:7.2rem;margin-bottom: 3rem;}
+.sub-sec02 .icon .title {font-size: var(--title-type3);font-weight:700;line-height: 140%;}
+.sub-sec02 .icon span {display: block;margin-top:0.8rem;font-size: var(--small-size);font-weight: 500;color:#666;line-height: 140%;}
+.sub-sec02 .info li {padding: 3rem 0;border-bottom:1px solid #EBEBEB}
+.sub-sec02 .info li p {display:flex;align-items:center;margin-bottom:1.5rem;font-size: var(--basic-size);font-weight: 700;line-height: 150%;color:#000;}
+.sub-sec02 .info li p img {display: inline-block;width:2rem;margin-right: 0.8rem;}
+.sub-sec02 .info li span {display:block;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#666}
+.sub-sec02 .recruit-box {margin-top: 15rem;}
