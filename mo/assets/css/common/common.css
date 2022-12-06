@@ -31,12 +31,12 @@ header > a:last-child img {height: 2.4rem;}
 
 /* footer */
 footer {}
-footer .info {margin-bottom: 6rem;}
-footer .info .num {font-size:7.222vw;font-weight:800;line-height: 3.1rem;margin-bottom:0.8rem;}
-footer .info .time {font-size:3.889vw;line-height: 140%;font-weight:600;}
-footer .list-corp {margin-bottom: 6rem;}
-footer .list-corp li + li {margin-top: 1.2rem;}
-footer .list-corp li {font-size:3.333vw;font-weight:500;line-height: 140%;}
-footer .list-priv {margin-bottom: 6rem;display: flex;flex-wrap: wrap;row-gap:1.2rem}
-footer .list-priv a {margin-right:2rem;font-size: 3.333vw;font-weight:700;color:#000;}
-footer p:last-child {padding-bottom: 2rem;font-size: 3.333vw;line-height: 1.44rem;font-weight:400;}
+footer .info {margin-bottom: 16.6667vw;}
+footer .info .num {font-size: 7.222vw;font-weight:800;line-height: 8.6111vw;margin-bottom: 0.2222vw;}
+footer .info .time {font-size: 3.889vw;line-height: 5.4444vw;font-weight:600;letter-spacing: -0.01rem;}
+footer .list-corp {margin-bottom: 16.6667vw;}
+footer .list-corp li + li {margin-top: 3.3333vw;}
+footer .list-corp li {font-size: 3.333vw;font-weight: 500;line-height: 4vw;}
+footer .list-priv {margin-bottom: 16.6667vw;display: flex;flex-wrap: wrap;row-gap: 3.3333vw;}
+footer .list-priv a {margin-right: 5.5556vw;font-size: 3.333vw;font-weight:700;color:#000;}
+footer > p:last-child {padding-bottom: 5.5556vw;font-size: 3.333vw;line-height: 4vw;font-weight:400;}

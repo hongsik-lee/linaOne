@@ -1,9 +1,10 @@
 // mobile
-let swiper;
+let swiper, swiper2;
 let initialX, initialY, wheelDirection, touchDirection;
 let isMouseDown, initialScrollY;
 $(document).ready(function() {
     setSwiper();
+    setSwipter2();
     getVisualSectionSrcollInfo();
 
     $(window).on('touchstart', function(e) {
@@ -44,6 +45,7 @@ $(document).ready(function() {
 function openNav(){
     document.getElementById('gnb-wrap').classList.add('on')
 }
+
 function closeNav(){
     document.getElementById('gnb-wrap').classList.remove('on')
 }
@@ -76,6 +78,39 @@ const setSwiper = () => {
                     swiper.allowTouchMove = true;
                 }
             }
+        }
+    });
+}
+
+const setSwipter2 = function() {
+    const $texts = $('.brand-goal-sec').find('.text-area');
+
+    swiper2 = new Swiper(".brand-goal-swiper", {
+        slidesPerView: 'auto',
+        // slidesOffsetAfter: 600,
+        // breakpoints: {
+        //     1921: { slidesPerView: 2 }
+        // },
+        speed: 800,
+        simulateTouch: false,
+        navigation: {
+            nextEl: ".control-next",
+            prevEl: ".control-prev",
+        },
+        on:{
+            slideChange() {
+                const index = this.activeIndex
+                    , $slide = $(this.slides[index]);
+
+                $texts.children().eq(index).addClass('active').siblings().removeClass('active');
+                $('.current-index').html(index + 1);
+
+                if(index == 1) {
+                    $('.control-next').addClass('disabled');
+                } else {
+                    $('.control-next').removeClass('disabled');
+                }
+            },
         }
     });
 }
