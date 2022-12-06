@@ -124,3 +124,6 @@
 .associate .rule-sec .ico-box span {display: block;font-size: var(--small-size);font-weight: 500;color:#666;line-height:150%;}
 .associate .rule-sec .ico-box span + span {margin-top:0.4rem;}
 .associate .rule-sec .ico-box span:first-of-type {margin-top:4rem;}
+.associate .rule-sec:nth-of-type(2) .ico-box span + span {margin-top: 1rem;}
+/* .associate .rule-sec:last-of-type {opacity: 0.2;} */
+.associate .mail-box {margin:15rem auto 0;}

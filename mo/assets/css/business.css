@@ -1,0 +1,4 @@
+@import url(common/common.css);
+
+/* Business Service */
+.sub-wrap.business .visual:before {background-image:url(../images/bu_business_visual.png)}
