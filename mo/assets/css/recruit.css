@@ -1,0 +1,6 @@
+@import url(common/common.css);
+
+/* Business Service */
+.sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
+.sub-wrap.recruit .content > .desc {margin-bottom: 0;}
+.sub-wrap.recruit .content > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
