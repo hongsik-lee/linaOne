@@ -32,7 +32,6 @@ $(document).ready(function() {
     });
 
     $(document).on('touchmove', '.swiper-slide', function(e) {
-        console.log('touchmove')
         handleMoveSwiper(swiper, touchDirection);
     });
 
@@ -61,6 +60,24 @@ const setSwiper = () => {
             init: function() {
                 console.log('init');
             },
+            beforeSlideChangeStart: function() {
+                let index  = this.activeIndex;
+
+                if(wheelDirection === 'top' || touchDirection === 'top') {
+                    index + 1
+                }
+
+                const $slide = $(this.slides[index])
+                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    , dataSwiperMove = $slide.data('swiper-move');
+
+                if(dataSwiperMove && dataSwiperMove === 'disabled') {
+                    wheelDirection = '';
+                    touchDirection = '';
+                    swiper.mousewheel.disable();
+                    swiper.allowTouchMove = false;
+                } 
+            },
             slideChange: function() {
                 const index = this.activeIndex
                     , $slide = $(this.slides[index])
@@ -68,12 +85,11 @@ const setSwiper = () => {
                     , dataSwiperMove = $slide.data('swiper-move');
 
                 if(dataSwiperMove && dataSwiperMove === 'disabled') {
-                    console.log('비활성화')
-                    wheelDirection = ''; // 변경 시 초기화
-                    swiper.mousewheel.disable(); // 마우스 휠 금지
-                    swiper.allowTouchMove = false; // 터치 금지
+                    wheelDirection = '';
+                    touchDirection = '';
+                    swiper.mousewheel.disable();
+                    swiper.allowTouchMove = false;
                 } else {
-                    console.log('활성화')
                     swiper.mousewheel.enable();
                     swiper.allowTouchMove = true;
                 }
@@ -115,10 +131,35 @@ const setSwipter2 = function() {
     });
 }
 
-const handleMouseDownSwiper = (e) => {
-    const mouseMove = (e) => mouseDownMoveSwiper(e)
+// 마우스 눌렀을 때
+const handleMouseDownSwiper = function(e) {
 
-    const mouseUp = (e) => {
+    const mouseMove = function(e) {
+        const index = swiper.activeIndex
+            , $slide = $(swiper.slides[index])
+            , scrollY = Math.round($slide.scrollTop())
+            , outerHeight = Math.round($slide.outerHeight())
+            , scrollHeight = Math.round($slide.prop('scrollHeight'))
+            , currentY = getClientY(e)
+            , direction = getDirection(e)
+            , isScroll = scrollHeight > outerHeight ? true : false
+            , dataSwiperMove = $slide.data('swiper-move');
+
+        if(isMouseDown) {
+            $slide.scrollTop(initialScrollY - currentY + initialY);
+    
+            // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
+            if(dataSwiperMove && dataSwiperMove === 'disabled') {
+                if(direction === 'top' && !(scrollY === 0) && scrollY + outerHeight >= scrollHeight) {
+                    moveSwiperSlideTo(index, direction);
+                } else if(direction === 'bottom' && scrollY === 0) {
+                    moveSwiperSlideTo(index, direction);
+                }
+            }
+        }
+    }
+
+    const mouseUp = function(e) {
         isMouseDown = false;
         initialX = null;
         initialY = null;
@@ -131,6 +172,7 @@ const handleMouseDownSwiper = (e) => {
     $(window).on('mouseup', mouseUp);
 }
 
+ // 마우스 휠 했을 때, 터치 했을 때
 const handleMoveSwiper = (swiper, direction = 'top') => {
     const index = swiper.activeIndex
         , $slide = $(swiper.slides[index])
@@ -144,34 +186,8 @@ const handleMoveSwiper = (swiper, direction = 'top') => {
     if(dataSwiperMove && dataSwiperMove === 'disabled') {
         if(direction === 'top' && scrollY + outerHeight >= scrollHeight) {
             moveSwiperSlideTo(index, direction);
-        } else if(direction === 'bottom' && scrollY === 0) {
+        } else if(direction === 'bottom' && scrollY <= 5) {
             moveSwiperSlideTo(index, direction);
-        }
-    }
-}
-
-const mouseDownMoveSwiper = (e) => {
-    const index = swiper.activeIndex
-        , $slide = $(swiper.slides[index])
-        , scrollY = Math.round($slide.scrollTop())
-        , outerHeight = Math.round($slide.outerHeight())
-        , scrollHeight = Math.round($slide.prop('scrollHeight'))
-        , currentY = getClientY(e)
-        , direction = getDirection(e)
-        , isScroll = scrollHeight > outerHeight ? true : false
-        , dataSwiperMove = $slide.data('swiper-move');
-
-    if(isMouseDown) {
-        $slide.scrollTop(initialScrollY - currentY + initialY);
-
-        // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
-        if(dataSwiperMove && dataSwiperMove === 'disabled') {
-            if(direction === 'top' && !(scrollY === 0) && scrollY + outerHeight >= scrollHeight) {
-                console.log('top')
-                moveSwiperSlideTo(index, direction);
-            } else if(direction === 'bottom' && scrollY === 0) {
-                moveSwiperSlideTo(index, direction);
-            }
         }
     }
 }
@@ -188,14 +204,17 @@ const moveSwiperSlideTo = (index, direction) => {
     }
 }
 
+// 터치 했을 때 x 값
 const getClientX = (e) => {
     return e.touches ? e.touches[0].clientX : e.clientX;
 };
 
+// 터치 했을 때 y 값
 const getClientY = (e) => {
     return e.touches ? e.touches[0].clientY : e.clientY;
 };
 
+// 터치 했을 때 이동 위치에 따라 좌우/아래 값
 const getDirection = (e) => {
     if (initialX !== null && initialY !== null) {
         const currentX = getClientX(e)
@@ -230,7 +249,7 @@ const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
 const getVisualSectionSrcollInfo = () => {
     visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 7
     visualPosInfo.endY = $('.visual-fixed-sec').find('.text-area').position().top;
-    visualPosInfo.height = $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 + $('.visual-fixed-sec').find('.page-tit').find('span:first-child').innerHeight() / 2;
+    visualPosInfo.height = $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 - 5
     visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
 }
 
@@ -258,7 +277,7 @@ const videoSectionScrollAnimation = function() {
         $('.visual-sec').find('.inner').prepend($('.visual-fixed-sec'));
         $('.visual-fixed-sec').find('.text-area').css({
             'position': 'absolute',
-            'top': visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 - $('.visual-fixed-sec').find('.page-tit').find('span:first-child').innerHeight() / 2
+            'top': visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 - 5
         });
     }
 }
