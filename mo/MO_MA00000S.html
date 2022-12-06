@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="./favicon.ico">
     <link rel="stylesheet" href="../mo/assets/css/swiper.css">
     <link rel="stylesheet" href="../mo/assets/css/main.css">
+    <link rel="preload" as="video" href="../mo/assets/images/lina_main_video.mov">
 </head>
 <body>
     <div class="wrap main">
         <span id="value" style="position: fixed;top: 60px;right: 10px">0</span>
+        <!-- <span id="value2" style="position: fixed;top: 70px;right: 10px">0</span> -->
         <!-- S : HEADER AREA -->
         <header class="inner">
             <a href="#"><img src="../mo/assets/images/common/logo_h.png" alt="라이나원 로고이미지"></a>
@@ -390,12 +392,15 @@
                     </div>
                     <!-- E : FOOTER AREA -->
                 </div>
-                <div class="swiper-pagination"></div>
+                
             </div>
         </div>
         <!-- E : CONTENTS  -->
         <div class="fixed-controls-wrap">
-
+            <div class="swiper-pagination"></div>
+            <button type="button" class="goTop">
+                <em class="blind">다음 sectin 이동</em>
+            </button>
         </div>
     </div>
     <script src="../mo/assets/js/jquery-3.6.1.min.js"></script>

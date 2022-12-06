@@ -3,6 +3,7 @@ let swiper, swiper2;
 let initialX, initialY, wheelDirection, touchDirection;
 let isMouseDown, initialScrollY;
 $(document).ready(function() {
+    $('.visual-sec').find('video').get(0).play();
     setSwiper();
     setSwipter2();
     getVisualSectionSrcollInfo();
@@ -35,9 +36,40 @@ $(document).ready(function() {
         handleMoveSwiper(swiper, touchDirection);
     });
 
+    $(document).on('click', '.goTop', function(e) {
+        const index = swiper.activeIndex;
+
+        if(swiper.slidesGrid.length === index + 1) {
+            moveSwiperSlideTo(-1, 'top');
+        } else {
+            moveSwiperSlideTo(index, 'top');
+        }
+    });
+
     $('.visual-sec').on('scroll', function() {
         videoSectionScrollAnimation();
     });
+
+    // $('.balance-promise-sec').on('scroll', function() {
+    //     const index = swiper.activeIndex
+    //         , $slide = $(swiper.slides[index])
+
+    //     const scrollY = $(this).scrollTop()
+    //         , outerHeight = Math.round($(this).outerHeight())
+    //         , scrollHeight = Math.round($(this).prop('scrollHeight'))
+    //         , dataSwiperMove = $slide.data('swiper-move');
+
+    //     // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
+    //     if(dataSwiperMove && dataSwiperMove === 'disabled') {
+    //         if(wheelDirection || touchDirection === 'top' && scrollY + outerHeight >= scrollHeight) {
+    //             moveSwiperSlideTo(index, wheelDirection || touchDirection);
+    //         } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3) {
+    //             moveSwiperSlideTo(index, wheelDirection || touchDirection);
+    //         }
+    //     }
+
+    //     $('#value2').html(wheelDirection || touchDirection + 'scrollY: ' + (scrollY + outerHeight >= scrollHeight)) 
+    // })
 });
 
 // header nav animation
@@ -186,10 +218,7 @@ const handleMoveSwiper = (swiper, direction = 'top') => {
         , dataSwiperMove = $slide.data('swiper-move');
     let scrollY = Math.round($slide.scrollTop())
 
-    if(scrollY < 0) {
-        scrollY = 0;
-    }
-
+    if(scrollY < 0) scrollYscrollY = 0;
     $('#value').html('direction: ' + direction + ', srcollY: ' + scrollY)
 
     // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {

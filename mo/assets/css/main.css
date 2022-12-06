@@ -21,7 +21,7 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 .main .video-wrap .cut-off {position: absolute;top: 0;width: calc((100vw - 88.8889vw) / 2);height: 100%;background-color: #fff;transform:translate3d(0, 0 ,0);z-index: 100;}
 .main .video-wrap .cut-off.left {left: 0;}
 .main .video-wrap .cut-off.right {right: 0;}
-.main .visual-sec .video-inner {position: relative;width: 100%;height: 640px}
+.main .visual-sec .video-inner {position: relative;width: 100%;height: 640px;background-color: gray}
 .main .visual-sec .video-inner video {position:absolute;top:0;left:0;width:100%;height: 100%;object-fit: cover;}
 
 /* balance-promise-sec */
