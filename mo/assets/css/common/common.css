@@ -28,6 +28,8 @@ header > a:last-child img {height: 2.4rem;}
 .sub-wrap .visual:before {position:absolute;left:0;bottom:0;top:0;right:0;;background-size:cover;content:'';}
 .sub-wrap .visual h1 {font-size:var(--title-type1);font-weight:700;line-height: 20vw;left:1.9rem;bottom:10%;font-family: var(--poppins-fonts);}
 .sub-wrap .content {margin-bottom:20rem;}
+.sub-wrap .content > .desc {margin:15rem 0;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
+.sub-wrap .label {font-size: var(--basic-size);font-weight: 700;line-height: 140%;}
 
 /* footer */
 footer {}
