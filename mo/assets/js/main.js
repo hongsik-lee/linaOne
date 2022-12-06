@@ -56,6 +56,10 @@ const setSwiper = () => {
         slidesPerView: 'auto',
         mousewheel: false, // 마우스 휠 지원 여부
         allowTouchMove: false, // 터치 이벤트(pc)
+        pagination: { // 페이지 버튼 설정
+            el: ".swiper-pagination", // 페이지 버튼 엘리먼트 설정
+            clickable: true, // 클릭 여부 (클릭 시 해당 슬라이드 이동)
+        },
         on: {
             init: function() {
                 console.log('init');
@@ -176,17 +180,23 @@ const handleMouseDownSwiper = function(e) {
 const handleMoveSwiper = (swiper, direction = 'top') => {
     const index = swiper.activeIndex
         , $slide = $(swiper.slides[index])
-        , scrollY = Math.round($slide.scrollTop())
         , outerHeight = Math.round($slide.outerHeight())
         , scrollHeight = Math.round($slide.prop('scrollHeight'))
         , isScroll = scrollHeight > outerHeight ? true : false
         , dataSwiperMove = $slide.data('swiper-move');
+    let scrollY = Math.round($slide.scrollTop())
+
+    if(scrollY < 0) {
+        scrollY = 0;
+    }
+
+    $('#value').html('direction: ' + direction + ', srcollY: ' + scrollY)
 
     // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
     if(dataSwiperMove && dataSwiperMove === 'disabled') {
         if(direction === 'top' && scrollY + outerHeight >= scrollHeight) {
             moveSwiperSlideTo(index, direction);
-        } else if(direction === 'bottom' && scrollY <= 5) {
+        } else if(direction === 'bottom' && scrollY <= 3) {
             moveSwiperSlideTo(index, direction);
         }
     }
