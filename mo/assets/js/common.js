@@ -116,6 +116,25 @@ function handleKeypressListboxList(listboxList, e) {
     }    
 }
 
+function changeListboxStatus(target) {
+    const $target = $(target)
+        , $listboxList = $target.closest('ul')
+        , $listbox = $listboxList.closest('.listbox-group')
+        , $label = $listbox.find('.label');
+
+    if(!$target.hasClass('focused')) {
+        $listboxList.attr('aria-activedescendant', $(target).attr('class'));
+    }
+
+    $target.siblings().removeClass('focused').removeAttr('aria-selected');
+    $target.addClass('focused').attr('aria-selected', 'true');
+    $target.attr('tabindex', 0).focus();
+    $target.removeAttr('tabindex');
+    $listboxList.attr('tabindex', '-1').focus();
+
+    $label.text($target.text());
+}
+
 // header nav animation
 function openNav(){
     document.getElementById('gnb-wrap').classList.add('on')

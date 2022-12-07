@@ -51,19 +51,3 @@ footer .list-corp li {font-size: 3.333vw;font-weight: 500;line-height: 4vw;}
 footer .list-priv {margin-bottom: 16.6667vw;display: flex;flex-wrap: wrap;row-gap: 3.3333vw;}
 footer .list-priv a {margin-right: 5.5556vw;font-size: 3.333vw;font-weight:700;color:#000;}
 footer > p:last-child {padding-bottom: 5.5556vw;font-size: 3.333vw;line-height: 4vw;font-weight:400;}
-
-/* select - listbox */
-.listbox-group {position: relative;width: 45.5556vw;height: 11.1111vw;text-align: left;}
-.listbox-group.active .label {border-color: #d7d7d7;}
-.listbox-group.active .listbox-list {display: block;}
-.listbox-group .label {width: 100%;height: 3.5rem;line-height: 3.5rem;padding: 0 1rem;border: 1px solid #c8c8c8;text-align:left;font-size: var(--small-size);font-weight:500;background: url(../../images/icon/icon_arrow_down.png) no-repeat;background-position: right 3.3333vw center;background-size: 6.6667vw;cursor: pointer;}
-/* .listbox-group .label:focus {border-color: #d7d7d7;} */
-.listbox-group .label:disabled {border-color: #DDD;background-color: #F6F6F6;cursor: not-allowed;}
-.listbox-group .listbox-list {scrollbar-width: thin;position: absolute;top: 4rem;left: 0;display: none;width: 100%;min-width: -webkit-fit-content;min-width: -moz-fit-content;min-width: fit-content;max-height: 21.6rem;overflow-y: auto;color: #111;background-color: #fff;z-index: 100;}
-.listbox-group .listbox-list::-webkit-scrollbar {width: 0.6rem;height: 0.6rem;}
-.listbox-group .listbox-list::-webkit-scrollbar-thumb {background-color: #DBE2EE;border-radius: 0.6rem;background-clip: padding-box;border: 0.1rem solid #DBE2EE;}
-.listbox-group .listbox-list::-webkit-scrollbar-track {background-color: #fff;border-radius: 0.6rem;border: 0.1rem solid transparent;}
-.listbox-group .listbox-list::-webkit-scrollbar-thumb {background-color: #AFAFAF;border: 0.1rem solid #AFAFAF;}
-.listbox-group .listbox-list li {height: 3.5rem;padding: 0.8rem 1.6rem;box-sizing: border-box;cursor: pointer;}
-.listbox-group .listbox-list li.focused {background-color: #fff;}
-/* .listbox-group .listbox-list li:hover {background-color: rgba(244, 247, 252, 0.5);} */
