@@ -1,4 +1,9 @@
 @import url(common/common.css);
+/* tab common */
+.it .content {display: none;}
+.it .content.active {display: block;}
+.sales .content {display: none;}
+.sales .content.active {display: block;}
 
 /* Business Service */
 .sub-wrap.business .visual:before {background-image:url(../images/bu_business_visual.png)}
@@ -20,6 +25,7 @@
 
 /* sales Marketing */
 .sub-wrap.sales .visual:before {background-image:url(../images/bu_sales_visual.png)}
+.sub-wrap .content.interview  > .desc {margin:8rem 0 15rem}
 .interview {margin-top: 8rem;}
 .interview-sec + .interview-sec {margin-top: 12rem;}
 .interview-sec.left {padding-right: 2rem;}

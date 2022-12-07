@@ -23,35 +23,35 @@
                 <li>
                     회사소개
                     <ul class="sub-nav">
-                        <li><a href="#">Overview</a></li>
-                        <li><a href="#">CEO인터뷰</a></li>
-                        <li><a href="#">비젼/미션</a></li>
-                        <li><a href="#">CI</a></li>
-                        <li><a href="#">브랜드영상</a></li>
-                        <li><a href="#">보도자료</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">제휴/제안</a></li>
+                        <li><a href="../about/MO_AB010000S.html">Overview</a></li>
+                        <li><a href="../about/MO_AB020000S.html">CEO인터뷰</a></li>
+                        <li><a href="../about/MO_AB030000S.html">비젼/미션</a></li>
+                        <li><a href="../about/MO_AB040000S.html">CI</a></li>
+                        <li><a href="../about/MO_AB050000S.html">브랜드영상</a></li>
+                        <li><a href="../about/MO_AB060100S.html">보도자료</a></li>
+                        <li><a href="../about/MO_AB070000T.html">Contact Us</a></li>
+                        <li><a href="../about/MO_AB080000S.html">제휴/제안</a></li>
                     </ul>
                 </li>
                 <li>
                     사업영역
                     <ul class="sub-nav">
-                        <li><a href="#">Business & Service</a></li>
-                        <li><a href="#">Sales & Marketing</a></li>
-                        <li><a href="#">IT</a></li>
+                        <li><a href="../business/MO_BU010000S.html">Business & Service</a></li>
+                        <li><a href="../business/MO_BU020100T.html">Sales & Marketing</a></li>
+                        <li><a href="../business/MO_BU030100T.html">IT</a></li>
                     </ul>
                 </li>
                 <li>
                     인재채용
                     <ul class="sub-nav">
-                        <li><a href="#">직원 인재채용</a></li>
-                        <li><a href="#">TMR 인재채용</a></li>
+                        <li><a href="../recruit/MO_RE010100S.html">직원 인재채용</a></li>
+                        <li><a href="../recruit/MO_RE020100T.html">TMR 인재채용</a></li>
                     </ul>
                 </li>
                 <li>
                     공지사항
                     <ul class="sub-nav">
-                        <li><a href="#">공지사항</a></li>
+                        <li><a href="../infomation/MO_IN010000S.html">공지사항</a></li>
                     </ul>
                 </li>
             </ul>
@@ -74,13 +74,19 @@
         </div>
         <!-- E : VISUAL -->
 
-        <!-- TAB AREA -->
-        <div style="width:100%;height:36px;margin:90px 0 0;background:#aaa;color:#fff;text-align:center;line-height:36px;font-size:20px">
-            tab
+        <!-- S : TAB AREA -->
+        <div class="slide-tab">
+            <ul class="inner">
+                <li class="tab-title active">전원선 부사장 인터뷰</li>
+                <li class="tab-title">오재혁 상무 인터뷰</li>
+                <li class="tab-title">사업영역</li>
+            </ul>
         </div>
+        <!-- E : TAB AREA -->
+
 
         <!-- S : 전원선 부사장 인터뷰 -->
-        <div class="content interview">
+        <div class="content interview active">
             <div class="interview-sec left">
                 <img src="../../assets/images/bu_sales_img01.png">
                 <div class="qna-box">
@@ -228,5 +234,42 @@
      </div>
      <script src="../../assets/js/jquery-3.6.1.min.js"></script>
      <script src="../../assets/js/common.js"></script>
+     <script>
+
+        const tabCont = document.querySelector('.slide-tab .inner')
+        const tabItem = document.querySelectorAll('.tab-title')
+        const tabInner = document.querySelectorAll('.content')
+
+        tabItem.forEach((tab, idx)=> {
+            tab.addEventListener('click', function(){
+                console.log(tabCont.scrollLeft, tabCont.scrollRight)
+                console.log()
+                
+
+                tabItem.forEach((item)=> {
+                    if(idx === 2){
+                        // tabCont.scrollLeft = + 40
+                        tabCont.scrollTo({ left: 100, behavior: 'smooth' })
+                    } else if (idx === 0){
+                        tabCont.scrollTo({ left: 0, behavior: 'smooth' })
+                    }
+                    item.classList.remove('active')
+                    console.log(this, item.offsetLeft, idx)
+                    // item.scrollIntoView({block:'start', behavior:'smooth'})
+                })
+
+                tabInner.forEach((inner)=> {
+                    inner.classList.remove('active');
+                    // this.scrollIntoView({inline:'end', behavior:'smooth'})
+
+                })
+
+                tabItem[idx].classList.add('active')
+                tabInner[idx].classList.add('active')
+            })
+        })
+
+
+     </script>
 </body>
 </html>

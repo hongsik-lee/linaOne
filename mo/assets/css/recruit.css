@@ -1,8 +1,11 @@
 @import url(common/common.css);
+/* tab common */
+.recruit .content {display: none;}
+.recruit .content.active {display: block;}
 
-/* Business Service */
+/* 채용절차 */
 .sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
-.sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;}
+.sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;margin-top: 8rem;}
 .sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
 .sub-wrap .acc-wrap {width:calc(100% - 4rem);margin:8rem auto 0;border-top: 2px solid #000;}
 .sub-wrap .acc-wrap li {padding:3.2rem 0;border-bottom: 1px solid #EBEBEB;}
@@ -40,6 +43,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .recruit-sec01 .btn {margin:auto}
 
 /* 복리후생제도 */
+.recruit-sec02 {margin-top: 8rem;}
 .recruit-sec02 ul {display: flex;flex-wrap: wrap;row-gap:7rem;column-gap: 4rem;}
 .recruit-sec02 li {width:calc(50% - 2rem);}
 .recruit-sec02 li img {display:block;width: 4.8rem;}
@@ -47,6 +51,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .recruit-sec02 li p.title {margin:2rem 0 0.6rem;font-size: var(--title-type3);font-weight:700;color:#000;}
 
 /* 인재상 */
+.sub-wrap .content.recruit-sec03 > .desc {margin:8rem 0 15rem}
 .recruit-sec03 .ico-box .ico {margin-top:7rem;text-align: center;}
 .recruit-sec03 .ico-box .ico + .ico {margin-top: 8rem;}
 .recruit-sec03 .ico-box .ico img {width: 7.2rem;}

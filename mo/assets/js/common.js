@@ -15,8 +15,8 @@ $(document).ready(function() {
 });
 
 // header nav animation
-const openNav = function() { $('#gnb-wrap').addClass(on); }
-const closeNav = function() { $('#gnb-wrap').removeClass(on); }
+const openNav = function() { $('#gnb-wrap').addClass('on'); }
+const closeNav = function() { $('#gnb-wrap').removeClass('on'); }
 
 // listbox click event
 let oldListbox, newListbox;
@@ -153,3 +153,15 @@ const checkMobile = function() {
         return "other";
     }
 }
+
+
+    const accMenu = document.querySelectorAll('.nav li')
+
+    accMenu.forEach((menu, idx)=> {
+        menu.addEventListener('click', function(){
+            accMenu.forEach((menus)=> {
+                menus.classList.remove('active')
+            })
+            accMenu[idx].classList.add('active')
+        })
+    })
