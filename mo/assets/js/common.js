@@ -130,9 +130,9 @@ const windowClose = function() {
         , type = checkMobile();
 
     if (type === 'kakaotalk') { 
-        window.location.href = (/iPad|iPhone|iPod/.test(_ua)) ? 'kakaoweb://closeBrowser': 'kakaotalk://inappbrowser/close';
+        window.location.href = (/iPad|iPhone|iPod/.test(userAgent)) ? 'kakaoweb://closeBrowser': 'kakaotalk://inappbrowser/close';
     } else if(type === 'ios'){ 
-        window.open('', '_self', '')
+        window.open('', '_self', '');
         window.close();
     } else {
         window.open('about:blank', '_self').self.close();
@@ -141,13 +141,13 @@ const windowClose = function() {
 
 // 기기구분
 const checkMobile = function() {
-	var userAgent = navigator.userAgent.toLowerCase(); 
+	const userAgent = navigator.userAgent.toLowerCase(); 
 
     if (userAgent.indexOf('kakaotalk') > -1) {
         return "kakaotalk";
     } else if (userAgent.indexOf('android') > -1) {
         return "android";
-    } else if (userAgent.indexOf("iphone") > -1 || ua.indexOf("ipad") > -1 || ua.indexOf("ipod") > -1 ) {
+    } else if (userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1 || userAgent.indexOf("ipod") > -1 ) {
         return "ios";
     } else {
         return "other";
