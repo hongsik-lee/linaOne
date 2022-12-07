@@ -51,7 +51,7 @@ header > a:last-child img {height: 2.4rem;}
 
 
 /* footer */
-footer {}
+footer a {color:#000}
 footer .info {margin-bottom: 16.6667vw;}
 footer .info .num {font-size: 7.222vw;font-weight:800;line-height: 8.6111vw;margin-bottom: 0.2222vw;}
 footer .info .time {font-size: 3.889vw;line-height: 5.4444vw;font-weight:600;letter-spacing: -0.01rem;}

@@ -6,7 +6,7 @@
 .sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
 
 /* 인터넷보험call TMR 지원문의 BOX */
-.recruit-box {margin:0 2rem;}
+.recruit-box {margin:15rem 2rem 0;}
 .recruit-box .box + .box {margin-top: 2rem;}
 .recruit-box .box {padding:2rem; background:#f9f9f9;height:14rem;}
 .recruit-box .box .title {font-size: var(--small-size);font-weight: 700;white-space: pre;}
@@ -72,7 +72,6 @@
 .sub-sec01 .info-box .info > p {margin-top: 3rem;font-size: var(--title-type2);font-weight: 700;line-height: 100%;}
 .sub-sec01 .info-box .info > p strong {padding-left:1.2rem;font-size:9.444vw;font-weight: 700;}
 .sub-sec01 .info-box .info > p.noti {font-size: var(--small-size);font-weight: 500;line-height: 100%;color:#666}
-.sub-sec01 .recruit-box {margin-top: 15rem;}
     /* 선택라이나 맞춤 */
 .sub-sec02 .center-box + .center-box {margin-top: 15rem;}
 .sub-sec02 .item {margin-left:5.6rem;margin-top: 5rem;}
@@ -84,7 +83,6 @@
 .sub-sec02 .info li p {display:flex;align-items:center;margin-bottom:1.5rem;font-size: var(--basic-size);font-weight: 700;line-height: 150%;color:#000;}
 .sub-sec02 .info li p img {display: inline-block;width:2rem;margin-right: 0.8rem;}
 .sub-sec02 .info li span {display:block;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#666}
-.sub-sec02 .recruit-box {margin-top: 15rem;}
     /* 선택라이나 소식 */
 .sub-sec03 .list {margin-top: 8rem;}
 .sub-sec03 .list li + li {margin-top: 8rem;}
@@ -94,5 +92,21 @@
 .sub-sec03 .list .title {font-size:var(--title-type3);font-weight:700;line-height:140%;margin:1.8rem 0 0.4rem;}
 .sub-sec03 .list .desc {font-size: var(--small-size);font-weight:500;line-height: 140%;color:#666;margin:0;padding:0;}
 .sub-sec03 .btn-more {margin:3rem auto 0;}
-.sub-sec03 .recruit-box {margin-top: 15rem;}
-.news_detail .recruit-box {margin-top: 15rem;}
+
+/* TMR 지원서 작성하기 */
+.sub-wrap .content.trm-recruit-sec02 > .desc {margin: 15rem 0 0;}
+.sub-wrap .content.trm-recruit-sec02 > .desc + .desc {margin-top: 3rem; margin-bottom: 8rem;}
+.trm-recruit-sec02 .linaTmr {padding-left:5.6rem;font-size: 11.111vw;line-height:140%;font-weight:900;color: #150F96;}
+.trm-recruit-sec02 .btn {margin: 8rem auto 0;}
+.trm-recruit-sec02 .col-box {margin-top:20rem;padding:3rem;background: #F9F9F9;border-radius: 8px;}
+.trm-recruit-sec02 .col-box + .col-box {margin-top: 3rem;}
+.trm-recruit-sec02 .col-box .badge {display:inline-block;width:7rem;height:2.6rem;font-size:3.333vw;color:#fff;line-height:2.6rem;font-weight:600;border-radius: 0.4rem;text-align: center;}
+.trm-recruit-sec02 .col-box .badge.blue {background: #01C1D6;}
+.trm-recruit-sec02 .col-box .badge.green {background:#7ACB00;}
+.trm-recruit-sec02 .col-box .title {margin-top: 1.6rem;padding-bottom: 3rem;font-size: var(--title-type2);font-weight: 700;line-height: 140%;border-bottom: 1px solid #000;}
+.trm-recruit-sec02 .col-box .txt {margin-top: 3rem;}
+.trm-recruit-sec02 .col-box .txt + .txt {margin-top:2.4rem;}
+.trm-recruit-sec02 .col-box .txt .txt-title {font-size: var(--basic-size);font-weight: 700;line-height: 140%;white-space: pre-line;}
+.trm-recruit-sec02 .col-box .txt span {display: block;margin-top:0.8rem;font-size: var(--small-size);font-weight: 500;color:#666;line-height: 140%;}
+.trm-recruit-sec02 .col-box .txt span + span {margin-top: 0.6rem;}
+.trm-recruit-sec02 .noti {margin-top:2rem;font-size: var(--small-size);font-weight: 500;color:#999}
