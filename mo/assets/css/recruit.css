@@ -14,6 +14,7 @@
 .recruit-box .box .number-wrap p:first-child {font-size:7.222vw;line-height: 100%;font-weight:700;}
 .recruit-box .box .number-wrap p:nth-of-type(2) {margin-top:0.8rem;font-size:3.611vw;color:#666;font-weight:500;line-height: 100%;}
 .recruit-box .box .number-wrap ul {margin-top:2.1rem;display: flex;column-gap:1.6rem;justify-content: flex-end;}
+.recruit-box .box:last-child .number-wrap ul {margin-top:4.2rem;}
 .recruit-box .box .number-wrap li {font-size:3.333vw;font-weight: 500;line-height: 100%;color:#666;white-space:pre;}
 
 /* 채용절차 */
@@ -84,3 +85,14 @@
 .sub-sec02 .info li p img {display: inline-block;width:2rem;margin-right: 0.8rem;}
 .sub-sec02 .info li span {display:block;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#666}
 .sub-sec02 .recruit-box {margin-top: 15rem;}
+    /* 선택라이나 소식 */
+.sub-sec03 .list {margin-top: 8rem;}
+.sub-sec03 .list li + li {margin-top: 8rem;}
+.sub-sec03 .list img {display:block;width:100%;}
+.sub-sec03 .list a {color:#000}
+.sub-sec03 .list p {white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+.sub-sec03 .list .title {font-size:var(--title-type3);font-weight:700;line-height:140%;margin:1.8rem 0 0.4rem;}
+.sub-sec03 .list .desc {font-size: var(--small-size);font-weight:500;line-height: 140%;color:#666;margin:0;padding:0;}
+.sub-sec03 .btn-more {margin:3rem auto 0;}
+.sub-sec03 .recruit-box {margin-top: 15rem;}
+.news_detail .recruit-box {margin-top: 15rem;}

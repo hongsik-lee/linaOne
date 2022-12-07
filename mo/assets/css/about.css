@@ -94,17 +94,6 @@
 .news_list .list-wrap li a {font-size: var(--title-type3);font-weight: 700;color:#000;line-height: 140%;}
 .news_list .list-wrap li span {display: block;width: 100%;margin-top: 0.8rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#999}
 .news_list .list-wrap a.btn-more {margin:3rem auto 0;}
-.news_list .list-wrap a.btn-more {display:block;width: 19.6rem;height:4.8rem;line-height: 4.8rem;font-size: var(--basic-size);font-weight:600;color:#000;text-align: center;}
-.news_list .list-wrap a.btn-more img {width: 1.2rem;margin-left:0.8rem}
-/* NEWS DETAIL 보도자료 */
-.sub-wrap.news_detail .content {padding-top: 40.625vw;}
-.news_detail .detail-wrap {margin-top:7rem;}
-.news_detail .detail-wrap .title {font-size: 7.500vw;font-weight:700;line-height:140%;}
-.news_detail .detail-wrap .date {display:block;margin-top:0.8rem;font-size: var(--small-size);font-weight:500;color:#999;line-height:140%;}
-.news_detail .detail-wrap img {display: block;width:100%;margin-top: 5rem;}
-.news_detail .detail-wrap img + p {position:relative;margin-top:5rem;padding-bottom:4rem;font-size: var(--small-size);font-weight:500;color:#000;white-space: pre-line;}
-.news_detail .detail-wrap img + p:after {position:absolute;width:calc(100% - 4rem);border-bottom:1px solid #EBEBEB;bottom:0;content: '';}
-.news_detail .detail-wrap .btn {margin:8rem auto 0;}
 
 /* Associate Proposal */
 .sub-wrap.associate .visual:before {background-image:url(../images/ab_associate_visual.png)}
