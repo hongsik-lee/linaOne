@@ -15,14 +15,22 @@
 .sub-wrap .mail-box .title {font-size:var(--small-size);font-weight:700;margin-bottom: 2.6rem;}
 .sub-wrap .mail-box p {margin-bottom:0.6rem;font-size: var(--small-size);font-weight:500;line-height: 140%;}
 .sub-wrap .mail-box a {font-size: 3.611vw;font-weight:500;color:#000;text-decoration: underline;}
+/* NEWS LIST 보도자료 */
+.sub-wrap .list-wrap .date {font-size: var(--small-size);font-weight: 500;line-height: 140%;text-align: right;}
+.sub-wrap .list-wrap .date span {font-size: var(--small-size);font-weight: 500;line-height: 140%;}
+.sub-wrap .list-wrap ul {margin-top: 2.4rem;border-top:2px solid #000;}
+.sub-wrap .list-wrap li {padding:3.2rem 0;border-bottom:1px solid #EBEBEB;word-break: keep-all;}
+.sub-wrap .list-wrap li a {font-size: var(--title-type3);font-weight: 700;color:#000;line-height: 140%;}
+.sub-wrap .list-wrap li span {display: block;width: 100%;margin-top: 0.8rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#999}
+.sub-wrap .list-wrap a.btn-more {margin:3rem auto 0;}
 /* NEWS DETAIL 보도자료 */
 .sub-wrap.news_detail .content {padding-top: 40.625vw;}
 .news_detail .detail-wrap {margin-top:7rem;}
-.news_detail .detail-wrap .title {font-size: 7.500vw;font-weight:700;line-height:140%;}
+.news_detail .detail-wrap .title {font-size: 7.500vw;font-weight:700;line-height:140%;word-break: keep-all;}
 .news_detail .detail-wrap .date {display:block;margin-top:0.8rem;font-size: var(--small-size);font-weight:500;color:#999;line-height:140%;}
 .news_detail .detail-wrap img {display: block;width:100%;margin-top: 5rem;}
-.news_detail .detail-wrap img + p {position:relative;margin-top:5rem;padding-bottom:4rem;font-size: var(--small-size);font-weight:500;color:#000;white-space: pre-line;line-height:150%;}
-.news_detail .detail-wrap img + p:after {position:absolute;width:calc(100% - 4rem);border-bottom:1px solid #EBEBEB;bottom:0;content: '';}
+.news_detail .detail-wrap p:not(.title) {position:relative;margin-top:5rem;padding-bottom:4rem;font-size: var(--small-size);font-weight:500;color:#000;white-space: pre-line;line-height:150%;}
+.news_detail .detail-wrap p:not(.title):after {position:absolute;width:calc(100% - 4rem);border-bottom:1px solid #EBEBEB;bottom:0;content: '';}
 .news_detail .detail-wrap .btn {margin:8rem auto 0;}
 
 /* header  */
