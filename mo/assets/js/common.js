@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-
     $(document).on('click', '.popup-close-btn', function() {
 
     });
@@ -17,9 +16,13 @@ $(document).ready(function() {
     });
 });
 
+// header nav animation
+const openNav = function() { $('#gnb-wrap').addClass(on); }
+const closeNav = function() { $('#gnb-wrap').removeClass(on); }
 
+// listbox click event
 let oldListbox, newListbox;
-function handelClickListbox(listbox, e) {
+const handelClickListbox = function(listbox, e) {
     const $listbox = $(listbox)
         , $label = $listbox.find('.label')
         , target = e.target
@@ -47,20 +50,14 @@ function handelClickListbox(listbox, e) {
 
         $label.removeAttr('aria-expanded');
         $listbox.removeClass('active');
-
-        // 조건 충족시 추가 입력 필드 출력
-        if($listbox.hasClass('condition')){
-            showListBoxDetail(e, '1depth');
-        } else if($listbox.hasClass('condition2')){
-            showListBoxDetail(e, '2depth');
-        }
     }
 
     oldListbox = $listbox[0];
 };
 
+// listbox keyborad event
 let keypressNum = 0;
-function handleKeypressListboxList(listboxList, e) {
+const handleKeypressListboxList = function(listboxList, e) {
     let target;
     const $listboxList = $(listboxList)
         , $listbox = $listboxList.closest('.listbox-group')
@@ -99,13 +96,6 @@ function handleKeypressListboxList(listboxList, e) {
             $label.focus();
             $listbox.removeClass('active');
 
-            // 조건 충족시 추가 입력 필드 출력
-            if($listbox.hasClass('condition')){
-                showListBoxDetail($listbox.find('.focused'), '1depth');
-            } else if($listbox.hasClass('condition2')){
-                showListBoxDetail($listbox.find('.focused'), '2depth');
-            }
-            
             break;
         case 27: // key exc
             $label.removeAttr('aria-expanded');
@@ -116,7 +106,8 @@ function handleKeypressListboxList(listboxList, e) {
     }    
 }
 
-function changeListboxStatus(target) {
+// listbox status change
+const changeListboxStatus = function(target) {
     const $target = $(target)
         , $listboxList = $target.closest('ul')
         , $listbox = $listboxList.closest('.listbox-group')
@@ -133,13 +124,4 @@ function changeListboxStatus(target) {
     $listboxList.attr('tabindex', '-1').focus();
 
     $label.text($target.text());
-}
-
-// header nav animation
-function openNav(){
-    document.getElementById('gnb-wrap').classList.add('on')
-}
-
-function closeNav(){
-    document.getElementById('gnb-wrap').classList.remove('on')
 }
