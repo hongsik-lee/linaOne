@@ -4,6 +4,15 @@
 .sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
 .sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;}
 .sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
+.sub-wrap .acc-wrap {width:calc(100% - 4rem);margin:8rem auto 0;border-top: 2px solid #000;}
+.sub-wrap .acc-wrap li {padding:3.2rem 0;border-bottom: 1px solid #EBEBEB;}
+.sub-wrap .acc-wrap .txt {position:relative;padding-right: 5.4rem;}
+.sub-wrap .acc-wrap .txt:after {position: absolute;right: 0;background: url(../images/icon/icon_arrow_down.png);width:2.4rem;height: 2.4rem;display: block;
+background-size: contain;top: 3.4rem;content: '';}
+.sub-wrap .acc-wrap .txt.active:after {transform: rotate(180deg);}
+.sub-wrap .acc-wrap .txt span {display:block;margin-bottom:0.8rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;}
+.sub-wrap .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
+.sub-wrap .acc-wrap .cont {margin-top:3rem;font-size: var(--small-size);font-weight:500;color:#666;line-height: 140%;}
 
 /* 인터넷보험call TMR 지원문의 BOX */
 .recruit-box {margin:15rem 2rem 0;}
