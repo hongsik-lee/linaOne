@@ -207,3 +207,9 @@ $(document).ready(function(){
         $subCont.hide().eq(idx).show();
     })
 })
+
+$(window).on('load',function(){
+    let $visual = $('.visual');
+    $visual.addClass('active').find('h1').addClass('active')
+})
+
