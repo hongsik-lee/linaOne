@@ -69,6 +69,7 @@
 .interview .page-interview .answer:after {content: "A.";}
 .interview .page-interview .left img {width: 62.7rem;}
 .interview .page-interview .left .txt {margin-top:6rem;padding-left: 32.4rem;}
+.interview .page-interview .left .txt + .txt {margin-top: 11rem;}
 .interview .page-sec02 {margin-top:25rem;padding:24rem 0;background:url(../../assets/images/ab_interview_img04.png);background-size: cover;}
 .interview .page-sec02 .inner {display: flex;}
 .interview .page-sec02 .col:last-child {width: calc(100% - 32.4rem);margin-left: auto;}
