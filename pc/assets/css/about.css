@@ -36,7 +36,7 @@
 .interview.sub_wrap .visual-sec.active {height:21.0938vw;}
 .interview #contents .visual-sec {height:21.0938vw;}
 .interview .visual-sec::after {height: 1vw;left:50%;bottom:0;transform:translateX(-50%);background: url(../images/ab_interview_visual.png) 50% 50% no-repeat;background-size: cover;}
-.interview .visual-sec.active::after {height:21.0938vw;width:100%;transition-duration:0.6s;}
+.interview .visual-sec.active::after {height: 22.813vw;width:100%;transition-duration:0.6s;}
 /* .interview .visual-sec .page-tit.type2 {top:21rem;left:22.8rem;} */
 .interview .visual-sec .page-tit.type2 {left:11.8750vw;}
 .interview .visual-sec .page-tit.type2 span {line-height:5.5990vw;}
