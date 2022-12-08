@@ -157,7 +157,7 @@ header, footer, section, article, aside, nav, hgroup, details, menu, figure, fig
 
 ul, ol{list-style:none} 
 em, address, i{font-style:normal}
-a{text-decoration:none}
+a{text-decoration:none;color:#000}
 
 /* Root Style */
 :root{
