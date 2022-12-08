@@ -22,6 +22,7 @@
 
 /* CEO INTERVIEW */
 .sub-wrap.interview .visual:before {background-image:url(../images/ab_interview_visual.png)}
+.sub-wrap.interview  .content {margin-bottom:0;}
 .interview .content > .desc {margin:15rem 0;padding-left: 7.6rem;}
 .interview .content > .desc span {font-size: var(--basic-size);color:#666;font-weight: 700;}
 .interview .content > .desc p {margin:1.8rem 0 5rem;font-size:var(--title-type2);font-weight:700;line-height:140%;}

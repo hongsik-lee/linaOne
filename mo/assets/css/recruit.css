@@ -2,6 +2,8 @@
 /* tab common */
 .recruit .content {display: none;}
 .recruit .content.active {display: block;}
+/* .tmr-recruit .content {display: none;}
+.tmr-recruit .content.active {display: block;} */
 
 /* 채용절차 */
 .sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
@@ -87,6 +89,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .sub-sec01 .info-box .info > p strong {padding-left:1.2rem;font-size:9.444vw;font-weight: 700;}
 .sub-sec01 .info-box .info > p.noti {font-size: var(--small-size);font-weight: 500;line-height: 100%;color:#666}
     /* 선택라이나 맞춤 */
+.sub-sec02 {margin-top: 8rem;}
 .sub-sec02 .center-box + .center-box {margin-top: 15rem;}
 .sub-sec02 .item {margin-left:5.6rem;margin-top: 5rem;}
 .sub-sec02 .icon {padding-bottom: 4rem;border-bottom:1px solid #000;}
