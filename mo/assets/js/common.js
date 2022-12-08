@@ -13,16 +13,27 @@ $(document).ready(function() {
         handleKeypressListboxList($(this), e);
     });
 
-    $(document).on('click', '.nav li', function(e) {
-        e.preventDefault();
+    $(document).on('click', '.nav > li', function(e) {
         $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
         $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
     });
 });
 
 // header nav animation
-const openNav = function() { $('#gnb-wrap').addClass('on'); }
-const closeNav = function() { $('#gnb-wrap').removeClass('on'); }
+const openNav = function() {
+    $('#gnb-wrap').addClass('on');
+}
+
+const closeNav = function() { 
+    $('#gnb-wrap').removeClass('on');
+
+    const $navLis = $('.nav > li');
+    setTimeout(function() {
+        $navLis.each(function(index, item) {
+            $(item).removeClass('active').find('.sub-nav').css('display', 'none');
+        });
+    }, 300);
+ }
 
 // listbox click event
 let oldListbox, newListbox;
@@ -159,6 +170,7 @@ const checkMobile = function() {
         return "other";
     }
 }
+
 // Tab 
 $(document).ready(function(){
     var $tabTitle = $('.tab-title');
