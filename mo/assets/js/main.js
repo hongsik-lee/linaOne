@@ -29,11 +29,13 @@ $(document).ready(function() {
     });
 
     $(document).on('mousewheel', '.swiper-slide', function(e) {
+        $('#value2').text('mouse(active): mousewheel');
         handleMoveSwiper(swiper, wheelDirection);
     });
 
     $(document).on('touchmove', '.swiper-slide', function(e) {
-        handleMoveSwiper(swiper, touchDirection);
+        $('#value3').text('touch(active): touchmove');
+        // handleMoveSwiper(swiper, touchDirection);
     });
 
     $(document).on('click', '.goTop', function(e) {
@@ -50,48 +52,57 @@ $(document).ready(function() {
         videoSectionScrollAnimation();
     });
 
-    // const $swiperSlides = $('.swiper-wrapper').children('.swiper-slide');
+    const $swiperSlides = $('.swiper-wrapper').children('.swiper-slide[data-swiper-move="disabled"]');
+    $swiperSlides.each(function(index, item) {
+        $(item).on('scroll', function() {
+            const index = swiper.activeIndex
+                , $slide = $(swiper.slides[index]);
 
-    // $('.balance-promise-sec').on('scroll', function() {
-    //     handleMoveSwiper(swiper, touchDirection);
-    // });
+            const scrollY = $(item).scrollTop()
+                , outerHeight = Math.round($(item).outerHeight())
+                , scrollHeight = Math.round($(item).prop('scrollHeight'))
+                , isScroll = scrollHeight > outerHeight ? true : false;
 
-    // $('.balance-promise-sec').on('scroll', function() {
-    //     const index = swiper.activeIndex
-    //         , $slide = $(swiper.slides[index])
+            
 
-    //     const scrollY = $(this).scrollTop()
-    //         , outerHeight = Math.round($(this).outerHeight())
-    //         , scrollHeight = Math.round($(this).prop('scrollHeight'))
-    //         , dataSwiperMove = $slide.data('swiper-move');
+            if(isScroll) {
+                if(wheelDirection || touchDirection === 'top' && scrollY + outerHeight >= scrollHeight) {
+                    moveSwiperSlideTo(index, wheelDirection || touchDirection);
+                } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3) {
+                    moveSwiperSlideTo(index, wheelDirection || touchDirection);
+                }
+            }
+        });
+    });
 
-    //     // if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
-    //     if(dataSwiperMove && dataSwiperMove === 'disabled') {
-    //         if(wheelDirection || touchDirection === 'top' && scrollY + outerHeight >= scrollHeight) {
-    //             moveSwiperSlideTo(index, wheelDirection || touchDirection);
-    //         } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3) {
-    //             moveSwiperSlideTo(index, wheelDirection || touchDirection);
-    //         }
-    //     }
-
-    //     $('#value2').html(wheelDirection || touchDirection + 'scrollY: ' + (scrollY + outerHeight >= scrollHeight)) 
-    // })
 });
 
 // header nav animation
-const openNav = function() { $('#gnb-wrap').addClass(on); }
-const closeNav = function() { $('#gnb-wrap').removeClass(on); }
+const openNav = function() {
+    $('#gnb-wrap').addClass('on');
+}
+
+const closeNav = function() { 
+    $('#gnb-wrap').removeClass('on');
+
+    const $navLis = $('.nav > li');
+    setTimeout(function() {
+        $navLis.each(function(index, item) {
+            $(item).removeClass('active').find('.sub-nav').css('display', 'none');
+        });
+    }, 300);
+ }
 
 const setSwiper = () => {
     swiper = new Swiper('.main-swiper', {
         direction: "vertical", // 방향 (가로: horizontal, 세로: vertical)
-        speed: 800, // 속도
+        speed: 1000, // 속도
         slidesPerView: 'auto',
         mousewheel: false, // 마우스 휠 지원 여부
         allowTouchMove: false, // 터치 이벤트(pc)
         pagination: { // 페이지 버튼 설정
             el: ".swiper-pagination", // 페이지 버튼 엘리먼트 설정
-            clickable: false, // 클릭 여부 (클릭 시 해당 슬라이드 이동)
+            clickable: true, // 클릭 여부 (클릭 시 해당 슬라이드 이동)
         },
         on: {
             init: function() {
@@ -105,10 +116,10 @@ const setSwiper = () => {
                 }
 
                 const $slide = $(this.slides[index])
-                    // , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
-
-                if(dataSwiperMove && dataSwiperMove === 'disabled') {
+                
+                if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
                     wheelDirection = '';
                     touchDirection = '';
                     swiper.mousewheel.disable();
@@ -118,10 +129,10 @@ const setSwiper = () => {
             slideChange: function() {
                 const index = this.activeIndex
                     , $slide = $(this.slides[index])
-                    // , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
 
-                if(dataSwiperMove && dataSwiperMove === 'disabled') {
+                if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
                     wheelDirection = '';
                     touchDirection = '';
                     swiper.mousewheel.disable();
@@ -140,10 +151,6 @@ const setSwipter2 = function() {
 
     swiper2 = new Swiper(".brand-goal-swiper", {
         slidesPerView: 'auto',
-        // slidesOffsetAfter: 600,
-        // breakpoints: {
-        //     1921: { slidesPerView: 2 }
-        // },
         speed: 800,
         simulateTouch: false,
         navigation: {
@@ -236,11 +243,11 @@ const moveSwiperSlideTo = (index, direction) => {
     if(direction === 'top') {
         swiper.mousewheel.enable();
         swiper.allowTouchMove = true;
-        swiper.slideTo(index + 1, 700, true);
+        swiper.slideTo(index + 1, 1000, true);
     } else if(direction === 'bottom') {
         swiper.mousewheel.enable();
         swiper.allowTouchMove = true;
-        swiper.slideTo(index - 1, 700, true);
+        swiper.slideTo(index - 1, 1000, true);
     }
 }
 

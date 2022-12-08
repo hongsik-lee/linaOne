@@ -134,7 +134,7 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 .main .related-info-sec .bg {width: 100%;height: 120vw;background: url(../images/main_bhr_quote_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 
 /* footer-sec */
-.main .footer-sec {padding-top:49.7222vw}
+/* .main .footer-sec {padding-top:49.7222vw} */
 
 .main .swiper-pagination {position: fixed;}
 .main .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {top: auto;bottom: 100px;right: 35px;transform: none;}
