@@ -165,3 +165,40 @@ const checkMobile = function() {
             accMenu[idx].classList.add('active')
         })
     })
+
+// Tab 
+$(document).ready(function(){
+    var $tabTitle = $('.tab-title');
+    var $subTabTitle = $('.sub-tab-title');
+    var $cont = $('.content');
+    var $subCont = $('.sub-content');
+   
+    $cont.hide().eq(0).show();
+    $subCont.hide().eq(0).show();
+
+    $tabTitle.click(function(){
+        var idx = $(this).index();
+        $tabTitle.removeClass('active');
+        $(this).addClass('active');
+        $cont.hide().eq(idx).show();
+
+
+        if( $tabTitle.length-1 == idx){
+            $tabTitle.parent('ul').animate({
+                scrollLeft:$(this).offset().left + 100
+            }, 700)
+        }else if (idx == 0){
+            $tabTitle.parent('ul').animate({
+                scrollLeft:$(this).offset().left + 0
+            }, 700)
+        }
+
+    })
+
+    $subTabTitle.click(function(){
+        var idx = $(this).index();
+        $subTabTitle.removeClass('active');
+        $(this).addClass('active');
+        $subCont.hide().eq(idx).show();
+    })
+})

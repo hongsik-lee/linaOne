@@ -77,15 +77,15 @@
         <!-- S : TAB AREA -->
         <div class="slide-tab">
             <ul class="inner">
-                <li class="tab-title active" data-tab="trm-recruit-sec01">선택! 라이나</li>
-                <li class="tab-title" data-tab="trm-recruit-sec02">지원서 작성하기</li>
-                <li class="tab-title" data-tab="trm-recruit-sec03">자주하는 질문</li>
+                <li class="tab-title active">선택! 라이나</li>
+                <li class="tab-title">지원서 작성하기</li>
+                <li class="tab-title">자주하는 질문</li>
             </ul>
         </div>
         <!-- E : TAB AREA -->
 
         <!-- S : 선택 라이나 -->
-        <div class="content trm-recruit-sec01 active" id="trm-recruit-sec01">
+        <div class="content trm-recruit-sec01 active">
         <!-- TAB AREA -->
             <!-- S : TAB AREA -->
             <div class="sub-slide-tab">
@@ -97,7 +97,7 @@
             </div>
             <!-- E : TAB AREA -->
             <!-- S : 선택 라이나 > 약속+ -->
-            <div class="sub-content sub-sec01 active" id="sub-sec01"> 
+            <div class="sub-content sub-sec01 active"> 
                 <div class="desc inner">
                     21세기 새로운 전문직<br>
                     다이렉트 컨설턴트.<br>
@@ -179,7 +179,7 @@
             <!-- E : 선택 라이나 > 약속+ -->
 
             <!-- S : 선택 라이나 > 맞춤 -->
-            <div class="sub-content sub-sec02" id="sub-sec02">
+            <div class="sub-content sub-sec02">
                 <div class="center-box inner">
                     <h2 class="label">OB센터</h2>
                     <div class="item">
@@ -271,7 +271,7 @@
             <!-- E : 선택 라이나 > 맞춤 -->
 
             <!-- S : 선택 라이나 > 소식 -->
-            <div class="sub-content sub-sec03" id="sub-sec03">
+            <div class="sub-content sub-sec03">
                 <ul class="list inner">
                     <li>
                         <a href="#">
@@ -323,7 +323,7 @@
         <!-- E :  선택 라이나 -->
 
         <!-- S : 지원서 작성하기 -->
-        <div class="content trm-recruit-sec02 inner" id="trm-recruit-sec02">
+        <div class="content trm-recruit-sec02 inner">
             <p class="desc">
                 능력있는 신입/경력 TMR을 <br>
                 모집합니다.
@@ -403,7 +403,7 @@
         <!-- E : 지원서 작성하기 -->
 
         <!-- S : 자주하는질문 -->
-        <div class="content trm-recruit-sec03" id="trm-recruit-sec03">
+        <div class="content trm-recruit-sec03">
             <ul class="acc-wrap">
                 <li>
                     <div class="txt active">
@@ -513,46 +513,7 @@
         //         tabItem[idx].classList.add('active')
         //         tabInner[idx].classList.add('active')
         //     })
-        // })
-        $(document).ready(function(){
-            var $tabTitle = $('.tab-title');
-            var $subTabTitle = $('.sub-tab-title');
-            var $cont = $('.content');
-            var $subCont = $('.sub-content');
-           
-            $cont.hide().eq(0).show();
-            $subCont.hide().eq(0).show();
-
-            $tabTitle.click(function(){
-                var idx = $(this).index();
-                $tabTitle.removeClass('active');
-                $(this).addClass('active');
-                $cont.hide().eq(idx).show();
- 
-
-                if( $tabTitle.length-1 == idx){
-                    $tabTitle.parent('ul').animate({
-                        scrollLeft:$(this).offset().left + 100
-                    }, 700)
-                }else if (idx == 0){
-                    $tabTitle.parent('ul').animate({
-                        scrollLeft:$(this).offset().left + 0
-                    }, 700)
-                }
-
-            })
-
-            $subTabTitle.click(function(){
-                var idx = $(this).index();
-                $subTabTitle.removeClass('active');
-                $(this).addClass('active');
-                $subCont.hide().eq(idx).show();
-            })
-        })
-
-
-
-        
+        // })        
      </script>
 </body>
 </html>

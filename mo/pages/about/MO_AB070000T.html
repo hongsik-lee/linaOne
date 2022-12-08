@@ -365,43 +365,6 @@
         </footer>
         <!-- E : FOOTER AREA -->
      </div>
-     <script>
-        const tabItem = document.querySelectorAll('.tab-title')
-        const tabInner = document.querySelectorAll('.content')
-
-        tabItem.forEach((tab, idx)=> {
-            tab.addEventListener('click', function(){
-                tabInner.forEach((inner)=> {
-                    inner.classList.remove('active')
-                })
-
-                tabItem.forEach((item)=> {
-                    item.classList.remove('active')
-                })
-
-                tabItem[idx].classList.add('active')
-                tabInner[idx].classList.add('active')
-            })
-        })
-
-        const subTabItem = document.querySelectorAll('.sub-tab-title')
-        const subTabInner = document.querySelectorAll('.sub-content')
-
-        subTabItem.forEach((tab, idx)=> {
-            tab.addEventListener('click', function(){
-                subTabInner.forEach((inner)=> {
-                    inner.classList.remove('active')
-                })
-
-                subTabItem.forEach((item)=> {
-                    item.classList.remove('active')
-                })
-
-                subTabItem[idx].classList.add('active')
-                subTabInner[idx].classList.add('active')
-            })
-        })
-    </script>
     <script src="../../assets/js/jquery-3.6.1.min.js"></script>
     <script src="../../assets/js/common.js"></script>
 </body>

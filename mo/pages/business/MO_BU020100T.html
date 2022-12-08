@@ -234,42 +234,5 @@
      </div>
      <script src="../../assets/js/jquery-3.6.1.min.js"></script>
      <script src="../../assets/js/common.js"></script>
-     <script>
-
-        const tabCont = document.querySelector('.slide-tab .inner')
-        const tabItem = document.querySelectorAll('.tab-title')
-        const tabInner = document.querySelectorAll('.content')
-
-        tabItem.forEach((tab, idx)=> {
-            tab.addEventListener('click', function(){
-                console.log(tabCont.scrollLeft, tabCont.scrollRight)
-                console.log()
-                
-
-                tabItem.forEach((item)=> {
-                    if(idx === 2){
-                        // tabCont.scrollLeft = + 40
-                        tabCont.scrollTo({ left: 100, behavior: 'smooth' })
-                    } else if (idx === 0){
-                        tabCont.scrollTo({ left: 0, behavior: 'smooth' })
-                    }
-                    item.classList.remove('active')
-                    console.log(this, item.offsetLeft, idx)
-                    // item.scrollIntoView({block:'start', behavior:'smooth'})
-                })
-
-                tabInner.forEach((inner)=> {
-                    inner.classList.remove('active');
-                    // this.scrollIntoView({inline:'end', behavior:'smooth'})
-
-                })
-
-                tabItem[idx].classList.add('active')
-                tabInner[idx].classList.add('active')
-            })
-        })
-
-
-     </script>
 </body>
 </html>
