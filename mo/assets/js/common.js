@@ -12,6 +12,12 @@ $(document).ready(function() {
         e.preventDefault();
         handleKeypressListboxList($(this), e);
     });
+
+    $(document).on('click', '.nav li', function(e) {
+        e.preventDefault();
+        $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
+        $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
+    });
 });
 
 // header nav animation
@@ -153,15 +159,3 @@ const checkMobile = function() {
         return "other";
     }
 }
-
-
-    const accMenu = document.querySelectorAll('.nav li')
-
-    accMenu.forEach((menu, idx)=> {
-        menu.addEventListener('click', function(){
-            accMenu.forEach((menus)=> {
-                menus.classList.remove('active')
-            })
-            accMenu[idx].classList.add('active')
-        })
-    })

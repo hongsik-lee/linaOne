@@ -10,10 +10,7 @@ header > a:last-child img {height: 2.4rem;}
 #gnb-wrap .nav {padding-top:11.2rem;}
 #gnb-wrap .nav > li {position:relative;min-height:5.6rem;font-size:var(--title-type2);font-weight:800;}
 #gnb-wrap .nav > li:after {position:absolute;top:3px;right:0.4rem;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
-#gnb-wrap .sub-nav {transition:0.3s ease;opacity:0;height: 0;}
-
-
-#gnb-wrap .nav > li.active .sub-nav {opacity: 1;margin:10px 0 20px;padding:1rem 0;height: auto;}
+#gnb-wrap .sub-nav {display:none;margin:10px 0 20px;padding:1rem 0;}
 #gnb-wrap .nav > li.active:after {transform: rotate(180deg);}
 
 #gnb-wrap .sub-nav > li {height: 1.9rem;}

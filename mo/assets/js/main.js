@@ -50,6 +50,12 @@ $(document).ready(function() {
         videoSectionScrollAnimation();
     });
 
+    // const $swiperSlides = $('.swiper-wrapper').children('.swiper-slide');
+
+    // $('.balance-promise-sec').on('scroll', function() {
+    //     handleMoveSwiper(swiper, touchDirection);
+    // });
+
     // $('.balance-promise-sec').on('scroll', function() {
     //     const index = swiper.activeIndex
     //         , $slide = $(swiper.slides[index])
@@ -73,13 +79,8 @@ $(document).ready(function() {
 });
 
 // header nav animation
-function openNav(){
-    document.getElementById('gnb-wrap').classList.add('on')
-}
-
-function closeNav(){
-    document.getElementById('gnb-wrap').classList.remove('on')
-}
+const openNav = function() { $('#gnb-wrap').addClass(on); }
+const closeNav = function() { $('#gnb-wrap').removeClass(on); }
 
 const setSwiper = () => {
     swiper = new Swiper('.main-swiper', {
@@ -90,7 +91,7 @@ const setSwiper = () => {
         allowTouchMove: false, // 터치 이벤트(pc)
         pagination: { // 페이지 버튼 설정
             el: ".swiper-pagination", // 페이지 버튼 엘리먼트 설정
-            clickable: true, // 클릭 여부 (클릭 시 해당 슬라이드 이동)
+            clickable: false, // 클릭 여부 (클릭 시 해당 슬라이드 이동)
         },
         on: {
             init: function() {
@@ -104,7 +105,7 @@ const setSwiper = () => {
                 }
 
                 const $slide = $(this.slides[index])
-                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    // , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
 
                 if(dataSwiperMove && dataSwiperMove === 'disabled') {
@@ -117,7 +118,7 @@ const setSwiper = () => {
             slideChange: function() {
                 const index = this.activeIndex
                     , $slide = $(this.slides[index])
-                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    // , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
 
                 if(dataSwiperMove && dataSwiperMove === 'disabled') {
@@ -208,13 +209,13 @@ const handleMouseDownSwiper = function(e) {
     $(window).on('mouseup', mouseUp);
 }
 
- // 마우스 휠 했을 때, 터치 했을 때
+// 마우스 휠 했을 때, 터치 했을 때
 const handleMoveSwiper = (swiper, direction = 'top') => {
     const index = swiper.activeIndex
         , $slide = $(swiper.slides[index])
         , outerHeight = Math.round($slide.outerHeight())
         , scrollHeight = Math.round($slide.prop('scrollHeight'))
-        , isScroll = scrollHeight > outerHeight ? true : false
+        // , isScroll = scrollHeight > outerHeight ? true : false
         , dataSwiperMove = $slide.data('swiper-move');
     let scrollY = Math.round($slide.scrollTop())
 
@@ -243,17 +244,14 @@ const moveSwiperSlideTo = (index, direction) => {
     }
 }
 
-// 터치 했을 때 x 값
 const getClientX = (e) => {
     return e.touches ? e.touches[0].clientX : e.clientX;
 };
 
-// 터치 했을 때 y 값
 const getClientY = (e) => {
     return e.touches ? e.touches[0].clientY : e.clientY;
 };
 
-// 터치 했을 때 이동 위치에 따라 좌우/아래 값
 const getDirection = (e) => {
     if (initialX !== null && initialY !== null) {
         const currentX = getClientX(e)
