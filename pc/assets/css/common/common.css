@@ -13,7 +13,7 @@ header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;wi
 header:hover {background:#fff;}
 header .logo {flex: 1}
 header .logo svg {width: 13.0313vw;}
-header .logo svg path.logo-ani {animation: logo-ani 25s normal infinite;}
+header .logo svg path.logo-ani {animation: logo-ani 70s normal infinite;}
 @keyframes logo-ani {
     0% {fill: #000;}
     10% {fill: #FF0198;}

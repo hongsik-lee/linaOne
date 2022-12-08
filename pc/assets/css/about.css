@@ -44,8 +44,9 @@
 .interview .page-desc-sec {padding-bottom:25rem}
 .interview .page-desc-sec .sub-tit {font-size:4rem;line-height: 5.6rem;}
 .interview .page-desc-sec .sub-tit span {display:block;margin-bottom:1.6rem;font-size: 2.4rem;font-weight:500;line-height:3.36rem;}
-.interview .page-desc-sec .desc {display:flex;margin-top: 7rem;align-items: center; color: #000;font-size: 2.4rem;line-height: 3.36rem;font-weight: 700;}
-.interview .page-desc-sec .desc strong {margin:0;margin-left:2.6rem;font-size: 4rem;line-height:5.6rem;font-weight:700;}
+/* .interview .page-desc-sec .desc {display:flex;margin-top: 7rem;align-items: center; color: #000;font-size: 2.4rem;line-height: 3.36rem;font-weight: 700;}
+.interview .page-desc-sec .desc strong {margin:0;margin-left:2.6rem;font-size: 4rem;line-height:5.6rem;font-weight:700;} */
+.interview .page-desc-sec .sign {width: 26.875vw;height: 5.2604vw;margin-top: 4.7917vw;}
 .interview .page-sec01 {padding:17.8rem 0 17.7rem;background:url(../images/ab_interview_img01.png);background-size:cover}
 .interview .page-sec01 .inner {padding-left: 32.4rem;}
 .interview .page-sec01 .desc {font-size:3.2rem;line-height:4.4rem;font-weight:700;color:#fff;letter-spacing: -0.03em;}
