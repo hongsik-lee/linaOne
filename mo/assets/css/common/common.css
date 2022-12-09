@@ -1,7 +1,7 @@
 @import url(reset.css);
 
 /* header  */
-header {position:fixed;top:0;height:5.6rem;display: flex;justify-content: space-between;align-items: center;z-index:200;}
+header {position:fixed;top:0;display: flex;justify-content: space-between;align-items: center;z-index:200;}
 header .logo {width: 43.8889vw;height: 5.5556vw;}
 header .logo .img {width: 100%;}
 header > a:last-child img {height: 2.4rem;}
