@@ -421,3 +421,69 @@ const handleAccTitAreaClick = function(item) {
         $target.addClass('acc-active');
     }
 }
+// overview 숫자 counting animation 
+$(window).scroll(function () {
+    const $counters = $(".counter");
+    if($counters.length > 0) {
+
+        $counters.each(function(index, item) {
+            const counterTop = $(item).offset().top - window.innerHeight;
+
+            if ($(window).scrollTop() > counterTop) {
+                const $countNum = $(item).find('.count-num');
+
+                $countNum.each((index, elem) => {
+                    if(!$(elem).hasClass('count-finished')) {
+                        increaseNumberAnimation(elem, 1000);
+                    }
+                });
+            }
+        });
+    }
+});
+// OVERVIEW 숫자 카운팅 에니메이션
+const increaseNumberAnimation = function(elem, duration) {
+    let startTimeStamp;
+    const $target = $(elem)
+        , start = $target.data('start-count')
+        , end = $target.data('end-count')
+        , type = $target.data('type')
+
+    $target.addClass('count-finished');
+    const step = (timestamp) => {
+        if (!startTimeStamp) startTimeStamp = timestamp;
+        const progress = Math.min((timestamp - startTimeStamp) / duration);
+        let value;
+
+        if(type === 'reverse') {
+            value = Math.floor(progress * (end - start) + start);
+
+            if(value > end) $target.text(setNumberComma(value));
+            else $target.text(setNumberComma(end));
+        } else {
+            value = Math.floor(progress * (end - start) + start);
+
+            if(type === 'percent') {
+                if(value > end) $target.text(setPercentComma(end));
+                else $target.text(setPercentComma(value));
+            } else {
+                if(value > end) $target.text(setNumberComma(end));
+                else $target.text(setNumberComma(value));
+            }
+        }
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+
+    requestAnimationFrame(step);
+};
+
+const setNumberComma = function(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+const setPercentComma = function(num) {
+    return num.toString().replace(/\B(?=(\d{2})+(?!\d))/g, ".");
+}
