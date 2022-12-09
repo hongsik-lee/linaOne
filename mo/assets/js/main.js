@@ -8,13 +8,13 @@ $(document).ready(function() {
     setSwipter2();
     getVisualSectionSrcollInfo();
 
-    $(document).on('click', '.goTop', function(e) {
+    $(document).on('click', '.swiper-next-btn', function(e) {
         const index = swiper.activeIndex;
 
         if(swiper.slidesGrid.length === index + 1) {
-            moveSwiperSlideTo(-1, 'top');
+            moveSwiperSlideTo2(-1, 'top');
         } else {
-            moveSwiperSlideTo(index, 'top');
+            moveSwiperSlideTo2(index, 'top');
         }
     });
 
@@ -61,7 +61,8 @@ $(document).ready(function() {
     });
 
     $('.visual-sec').on('scroll mousewheel', function() {
-        // console.log(visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 3)
+        // console.log('1: ', visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109)
+        // console.log('2: ', visualPosInfo.startY,  $('.visual-fixed-sec').find('.page-tit').innerHeight()  )
         // $(this).animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 1000);
         videoSectionScrollAnimation();
     });
@@ -84,8 +85,10 @@ $(document).ready(function() {
                 timer = setTimeout(function() { 
                     if(isScroll) {
                         if(wheelDirection || touchDirection === 'top' && (outerHeight > scrollHeight - scrollY || scrollY + outerHeight >= scrollHeight)) {
+                            // enableSlideChange();
                             moveSwiperSlideTo(index, wheelDirection || touchDirection);
                         } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3)  {
+                            // enableSlideChange();
                             moveSwiperSlideTo(index, wheelDirection || touchDirection);
                         }
                     }
@@ -154,6 +157,17 @@ const setSwiper = () => {
                 if(index === 0) {
                     $slide.siblings().removeClass('seen-sec')
                 }
+
+                if(this.slidesGrid.length === index + 1) {
+                    $('.swiper-next-btn').addClass('up');
+                    $('.swiper-next-btn').find('em').text('맨 위로 이동');
+                    $('.sns').addClass('up');
+                } else {
+                    $('.swiper-next-btn').hasClass('up') ? $('.swiper-next-btn').removeClass('up') : false;
+                    $('.swiper-next-btn').find('em').text('다음 section 이동');
+                    $('.sns').hasClass('up') ? $('.sns').removeClass('up') : false;
+                }
+
                 textMotionAnimation($slide);
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
                     wheelDirection = '';
@@ -261,6 +275,29 @@ const moveSwiperSlideTo = (index, direction) => {
     if(direction === 'top') {
         enableSlideChange();
         swiper.slideTo(index + 1, 1000, true);
+    } else if(direction === 'bottom') {
+        enableSlideChange();
+        swiper.slideTo(index - 1, 1000, true);
+    }
+}
+
+const moveSwiperSlideTo2 = (index, direction) => {
+    const $slide = $(swiper.slides[index])
+        , outerHeight = Math.round($slide.outerHeight())
+        , scrollHeight = Math.round($slide.prop('scrollHeight'))
+        , isScroll = scrollHeight > outerHeight ? true : false
+        , dataSwiperMove = $slide.data('swiper-move');
+        
+    if(direction === 'top') {
+        if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
+            $slide.animate({ scrollTop: scrollHeight - outerHeight }, 800, function() {
+                enableSlideChange();
+                swiper.slideTo(index + 1, 1000, true);
+            })
+        } else {
+            enableSlideChange();
+            swiper.slideTo(index + 1, 1000, true);
+        }
     } else if(direction === 'bottom') {
         enableSlideChange();
         swiper.slideTo(index - 1, 1000, true);

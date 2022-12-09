@@ -3,7 +3,7 @@
 html, body {position: relative;height: 100%;overflow: hidden;}
 .main, .main #contents {height: 100%;}
 .main .swiper-container {width: 100%;height: 100%;}
-.main .swiper-container.fixed {position: fixed;overflow:hidden;}
+/* .main .swiper-container.fixed {position: fixed;overflow:hidden;} */
 .main .swiper-slide {position: relative;overflow-x: hidden;overflow-y: auto;}
 
 /* activeMotion */
@@ -191,8 +191,11 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 /* footer-sec */
 /* .main .footer-sec {padding-top:49.7222vw} */
 
+/* fixed-controls-wrap */
 .main .swiper-pagination {position: fixed;}
 .main .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {top: auto;bottom: 100px;right: 35px;transform: none;}
 .main .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {margin: 1.1111vw 0;}
 .main .swiper-pagination-bullet {width: 2.2222vw;height: 2.2222vw;border: 0.2778vw solid #000;opacity: 0.3;background: transparent;}
 .main .swiper-pagination-bullet-active {opacity: 1;background: #000;}
+.main .swiper-next-btn {position: fixed;right: 5.5556vw;bottom: 11.1111vw;width: 11.1111vw;height: 11.1111vw;padding:0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background:url(../images/icon/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;transform: rotate(-180deg);transition: transform .6s ease;z-index: 300;}
+.main .swiper-next-btn.up {transform: rotate(0);}
