@@ -164,15 +164,15 @@ const setSwiper = () => {
                 }
             },
             transitionStart: function() {
-                disableSlideChange();
+                // disableSlideChange();
             },
             transitionEnd: function() {
-                if(!timer2) {
-                    clearTimeout(timer2);
-                }
-                timer2 = setTimeout(function() {
-                    enableSlideChange();
-                }, 500);
+                // if(!timer2) {
+                //     clearTimeout(timer2);
+                // }
+                // timer2 = setTimeout(function() {
+                //     enableSlideChange();
+                // }, 500);
             },
             slidePrevTransitionStart: function() {
                 const index = this.activeIndex
