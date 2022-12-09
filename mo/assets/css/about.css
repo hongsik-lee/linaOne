@@ -3,18 +3,19 @@
 /* OVERVIEW */
 .sub-wrap.overview .visual:before {background-image:url(../images/ab_overview_visual.png)}
 .overview .content > .desc {margin:15rem 3rem 15rem 7.6rem;padding:0;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
-.overview .introduction {padding:16rem 2rem 21.2rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
+.overview .introduction {padding:16rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
 .overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
 .overview .introduction .desc {font-size:var(--small-size);color:#666;line-height:140%;font-weight:500;}
-.overview .introduction .diagram {margin:8rem 1rem 0;display: flex;column-gap:4rem;}
+.overview .introduction > img {display: block;width: 100%;margin:8rem auto 0;}
+.overview .introduction .diagram {margin:22.22vw 0.556vw 0;display: flex;column-gap:1.111vw;justify-content: space-between;}
 .overview .introduction .lina,
-.overview .introduction .chubb {position:relative;width:13rem;height:13rem;border-radius:50%;display: flex;justify-content: center;align-items: center;}
+.overview .introduction .chubb {position:relative;width:36.111vw;height:36.111vw;border-radius:50%;display: flex;justify-content: center;align-items: center;}
 .overview .introduction .lina img,
-.overview .introduction .chubb img {display: block;max-height:2.2rem;}
+.overview .introduction .chubb img {display: block;max-height:6.111vw}
 .overview .introduction .lina div,
-.overview .introduction .chubb div {display: flex;justify-content: center;align-items: center;border-radius: 50%;width:calc(100% - 1.6rem);height: calc(100% - 1.6rem);}
+.overview .introduction .chubb div {display: flex;justify-content: center;align-items: center;border-radius: 50%;width:calc(100% - 4.44vw);height: calc(100% - 4.44vw);}
 .overview .introduction .lina div {background:#150F96}
 .overview .introduction .chubb div {background:#000}
 .overview .introduction .lina {background: rgba(21, 15, 150, 0.2);box-shadow: 30px 34px 80px rgba(21, 15, 150, 0.1);}

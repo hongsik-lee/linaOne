@@ -17,6 +17,12 @@ $(document).ready(function() {
         $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
         $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
     });
+    
+    // 컨텐츠 scroll 공통 효과
+    AOS.init({
+        easing: 'linear',
+        duration:500
+    });
 });
 
 // header nav animation
@@ -181,7 +187,7 @@ $(document).ready(function(){
     $cont.hide().eq(0).show();
     $subCont.hide().eq(0).show();
 
-    $tabTitle.click(function(){
+    $tabTitle.click(function(e){
         var idx = $(this).index();
         $tabTitle.removeClass('active');
         $(this).addClass('active');
@@ -196,6 +202,9 @@ $(document).ready(function(){
             $tabTitle.parent('ul').animate({
                 scrollLeft:$(this).offset().left + 0
             }, 700)
+        }
+        if($(e.target).hasClass('clicked')) {
+            $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');
         }
 
     })
