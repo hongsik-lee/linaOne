@@ -23,8 +23,26 @@ $(document).ready(function() {
         easing: 'linear',
         duration:500
     });
+    onElementHeightChange(document.body, function(){
+        AOS.refresh();
+    });
 });
+const onElementHeightChange = function(elm, callback) {
+    let lastHeight = elm.clientHeight
+    let newHeight;
+    
+    (function run() {
+        newHeight = elm.clientHeight;
+        if (lastHeight !== newHeight) callback();
+        lastHeight = newHeight;
 
+        if (elm.onElementHeightChangeTimer) {
+          clearTimeout(elm.onElementHeightChangeTimer); 
+        }
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+}
 // header nav animation
 const openNav = function() {
     $('#gnb-wrap').addClass('on');
