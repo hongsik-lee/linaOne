@@ -8,7 +8,18 @@
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
 .overview .introduction .desc {font-size:var(--small-size);color:#666;line-height:140%;font-weight:500;}
-.overview .introduction img {display:block;margin-top:8rem;height: 36.111vw;}
+.overview .introduction .diagram {margin:8rem 1rem 0;display: flex;column-gap:4rem;}
+.overview .introduction .lina,
+.overview .introduction .chubb {position:relative;width:13rem;height:13rem;border-radius:50%;display: flex;justify-content: center;align-items: center;}
+.overview .introduction .lina img,
+.overview .introduction .chubb img {display: block;max-height:2.2rem;}
+.overview .introduction .lina div,
+.overview .introduction .chubb div {display: flex;justify-content: center;align-items: center;border-radius: 50%;width:calc(100% - 1.6rem);height: calc(100% - 1.6rem);}
+.overview .introduction .lina div {background:#150F96}
+.overview .introduction .chubb div {background:#000}
+.overview .introduction .lina {background: rgba(21, 15, 150, 0.2);box-shadow: 30px 34px 80px rgba(21, 15, 150, 0.1);}
+.overview .introduction .chubb {background: rgba(0, 0, 0, 0.2);box-shadow: 30px 34px 174px rgba(0, 0, 0, 0.2);}
+.overview .introduction .lina:after {position: absolute;background: url(../../assets/images/ab_overview_img03.png);width: 4.5rem; right: 0;height: auto;display: block;height: 1.4rem;right: -4.2rem;background-size: contain;background-repeat: no-repeat;content: '';}
 .overview .count-box {margin-top: 15rem;}
 .overview .count-box h2 {margin-bottom:5rem;font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .count-box p {padding-left:5.6rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
@@ -27,8 +38,9 @@
 .interview .content > .desc {margin:15rem 0;padding-left: 7.6rem;}
 .interview .content > .desc span {font-size: var(--basic-size);color:#666;font-weight: 700;}
 .interview .content > .desc p {margin:1.8rem 0 5rem;font-size:var(--title-type2);font-weight:700;line-height:140%;}
-.interview .content > .desc p.sign {font-size:5.833vw;line-height: 2.94rem;}
-.interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000}
+.interview .content > .desc p.sign {font-size:5.833vw;line-height: 2.94rem;margin-bottom: 1.3rem;}
+.interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000;}
+.interview img.sign {height: 7.4rem;margin-left: -2rem;}
 .interview .interview-sec {padding:15rem 2rem;background:url(../images/ab_interview_bg.png);background-size:cover;}
 .interview .interview-sec p {padding-left:5.6rem;font-size: var(--title-type3);color:#fff;font-weight:700;line-height: 140%;letter-spacing:-0.01em;}
 .interview .interview-sec p + p {margin-top: 5rem;}
@@ -48,7 +60,7 @@
 .interview .interview-box .qna-box:nth-of-type(2) .answer {font-size:var(--small-size);line-height: 140%;font-weight: 500;}
 .interview .interview-box.left > img {max-width: 30rem;}
 .interview .interview-box.left .qna-box {padding-left: 5.6rem;padding-right: 1rem;}
-.interview .directivity {padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;}
+.interview .directivity {padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;background-position: bottom;}
 .interview .directivity h2 {font-size: var(--basic-size);color:#fff;font-weight: 700;line-height: 140%;}
 .interview .directivity .txt-box {margin-top:5rem;padding-left:5.6rem;}
 .interview .directivity .txt-box p {font-size: var(--title-type3);color:#fff;letter-spacing: -0.01em;font-weight:700;line-height: 140%;}
