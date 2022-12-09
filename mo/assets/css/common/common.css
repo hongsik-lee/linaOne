@@ -2,8 +2,9 @@
 
 /* header  */
 header {position:fixed;top:0;height:5.6rem;display: flex;justify-content: space-between;align-items: center;z-index:200;}
-header .logo svg {width: 43.8889vw;height: 5.5556vw;}
-header .logo svg path.logo-ani {animation: logo-ani 70s steps(7, start) normal infinite;}
+header .logo {width: 43.8889vw;height: 5.5556vw;}
+header .logo .img {width: 100%;}
+/* header .logo svg path.logo-ani {animation: logo-ani 70s steps(7, start) normal infinite;} */
 header > a:last-child img {height: 2.4rem;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index: 300;right:0;}
@@ -23,7 +24,7 @@ header > a:last-child img {height: 2.4rem;}
 #gnb-wrap .corp-wrap p a {font-size:var(--small-size);margin-right:2.4rem;font-weight: 700;color:rgba(0,0,0,.5)}
 #gnb-wrap .corp-wrap p {font-size:3.333vw;font-weight: 400;color:rgba(0,0,0,.3)}
 
-@keyframes logo-ani {
+/* @keyframes logo-ani {
     0% {fill: #000;}
     10% {fill: #FF0198;}
     20% {fill: #01C1D6;}
@@ -35,7 +36,7 @@ header > a:last-child img {height: 2.4rem;}
     80% {fill: #FFB617;}
     90% {fill: #7ACB00;}
     100% {fill: #000;}
-}
+} */
 
 /* sub visual */
 .sub-wrap .visual {position:relative;margin-top:61.944vw;width: 100%;height:95.556vw;}

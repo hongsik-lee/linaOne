@@ -193,7 +193,7 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 
 /* fixed-controls-wrap */
 .main .swiper-pagination {position: fixed;}
-.main .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {top: auto;bottom: 100px;right: 35px;transform: none;}
+.main .swiper-vertical > .swiper-pagination-bullets, .swiper-pagination-vertical.swiper-pagination-bullets {top: auto;bottom: 27.7778vw;right: 9.7222vw;transform: none;}
 .main .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet {margin: 1.1111vw 0;}
 .main .swiper-pagination-bullet {width: 2.2222vw;height: 2.2222vw;border: 0.2778vw solid #000;opacity: 0.3;background: transparent;}
 .main .swiper-pagination-bullet-active {opacity: 1;background: #000;}
