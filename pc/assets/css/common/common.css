@@ -10,7 +10,7 @@ body {overflow-x:hidden;font-family: var(--body-fonts);color: #000;}
 header {position:fixed;top:0;padding:0 6rem;display: flex;align-items: center;width: 100%;min-width: 78.6458vw;box-sizing: border-box;background:none;z-index:1000;}
 header:hover {background:#fff;}
 header .logo {flex: 1}
-header .logo img {width: 13.0313vw;}
+header .logo img {display: block;width: 13.0313vw;}
 header nav > ul {display: flex;}
 header nav li {margin:0 3.1250vw 0 0;height: 3.9583vw;}
 header nav > ul > li::after {content: '';position: relative;top:-0.2083vw;display: block;width:0;height: 0.2083vw;background: #000;transition: width 0.3s ease;}
