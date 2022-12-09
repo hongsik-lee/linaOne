@@ -1,5 +1,5 @@
 // mobile
-let swiper, swiper2, timer;
+let swiper, swiper2, timer, timer2;
 let initialX, initialY, wheelDirection, touchDirection;
 let isMouseDown, initialScrollY;
 $(document).ready(function() {
@@ -27,11 +27,6 @@ $(document).ready(function() {
     //     handleMouseDownSwiper(e);
     // });
 
-    $(document).on('mousewheel', '.swiper-slide', function(e) {
-        $('#value2').text('mouse(active): mousewheel');
-        // handleMoveSwiper(swiper, wheelDirection);
-    });
-
     $(window).on('touchmove', getDirection);
 
     $(window).on('touchstart', function(e) {
@@ -43,43 +38,71 @@ $(document).ready(function() {
         wheelDirection = e.originalEvent.deltaY > 0 ? "top" : "bottom";
     });
 
+    $(document).on('mousewheel', '.swiper-slide', function(e) {
+        handleMoveSwiper(swiper, wheelDirection);
+
+        $('.swiper-slide').each(function(index, item) {
+            const isScreen = isElemOverScreen(item);
+            if(isScreen) {
+                $(item).removeClass('seen-sec')
+            }
+        });
+    });
+
     $(document).on('touchmove', '.swiper-slide', function(e) {
-        $('#value3').text('touch(active): touchmove');
         handleMoveSwiper(swiper, touchDirection);
+
+        $('.swiper-slide').each(function(index, item) {
+            const isScreen = isElemOverScreen(item);
+            if(isScreen) {
+                $(item).removeClass('seen-sec')
+            }
+        });
     });
 
     $('.visual-sec').on('scroll mousewheel', function() {
+        // console.log(visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 3)
+        // $(this).animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 1000);
         videoSectionScrollAnimation();
     });
 
     const $swiperSlides = $('.swiper-wrapper').children('.swiper-slide[data-swiper-move="disabled"]');
     $swiperSlides.each(function(index, item) {
-        $(item).on('scroll', function() {
-            const index = swiper.activeIndex
+        $(item).on('scroll', optimizeAnimation(function(e) {
+                const index = swiper.activeIndex
                 , $slide = $(swiper.slides[index]);
-           
-            const scrollY = $(item).scrollTop()
-                , outerHeight = Math.round($(item).outerHeight())
-                , scrollHeight = Math.round($(item).prop('scrollHeight'))
-                , isScroll = scrollHeight > outerHeight ? true : false;
+        
+                const scrollY = $(item).scrollTop()
+                    , outerHeight = Math.round($(item).outerHeight())
+                    , scrollHeight = Math.round($(item).prop('scrollHeight'))
+                    , isScroll = scrollHeight > outerHeight ? true : false;
+                                
+                // if(outerHeight > scrollHeight - scrollY) $slide.scrollTop(scrollHeight - outerHeight);
+                // if(scrollY < 0) $slide.scrollTop(0);
 
-                // console.log(scrollY, scrollHeight - outerHeight)
-            if(!timer) {
-                clearTimeout(timer);
-            }
-
-            timer = setTimeout(function() { 
-                if(isScroll) {
-                    if(wheelDirection || touchDirection === 'top' && scrollY + outerHeight >= scrollHeight) {
-                        moveSwiperSlideTo(index, wheelDirection || touchDirection);
-                    } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3)  {
-                        moveSwiperSlideTo(index, wheelDirection || touchDirection);
+                if(!timer) clearTimeout(timer);
+                timer = setTimeout(function() { 
+                    if(isScroll) {
+                        if(wheelDirection || touchDirection === 'top' && (outerHeight > scrollHeight - scrollY || scrollY + outerHeight >= scrollHeight)) {
+                            moveSwiperSlideTo(index, wheelDirection || touchDirection);
+                        } else if(wheelDirection || touchDirection === 'bottom' && scrollY <= 3)  {
+                            moveSwiperSlideTo(index, wheelDirection || touchDirection);
+                        }
                     }
-                }
-            }, 200);
-        });
+                }, 500);
+            })
+        );
     });
 
+    $(document).on('click', '.nav > li', function(e) {
+        $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
+        $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
+    });
+
+    setTimeout(function() {
+        $('.visual-fixed-sec').find('.page-tit').addClass('activeMotion');
+        $('.visual-fixed-sec').find('.text-area > span').addClass('activeMotion');
+    }, 500);
 });
 
 const setSwiper = () => {
@@ -100,17 +123,18 @@ const setSwiper = () => {
             init: function() {
                 console.log('init');
             },
+            beforeInit: function() {
+                console.log('beforeInit')
+            },
             beforeSlideChangeStart: function() {
                 let index  = this.activeIndex;
+                const $slide = $(this.slides[index])
+                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
+                    , dataSwiperMove = $slide.data('swiper-move');
 
                 if(wheelDirection === 'top' || touchDirection === 'top') {
                     index + 1
                 }
-
-                const $slide = $(this.slides[index])
-                    , isScroll = Math.round($slide.prop('scrollHeight')) > Math.round($slide.outerHeight()) ? true : false
-                    , dataSwiperMove = $slide.data('swiper-move');
-                
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
                     wheelDirection = '';
                     touchDirection = '';
@@ -119,26 +143,51 @@ const setSwiper = () => {
             },
             slideChange: function() {
                 const index = this.activeIndex
-                    , prevIndex = index - 1
-                    , nextIndex = index + 1
                     , $slide = $(this.slides[index])
-                    , $prevSlide = $(this.slides[prevIndex])
-                    , $nextSlide = $(this.slides[nextIndex])
                     , outerHeight = Math.round($slide.outerHeight())
                     , scrollHeight = Math.round($slide.prop('scrollHeight'))
                     , isScroll = scrollHeight > outerHeight ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
+                
+                $slide.addClass('seen-sec')
 
+                if(index === 0) {
+                    $slide.siblings().removeClass('seen-sec')
+                }
+                textMotionAnimation($slide);
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
-                    // $prevSlide.scrollTop(scrollHeight - outerHeight)
-                    $nextSlide.scrollTop(0);
                     wheelDirection = '';
                     touchDirection = '';
                     disableSlideChange();
                 } else {
                     enableSlideChange();
                 }
-            }
+            },
+            transitionStart: function() {
+                disableSlideChange();
+            },
+            transitionEnd: function() {
+                if(!timer2) {
+                    clearTimeout(timer2);
+                }
+                timer2 = setTimeout(function() {
+                    enableSlideChange();
+                }, 500);
+            },
+            slidePrevTransitionStart: function() {
+                const index = this.activeIndex
+                    , $slide = $(this.slides[index])
+                    , outerHeight = Math.round($slide.outerHeight())
+                    , scrollHeight = Math.round($slide.prop('scrollHeight'))
+
+                $slide.scrollTop(scrollHeight - outerHeight)
+            },
+            slideNextTransitionStart: function() {
+                const index = this.activeIndex
+                    , $slide = $(this.slides[index])
+
+                $slide.scrollTop(0);
+            },
         }
     });
 }
@@ -205,7 +254,7 @@ const handleMoveSwiper = (swiper, direction = 'top') => {
                 moveSwiperSlideTo(index, wheelDirection || touchDirection);
             }
         }
-    }, 200);
+    }, 500);
 }
 
 const moveSwiperSlideTo = (index, direction) => {
@@ -308,6 +357,7 @@ const setSwipter2 = function() {
 
     swiper2 = new Swiper(".brand-goal-swiper", {
         slidesPerView: 'auto',
+        slidesOffsetAfter: 40,
         speed: 800,
         simulateTouch: false,
         navigation: {
@@ -332,6 +382,36 @@ const setSwipter2 = function() {
     });
 }
 
+const textMotionAnimation = function(item) {
+    const $target = $(item)
+
+    setTimeout(function() {
+        $target.find('.tit').addClass('activeMotion');
+        $target.find('.desc').addClass('activeMotion');
+    }, 400);
+}
+
+const isElemOverScreen = function(elem, triggerDiff) {
+    const top = $(elem).get(0).getBoundingClientRect().top
+        , { innerHeight } = window;
+
+    return top > innerHeight + (triggerDiff || 0);
+}
+
+const optimizeAnimation = function(cb) {
+    let ticking = false;
+
+    return function() {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(function() {
+                cb();
+
+                ticking = false;
+            });
+        }
+    }
+}
 
 // header nav animation
 const openNav = function() {

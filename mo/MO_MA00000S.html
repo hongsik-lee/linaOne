@@ -12,11 +12,6 @@
 </head>
 <body>
     <div class="wrap main">
-        <span id="value" style="position: fixed;top: 60px;right: 10px; z-index:200">0</span>
-        <span id="value2" style="position: fixed;top: 73px;right: 10px; z-index:200">mouse(deactive): </span>
-        <span id="value3" style="position: fixed;top: 86px;right: 10px; z-index:200">touch(deactive): </span>
-        <span id="value4" style="position: fixed;top: 98px;right: 10px; z-index:200">speed: 1000ms</span>
-        <span id="value5" style="position: fixed;top: 113px;right: 10px; z-index:200"></span>
         <!-- S : HEADER AREA -->
         <header class="inner">
             <a href="MO_MA00000S.html" class="logo">
@@ -61,35 +56,35 @@
                 <li>
                     회사소개
                     <ul class="sub-nav">
-                        <li><a href="../about/MO_AB010000S.html">Overview</a></li>
-                        <li><a href="../about/MO_AB020000S.html">CEO인터뷰</a></li>
-                        <li><a href="../about/MO_AB030000S.html">비젼/미션</a></li>
-                        <li><a href="../about/MO_AB040000S.html">CI</a></li>
-                        <li><a href="../about/MO_AB050000S.html">브랜드영상</a></li>
-                        <li><a href="../about/MO_AB060100S.html">보도자료</a></li>
-                        <li><a href="../about/MO_AB070000T.html">Contact Us</a></li>
-                        <li><a href="../about/MO_AB080000S.html">제휴/제안</a></li>
+                        <li><a href="../mo/pages/about/MO_AB010000S.html">Overview</a></li>
+                        <li><a href="../mo/pages/about/MO_AB020000S.html">CEO인터뷰</a></li>
+                        <li><a href="../mo/pages/about/MO_AB030000S.html">비젼/미션</a></li>
+                        <li><a href="../mo/pages/about/MO_AB040000S.html">CI</a></li>
+                        <li><a href="../mo/pages/about/MO_AB050000S.html">브랜드영상</a></li>
+                        <li><a href="../mo/pages/about/MO_AB060100S.html">보도자료</a></li>
+                        <li><a href="../mo/pages/about/MO_AB070000T.html">Contact Us</a></li>
+                        <li><a href="../mo/pages/about/MO_AB080000S.html">제휴/제안</a></li>
                     </ul>
                 </li>
                 <li>
                     사업영역
                     <ul class="sub-nav">
-                        <li><a href="../business/MO_BU010000S.html">Business & Service</a></li>
-                        <li><a href="../business/MO_BU020100T.html">Sales & Marketing</a></li>
-                        <li><a href="../business/MO_BU030100T.html">IT</a></li>
+                        <li><a href="../mo/pages/business/MO_BU010000S.html">Business & Service</a></li>
+                        <li><a href="../mo/pages/business/MO_BU020100T.html">Sales & Marketing</a></li>
+                        <li><a href="../mo/pages/business/MO_BU030100T.html">IT</a></li>
                     </ul>
                 </li>
                 <li>
                     인재채용
                     <ul class="sub-nav">
-                        <li><a href="../recruit/MO_RE010100S.html">직원 인재채용</a></li>
-                        <li><a href="../recruit/MO_RE020100T.html">TMR 인재채용</a></li>
+                        <li><a href="../mo/pages/recruit/MO_RE010100S.html">직원 인재채용</a></li>
+                        <li><a href="../mo/pages/recruit/MO_RE020100T.html">TMR 인재채용</a></li>
                     </ul>
                 </li>
                 <li>
                     공지사항
                     <ul class="sub-nav">
-                        <li><a href="../infomation/MO_IN010000S.html">공지사항</a></li>
+                        <li><a href="../mo/pages/infomation/MO_IN010000S.html">공지사항</a></li>
                     </ul>
                 </li>
             </ul>
@@ -104,7 +99,7 @@
         <!-- E : HEADER AREA -->
         <!-- S : CONTENTS  -->
         <div id="contents">
-            <div class="visual-fixed-sec">
+            <div class="visual-fixed-sec seen-sec">
                 <div class="text-area">
                     <h2 class="page-tit">
                         <span class="txtLine"><span>보험의</span></span>
@@ -115,9 +110,9 @@
                     <span class="txtLine"><span>LINA One</span></span>
                 </div>
             </div>
-            <div id="fullPage" class="swiper-container main-swiper">
+            <div id="fullPage" class="swiper-container main-swiper fixed">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide visual-sec" data-swiper-move="disabled">
+                    <div class="swiper-slide visual-sec seen-sec" data-swiper-move="disabled">
                         <div class="inner">
                             <div class="video-wrap">
                                 <div class="video-inner">
@@ -169,7 +164,7 @@
                                 </p>
                             </div>
                             <div class="img-wrap">
-                                <div class="img"></div>
+                                <img src="../mo/assets/images/main_relationship_img.jpg" alt="">
                             </div>
                             <span class="circle">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -304,8 +299,8 @@
                                             </g>
                                         </svg>
                                     </li>
-                                    <li class="swiper-slide">
-                                    </li>
+                                    <!-- <li class="swiper-slide">
+                                    </li> -->
                                 </ul>
                             </div>
                             <div class="swiper-controller">
