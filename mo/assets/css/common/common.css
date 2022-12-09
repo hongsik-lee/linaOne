@@ -3,7 +3,7 @@
 /* header  */
 header {position:fixed;top:0;display: flex;justify-content: space-between;align-items: center;z-index:200;}
 header .logo {width: 43.8889vw;height: 5.5556vw;}
-header .logo .img {width: 100%;}
+header .logo img {width: 100%;}
 header > a:last-child img {height: 2.4rem;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index: 300;right:0;}
