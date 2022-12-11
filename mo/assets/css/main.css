@@ -3,7 +3,8 @@
 html, body {position: relative;height: 100%;overflow: hidden;}
 .main, .main #contents {height: 100%;}
 .main .swiper-container {width: 100%;height: 100%;}
-/* .main .swiper-container.fixed {position: fixed;overflow:hidden;} */
+.main .swiper-container.fixed {position: fixed;overflow:hidden;}
+.main .swiper-container .visual-sec.fixed {overflow-y: hidden;}
 .main .swiper-slide {position: relative;overflow-x: hidden;overflow-y: auto;}
 
 /* activeMotion */
@@ -53,7 +54,7 @@ html, body {position: relative;height: 100%;overflow: hidden;}
 .main .foundation01-sec .tit .txtLine:nth-of-type(1) span {font-weight: 900;font-size: 10vw;line-height: 11vw;}
 .main .foundation01-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;font-size: 10vw;line-height: 12vw;}
 .main .foundation01-sec .desc .txtLine span {font-weight: 500;font-size: var(--basic-size);line-height: 6.2222vw;}
-.main .foundation01-sec .img-wrap {position:relative;width: 63.3333vw;height: 111.1111vw;margin-top: 27.7778vw;overflow: hidden;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.2s ease .5s, opacity 1.2s ease .5s;z-index: 10;}
+.main .foundation01-sec .img-wrap {position:relative;width: 63.3333vw;height: 111.1111vw;margin-top: 27.7778vw;overflow: auto;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.2s ease .5s, opacity 1.2s ease .5s;z-index: 10;}
 .main .foundation01-sec.seen-sec .img-wrap {opacity: 1;transform: translateY(0);}
 .main .foundation01-sec .img-wrap img {position:relative;width: 100%;transition: transform 1.2s ease .7s;}
 .main .foundation01-sec.seen-sec .img-wrap img {transform: scale(1.1);}
