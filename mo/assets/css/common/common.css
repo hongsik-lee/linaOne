@@ -6,7 +6,7 @@ header .logo {width: 43.8889vw;}
 header .logo .img {width: 100%;}
 header > a:last-child img {height: 2.4rem;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
-#gnb-wrap.on {width:100%;z-index: 300;right:0;}
+#gnb-wrap.on {width:100%;z-index:500;right:0;}
 #gnb-wrap header {width:calc(100% - 4rem);}
 #gnb-wrap header > a:first-child img {height: 2rem;}
 #gnb-wrap .nav {padding-top:11.2rem;}
@@ -14,7 +14,6 @@ header > a:last-child img {height: 2.4rem;}
 #gnb-wrap .nav > li:after {position:absolute;top:3px;right:0.4rem;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
 #gnb-wrap .sub-nav {display:none;margin:10px 0 20px;padding:1rem 0;}
 #gnb-wrap .nav > li.active:after {transform: rotate(180deg);}
-
 #gnb-wrap .sub-nav > li {height: 1.9rem;}
 #gnb-wrap .sub-nav > li + li {margin-top: 2rem;}
 #gnb-wrap .sub-nav > li a {display:block;font-size:var(--basic-size);color:#000;font-weight:500;}
@@ -25,7 +24,8 @@ header > a:last-child img {height: 2.4rem;}
 
 
 /* sub visual */
-.sub-wrap .visual {position:relative;margin-top:61.944vw;width: 100%;height:95.556vw;}
+.sub-wrap {padding-top:61.944vw;}
+.sub-wrap .visual {position:relative;width: 100%;height:95.556vw;}
 .sub-wrap .visual:before {width: 70%;position: absolute;height: 1vw;left:50%;bottom:0;transform:translateX(-50%);background-size: cover;content: '';z-index: -1;}
 .sub-wrap .visual.active:before {height:100%;width:100%;transition-duration:0.6s;}
 
@@ -85,10 +85,8 @@ header > a:last-child img {height: 2.4rem;}
 .news_detail .detail-wrap p:not(.title):after {position:absolute;width:calc(100% - 4rem);border-bottom:1px solid #EBEBEB;bottom:0;content: '';}
 .news_detail .detail-wrap .btn {margin:8rem auto 0;}
 
-
-
 /* footer */
-footer {background:#01C1D6}
+footer {position:relative;background:#01C1D6}
 footer.inner {padding:20rem 2rem 0;}
 footer a {color:#000}
 footer .info {margin-bottom: 16.6667vw;}
@@ -100,3 +98,4 @@ footer .list-corp li {font-size: 3.333vw;font-weight: 500;line-height: 4vw;}
 footer .list-priv {margin-bottom: 16.6667vw;display: flex;flex-wrap: wrap;row-gap: 3.3333vw;}
 footer .list-priv a {margin-right: 5.5556vw;font-size: 3.333vw;font-weight:700;color:#000;}
 footer > p:last-child {padding-bottom: 5.5556vw;font-size: 3.333vw;line-height: 4vw;font-weight:400;}
+footer .btn-up {position: fixed;right: 5.5556vw;bottom: 11.1111vw;width: 11.1111vw;height: 11.1111vw;padding: 0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background: url(../../images/icon/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;transition: transform .6s ease;z-index: 300;}
