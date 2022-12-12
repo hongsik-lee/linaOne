@@ -22,7 +22,6 @@ header > a:last-child img {height: 2.4rem;}
 #gnb-wrap .corp-wrap p a {font-size:var(--small-size);margin-right:2.4rem;font-weight: 700;color:rgba(0,0,0,.5)}
 #gnb-wrap .corp-wrap p {font-size:3.333vw;font-weight: 400;color:rgba(0,0,0,.3)}
 
-
 /* sub visual */
 .sub-wrap {padding-top:61.944vw;}
 .sub-wrap .visual {position:relative;width: 100%;height:95.556vw;}

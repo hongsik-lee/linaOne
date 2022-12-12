@@ -1,6 +1,9 @@
 let swiper;
 let yOffset = 0;
 $(document).ready(() => {
+    $('.visual-sec').find('video').get(0).play();
+    $('.visual-sec').find('video').get(0).pause();
+    
     setSwipter();
     setSectionFixed();
     getVisualSectionSrcollInfo();

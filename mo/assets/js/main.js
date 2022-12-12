@@ -1,7 +1,5 @@
 // mobile
-let swiper, timer, timer2;
 let initialX, initialY, wheelDirection, touchDirection;
-
 $(document).ready(function() {
     $('.visual-sec').find('video').get(0).play();
     setSwiper();
@@ -35,9 +33,15 @@ $(document).ready(function() {
     setTimeout(function() {
         $('.visual-fixed-sec').find('.page-tit').addClass('activeMotion');
         $('.visual-fixed-sec').find('.text-area > span').addClass('activeMotion');
-    }, 500);
+    }, 300);
 
+    $('.visual-sec').find('video').get(0).play();
+    $('.visual-sec').find('video').get(0).pause();
     $('.visual-sec').on('scroll mousewheel touchmove', optimizeAnimation(videoSectionScrollAnimation));
+
+    $(window).on('orientationchange', function () {
+        setTimeout(() => swiper.onResize(), 50);
+    });
 
     const $swiperSlides = $('.swiper-wrapper').children('.swiper-slide[data-swiper-move="disabled"]');
     $swiperSlides.each(function(index, item) {
@@ -85,7 +89,7 @@ $(document).ready(function() {
     });
 });
 
-let swiperWheelControl; 
+let swiper, swiperWheelControl;
 const setSwiper = () => {
     swiper = new Swiper('.main-swiper', {
         direction: "vertical", // 방향 (가로: horizontal, 세로: vertical)
@@ -109,11 +113,22 @@ const setSwiper = () => {
                     , isScroll = scrollHeight > outerHeight ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
                 
-                $slide.addClass('seen-sec');
+                wheelDirection = '';
+                touchDirection = '';
                 textMotionAnimation($slide);
+                $slide.addClass('seen-sec');
+                $slide.nextAll().removeClass('seen-sec');
 
-                if(index === 0) $slide.siblings().removeClass('seen-sec');
-                else $slide.nextAll().removeClass('seen-sec');
+                if(index !== 0) {
+                    // $('.visual-sec').scrollTop($('.visual-sec').prop('scrollHeight') - $('.visual-sec').outerHeight());
+                    // $('.visual-sec').find('.inner').prepend($('.visual-fixed-sec'));
+                    // $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
+                    // $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
+                    // $('.visual-fixed-sec').find('.text-area').css({
+                    //     'position': 'absolute',
+                    //     'top': visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 - 5
+                    // });
+                }
 
                 if(this.slidesGrid.length === index + 1) {
                     $('.swiper-next-btn').addClass('up');
@@ -122,23 +137,15 @@ const setSwiper = () => {
                     $('.swiper-next-btn').hasClass('up') ? $('.swiper-next-btn').removeClass('up') : false;
                     $('.swiper-next-btn').find('em').text('다음 section 이동');
                 }
-                
+
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
-                    wheelDirection = '';
-                    touchDirection = '';
-                    swiperWheelControl.turnOff();
-                    swiper.mousewheel.disable();
-                    swiper.allowTouchMove = false;   
+                    disableSlideChange();
                 } else {
-                    swiperWheelControl.turnOn();
-                    swiper.mousewheel.enable();
-                    swiper.allowTouchMove = true;    
+                    enableSlideChange();
                 }
             },
             transitionStart: function() {
-                swiperWheelControl.turnOff();
-                swiper.mousewheel.disable();
-                swiper.allowTouchMove = false; 
+                disableSlideChange();
             },
             transitionEnd: function() {
                 const index = this.activeIndex
@@ -151,9 +158,7 @@ const setSwiper = () => {
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
               
                 } else {
-                    swiperWheelControl.turnOn();
-                    swiper.mousewheel.enable();
-                    swiper.allowTouchMove = true;
+                    enableSlideChange();
                 }
             },
             slidePrevTransitionStart: function() {
@@ -188,27 +193,18 @@ const setSwiper = () => {
 }
 
 const enableSlideChange = function() {
-    // swiper.mousewheel.enable();
-    // swiper.allowTouchMove = true;
-
-    // if(!timer3) {
-    //     clearTimeout(timer3);
-    // }
-    // timer3 = setTimeout(function() {
-    //     swiperWheelControl.turnOn();
-    // }, 1000);
+    swiperWheelControl.turnOn();
+    swiper.mousewheel.enable();
+    swiper.allowTouchMove = true;
 }
 
 const disableSlideChange = function() {
-    // swiper.mousewheel.disable();
-    // swiper.allowTouchMove = false;
-
-    // swiperWheelControl.turnOff();
-    // swiperWheelControl.getOption('preventMouse'); // true
-
+    swiperWheelControl.turnOff();
+    swiper.mousewheel.disable();
+    swiper.allowTouchMove = false; 
 }
 
-const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
+const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0 };
 const getVisualSectionSrcollInfo = () => {
     visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 7
     visualPosInfo.endY = $('.visual-fixed-sec').find('.text-area').position().top;
@@ -250,15 +246,22 @@ const videoSectionScrollAnimation = function() {
         });
     }
 
-    if(!isFixed) {
+    let direction = wheelDirection || touchDirection;
+    if(!isFixed && direction === 'top') {
+        console.log('top action')
         $visualSec.animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 600);
         $visualSec.addClass('fixed');
 
         isFixed = true;
     }
 
+    if(isFixed && direction === 'bottom') {
+        $visualSec.removeClass('fixed');
+        $visualSec.animate({scrollTop: 0 }, 600);
+    }
+
     if(!$visualSec.is(':animated') && $visualSec.hasClass('fixed')) {
-        $visualSec.removeClass('fixed')
+        // $visualSec.removeClass('fixed')
         $visualSec.animate({scrollTop: scrollHeight - outerHeight }, 600);
     }
 }
