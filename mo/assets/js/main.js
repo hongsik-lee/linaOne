@@ -261,7 +261,7 @@ const videoSectionScrollAnimation = function() {
     }
 
     if(!$visualSec.is(':animated') && $visualSec.hasClass('fixed')) {
-        // $visualSec.removeClass('fixed')
+        $visualSec.removeClass('fixed')
         $visualSec.animate({scrollTop: scrollHeight - outerHeight }, 600);
     }
 }
