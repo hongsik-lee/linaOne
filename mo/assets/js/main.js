@@ -64,7 +64,7 @@ $(document).ready(function() {
                         if(index === crtIndedx) {
                             if(crtOuterHeight >= crtScrollHeight - crtScrollY || crtScrollY + crtOuterHeight >= crtScrollHeight) {
                                 // 자동으로 다음 컨텐츠로 이동한다.
-                                // swiper.slideNext();
+                                swiper.slideNext();
                                 
                                 // 한 번더 모션을 취해야만 다음 컨텐츠로 이동할 수 있다 
                                 swiperWheelControl.turnOn();
@@ -75,7 +75,7 @@ $(document).ready(function() {
                     }
                     if((wheelDirection === 'bottom' || touchDirection === 'bottom') && scrollY <= 5) {
                         // 자동으로 다음 컨텐츠로 이동한다.
-                        // swiper.slidePrev();
+                        swiper.slidePrev();
 
                         //  한 번더 모션을 취해야만 다음 컨텐츠로 이동할 수 있다 
                         swiperWheelControl.turnOn();
@@ -243,19 +243,20 @@ const videoSectionScrollAnimation = function() {
             'position': 'absolute',
             'top': visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() / 2 - 5
         });
+        console.log($('.visual-sec').scrollTop())
     }
 
     let direction = wheelDirection || touchDirection;
     if(!isFixed && direction === 'top') {
-        $visualSec.animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 600);
-        $visualSec.addClass('fixed');
+        // $visualSec.animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 600);
+        // $visualSec.addClass('fixed');
 
-        isFixed = true;
+        // isFixed = true;
     }
 
     if(!$visualSec.is(':animated') && $visualSec.hasClass('fixed')) {
-        $visualSec.removeClass('fixed')
-        $visualSec.animate({scrollTop: scrollHeight - outerHeight }, 600);
+        // $visualSec.removeClass('fixed')
+        // $visualSec.animate({scrollTop: scrollHeight - outerHeight }, 600);
     }
 
     // if(isFixed && direction === 'bottom') {
