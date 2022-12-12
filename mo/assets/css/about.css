@@ -83,7 +83,7 @@
 .vision .value-sec .step-box .title {font-size: var(--title-type2);font-weight: 700;line-height: 140%;word-break: keep-all;}
 .vision .value-sec .step-box ul {margin-top: 5rem;}
 .vision .value-sec .step-box li + li {margin-top: 4rem;}
-.vision .value-sec .step-box li {position:relative;padding-left: 3.4rem;font-size:var(--title-type3);font-weight: 700;line-height: 140%;}
+.vision .value-sec .step-box li {position:relative;padding-left:9.444vw;font-size:var(--title-type3);font-weight: 700;line-height: 140%;}
 .vision .value-sec .step-box li span {display: block;margin-top:0.8rem;color:#999;line-height: 140%;font-weight: 500;font-size: var(--small-size);}
 .vision .value-sec .step-box li em {position:absolute;left:0;top:0;color:#150F96;font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
 

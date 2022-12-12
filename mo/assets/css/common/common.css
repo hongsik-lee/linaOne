@@ -75,7 +75,7 @@ header > a:last-child img {height: 2.4rem;}
 .sub-wrap .list-wrap li span {display: block;width: 100%;margin-top: 0.8rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#999}
 .sub-wrap .list-wrap a.btn-more {margin:3rem auto 0;}
 /* NEWS DETAIL 보도자료 */
-.sub-wrap.news_detail .content {padding-top: 40.625vw;}
+.sub-wrap.news_detail {padding-top: 36.111vw;}
 .news_detail .detail-wrap {margin-top:7rem;}
 .news_detail .detail-wrap .title {font-size: 7.500vw;font-weight:700;line-height:140%;word-break: keep-all;}
 .news_detail .detail-wrap .date {display:block;margin-top:0.8rem;font-size: var(--small-size);font-weight:500;color:#999;line-height:140%;}
