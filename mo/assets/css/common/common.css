@@ -2,13 +2,13 @@
 
 /* header  */
 header {position:fixed;top:0;height:5.6rem;display: flex;justify-content: space-between;align-items: center;z-index:200;}
-header .logo {width: 43.8889vw;}
+header .logo {width: 43.8889vw;margin-left: -1.111vw;}
 header .logo .img {width: 100%;}
 header > a:last-child img {height: 2.4rem;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index:500;right:0;}
 #gnb-wrap header {width:calc(100% - 4rem);}
-#gnb-wrap header > a:first-child img {height: 2rem;}
+#gnb-wrap header > a:first-child {width: 43.8889vw;margin-left: -1.111vw;}
 #gnb-wrap .nav {padding-top:11.2rem;}
 #gnb-wrap .nav > li {position:relative;min-height:5.6rem;font-size:var(--title-type2);font-weight:800;}
 #gnb-wrap .nav > li:after {position:absolute;top:3px;right:0.4rem;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
@@ -86,7 +86,7 @@ header > a:last-child img {height: 2.4rem;}
 
 /* footer */
 footer {position:relative;background:#01C1D6}
-footer.inner {padding:20rem 2rem 0;}
+footer.inner {padding:55.556vw 5.556vw 0;}
 footer a {color:#000}
 footer .info {margin-bottom: 16.6667vw;}
 footer .info .num {font-size: 7.222vw;font-weight:800;line-height: 8.6111vw;margin-bottom: 0.2222vw;}
