@@ -1,6 +1,7 @@
 @import url(reset.css);
 
 /* header  */
+.sub-wrap header {background:#fff;}
 header {position:fixed;top:0;height:5.6rem;display: flex;justify-content: space-between;align-items: center;z-index:200;}
 header .logo {width: 43.8889vw;margin-left: -1.111vw;}
 header .logo .img {width: 100%;}
@@ -9,6 +10,7 @@ header > a:last-child img {height: 2.4rem;}
 #gnb-wrap.on {width:100%;z-index:500;right:0;}
 #gnb-wrap header {width:calc(100% - 4rem);}
 #gnb-wrap header > a:first-child {width: 43.8889vw;margin-left: -1.111vw;}
+#gnb-wrap header > a:first-child img {display:block;width: 100%;}
 #gnb-wrap .nav {padding-top:11.2rem;}
 #gnb-wrap .nav > li {position:relative;min-height:5.6rem;font-size:var(--title-type2);font-weight:800;}
 #gnb-wrap .nav > li:after {position:absolute;top:3px;right:0.4rem;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
@@ -47,7 +49,7 @@ header > a:last-child img {height: 2.4rem;}
 .sub-slide-tab {margin-top: 3rem;}
 .sub-slide-tab ul{display: flex;overflow-x: auto;-ms-overflow-style: none;scrollbar-width: none;}
 .sub-slide-tab ul::-webkit-scrollbar {display: none;}
-.sub-slide-tab li {padding:0.8rem 0;margin-right:3rem;font-size: var(--basic-size);font-weight: 700;color:#666;transition:.1s;white-space: pre;}
+.sub-slide-tab li {padding:0.8rem 0;margin-right:3rem;font-size: var(--basic-size);font-weight: 700;color:#666;white-space: pre;}
 .sub-slide-tab li:last-child {margin-right:0;}
 .sub-slide-tab li.active {padding:0.8rem 2.4rem;color:#fff;background:#000;border-radius:0.4rem;}
 
@@ -98,3 +100,4 @@ footer .list-priv {margin-bottom: 16.6667vw;display: flex;flex-wrap: wrap;row-ga
 footer .list-priv a {margin-right: 5.5556vw;font-size: 3.333vw;font-weight:700;color:#000;}
 footer > p:last-child {padding-bottom: 5.5556vw;font-size: 3.333vw;line-height: 4vw;font-weight:400;}
 footer .btn-up {position: absolute;right: 5.5556vw;bottom: 11.1111vw;width: 11.1111vw;height: 11.1111vw;padding: 0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background: url(../../images/icon/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;transition: transform .6s ease;z-index: 300;}
+footer .btn-down {position: fixed;right: 5.5556vw;bottom: 11.1111vw;width: 11.1111vw;height: 11.1111vw;padding: 0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background: url(../../images/icon/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;transition: transform .6s ease;z-index: 300;transform: rotate(180deg);}

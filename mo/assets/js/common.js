@@ -27,12 +27,45 @@ $(document).ready(function() {
         AOS.refresh();
     });
 
-    $(document).on('click', '.btn-up', () => {
-        document.body.scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+
+    // scroll button 공통 효과 *추후 업데이트예정입니다
+    let scrollStatus = 0;
+    let btnDown = $('.btn-down');
+    let btnUp = $('.btn-up')
+
+    $(window).on('scroll', function(){
+        let scrollTop = $(this).scrollTop();
+
+        if(scrollTop === 0){
+            btnDown.stop().fadeIn()
+        }else if(scrollStatus > 50){
+            btnDown.stop().fadeOut()
+        }else{
+        }
+        scrollStatus = scrollTop
+    })
 });
+
+function scrollToTop(){
+    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+}
+function scrollToTarget(){
+    let content = document.querySelector('.content')
+    // window.scrollTo({left:0, top:Position(content), behavior: "smooth"} )
+    window.scrollTo({left:0, top:600, behavior: "smooth"} )
+
+}
+
+function Position(obj){
+    var currenttop = 0;
+    if (obj.offsetParent){
+     do {
+      currenttop += obj.offsetTop - 60;
+    }while ((obj = obj.offsetParent));
+     return [currenttop];
+    }
+   }
+
 const onElementHeightChange = function(elm, callback) {
     let lastHeight = elm.clientHeight
     let newHeight;
@@ -221,11 +254,11 @@ $(document).ready(function(){
         if( $tabTitle.length-1 == idx){
             $tabTitle.parent('ul').animate({
                 scrollLeft:$(this).offset().left + 100
-            }, 700)
+            }, 800)
         }else if (idx == 0){
             $tabTitle.parent('ul').animate({
                 scrollLeft:$(this).offset().left + 0
-            }, 700)
+            }, 800)
         }
         if($(e.target).hasClass('clicked')) {
             $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');
