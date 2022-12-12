@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     $(window).on('scroll', function(){
         let scrollTop = $(this).scrollTop();
-
+        console.log(scrollTop)
         if(scrollTop === 0){
             btnDown.stop().fadeIn()
         }else if(scrollStatus > 50){
@@ -43,6 +43,13 @@ $(document).ready(function() {
         }else{
         }
         scrollStatus = scrollTop
+    })
+
+    $(document).on('load', function(){
+        let scrollTop = $('.sub-wrap').scrollTop();
+        if(scrollTop !== 0){
+            btnDown.hide()
+        }
     })
 });
 
@@ -64,7 +71,7 @@ function Position(obj){
     }while ((obj = obj.offsetParent));
      return [currenttop];
     }
-   }
+}
 
 const onElementHeightChange = function(elm, callback) {
     let lastHeight = elm.clientHeight
@@ -276,7 +283,8 @@ $(document).ready(function(){
 
 $(window).on('load',function(){
     let $visual = $('.visual');
-    $visual.addClass('active').find('h1').addClass('active')
+    $visual.addClass('active').find('h1').addClass('active');
+ 
 })
 
 // 채용절차 자주하는질문 filter 
