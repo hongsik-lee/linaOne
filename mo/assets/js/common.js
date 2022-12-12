@@ -26,6 +26,12 @@ $(document).ready(function() {
     onElementHeightChange(document.body, function(){
         AOS.refresh();
     });
+
+    $(document).on('click', '.btn-up', () => {
+        document.body.scrollIntoView({
+            behavior: "smooth"
+        });
+    });
 });
 const onElementHeightChange = function(elm, callback) {
     let lastHeight = elm.clientHeight

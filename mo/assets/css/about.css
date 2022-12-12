@@ -73,7 +73,7 @@
 .sub-wrap.vision .content > .desc {margin:15rem 0;padding:0 2rem 0 7.6rem;font-size:var(--title-type2);line-height:140%;font-weight:700;word-break: keep-all;}
 .vision .vision-sec {padding:15rem 2rem;background: url(../images/ab_vision_bg.png);background-size: cover;}
 .vision .img-box {padding:0 3rem;margin-bottom: 3.2rem;}
-.vision .img-box img {display: block;width: 100%;}
+.vision .img-box img {display: block;width: 100%;padding-left: 7.222vw;}
 .vision .vision-sec p {margin:5rem 0 2rem;padding-left:5.6rem;font-size:var(--title-type2);font-weight: 700;line-height:140%;color:#fff;word-break: keep-all;}
 .vision .vision-sec .label {color:#fff}
 .vision .vision-sec span {display:inline-block;padding-left:5.6rem;font-size: var(--small-size);font-weight: 500;color:rgba(255,255,255,.5);line-height: 140%;}
