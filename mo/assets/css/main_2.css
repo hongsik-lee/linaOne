@@ -1,7 +1,9 @@
 @import url(common/common.css);
 
 html, body {position: relative;overflow-x: hidden;}
-.sec-wrap.fixed {position:fixed;overflow: hidden;}
+#contents.fixed {position: fixed; overflow: hidden;}
+.sec-wrap {transition: all .8s ease;}
+.sec-wrap.depth1 {position:fixed;overflow: hidden;}
 /* .main #contents.fixed{position:fixed;overflow: hidden;} */
 
 /* activeMotion */
