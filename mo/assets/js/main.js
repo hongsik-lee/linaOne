@@ -1,7 +1,6 @@
 // mobile
 let initialX, initialY, wheelDirection, touchDirection;
 $(document).ready(function() {
-    $('.visual-sec').find('video').get(0).play();
     setSwiper();
     setSwipter2();
     getVisualSectionSrcollInfo();
@@ -248,22 +247,21 @@ const videoSectionScrollAnimation = function() {
 
     let direction = wheelDirection || touchDirection;
     if(!isFixed && direction === 'top') {
-        console.log('top action')
         $visualSec.animate({scrollTop: visualPosInfo.startY - $('.visual-fixed-sec').find('.page-tit').innerHeight() - 109 }, 600);
         $visualSec.addClass('fixed');
 
         isFixed = true;
     }
 
-    if(isFixed && direction === 'bottom') {
-        $visualSec.removeClass('fixed');
-        $visualSec.animate({scrollTop: 0 }, 600);
-    }
-
     if(!$visualSec.is(':animated') && $visualSec.hasClass('fixed')) {
         $visualSec.removeClass('fixed')
         $visualSec.animate({scrollTop: scrollHeight - outerHeight }, 600);
     }
+
+    // if(isFixed && direction === 'bottom') {
+    //     $visualSec.removeClass('fixed');
+    //     $visualSec.animate({scrollTop: 0 }, 600);
+    // }
 }
 
 const setSwipter2 = function() {
