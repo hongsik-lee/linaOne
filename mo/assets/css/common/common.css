@@ -32,7 +32,7 @@ header > a:last-child img {height: 2.4rem;}
 .sub-wrap .visual h1 {position:absolute;left:2rem;top:-12%;width:100%;max-width:calc(100% - 4rem)}
 .sub-wrap .visual h1.type2 {top:-32%;}
 .sub-wrap .visual h1 p {position:relative;overflow: hidden;font-size: var(--title-type1);font-weight: 700;}
-.sub-wrap .visual h1 p span {display:inline-block;font-size:var(--title-type1);font-weight:700;line-height: 20vw;font-family: var(--poppins-fonts);transition:0.7s;position:relative;bottom:-130px;transition-delay:0.8s;}
+.sub-wrap .visual h1 p span {display:inline-block;margin-left: -1.1111vw;font-size:var(--title-type1);font-weight:700;line-height: 20vw;font-family: var(--poppins-fonts);transition:0.7s;position:relative;bottom:-130px;transition-delay:0.8s;}
 .sub-wrap .visual h1.active p span {bottom:0}
 .sub-wrap .visual h1 p span:nth-of-type(2) {padding-left:1rem;font-family: var(--body-fonts);font-weight: 800;}
 .sub-wrap .visual h1.type2 p:first-child {top:2rem;}

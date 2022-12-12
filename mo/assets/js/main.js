@@ -63,16 +63,10 @@ $(document).ready(function() {
                                 // 자동으로 다음 컨텐츠로 이동한다.
                                 // swiper.slideNext();
                                 
-                                if (!timer2) {
-                                    timer2 = setTimeout(() => {
-                                        timer2 = null;
-                                
-                                        // 한 번더 모션을 취해야만 다음 컨텐츠로 이동할 수 있다 
-                                        swiperWheelControl.turnOn();
-                                        swiper.mousewheel.enable();
-                                        swiper.allowTouchMove = true; 
-                                    }, 800);
-                                }
+                                // 한 번더 모션을 취해야만 다음 컨텐츠로 이동할 수 있다 
+                                swiperWheelControl.turnOn();
+                                swiper.mousewheel.enable();
+                                swiper.allowTouchMove = true; 
                             }
                         }
                     }
@@ -90,11 +84,12 @@ $(document).ready(function() {
         );
     });
 });
+
 let swiperWheelControl; 
 const setSwiper = () => {
     swiper = new Swiper('.main-swiper', {
         direction: "vertical", // 방향 (가로: horizontal, 세로: vertical)
-        speed: 1000, // 속도
+        speed: 1200, // 속도
         mousewheel: false, // 마우스 휠 지원 여부
         allowTouchMove: false,
         replaceState: true,
@@ -141,9 +136,9 @@ const setSwiper = () => {
                 }
             },
             transitionStart: function() {
-                // swiperWheelControl.turnOff();
-                // swiper.mousewheel.disable();
-                // swiper.allowTouchMove = false; 
+                swiperWheelControl.turnOff();
+                swiper.mousewheel.disable();
+                swiper.allowTouchMove = false; 
             },
             transitionEnd: function() {
                 const index = this.activeIndex
@@ -153,15 +148,12 @@ const setSwiper = () => {
                     , isScroll = scrollHeight > outerHeight ? true : false
                     , dataSwiperMove = $slide.data('swiper-move');
 
-
                 if(isScroll && dataSwiperMove && dataSwiperMove === 'disabled') {
-                    // swiperWheelControl.turnOff();
-                    // swiper.mousewheel.disable();
-                    // swiper.allowTouchMove = false;   
+              
                 } else {
                     swiperWheelControl.turnOn();
                     swiper.mousewheel.enable();
-                    swiper.allowTouchMove = true;    
+                    swiper.allowTouchMove = true;
                 }
             },
             slidePrevTransitionStart: function() {
@@ -186,24 +178,13 @@ const setSwiper = () => {
         elem: document.querySelector('.swiper-container'),
         callback: function(e){
             if(e.direction == 'up') {
-                swiper.slidePrev();
+                swiper.slidePrev(1200);
             } else {
-                swiper.slideNext();
+                swiper.slideNext(1200);
             }
         },
         preventMouse: false
     });
-}
-
-const moveSwiperSlideTo = (index, direction) => {
-    if(direction === 'top') {
-        // enableSlideChange();
-        // swiper.slideTo(index + 1, 800, true);
-        // swiper.slideNext();
-    } else if(direction === 'bottom') {
-        // enableSlideChange();
-        // swiper.slideTo(index - 1, 800, true);
-    }
 }
 
 const enableSlideChange = function() {
@@ -244,7 +225,6 @@ const videoSectionScrollAnimation = function() {
         , videoY = $visualSec.find('.video-wrap').get(0).getBoundingClientRect().y
         , diff = videoY - textY
         , diffRatio = diff / visualPosInfo.point * 100;
-
 
     if(diff > 0) {
         $visualSec.find('video').get(0).pause();
