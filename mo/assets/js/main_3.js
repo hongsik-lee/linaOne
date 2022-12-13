@@ -1,20 +1,26 @@
-
-
 let yOffset = 0;
+let wheelDirection;
+let touchDirection;
+let startX, startY, endX, endY;
 $(document).ready(function() {
+    $("#contents").on('touchstart',function(event){
+        startX = event.originalEvent.changedTouches[0].screenX;
+        startY = event.originalEvent.changedTouches[0].screenY;
+    });
+
+    $("#contents").on('touchmove',function(event){
+        endX=event.originalEvent.changedTouches[0].screenX;
+        endY=event.originalEvent.changedTouches[0].screenY;
+
+        if(startY-endY > 5) touchDirection = 'top';
+        if(endY-startY > 5) touchDirection = 'bottom';
+    });
+
     setSwipter();
     getVisualSectionSrcollInfo();
-
+    
     $('.visual-sec').find('video').get(0).play();
     $('.visual-sec').find('video').get(0).pause();
-    $('#contents').css('height', $('.sec-wrap').outerHeight() - 200);
-
-    $(window).on('touchmove', getDirection);
-
-    $(window).on('touchstart', function(e) {
-        initialX = getClientX(e);
-        initialY = getClientY(e);
-    });
 
     $(window).on('mousewheel', function(e) {
         wheelDirection = e.originalEvent.deltaY > 0 ? "top" : "bottom";
@@ -28,14 +34,6 @@ $(document).ready(function() {
     $(window).on('scroll mousewheel touchmove', optimizeAnimation(function() {
         yOffset = $(window).scrollTop();
         videoSectionScrollAnimation2();
-
-        // if($('#contents').outerHeight() > $('.sec-wrap').outerHeight()) {
-        //     console.log('aa');
-
-        //     $('#contents').css({
-        //         'height' : $('#contents').outerHeight() - 700
-        //     })
-        // }
 
         // if(outerHeight > scrollHeight - scrollY) $slide.scrollTop(scrollHeight - outerHeight);
         // if(yOffset < 0) $('html, body').scrollTop(0);
@@ -75,6 +73,8 @@ $(document).ready(function() {
     if(window.pageYOffset > 0) {
         $(window).scrollTop(0);
     }
+    
+    
 });
 
 const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
@@ -90,15 +90,21 @@ const videoSectionScrollAnimation2 = function() {
     const $contents = $('#contents')
         , $secWrap = $('.sec-wrap')
         , $visualSec = $('.visual-sec');
-
-    if(wheelDirection === 'top' || touchDirection === 'top') {
-        if(!timer) {
-            timer = setTimeout(() => {
-                timer = null;
-               
-                if($secWrap.hasClass('depth1') && !$secWrap.hasClass('active')) {
-                    $(window).scrollTop(1);
     
+    if($(window).scrollTop() > 0 && $secWrap.hasClass('active')) {
+        $secWrap.removeClass('depth2');
+    }
+
+    // direction === top
+    if(wheelDirection === 'top' || touchDirection === 'top') {
+        console.log(wheelDirection, touchDirection)
+        if(!timer) {
+            timer = setTimeout(function() {
+                timer = null;
+                
+                if($secWrap.hasClass('depth1') && !$secWrap.hasClass('active')) {
+                    $(window).scrollTop(0);
+                    
                     $visualSec.find('.text-area').css({
                         'position': 'absolute',
                         'top': visualPosInfo.endY + 3
@@ -113,62 +119,65 @@ const videoSectionScrollAnimation2 = function() {
                     
                     setTimeout(function() {
                         $secWrap.addClass('depth2');
+                        $visualSec.find('.inner').addClass('invert');
                     }, 1000);
                 }
-            }, 800);
+            }, 200);
         }
     
         if(!timer2) {
-            timer2 = setTimeout(() => {
+            timer2 = setTimeout(function() {
                 timer2 = null;
                 if($secWrap.hasClass('depth2') && !$secWrap.hasClass('active')) {
-                    
-                    $secWrap.css({ 
-                        'transform': 'translate3d(0, -'+ (279 / 360 * 100) +'vw, 0)',
-                    });
-                    $secWrap.removeClass('depth1 depth2');
+
+                    $visualSec.find('.text-area').animate({
+                        'top': '-' + (88 / 360 * 100).toFixed(4) + 'vw'
+                    }, 1000);
+
+                    $visualSec.find('.inner').animate({
+                        'padding-top': 0
+                    }, 1000);
+
+                    $secWrap.removeClass('depth1');
+                    $secWrap.removeClass('depth2');
                     $secWrap.addClass('active');
-                    // $secWrap.addClass('active2')
+
                     $('.visual-sec').find('video').get(0).play();
                 }
-            }, 800);
+            }, 200);
+        } else {
+            return;
         }
-
-        // if($secWrap.hasClass('active2')) {
-        //     $('html, body').animate({scrollTop : $('.balance-promise-sec').offset().top }, 800);
-        //     $secWrap.removeClass('active2')
-        // }
     }
 
-    const videoWrapY = $('.video-wrap').get(0).getBoundingClientRect().y;
+    // direction === bottom
     if(wheelDirection === 'bottom' || touchDirection === 'bottom') {
-        if(videoWrapY > 0 && videoWrapY < 5) {
-            $contents.addClass('fixed');
-            $secWrap.addClass('depth1 depth2');
-            $secWrap.css({ 'transform': 'translate3d(0, 0, 0)' });
-            $('.visual-sec').find('video').get(0).pause();
-        }
+        let aa = $('.page-tit').children('span').eq(1).offset().top;
 
-        const isActive = $secWrap.hasClass('active');
-        if(isActive && $visualSec.offset().top === 0) {
-            $contents.removeClass('fixed');
-            $secWrap.removeClass('depth2 active');
-            $visualSec.find('.inner').attr('style', '');
-            
-            $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
-            $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
-        }
+        if(yOffset === 0) {
+            const $visualSec = $('.visual-sec');
+            if($('.sec-wrap').hasClass('active')) {
 
-        if(!isActive && $secWrap.hasClass('depth2')) {
-            $secWrap.removeClass('depth2');
-            $visualSec.find('.inner').attr('style', '');
+                $visualSec.find('.text-area').animate({
+                    'top': (193 / 360 * 100).toFixed(4) + 'vw'
+                }, 1000);
 
-            $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
-            $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
-        }
+                $visualSec.find('.inner').animate({
+                    'padding-top': (280 / 360 * 100).toFixed(4) + 'vw'
+                }, 1000, function() {
+                    $visualSec.find('.inner').removeClass('invert')
+                    $('.sec-wrap').addClass('depth1');
+                });
 
-        if($(window).scrollTop() > 0 && $secWrap.hasClass('depth2')) {
-            $secWrap.removeClass('depth2');
+                $('.sec-wrap').removeClass('active');
+            }
+
+            if($('.sec-wrap').hasClass('depth1')) {
+                $secWrap.removeClass('depth2');
+                $('.visual-sec').find('.inner').attr('style', '');
+                $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
+                $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
+            }
         }
     }
 }
@@ -265,45 +274,6 @@ const setSwipter = function() {
         }
     });
 }
-
-let initialX, initialY, wheelDirection, touchDirection;
-const getDirection = function(e) {
-    if (initialX !== null && initialY !== null) {
-        const currentX = getClientX(e)
-            , currentY = getClientY(e);
-
-        let diffX = initialX - currentX
-          , diffY = initialY - currentY;
-
-        if(Math.abs(diffX) > Math.abs(diffY)) {
-            if(0 < diffX) {
-                touchDirection = 'left';
-                $('.scroll-direction').text(touchDirection);
-            } else {
-                touchDirection = 'right';
-                $('.scroll-direction').text(touchDirection);
-            }
-        } else {
-            if(0 < diffY) {
-                touchDirection = 'top';
-                $('.scroll-direction').text(touchDirection);
-            } else {
-                touchDirection = 'bottom';
-                $('.scroll-direction').text(touchDirection);
-            }
-        }
-    }
-
-    return touchDirection;
-}
-
-const getClientX = function(e) {
-    return e.touches ? e.touches[0].clientX : e.clientX;
-};
-
-const getClientY = function(e) {
-    return e.touches ? e.touches[0].clientY : e.clientY;
-};
 
 const optimizeAnimation = function(cb) {
     let ticking = false;

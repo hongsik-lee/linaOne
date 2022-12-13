@@ -1,6 +1,7 @@
 @import url(common/common.css);
 
 html, body {position: relative;overflow-x: hidden;}
+#contents {transition: all .8s ease;}
 #contents.fixed {position: fixed; overflow: hidden;}
 .sec-wrap {transition: all .8s ease;}
 .sec-wrap.depth1 {position:fixed;overflow: hidden;}
@@ -28,6 +29,7 @@ html, body {position: relative;overflow-x: hidden;}
 .main .visual-sec .text-area > .txtLine.eng span {transition-delay: .7s;font-family: var(--poppins-fonts);font-weight: 400;font-size: var(--title-type3);line-height: 6vw;} 
 .main .visual-sec .text-area > .txtLine:last-child span {transition-delay: .9s;font-family: var(--poppins-fonts);font-weight: 600;font-size: 6.6667vw;line-height: 8vw;} 
 .main .visual-sec .inner {padding: 158.0556vw 0 0;transition: all 1s ease;}
+.main .visual-sec .inner.invert {transition: none}
 .main .visual-sec .video-wrap {display: flex;justify-content: center;width: 100%;}
 .main .video-wrap .cut-off {position: absolute;top: 0;width: calc((100vw - 88.8889vw) / 2);height: 100%;background-color: #fff;transform:translate3d(0, 0 ,0);z-index: 100;transition: all 1s ease;}
 .main .video-wrap .cut-off.left {left: 0;}
