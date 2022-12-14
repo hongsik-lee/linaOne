@@ -57,6 +57,33 @@ $(document).ready(function() {
 
     // 새로고침시 맨 위로
     $(window).on('beforeunload', function() { $(window).scrollTop(0); });
+
+    // var wrapperHeight = $('.balance-promise-sec').height();
+    // // var scrollDistance = $('#scrollDistance').height();
+
+    // var action = new TimelineMax({paused:true})
+    //             .to('.scroll-wrap',1,{y:-wrapperHeight, ease: 'power1', duration: 5});
+
+    // // === scrolling sync =========================
+    // var lastScrollTop = 0;
+
+    // // distance defines the scroll speed
+    // TweenLite.set("#scrollDistance",{height: wrapperHeight });
+
+    // $('#scroll').scroll(function(e) {
+    //     var scrollNum = $('#scroll').scrollTop();
+    //     scrollPercent = $('#scroll').scrollTop() / ($('#scrollDistance').height() - $('#scroll').height());
+        
+    //     var progress = scrollPercent; 
+    
+    //     // !!!  for up / down same ease !!!
+    //     if (scrollNum > lastScrollTop) {  
+    //         TweenLite.to(action, 1, {progress:progress, ease: Power3.easeOut});
+    //     } else {   
+    //     TweenLite.to(action, 1, {progress:progress, ease: Power3.easeOut});
+    //     }
+    //     lastScrollTop = scrollNum;
+    // });
 });
 
 let balanceSecRealLt;
@@ -123,6 +150,7 @@ const videoSectionScrollAnimation = function() {
     }
 }
 
+// visial 애니메이션 순서대로
 const visualAnimation = function(order) {
     const $secWrap = $('.sec-wrap')
         , $visualSec = $('.visual-sec');
@@ -168,6 +196,7 @@ const visualAnimation = function(order) {
     }
 }
 
+// visial 애니메이션 역순대로
 const visualAnimationReverse = function(order) {
     const $secWrap = $('.sec-wrap')
         , $visualSec = $('.visual-sec');
@@ -202,6 +231,7 @@ const visualAnimationReverse = function(order) {
     }
 }
 
+// 고정 화살표 이동 버튼 클릭
 const handelSecMoveBtnClick = function(e) {
     const $target = $(e.currentTarget)
 
@@ -350,19 +380,3 @@ const optimizeAnimation = function(cb) {
         }
     }
 }
-
-// // header nav animation
-// const openNav = function() {
-//     $('#gnb-wrap').addClass('on');
-// }
-
-// const closeNav = function() { 
-//     $('#gnb-wrap').removeClass('on');
-
-//     const $navLis = $('.nav > li');
-//     setTimeout(function() {
-//         $navLis.each(function(index, item) {
-//             $(item).removeClass('active').find('.sub-nav').css('display', 'none');
-//         });
-//     }, 300);
-// }
