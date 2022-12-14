@@ -17,11 +17,11 @@
 .business .business-img img {display: block;width: 100%;}
 .business .business-img img:first-child {width: 4rem;margin:0 auto 5rem}
 .business .business-col {position:relative;padding-bottom:7rem;margin-top: 8rem;display:flex;justify-content: space-between;column-gap: 2rem;}
-.business .business-col:after {position:absolute;width:calc(100% - 4rem);left:2rem;bottom:0;border-bottom:1px solid #C8C8C8;content:'';}
 .business .business-col li {width:100%;text-align: center;border-top: 2px solid #000;padding-top: 2rem;}
 .business .business-col li p {font-size: var(--small-size);font-weight:500;line-height:140%;}
 .business .business-col li p.title {font-size: var(--title-type3);font-weight: 700;line-height:140%;}
 .business .business-col li p + p {margin-top: 2rem;}
+.business .business-col + .line {margin:0 5.556vw;border-bottom:1px solid #C8C8C8;}
 .business .txt {margin-top: 7rem;text-align: center;white-space: pre-line;font-size: var(--title-type3);font-weight:700;line-height: 140%;color:#150F96}
 
 /* sales Marketing */

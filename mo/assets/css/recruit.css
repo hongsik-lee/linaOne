@@ -7,8 +7,9 @@
 
 /* 채용절차 */
 .sub-wrap.recruit .visual:before {background-image:url(../images/re_recruit_visual.png)}
-.sub-wrap.recruit .content.recruit-sec01 > .desc {margin-bottom: 0;margin-top: 8rem;}
-.sub-wrap.recruit .content.recruit-sec01 > .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
+.sub-wrap.recruit .content.recruit-sec01 .desc {margin:15rem 0;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
+.sub-wrap.recruit .content.recruit-sec01 .desc {margin-bottom: 0;margin-top: 8rem;}
+.sub-wrap.recruit .content.recruit-sec01 .desc + .desc {margin-top:3rem;margin-bottom: 15rem;}
 .sub-wrap .acc-wrap {width:calc(100% - 4rem);margin:8rem auto 0;border-top: 2px solid #000;}
 .sub-wrap .acc-wrap li {padding:3.2rem 0;border-bottom: 1px solid #EBEBEB;}
 .sub-wrap .acc-wrap .txt {position:relative;padding-right: 5.4rem;}
@@ -20,7 +21,7 @@ background-size: contain;top:2.8rem;content: '';}
 .sub-wrap .acc-wrap .cont {margin-top:3rem;font-size: var(--small-size);font-weight:500;color:#666;line-height: 140%;}
 
 /* 인터넷보험call TMR 지원문의 BOX */
-.recruit-box {margin:15rem 2rem 0;}
+.recruit-box {margin:15rem 0 0;}
 .recruit-box .box + .box {margin-top: 2rem;}
 .recruit-box .box {padding:2rem; background:#f9f9f9;}
 .recruit-box .box .title {font-size: var(--small-size);font-weight: 700;white-space: pre;}
@@ -117,12 +118,13 @@ background-size: contain;top:2.8rem;content: '';}
 .sub-sec03 .btn-more {margin:3rem auto 0;}
 
 /* TMR 지원서 작성하기 */
-.sub-wrap .content.trm-recruit-sec02 > .desc {margin: 8rem 0 0;}
-.sub-wrap .content.trm-recruit-sec02 > .desc + .desc {margin-top: 3rem; margin-bottom: 8rem;}
+.sub-wrap .content.trm-recruit-sec02 .desc {margin:15rem 0;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
+.sub-wrap .content.trm-recruit-sec02 .desc {margin: 8rem 0 0;}
+.sub-wrap .content.trm-recruit-sec02 .desc + .desc {margin-top: 3rem; margin-bottom: 8rem;}
 .trm-recruit-sec02 .linaTmr {padding-left:5.6rem;font-size: 11.111vw;line-height:140%;font-weight:900;color: #150F96;}
 .trm-recruit-sec02 .btn {margin: 8rem auto 0;}
 .trm-recruit-sec02 .col-box {margin-top:20rem;padding:3rem;background: #F9F9F9;border-radius: 8px;}
-.trm-recruit-sec02 .col-box + .col-box {margin-top: 3rem;}
+.trm-recruit-sec02 .col-box:first-of-type {margin-top: 3rem;}
 .trm-recruit-sec02 .col-box .badge {display:inline-block;width:7rem;height:2.6rem;font-size:3.333vw;color:#fff;line-height:2.6rem;font-weight:600;border-radius: 0.4rem;text-align: center;}
 .trm-recruit-sec02 .col-box .badge.blue {background: #01C1D6;}
 .trm-recruit-sec02 .col-box .badge.green {background:#7ACB00;}
