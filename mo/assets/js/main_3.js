@@ -350,3 +350,19 @@ const optimizeAnimation = function(cb) {
         }
     }
 }
+
+// // header nav animation
+// const openNav = function() {
+//     $('#gnb-wrap').addClass('on');
+// }
+
+// const closeNav = function() { 
+//     $('#gnb-wrap').removeClass('on');
+
+//     const $navLis = $('.nav > li');
+//     setTimeout(function() {
+//         $navLis.each(function(index, item) {
+//             $(item).removeClass('active').find('.sub-nav').css('display', 'none');
+//         });
+//     }, 300);
+// }
