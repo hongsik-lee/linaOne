@@ -3,7 +3,7 @@
 /* OVERVIEW */
 .sub-wrap.overview .visual:before {background-image:url(../images/ab_overview_visual.png)}
 .overview .content > .desc {margin:15rem 3rem 15rem 7.6rem;padding:0;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
-.overview .introduction {padding:16rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
+.overview .introduction {padding:15rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;background-repeat: no-repeat;}
 .overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
@@ -145,8 +145,7 @@
 .associate .rule-sec .ico-box span {display: block;font-size: var(--small-size);font-weight: 500;color:#666;line-height:150%;}
 .associate .rule-sec .ico-box span + span {margin-top:0.4rem;}
 .associate .rule-sec .ico-box span:first-of-type {margin-top:4rem;}
-.associate .rule-sec:nth-of-type(2) .ico-box span + span {margin-top: 1rem;}
-/* .associate .rule-sec:last-of-type {opacity: 0.2;} */
+.associate .rule-sec + .rule-sec .ico-box span + span {margin-top: 1rem;}
 .associate .mail-box {margin:15rem auto 0;}
 
 /* 공지사항 스타일 */
