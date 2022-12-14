@@ -10,7 +10,7 @@
 .privacy-popup li,
 .privacy-popup table th,
 .privacy-popup table td {color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;}
-.privacy-popup {padding: 31.1111vw 0;}
+.privacy-popup {padding: 21.1111vw 0;}
 .privacy-popup .page-tit {margin-bottom: 13.8889vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
 .privacy-popup .page-desc {margin-bottom: 16.6667vw;}
 .privacy-popup .sec:nth-of-type(n+2) {margin-top: 16.6667vw;}
@@ -65,30 +65,48 @@
 .privacy-popup .sec12 a span {text-decoration: underline;}
 
 /* 이메일무단수집거부 */
-.email_collect_refuse {padding: 31.1111vw 0;}
-.email_collect_refuse .page-tit {margin-bottom: 13.8889vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
+.email_collect_refuse {padding: 21.1111vw 0;}
+.email_collect_refuse .page-tit {margin-bottom: 5.5556vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
 .email_collect_refuse .page-desc-sec {margin-top: 5.5556vw;}
 .email_collect_refuse .sub-tit {margin-bottom: 11.1111vw;font-weight: 700;font-size: var(--title-type3);line-height: 7vw;}
 .email_collect_refuse p {color: #666;}
 .email_collect_refuse .desc,
 .email_collect_refuse .extra-info {margin-bottom: 57.2222vw;font-weight: 500;font-size: var( --small-size);line-height: 5.4444vw;}
-.email_collect_refuse .extra-info {margin: 0;text-align: right;}
+.email_collect_refuse .extra-info {margin: 0;text-align: right;color: #999;}
 
 /* 금융소비자보호 */
-.financial_popup {padding: 31.1111vw 0;}
+.financial_popup {padding: 21.1111vw 0;}
 .financial_popup .page-tit {margin-bottom: 13.8889vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
 .financial_popup section:nth-of-type(n+2) {margin-top: 16.6667vw;}
-.financial_popup section .tit {margin-bottom: 2.2222vw;color: #150F96;font-weight: 600;font-size: var(--basic-size);line-height: 6.2222vw;}
-.financial_popup section pre {color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;white-space: pre-line;}
-.financial_popup section pre + pre {margin-top: 5.5556;}
+.financial_popup .tit {margin-bottom: 8.3333vw;color: #150F96;font-weight: 600;font-size: var(--basic-size);line-height: 5.3333vw}
+.financial_popup h3 {margin-bottom: 1.6667vw;font-weight: 600;}
+.financial_popup h3, .financial_popup .desc, .financial_popup li {color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.3333vw;}
+.financial_popup .list > li {margin-bottom: 8.3333vw}
+.financial_popup .list > li.mb-0 {margin-bottom: 0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 보험대리점등록증 */
-.regi_popup {padding: 31.1111vw 0;}
-.regi_popup .page-tit {margin-bottom: 13.8889vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
+.regi_popup {padding: 21.1111vw 0;}
+.regi_popup .page-tit {margin-bottom: 9.4444vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
 .regi_popup img {display:block;width:100%;width: 88.8889vw;margin:0 auto}
 
 /* 공시실 */
-.disclosure-table {padding: 31.1111vw 0;}
+.disclosure-table {padding: 21.1111vw 0;}
 .disclosure-table .page-tit {margin-bottom: 13.8889vw;font-weight: 700;font-size: 6.6667vw;line-height: 9.3333vw;}
 .disclosure-table .flexbox {display: flex;justify-content: flex-end;margin: 13.8889vw 0;}
 .disclosure-table select {width: 45.5556vw;height: 11.1111vw;padding: 2.2222vw 3.3333vw;border: 0.2778vw solid #C8C8C8;font-size: var(--small-size);line-height: 5.4444vw;font-weight:500;background: url(../images/icon/icon_arrow_down.png) no-repeat;background-position: right 3.3333vw center;background-size: 6.6667vw;}

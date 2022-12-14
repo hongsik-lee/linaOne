@@ -2,7 +2,14 @@ let yOffset = 0;
 let wheelDirection;
 let touchDirection;
 let startX, startY, endX, endY;
+
 $(document).ready(function() {
+    setSwipter();
+    getBalanceSecPositionTop();
+
+    $('.visual-sec').find('video').get(0).play();
+    $('.visual-sec').find('video').get(0).pause();
+
     $("#contents").on('touchstart',function(event){
         startX = event.originalEvent.changedTouches[0].screenX;
         startY = event.originalEvent.changedTouches[0].screenY;
@@ -16,15 +23,11 @@ $(document).ready(function() {
         if(endY-startY > 5) touchDirection = 'bottom';
     });
 
-    setSwipter();
-    getVisualSectionSrcollInfo();
-    
-    $('.visual-sec').find('video').get(0).play();
-    $('.visual-sec').find('video').get(0).pause();
-
     $(window).on('mousewheel', function(e) {
         wheelDirection = e.originalEvent.deltaY > 0 ? "top" : "bottom";
     });
+
+    $(document).on('click', '.sec-move-btn', handelSecMoveBtnClick);
 
     const $secWrap  = $('.sec-wrap > div');
     $secWrap.each(function(index, item) {
@@ -33,10 +36,7 @@ $(document).ready(function() {
 
     $(window).on('scroll mousewheel touchmove', optimizeAnimation(function() {
         yOffset = $(window).scrollTop();
-        videoSectionScrollAnimation2();
-
-        // if(outerHeight > scrollHeight - scrollY) $slide.scrollTop(scrollHeight - outerHeight);
-        // if(yOffset < 0) $('html, body').scrollTop(0);
+        videoSectionScrollAnimation();
 
         $secWrap.each(function(index, elem) {
             const $target = $(elem)
@@ -52,50 +52,24 @@ $(document).ready(function() {
             textMotionAnimation(elem);
         });
 
-        changeIndicatorStatus();
+        changeControlStatus();
     }));
 
-    $(document).on('click', '.goTop', function(e) {
-        const $currentScene = $('.sec-wrap').find('.seen-sec').last()
-            , index = $currentScene.index()
-            , $nextScene = $currentScene.next();
-
-        if($nextScene.length > 0) {
-            scrollMovePosition(index + 1);
-        }
-
-        if($(e.currentTarget).hasClass('up')) {
-            $('html, body').animate({scrollTop : 0 }, 800, function() {
-                visualBottomAnimation01();
-
-                setTimeout(function() {
-                    visualBottomAnimation02();
-                }, 2000)
-            });
-        }
-    });
-
-    // 중간 새로고침시 맨 위로
-    if(window.pageYOffset > 0) {
-        $(window).scrollTop(0);
-    }
-    
-    
+    // 새로고침시 맨 위로
+    $(window).on('beforeunload', function() { $(window).scrollTop(0); });
 });
 
-const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
-const getVisualSectionSrcollInfo = () => {
-    visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 7
-    visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top;
-    visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2;
-    visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
+let balanceSecRealLt;
+const getBalanceSecPositionTop = function() {
+    const visialSecPt = parseInt($('.visual-sec').find('.inner').css('padding-top'))
+        , balanceSecLt = $('.balance-promise-sec').position().top;
+
+    balanceSecRealLt = balanceSecLt - visialSecPt;
 }
 
-let timer, timer2;
-const videoSectionScrollAnimation2 = function() {
-    const $contents = $('#contents')
-        , $secWrap = $('.sec-wrap')
-        , $visualSec = $('.visual-sec');
+let timer, timer2, isMoveBtn = false;
+const videoSectionScrollAnimation = function() {
+    const $secWrap = $('.sec-wrap')
     
     if($(window).scrollTop() > 0 && $secWrap.hasClass('active')) {
         $secWrap.removeClass('depth2');
@@ -108,24 +82,7 @@ const videoSectionScrollAnimation2 = function() {
                 timer = null;
                 
                 if($secWrap.hasClass('depth1') && !$secWrap.hasClass('active')) {
-                    $(window).scrollTop(0);
-                    
-                    $visualSec.find('.text-area').css({
-                        'position': 'absolute',
-                        'top': visualPosInfo.endY + 3
-                    });
-    
-                    $visualSec.find('.inner').css({
-                        'padding-top': (281 / 360 * 100).toFixed(4) + 'vw'
-                    });
-
-                    $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
-                    $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
-                    
-                    setTimeout(function() {
-                        $secWrap.addClass('depth2');
-                        $visualSec.find('.inner').addClass('invert');
-                    }, 500);
+                    !isMoveBtn ? visualAnimation(1) : false;
                 }
             }, 200);
         }
@@ -134,31 +91,10 @@ const videoSectionScrollAnimation2 = function() {
             timer2 = setTimeout(function() {
                 timer2 = null;
                 if($secWrap.hasClass('depth2') && !$secWrap.hasClass('active')) {
-
-                    $visualSec.find('.text-area').animate({
-                        'top': '-' + (88 / 360 * 100).toFixed(4) + 'vw'
-                    }, 800);
-
-                    $visualSec.find('.inner').animate({
-                        'padding-top': 0
-                    }, 800);
-
-                    $secWrap.removeClass('depth1');
-                    $secWrap.removeClass('depth2');
-                    $secWrap.addClass('active');
-                    $secWrap.addClass('active2');
-                    $('.visual-sec').find('video').get(0).play();
+                    !isMoveBtn ? visualAnimation(2) : false;
                 }
             }, 200);
         }
-
-        if($secWrap.hasClass('active2')) {
-            $secWrap.removeClass('active2');
-            // scrollMovePosition(1)
-            // $(window).scrollTop($('.balance-promise-sec').offset().top);
-            // $('html, body').animate({scrollTop : $('.balance-promise-sec').offset().top }, 800);
-        }
-
     }
 
     // direction === bottom
@@ -166,14 +102,12 @@ const videoSectionScrollAnimation2 = function() {
         if(yOffset === 0) {
             const $visualSec = $('.visual-sec');
             if($('.sec-wrap').hasClass('active')) {
-                console.log('1')
-
                 $visualSec.find('.text-area').animate({
-                    'top': (193 / 360 * 100).toFixed(4) + 'vw'
+                    'top': (154 / 360 * 100).toFixed(4) + 'vw'
                 }, 800);
 
                 $visualSec.find('.inner').animate({
-                    'padding-top': (280 / 360 * 100).toFixed(4) + 'vw'
+                    'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw'
                 }, 800, function() {
                     $visualSec.find('.inner').removeClass('invert')
                     $('.sec-wrap').addClass('depth1');
@@ -183,59 +117,27 @@ const videoSectionScrollAnimation2 = function() {
             }
 
             if($('.sec-wrap').hasClass('depth1')) {
-                console.log('2');
-                $secWrap.removeClass('depth2');
-                $visualSec.find('.inner').removeClass('invert');
-                $('.visual-sec').find('.inner').attr('style', '');
-                $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
-                $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
+                visualAnimationReverse(2)
             }
         }
     }
 }
 
-const visualBottomAnimation01 = function() {
-    $('.visual-sec').find('.text-area').animate({
-        'top': (193 / 360 * 100).toFixed(4) + 'vw'
-    }, 1000);
+const visualAnimation = function(order) {
+    const $secWrap = $('.sec-wrap')
+        , $visualSec = $('.visual-sec');
 
-    $('.visual-sec').find('.inner').animate({
-        'padding-top': (280 / 360 * 100).toFixed(4) + 'vw'
-    }, 1000, function() {
-        $('.visual-sec').find('.inner').removeClass('invert')
-        $('.sec-wrap').addClass('depth1');
-    });
-
-    $('.sec-wrap').removeClass('active');
-}
-
-const visualBottomAnimation02 = function() {
-    $('.sec-wrap').removeClass('depth2');
-    $('.visual-sec').find('.inner').removeClass('invert');
-    $('.visual-sec').find('.inner').attr('style', '');
-    $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
-    $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
-}
-
-
-const scrollMovePosition = function(index) {
-    if(index === 1) {
-        const $contents = $('#contents')
-            , $secWrap = $('.sec-wrap')
-            , $visualSec = $('.visual-sec');
-
-        if($secWrap.hasClass('depth1') && !$secWrap.hasClass('active')) {
-            $(window).scrollTop(0);
-            
+    switch(order) {
+        case 1:
             $visualSec.find('.text-area').css({
                 'position': 'absolute',
-                'top': visualPosInfo.endY + 3
+                'top': (154 / 360 * 100).toFixed(4) + 'vw'
             });
-
+        
             $visualSec.find('.inner').css({
-                'padding-top': (281 / 360 * 100).toFixed(4) + 'vw'
+                'padding-top': (246 / 360 * 100).toFixed(4) + 'vw'
             });
-
+        
             $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
             $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
             
@@ -243,34 +145,106 @@ const scrollMovePosition = function(index) {
                 $secWrap.addClass('depth2');
                 $visualSec.find('.inner').addClass('invert');
             }, 500);
+            break;
 
-            setTimeout(function() {
-                if($secWrap.hasClass('depth2') && !$secWrap.hasClass('active')) {
+        case 2:
+            $visualSec.find('.text-area').animate({
+                'top': '-' + (88 / 360 * 100).toFixed(4) + 'vw'
+            }, 800);
+        
+            $visualSec.find('.inner').animate({
+                'padding-top': 0
+            }, 800);
+            
+            $secWrap.removeClass('depth1');
+            $secWrap.removeClass('depth2');
+            $secWrap.addClass('active');
+            $visualSec.find('video').get(0).play();
+            break;
+        
+        case 3:
+            $('html, body').animate({scrollTop : balanceSecRealLt }, 800);
+            break;
+    }
+}
 
-                    $visualSec.find('.text-area').animate({
-                        'top': '-' + (88 / 360 * 100).toFixed(4) + 'vw'
-                    }, 800);
+const visualAnimationReverse = function(order) {
+    const $secWrap = $('.sec-wrap')
+        , $visualSec = $('.visual-sec');
 
-                    $visualSec.find('.inner').animate({
-                        'padding-top': 0
-                    }, 800);
+    switch(order) {
+        case 1:
+            $visualSec.find('.text-area').animate({
+                'top': (154 / 360 * 100).toFixed(4) + 'vw'
+            }, 100);
 
-                    $secWrap.removeClass('depth1');
-                    $secWrap.removeClass('depth2');
-                    $secWrap.addClass('active');
-                    $secWrap.addClass('active2');
-                    $('.visual-sec').find('video').get(0).play();
-                }
-            }, 500);
+            $visualSec.find('.inner').animate({
+                'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw'
+            }, 100, function() {
+                $visualSec.find('.inner').removeClass('invert')
+            });
+            
+            $('.sec-wrap').removeClass('active');
+            break;
 
-            // setTimeout(function() {
-            //     $('html, body').animate({scrollTop : $('.balance-promise-sec').offset().top }, 800);
-            //     console.log($(window).scrollTop())
-            // }, 800);
+        case 2:
+            $secWrap.removeClass('depth2');
+            $visualSec.find('.inner').removeClass('invert');
+            $('.visual-sec').find('.inner').attr('style', '');
+            $('.cut-off.left').css('transform', 'translate3d(0, 0, 0)');
+            $('.cut-off.right').css('transform', 'translate3d(0, 0, 0)');
+            $visualSec.find('video').get(0).pause();
+            break;
+        
+        case 3:
+            $('html, body').animate({scrollTop : balanceSecRealLt }, 800);
+            break;
+    }
+}
+
+const handelSecMoveBtnClick = function(e) {
+    const $target = $(e.currentTarget)
+
+    if($target.hasClass('next')) {
+        if($('.sec-wrap').hasClass('depth1') && !$('.sec-wrap').hasClass('active')) {
+            $(window).scrollTop(0);
+            visualAnimation(1);
         }
-    } else {
-        let posTop = $('.sec-wrap').children().eq(index).offset().top;
-        $('html, body').animate({scrollTop : posTop }, 800);
+
+        setTimeout(function() {
+            if($('.sec-wrap').hasClass('depth2') && !$('.sec-wrap').hasClass('active')) {
+                visualAnimation(2);
+            }
+        }, 500);
+
+        setTimeout(function() {
+            visualAnimation(3);
+        }, 1000);
+    }
+
+    if($target.hasClass('up')) {
+        let posTop = $('.sec-wrap').children().eq(0).offset().top;
+        isMoveBtn = true;
+        
+        $('html, body').animate({scrollTop : posTop }, 800, function() {
+
+            if($('.sec-wrap').hasClass('active')) {
+                $('.sec-wrap').addClass('depth1');
+                visualAnimationReverse(1)
+            }
+
+            if($('.sec-wrap').hasClass('depth1')) {
+                setTimeout(function() {
+                    visualAnimationReverse(2);
+                    isMoveBtn = false;
+                }, 230);
+                
+                setTimeout(function() {
+                    visualAnimationReverse(2);
+                    isMoveBtn = false;
+                }, 250);
+            }
+        });
     }
 }
 
@@ -310,27 +284,27 @@ const isElemOverScreen = function(elem, triggerDiff) {
     return top > innerHeight + (triggerDiff || 0);
 }
 
-const changeIndicatorStatus = function() {
+const changeControlStatus = function() {
     const $currentScene = $('.sec-wrap').find('.seen-sec').last()
         , len = $('.sec-wrap').children().length
         , index = $currentScene.index()
         , $indicator = $('.indicator-group')
         , ratio = getElemScrollRatio($currentScene)
-        , $goTop = $('.goTop');
+        , $goTop = $('.sec-move-btn');
 
     if(1 - ratio > 0.2) {
         $indicator.children().eq(index).addClass('active').siblings().removeClass('active');
     }
-
-    if(index + 1 === len) {
+    if(index === 0) {
+        $goTop.addClass('next');
+        $goTop.removeClass('blind up');
+    } else if(index + 1 === len) {
         $goTop.addClass('up');
+        $goTop.removeClass('blind next');
         $goTop.find('em').text('맨 위로 이동');
     } else {
-        if($goTop.hasClass('up')) {
-            $goTop.removeClass('up');
-            $goTop.find('em').text('다음 section 이동');
-        }
-    }
+        $goTop.addClass('blind');
+    } 
 }
 
 const setSwipter = function() {
@@ -339,7 +313,7 @@ const setSwipter = function() {
     new Swiper(".brand-goal-swiper", {
         slidesPerView: 'auto',
         slidesOffsetAfter: 40,
-        speed: 1000,
+        speed: 600,
         simulateTouch: false,
         navigation: {
             nextEl: ".control-next",

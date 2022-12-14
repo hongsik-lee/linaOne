@@ -1,20 +1,34 @@
 // mobile
 let initialX, initialY, wheelDirection, touchDirection;
+
 $(document).ready(function() {
     setSwiper();
     setSwipter2();
     getVisualSectionSrcollInfo();
     swiperWheelControl.turnOff();
     
-    $(window).on('touchmove', getDirection);
+    // $(window).on('touchmove', getDirection);
 
-    $(window).on('touchstart', function(e) {
-        initialX = getClientX(e);
-        initialY = getClientY(e);
-    });
+    // $(window).on('touchstart', function(e) {
+    //     initialX = getClientX(e);
+    //     initialY = getClientY(e);
+    // });
     
     $(window).on('mousewheel', function(e) {
         wheelDirection = e.originalEvent.deltaY > 0 ? "top" : "bottom";
+    });
+
+    $("#contents").on('touchstart',function(event){
+        startX = event.originalEvent.changedTouches[0].screenX;
+        startY = event.originalEvent.changedTouches[0].screenY;
+    });
+
+    $("#contents").on('touchmove',function(event){
+        endX=event.originalEvent.changedTouches[0].screenX;
+        endY=event.originalEvent.changedTouches[0].screenY;
+
+        if(startY-endY > 5) touchDirection = 'top';
+        if(endY-startY > 5) touchDirection = 'bottom';
     });
 
     $(document).on('click', '.swiper-next-btn', function(e) {
@@ -346,43 +360,43 @@ const optimizeAnimation = function(cb) {
     }
 }
 
-const getClientX = function(e) {
-    return e.touches ? e.touches[0].clientX : e.clientX;
-};
+// const getClientX = function(e) {
+//     return e.touches ? e.touches[0].clientX : e.clientX;
+// };
 
-const getClientY = function(e) {
-    return e.touches ? e.touches[0].clientY : e.clientY;
-};
+// const getClientY = function(e) {
+//     return e.touches ? e.touches[0].clientY : e.clientY;
+// };
 
-const getDirection = function(e) {
-    if (initialX !== null && initialY !== null) {
-        const currentX = getClientX(e)
-            , currentY = getClientY(e);
+// const getDirection = function(e) {
+//     if (initialX !== null && initialY !== null) {
+//         const currentX = getClientX(e)
+//             , currentY = getClientY(e);
 
-        let diffX = initialX - currentX
-          , diffY = initialY - currentY;
+//         let diffX = initialX - currentX
+//           , diffY = initialY - currentY;
 
-        if(Math.abs(diffX) > Math.abs(diffY)) {
-            if(0 < diffX) {
-                touchDirection = 'left';
-                $('.scroll-direction').text(touchDirection);
-            } else {
-                touchDirection = 'right';
-                $('.scroll-direction').text(touchDirection);
-            }
-        } else {
-            if(0 < diffY) {
-                touchDirection = 'top';
-                $('.scroll-direction').text(touchDirection);
-            } else {
-                touchDirection = 'bottom';
-                $('.scroll-direction').text(touchDirection);
-            }
-        }
-    }
+//         if(Math.abs(diffX) > Math.abs(diffY)) {
+//             if(0 < diffX) {
+//                 touchDirection = 'left';
+//                 $('.scroll-direction').text(touchDirection);
+//             } else {
+//                 touchDirection = 'right';
+//                 $('.scroll-direction').text(touchDirection);
+//             }
+//         } else {
+//             if(0 < diffY) {
+//                 touchDirection = 'top';
+//                 $('.scroll-direction').text(touchDirection);
+//             } else {
+//                 touchDirection = 'bottom';
+//                 $('.scroll-direction').text(touchDirection);
+//             }
+//         }
+//     }
 
-    return touchDirection;
-}
+//     return touchDirection;
+// }
 
 // header nav animation
 const openNav = function() {
