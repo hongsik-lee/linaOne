@@ -3,7 +3,7 @@
 /* OVERVIEW */
 .sub-wrap.overview .visual:before {background-image:url(../images/ab_overview_visual.png)}
 .overview .content > .desc {margin:15rem 3rem 15rem 7.6rem;padding:0;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
-.overview .introduction {padding:16rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;}
+.overview .introduction {padding:15rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;background-repeat: no-repeat;}
 .overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
@@ -37,10 +37,10 @@
 .sub-wrap.interview .visual h1 p:last-child {padding-left: 3.7rem;}
 .sub-wrap.interview  .content {margin-bottom:0;}
 .interview .content > .desc {margin:15rem 0;padding-left: 7.6rem;}
-.interview .content > .desc span {font-size: var(--basic-size);color:#666;font-weight: 700;}
+.interview .content > .desc span {font-size: var(--basic-size);color:#666;font-weight: 700;line-height: 140%;}
 .interview .content > .desc p {margin:1.8rem 0 5rem;font-size:var(--title-type2);font-weight:700;line-height:140%;}
-.interview .content > .desc p.sign {font-size:5.833vw;line-height: 2.94rem;margin-bottom: 1.3rem;}
-.interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000;}
+.interview .content > .desc p.sign {font-size:4.167vw;line-height: 2.94rem;margin-bottom: 1.3rem;}
+.interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000;font-size: var(--small-size);}
 .interview img.sign {height: 7.4rem;margin-left: -2rem;}
 .interview .interview-sec {padding:15rem 2rem;background:url(../images/ab_interview_bg.png);background-size:cover;}
 .interview .interview-sec p {padding-left:5.6rem;font-size: var(--title-type3);color:#fff;font-weight:700;line-height: 140%;letter-spacing:-0.01em;}
@@ -59,7 +59,7 @@
 .interview .interview-box .qna-box .question {margin-bottom: 0.6rem;}
 .interview .interview-box .qna-box:nth-of-type(1) .answer {font-size: var(--title-type3);font-weight:700;line-height:140%;}
 .interview .interview-box .qna-box:nth-of-type(2) .answer {font-size:var(--small-size);line-height: 140%;font-weight: 500;}
-.interview .interview-box.left > img {max-width: 30rem;}
+.interview .interview-box.left > img {max-width: 93.750vw;}
 .interview .interview-box.left .qna-box {padding-left: 5.6rem;padding-right: 1rem;}
 .interview .directivity {padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;background-position: bottom;}
 .interview .directivity h2 {font-size: var(--basic-size);color:#fff;font-weight: 700;line-height: 140%;}
@@ -72,7 +72,7 @@
 .sub-wrap.vision .visual h1 p:last-child {padding-left: 7.6rem;}
 .sub-wrap.vision .content > .desc {margin:15rem 0;padding:0 2rem 0 7.6rem;font-size:var(--title-type2);line-height:140%;font-weight:700;word-break: keep-all;}
 .vision .vision-sec {padding:15rem 2rem;background: url(../images/ab_vision_bg.png);background-size: cover;}
-.vision .img-box {padding:0 3rem;margin-bottom: 3.2rem;}
+.vision .img-box {padding:0 1.111vw;margin-bottom: 3.2rem;}
 .vision .img-box img {display: block;width: 100%;padding-left: 7.222vw;}
 .vision .vision-sec p {margin:5rem 0 2rem;padding-left:5.6rem;font-size:var(--title-type2);font-weight: 700;line-height:140%;color:#fff;word-break: keep-all;}
 .vision .vision-sec .label {color:#fff}
@@ -97,14 +97,14 @@
 .sub-wrap.video .visual:before {background-image:url(../images/ab_video_visual.jpg)}
 .sub-wrap.video .visual h1 {left: 1.7rem;}
 .sub-wrap.video .visual h1 p:last-child {padding-left: 51.389vw}
-.sub-wrap.video .content > .desc {font-size:7.500vw;}
+.sub-wrap.video .content > .desc {font-size:6.667vw;}
 .video .video-wrap .title {margin:5rem 0 3rem;font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
 .video .video-wrap p {font-size: var(--small-size);line-height: 140%;font-weight:500;color:#666;white-space:pre-line;}
 .video .video-wrap br {display:block;padding: 3rem;}
 
 /* NEWS LIST 보도자료 */
 .sub-wrap.news_list .visual:before {background-image:url(../images/ab_news_visual.png)}
-.sub-wrap.news_list .content > .desc {font-size:7.500vw;}
+.sub-wrap.news_list .content > .desc {font-size:6.667vw;}
 
 /* Contact Us */
 .sub-wrap.contact .visual:before {background-image:url(../images/contact_visual.png)}
@@ -145,12 +145,12 @@
 .associate .rule-sec .ico-box span {display: block;font-size: var(--small-size);font-weight: 500;color:#666;line-height:150%;}
 .associate .rule-sec .ico-box span + span {margin-top:0.4rem;}
 .associate .rule-sec .ico-box span:first-of-type {margin-top:4rem;}
-.associate .rule-sec:nth-of-type(2) .ico-box span + span {margin-top: 1rem;}
-/* .associate .rule-sec:last-of-type {opacity: 0.2;} */
+.associate .rule-sec + .rule-sec .ico-box span + span {margin-top: 1rem;}
 .associate .mail-box {margin:15rem auto 0;}
 
 /* 공지사항 스타일 */
 .sub-wrap.notice .visual:before {background-image:url(../images/in_notice_visual.png)}
-.sub-wrap.notice .content > .desc {font-size:7.500vw;}
-.news_detail.notice .detail-wrap p:not(.title) {border-top: 1px solid #000;padding-top: 5rem;}
+.sub-wrap.notice .content > .desc {font-size:6.667vw;}
+.news_detail.notice .detail-wrap p:not(.title) {border-top: 1px solid #000;padding-top: 5rem;border-bottom: 1px solid #EBEBEB;}
+.news_detail .detail-wrap p:not(.title):after {display: none;}
 .news_detail.notice .detail-wrap p > a {color:#000;text-decoration: underline;}

@@ -260,11 +260,11 @@ $(document).ready(function(){
         if( $tabTitle.length-1 == idx){
             $tabTitle.parent('ul').animate({
                 scrollLeft:$(this).offset().left + 100
-            }, 800)
+            }, 1000)
         }else if (idx == 0){
             $tabTitle.parent('ul').animate({
                 scrollLeft:$(this).offset().left + 0
-            }, 800)
+            }, 500)
         }
         if($(e.target).hasClass('clicked')) {
             $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');

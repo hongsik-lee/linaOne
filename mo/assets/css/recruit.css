@@ -13,7 +13,7 @@
 .sub-wrap .acc-wrap li {padding:3.2rem 0;border-bottom: 1px solid #EBEBEB;}
 .sub-wrap .acc-wrap .txt {position:relative;padding-right: 5.4rem;}
 .sub-wrap .acc-wrap .txt:after {position: absolute;right: 0;background: url(../images/icon/icon_arrow_down.png);width:2.4rem;height: 2.4rem;display: block;transition:.3s ease;
-background-size: contain;top: 3.4rem;content: '';}
+background-size: contain;top:2.8rem;content: '';}
 .sub-wrap .acc-wrap .txt.active:after {transform: rotate(180deg);}
 .sub-wrap .acc-wrap .txt span {display:block;margin-bottom:0.8rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;}
 .sub-wrap .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
@@ -22,14 +22,16 @@ background-size: contain;top: 3.4rem;content: '';}
 /* 인터넷보험call TMR 지원문의 BOX */
 .recruit-box {margin:15rem 2rem 0;}
 .recruit-box .box + .box {margin-top: 2rem;}
-.recruit-box .box {padding:2rem; background:#f9f9f9;height:14rem;}
+.recruit-box .box {padding:2rem; background:#f9f9f9;}
 .recruit-box .box .title {font-size: var(--small-size);font-weight: 700;white-space: pre;}
 .recruit-box .box .number-wrap {text-align: right;}
 .recruit-box .box .number-wrap p:first-child {font-size:7.222vw;line-height: 100%;font-weight:700;}
 .recruit-box .box .number-wrap p:nth-of-type(2) {margin-top:0.8rem;font-size:3.611vw;color:#666;font-weight:500;line-height: 100%;}
 .recruit-box .box .number-wrap ul {margin-top:2.1rem;display: flex;column-gap:1.6rem;justify-content: flex-end;}
 .recruit-box .box:last-child .number-wrap ul {margin-top:4.2rem;}
-.recruit-box .box .number-wrap li {font-size:3.333vw;font-weight: 500;line-height: 100%;color:#666;white-space:pre;}
+.recruit-box .box .number-wrap li {position:relative;font-size:3.333vw;font-weight: 500;line-height: 100%;color:#666;white-space:pre;}
+.recruit-box .box .number-wrap li::after {position: absolute;width:0.4rem;height:0.4rem;right:-1rem;top:50%;transform:translateY(-50%);background:#dcdcdc;border-radius:50%;content: '';}
+.recruit-box .box .number-wrap li:last-child::after {display: none;}
 
 /* 채용절차 */
 .recruit-sec01 .process ul {padding-left: 5.6rem;margin-top: 5rem;}
@@ -68,7 +70,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .recruit-sec04 .acc-wrap .txt span {font-size: var(--small-size);font-weight: 500;line-height: 140%;}
 .recruit-sec04 .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
 .recruit-sec04 .acc-wrap .cont {font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;padding:0;height: 0;opacity:0;transition:0.3s ease;}
-.recruit-sec04 .acc-wrap .txt.acc-active + .cont {opacity: 1;transition:0;margin-top:4.2rem;height: auto;}
+.recruit-sec04 .acc-wrap .txt.acc-active + .cont {opacity: 1;transition:0;margin-top:3rem;height: auto;}
 .recruit-sec04 .acc-wrap .txt.acc-active:after {transform: rotate(180deg);transition:0.3s ease;}
 .recruit-sec04 .mail-box {margin:15rem auto 0;}
 
@@ -91,7 +93,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .sub-sec01 .info-box .info > span {font-size: var(--small-size);font-weight: 700;line-height: 100%;}
 .sub-sec01 .info-box .info > p {margin-top: 3rem;font-size: var(--title-type2);font-weight: 700;line-height: 100%;}
 .sub-sec01 .info-box .info > p strong {padding-left:1.2rem;font-size:9.444vw;font-weight: 700;}
-.sub-sec01 .info-box .info > p.noti {font-size: var(--small-size);font-weight: 500;line-height: 100%;color:#666}
+.sub-sec01 .info-box .info > p.noti {margin-top:1.4rem;font-size: var(--small-size);font-weight: 500;line-height: 100%;color:#666}
     /* 선택라이나 맞춤 */
 .sub-sec02 {margin-top: 8rem;}
 .sub-sec02 .center-box + .center-box {margin-top: 15rem;}
@@ -115,7 +117,7 @@ background-size: contain;top: 3.4rem;content: '';}
 .sub-sec03 .btn-more {margin:3rem auto 0;}
 
 /* TMR 지원서 작성하기 */
-.sub-wrap .content.trm-recruit-sec02 > .desc {margin: 15rem 0 0;}
+.sub-wrap .content.trm-recruit-sec02 > .desc {margin: 8rem 0 0;}
 .sub-wrap .content.trm-recruit-sec02 > .desc + .desc {margin-top: 3rem; margin-bottom: 8rem;}
 .trm-recruit-sec02 .linaTmr {padding-left:5.6rem;font-size: 11.111vw;line-height:140%;font-weight:900;color: #150F96;}
 .trm-recruit-sec02 .btn {margin: 8rem auto 0;}
@@ -132,5 +134,5 @@ background-size: contain;top: 3.4rem;content: '';}
 .trm-recruit-sec02 .col-box .txt span + span {margin-top: 0.6rem;}
 .trm-recruit-sec02 .noti {margin-top:2rem;font-size: var(--small-size);font-weight: 500;color:#999}
 .trm-recruit-sec03 .acc-wrap .cont {margin:0;font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;padding:0;height: 0;opacity:0;transition:0.3s ease;}
-.trm-recruit-sec03 .acc-wrap .txt.acc-active + .cont {opacity: 1;transition:0;margin-top:4.2rem;height: auto;}
+.trm-recruit-sec03 .acc-wrap .txt.acc-active + .cont {opacity: 1;transition:0;margin-top:3rem;height: auto;}
 .trm-recruit-sec03 .acc-wrap .txt.acc-active:after {transform: rotate(180deg);transition:0.3s ease;}
