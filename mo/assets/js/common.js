@@ -27,7 +27,6 @@ $(document).ready(function() {
         AOS.refresh();
     });
 
-
     // scroll button 공통 효과 *추후 업데이트예정입니다
     let scrollStatus = 0;
     let btnDown = $('.btn-down');
