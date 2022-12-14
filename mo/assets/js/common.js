@@ -278,6 +278,17 @@ $(document).ready(function(){
         $subTabTitle.removeClass('active');
         $(this).addClass('active');
         $subCont.hide().eq(idx).show();
+
+        if( $subTabTitle.length-1 == idx){
+            $subTabTitle.parent('ul').animate({
+                scrollLeft:$(this).offset().left + 100
+            }, 1000)
+        }else if (idx == 0){
+            $subTabTitle.parent('ul').animate({
+                scrollLeft:$(this).offset().left + 0
+            }, 500)
+        }
+        
     })
 })
 
