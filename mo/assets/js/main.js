@@ -63,7 +63,7 @@ const getBalanceSecPositionTop = function() {
     balanceSecRealLt = balanceSecLt - visialSecPt;
 }
 
-let timer, timer2, isMoveBtn = false;
+let timer, timer2, timer3, isMoveBtn = false;
 const videoSectionScrollAnimation = function() {
     const $secWrap = $('.sec-wrap')
     
@@ -89,6 +89,15 @@ const videoSectionScrollAnimation = function() {
                 timer2 = null;
                 if($secWrap.hasClass('depth2') && !$secWrap.hasClass('active')) {
                     !isMoveBtn ? visualAnimation(2) : false;
+                }
+            }, 200);
+        }
+        
+        if(!timer3) {
+            timer3 = setTimeout(function() {
+                timer3 = null;
+                if($secWrap.hasClass('active') && $secWrap.hasClass('depth3')) {
+                    !isMoveBtn ? visualAnimation(3) : false;
                 }
             }, 200);
         }
@@ -152,7 +161,9 @@ const visualAnimation = function(order) {
         
             $visualSec.find('.inner').animate({
                 'padding-top': 0
-            }, 800);
+            }, 800, function() {
+                $secWrap.addClass('depth3');
+            });
             
             $secWrap.removeClass('depth1');
             $secWrap.removeClass('depth2');
@@ -161,6 +172,8 @@ const visualAnimation = function(order) {
             break;
         
         case 3:
+            $secWrap.removeClass('depth3');
+            $(window).scrollTop(0);
             $('html, body').animate({scrollTop : balanceSecRealLt }, 800);
             break;
     }
@@ -232,8 +245,16 @@ const handelSecMoveBtnClick = function(e) {
         }, 500);
 
         setTimeout(function() {
-            visualAnimation(3);
-        }, 1000);
+            if($('.sec-wrap').hasClass('active') && $('.sec-wrap').hasClass('depth3')) {
+                visualAnimation(3);
+            }
+        }, 1350);
+
+        setTimeout(function() {
+            if($('.sec-wrap').hasClass('active') && $('.sec-wrap').hasClass('depth3')) {
+                visualAnimation(3);
+            }
+        }, 1400);
     }
 
     if($target.hasClass('up')) {

@@ -4,7 +4,7 @@ html, body {position: relative;overflow-x: hidden;}
 #contents {transition: all .8s ease;}
 #contents.fixed {position: fixed; overflow: hidden;}
 .sec-wrap {transition: all .8s ease;}
-.sec-wrap.depth1 {position:fixed;overflow: hidden;}
+.sec-wrap.depth1,.sec-wrap.depth3 {position:fixed;overflow: hidden;}
 /* .main #contents.fixed{position:fixed;overflow: hidden;} */
 
 /* activeMotion */
@@ -189,7 +189,7 @@ html, body {position: relative;overflow-x: hidden;}
 .main .related-info-sec .bg {width: 100%;height: 120vw;background: url(../images/main_bhr_quote_bg.jpg) 50% 50% no-repeat;background-size: cover;}
 
 /* footer-sec */
-.main .footer-sec .inner {padding: 55.5556 49.7222vw 0;}
+/* .main .footer-sec .inner {padding: 55.5556 49.7222vw 0;} */
 
 /* fixed-controls-wrap */
 .main .indicator-group {position: fixed;top: auto;bottom: 27.7778vw;right: 11.9444vw;display: flex;flex-direction: column;z-index: 300;}
