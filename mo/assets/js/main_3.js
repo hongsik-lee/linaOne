@@ -5,6 +5,7 @@ let startX, startY, endX, endY;
 
 $(document).ready(function() {
     setSwipter();
+    textMotionAnimation();
     getBalanceSecPositionTop();
 
     $('.visual-sec').find('video').get(0).play();
@@ -30,13 +31,12 @@ $(document).ready(function() {
     $(document).on('click', '.sec-move-btn', handelSecMoveBtnClick);
 
     const $secWrap  = $('.sec-wrap > div');
-    $secWrap.each(function(index, item) {
-        textMotionAnimation(item);
-    });
-
     $(window).on('scroll mousewheel touchmove', optimizeAnimation(function() {
         yOffset = $(window).scrollTop();
+        textMotionAnimation();
+        changeControlStatus();
         videoSectionScrollAnimation();
+        relatedInfoSectionAnimation();
 
         $secWrap.each(function(index, elem) {
             const $target = $(elem)
@@ -48,16 +48,41 @@ $(document).ready(function() {
                 if(1 - ratio > 0.2) $target.addClass('seen-sec');
                 if(1 - ratio < 0.4) $target.removeClass('seen-sec');
             }
-
-            textMotionAnimation(elem);
         });
-
-        changeControlStatus();
     }));
 
     // 새로고침시 맨 위로
     $(window).on('beforeunload', function() { $(window).scrollTop(0); });
 });
+
+    // var wrapperHeight = $('.sec-wrap').height();
+
+    // var action = new TimelineMax({paused:true})
+    // .to('.sec-wrap',1,{y:-wrapperHeight, ease: Sine.easeInOut});
+
+    // // === scrolling sync =========================
+    // var lastScrollTop = 0;
+
+    // // distance defines the scroll speed
+    // TweenLite.set("#scrollDistance",{height: 9000});
+
+    // $('#scroll').scroll(function(e) {
+    //     var scrollNum = $('#scroll').scrollTop();
+    //     scrollPercent = $('#scroll').scrollTop() / ($('#scrollDistance').height() - $('#scroll').height());
+        
+    //     var progress = scrollPercent; 
+        
+    //     console.log(progress)
+    //     if (scrollNum > lastScrollTop) {  // !!!  different eases  !!!
+    //         TweenLite.to(action, 1, {progress:progress, ease: Power3.easeOut});
+    //     } else {   
+    //         TweenLite.to(action, 1, {progress:progress, ease: Power3.easeNone});
+    //     }
+        
+    //     lastScrollTop = scrollNum;
+
+    //     console.log(scrollNum)
+    // }); 
 
 let balanceSecRealLt;
 const getBalanceSecPositionTop = function() {
@@ -82,6 +107,7 @@ const videoSectionScrollAnimation = function() {
                 timer = null;
                 
                 if($secWrap.hasClass('depth1') && !$secWrap.hasClass('active')) {
+                    $(window).scrollTop(0);
                     !isMoveBtn ? visualAnimation(1) : false;
                 }
             }, 200);
@@ -123,6 +149,7 @@ const videoSectionScrollAnimation = function() {
     }
 }
 
+// visial 애니메이션 순서대로
 const visualAnimation = function(order) {
     const $secWrap = $('.sec-wrap')
         , $visualSec = $('.visual-sec');
@@ -168,6 +195,7 @@ const visualAnimation = function(order) {
     }
 }
 
+// visial 애니메이션 역순대로
 const visualAnimationReverse = function(order) {
     const $secWrap = $('.sec-wrap')
         , $visualSec = $('.visual-sec');
@@ -202,6 +230,21 @@ const visualAnimationReverse = function(order) {
     }
 }
 
+const relatedInfoSectionAnimation = function() {
+    const $target = $('.related-info-sec')
+        , $bg = $target.find('.bg')
+        , isScreen = isElemOverScreen($target)
+        , ratio = getElemScrollRatio($target)
+    
+    if(!isScreen) {
+        if(ratio > -1) {
+            let scaleValue = 1 + (1 - ratio) / 3;
+            $bg.css('transform', 'scale('+ scaleValue +')');
+        }
+    }
+}
+
+// 고정 화살표 이동 버튼 클릭
 const handelSecMoveBtnClick = function(e) {
     const $target = $(e.currentTarget)
 
@@ -248,26 +291,16 @@ const handelSecMoveBtnClick = function(e) {
     }
 }
 
-const textMotionAnimation = function(item) {
-    const $target = $(item)
-        , isScreen = isElemOverScreen($target)
-        , ratio = getElemScrollRatio($target);
+const textMotionAnimation = function() {
+    const $texts = $('.aniObj');
 
-    if(!isScreen) {
-        if($target.hasClass('visual-sec')) {
-            $target.find('.page-tit').addClass('activeMotion');
-            $target.find('.text-area > span').addClass('activeMotion');
-        };
-        if(ratio > 0 && 0.7 > ratio) {
-            $target.find('.page-tit').addClass('activeMotion');
-            $target.find('.tit').addClass('activeMotion');
-            $target.find('.desc').addClass('activeMotion');
+    $texts.each(function(index, item) {
+        if (isElemOverScreen(item, -20)) {
+           $(item).removeClass('activeMotion')
+        } else {
+            $(item).addClass('activeMotion')
         }
-    } else {
-        $target.find('.page-tit').removeClass('activeMotion');
-        $target.find('.tit').removeClass('activeMotion');
-        $target.find('.desc').removeClass('activeMotion');
-    }
+    });
 }
 
 const getElemScrollRatio = function(elem) {
@@ -350,19 +383,3 @@ const optimizeAnimation = function(cb) {
         }
     }
 }
-
-// // header nav animation
-// const openNav = function() {
-//     $('#gnb-wrap').addClass('on');
-// }
-
-// const closeNav = function() { 
-//     $('#gnb-wrap').removeClass('on');
-
-//     const $navLis = $('.nav > li');
-//     setTimeout(function() {
-//         $navLis.each(function(index, item) {
-//             $(item).removeClass('active').find('.sub-nav').css('display', 'none');
-//         });
-//     }, 300);
-// }

@@ -111,7 +111,7 @@ div { box-sizing: border-box;}
 .main .foundation03-sec .img-wrap > div.img img {transform: scale(1.0);transition: transform 1.5s ease;}
 .main .foundation03-sec .img-wrap > div.img.activeMotion {opacity: 1;transform: translateY(0);}
 .main .foundation03-sec .img-wrap > div.img.activeMotion img {transform: scale(1.1);}
-.main .foundation03-sec .img-wrap img {position:relative;top: -100px;width: 100%;}
+.main .foundation03-sec .img-wrap img {position:relative;top: -5.2083vw;width: 100%;}
 .main .foundation03-sec .circle {position: absolute;right: 0;transition:transform .8s ease 1s, opacity 1.2s linear 1s;display: flex;align-items: center;justify-content: center;background:url(../images/main_circle_img.jpg) 50% 50% no-repeat;background-size: cover;opacity: 0;z-index: -1;}
 .main .foundation03-sec .circle circle {opacity: 0;}
 .main .foundation03-sec .circle.activeMotion {opacity: 1;transform: translate3d(-17.1875vw, 0, 0);}
