@@ -55,35 +55,6 @@ $(document).ready(function() {
     $(window).on('beforeunload', function() { $(window).scrollTop(0); });
 });
 
-    // var wrapperHeight = $('.sec-wrap').height();
-
-    // var action = new TimelineMax({paused:true})
-    // .to('.sec-wrap',1,{y:-wrapperHeight, ease: Sine.easeInOut});
-
-    // // === scrolling sync =========================
-    // var lastScrollTop = 0;
-
-    // // distance defines the scroll speed
-    // TweenLite.set("#scrollDistance",{height: 9000});
-
-    // $('#scroll').scroll(function(e) {
-    //     var scrollNum = $('#scroll').scrollTop();
-    //     scrollPercent = $('#scroll').scrollTop() / ($('#scrollDistance').height() - $('#scroll').height());
-        
-    //     var progress = scrollPercent; 
-        
-    //     console.log(progress)
-    //     if (scrollNum > lastScrollTop) {  // !!!  different eases  !!!
-    //         TweenLite.to(action, 1, {progress:progress, ease: Power3.easeOut});
-    //     } else {   
-    //         TweenLite.to(action, 1, {progress:progress, ease: Power3.easeNone});
-    //     }
-        
-    //     lastScrollTop = scrollNum;
-
-    //     console.log(scrollNum)
-    // }); 
-
 let balanceSecRealLt;
 const getBalanceSecPositionTop = function() {
     const visialSecPt = parseInt($('.visual-sec').find('.inner').css('padding-top'))
