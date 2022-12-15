@@ -8,10 +8,10 @@ header .logo .img {width: 100%;}
 header > a:last-child img {height: 6.6667vw;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index:500;right:0;}
-#gnb-wrap.inner {padding:0 6.667vw;}
-#gnb-wrap header {width:calc(100% - 13.333vw);}
+
+#gnb-wrap header {width:calc(100% - 11.1vw);}
 #gnb-wrap header > a:first-child {width: 43.8889vw;margin-left: -1.111vw;}
-#gnb-wrap header > a:first-child img {display:block;width: 100%;}
+#gnb-wrap header > a:first-child img {width: 100%;}
 #gnb-wrap .nav {padding-top:21.111vw;}
 #gnb-wrap .nav > li {position:relative;min-height: 15.5556vw;font-size:var(--title-type2);font-weight:800;}
 #gnb-wrap .nav > li:after {position:absolute;top:1.389vw;right:1.111vw;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
@@ -22,7 +22,8 @@ header > a:last-child img {height: 6.6667vw;}
 #gnb-wrap .sub-nav > li a {display:block;font-size:var(--basic-size);color:#000;font-weight:500;}
 #gnb-wrap .corp-wrap {padding-bottom: 5.5556vw;margin-top: 11.1111vw;}
 #gnb-wrap .corp-wrap p + p {margin-top: 4.4444vw;}
-#gnb-wrap .corp-wrap p a {font-size:var(--small-size);margin-right: 6.6667vw;font-weight: 700;color:rgba(0,0,0,.5)}
+#gnb-wrap .corp-wrap p a {position:relative;font-size:var(--small-size);margin-right: 6.6667vw;font-weight: 700;color:rgba(0,0,0,.5)}
+#gnb-wrap .corp-wrap p a:first-child:after {position: absolute; width: 0.278vw; height: 3.333vw; background: rgba(0,0,0,.2); right: -3.889vw; top: 50%;transform: translateY(-50%); content: '';}
 #gnb-wrap .corp-wrap p {font-size:3.333vw;font-weight: 400;color:rgba(0,0,0,.3)}
 
 /* sub visual */

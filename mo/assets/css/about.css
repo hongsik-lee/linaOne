@@ -13,8 +13,8 @@
 .overview .introduction .diagram > img {position:absolute;display: block;width:12.222vw;flex:none}
 .overview .introduction .lina,
 .overview .introduction .chubb {position:relative;width:36.111vw;height:36.111vw;border-radius:50%;display: flex;justify-content: center;align-items: center;}
-.overview .introduction .lina img,
-.overview .introduction .chubb img {display: block;max-height:6.111vw}
+.overview .introduction .lina img {display: block;width: 18.333vw;}
+.overview .introduction .chubb img {display: block;width:20vw}
 .overview .introduction .lina div,
 .overview .introduction .chubb div {display: flex;justify-content: center;align-items: center;border-radius: 50%;width:calc(100% - 4.44vw);height: calc(100% - 4.44vw);}
 .overview .introduction .lina div {background:#150F96}

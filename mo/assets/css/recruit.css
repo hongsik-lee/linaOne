@@ -70,7 +70,7 @@ background-size: contain;top:2.8rem;content: '';}
 .recruit-sec04 .acc-wrap .txt {padding-right: 5.4rem;}
 .recruit-sec04 .acc-wrap .txt span {font-size: var(--small-size);font-weight: 500;line-height: 140%;}
 .recruit-sec04 .acc-wrap .txt p {font-size: var(--title-type3);font-weight: 700;line-height: 140%;}
-.recruit-sec04 .acc-wrap .cont {font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;padding:0;height: 0;opacity:0;transition:0.3s ease;}
+.recruit-sec04 .acc-wrap .cont {font-size: var(--small-size);font-weight: 500;line-height: 150%;letter-spacing: 0.05em;color:#666;padding:0;margin:0;height: 0;opacity:0;transition:0.3s ease;}
 .recruit-sec04 .acc-wrap .txt.acc-active + .cont {opacity: 1;transition:0;margin-top:3rem;height: auto;}
 .recruit-sec04 .acc-wrap .txt.acc-active:after {transform: rotate(180deg);transition:0.3s ease;}
 .recruit-sec04 .mail-box {margin:15rem auto 0;}
