@@ -17,15 +17,17 @@ $(document).ready(function() {
         $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
         $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
     });
-    
-    // 컨텐츠 scroll 공통 효과
-    AOS.init({
-        easing: 'linear',
-        duration:500
-    });
-    onElementHeightChange(document.body, function(){
-        AOS.refresh();
-    });
+
+    if($('.main').length == 0) {
+        // 컨텐츠 scroll 공통 효과
+        AOS.init({
+            easing: 'linear',
+            duration:500
+        });
+        onElementHeightChange(document.body, function(){
+            AOS.refresh();
+        });
+    }
 
     // scroll button 공통 효과 *추후 업데이트예정입니다
     let scrollStatus = 0;
@@ -34,7 +36,6 @@ $(document).ready(function() {
 
     $(window).on('scroll', function(){
         let scrollTop = $(this).scrollTop();
-        console.log(scrollTop)
         if(scrollTop === 0){
             btnDown.stop().fadeIn()
         }else if(scrollStatus > 50){
@@ -59,7 +60,6 @@ function scrollToTarget(){
     let content = document.querySelector('.content')
     // window.scrollTo({left:0, top:Position(content), behavior: "smooth"} )
     window.scrollTo({left:0, top:600, behavior: "smooth"} )
-
 }
 
 function Position(obj){
