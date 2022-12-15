@@ -258,13 +258,13 @@ $(document).ready(function(){
 
 
         if( $tabTitle.length-1 == idx){
-            $tabTitle.parent('ul').animate({
+            $tabTitle.parent('ul').stop(true, true).delay(0).animate({
                 scrollLeft:$(this).offset().left + 100
-            }, 1000)
+            }, { queue: false, duration: 1000 })
         }else if (idx == 0){
-            $tabTitle.parent('ul').animate({
+            $tabTitle.parent('ul').stop(true, true).delay(0).animate({
                 scrollLeft:$(this).offset().left + 0
-            }, 500)
+            }, { queue: false, duration: 200 })
         }
         if($(e.target).hasClass('clicked')) {
             $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');
@@ -279,13 +279,13 @@ $(document).ready(function(){
         $subCont.hide().eq(idx).show();
 
         if( $subTabTitle.length-1 == idx){
-            $subTabTitle.parent('ul').animate({
+            $subTabTitle.parent('ul').stop(true, true).delay(0).animate({
                 scrollLeft:$(this).offset().left + 100
-            }, 1000)
+            }, { queue: false, duration: 1000 })
         }else if (idx == 0){
-            $subTabTitle.parent('ul').animate({
+            $subTabTitle.parent('ul').stop(true, true).delay(0).animate({
                 scrollLeft:$(this).offset().left + 0
-            }, 500)
+            }, { queue: false, duration: 200 })
         }
         
     })
