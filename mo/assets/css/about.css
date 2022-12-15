@@ -3,13 +3,14 @@
 /* OVERVIEW */
 .sub-wrap.overview .visual:before {background-image:url(../images/ab_overview_visual.png)}
 .overview .content > .desc {margin:15rem 3rem 15rem 7.6rem;padding:0;font-size:var(--title-type2);font-weight: 700;line-height:7.778vw;}
-.overview .introduction {padding:15rem 2rem 17.7rem;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;background-repeat: no-repeat;}
+.overview .introduction {padding:15rem 2rem 58.889vw;background:url(../images/ab_introcution_bg.png);background-size:cover;background-position:bottom;background-repeat: no-repeat;}
 .overview .introduction h2 {font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .introduction .txt-box {padding-left:5.6rem;margin-top:5rem;}
 .overview .introduction .title {margin-bottom:2rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
 .overview .introduction .desc {font-size:var(--small-size);color:#666;line-height:140%;font-weight:500;}
 .overview .introduction > img {display: block;width: 100%;margin:8rem auto 0;}
-.overview .introduction .diagram {margin:22.22vw 0.556vw 0;display: flex;column-gap:1.111vw;justify-content: space-between;}
+.overview .introduction .diagram {margin:22.22vw 2.778vw 0;display: flex;column-gap:11.111vw;align-items: center;justify-content: center;}
+.overview .introduction .diagram > img {position:absolute;display: block;width:12.222vw;flex:none}
 .overview .introduction .lina,
 .overview .introduction .chubb {position:relative;width:36.111vw;height:36.111vw;border-radius:50%;display: flex;justify-content: center;align-items: center;}
 .overview .introduction .lina img,
@@ -20,7 +21,7 @@
 .overview .introduction .chubb div {background:#000}
 .overview .introduction .lina {background: rgba(21, 15, 150, 0.2);box-shadow: 30px 34px 80px rgba(21, 15, 150, 0.1);}
 .overview .introduction .chubb {background: rgba(0, 0, 0, 0.2);box-shadow: 30px 34px 174px rgba(0, 0, 0, 0.2);}
-.overview .introduction .lina:after {position: absolute;background: url(../../assets/images/ab_overview_img03.png);width: 4.5rem; right: 0;height: auto;display: block;height: 1.4rem;right: -4.2rem;background-size: contain;background-repeat: no-repeat;content: '';}
+/* .overview .introduction .lina:after {position: absolute;background: url(../../assets/images/ab_overview_img03.png);width: 4.5rem; right: 0;height: auto;display: block;height: 1.4rem;right: -4.2rem;background-size: contain;background-repeat: no-repeat;content: '';} */
 .overview .count-box {margin-top: 15rem;}
 .overview .count-box h2 {margin-bottom:5rem;font-size:var(--basic-size);font-weight:700;line-height: 140%;}
 .overview .count-box p {padding-left:5.6rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
