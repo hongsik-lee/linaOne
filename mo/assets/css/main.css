@@ -192,10 +192,10 @@ html, body {position: relative;overflow-x: hidden;}
 /* .main .footer-sec .inner {padding: 55.5556 49.7222vw 0;} */
 
 /* fixed-controls-wrap */
-.main .indicator-group {position: fixed;top: auto;bottom: 27.7778vw;right: 11.9444vw;display: flex;flex-direction: column;z-index: 300;}
+.main .indicator-group {position: fixed;top: auto;bottom: 27.7778vw;right: 9.7222vw;display: flex;flex-direction: column;z-index: 300;}
 .main .indicator-group .dot {width: 2.2222vw;height: 2.2222vw;margin-bottom: 1.1111vw;padding: 0;border: 0.2778vw solid #000;border-radius: 50%;box-sizing: border-box;opacity: 0.3;background-color: transparent;cursor: pointer;}
 .main .indicator-group .dot.active {opacity: 1;background-color: #000;}
-.main .sec-move-btn {position: fixed;right: 7.7778vw;bottom: 11.1111vw;z-index: 300;}
+.main .sec-move-btn {position: fixed;right: 5.5556vw;bottom: 11.1111vw;z-index: 300;}
 .main .sec-move-btn.up button {transform: rotate(0);}
 .main .sec-move-btn button {transform: rotate(-180deg);width: 11.1111vw;height: 11.1111vw;padding:0;border: 1px solid #000;border-radius: 50%;background-color: transparent;background:url(../images/icon/arrow_top.png) 50% 50% no-repeat;background-size: cover;cursor: pointer;}
 

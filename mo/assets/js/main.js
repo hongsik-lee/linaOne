@@ -110,11 +110,11 @@ const videoSectionScrollAnimation = function() {
             if($('.sec-wrap').hasClass('active')) {
                 $visualSec.find('.text-area').animate({
                     'top': (154 / 360 * 100).toFixed(4) + 'vw'
-                }, 800);
+                }, 500);
 
                 $visualSec.find('.inner').animate({
                     'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw'
-                }, 800, function() {
+                }, 500, function() {
                     $visualSec.find('.inner').removeClass('invert')
                     $('.sec-wrap').addClass('depth1');
                 });
@@ -157,11 +157,11 @@ const visualAnimation = function(order) {
         case 2:
             $visualSec.find('.text-area').animate({
                 'top': '-' + (88 / 360 * 100).toFixed(4) + 'vw'
-            }, 800);
+            }, 500);
         
             $visualSec.find('.inner').animate({
                 'padding-top': 0
-            }, 800, function() {
+            }, 500, function() {
                 $secWrap.addClass('depth3');
             });
             
@@ -230,7 +230,7 @@ const relatedInfoSectionAnimation = function() {
 
 // 고정 화살표 이동 버튼 클릭
 const handelSecMoveBtnClick = function(e) {
-    const $target = $(e.currentTarget)
+    const $target = $(e.currentTarget);
 
     if($target.hasClass('next')) {
         if($('.sec-wrap').hasClass('depth1') && !$('.sec-wrap').hasClass('active')) {
@@ -248,13 +248,13 @@ const handelSecMoveBtnClick = function(e) {
             if($('.sec-wrap').hasClass('active') && $('.sec-wrap').hasClass('depth3')) {
                 visualAnimation(3);
             }
-        }, 1350);
+        }, 1050);
 
         setTimeout(function() {
             if($('.sec-wrap').hasClass('active') && $('.sec-wrap').hasClass('depth3')) {
                 visualAnimation(3);
             }
-        }, 1400);
+        }, 1100);
     }
 
     if($target.hasClass('up')) {
