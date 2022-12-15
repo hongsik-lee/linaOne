@@ -126,6 +126,7 @@
 .contact .map-info li p img {display:inline-block;width:2rem;margin-right:0.8rem;}
 .contact .map-info li span {display:block;color:#666;line-height:140%;font-size: var(--small-size);font-weight: 500;}
 .contact .map-info li span + span {margin-top: 1.4rem;}
+.contact .map-info li a.tel {display:block;color:#666;line-height:140%;font-size: var(--small-size);font-weight: 500;}
 
 /* Associate Proposal */
 .sub-wrap.associate .visual:before {background-image:url(../images/ab_associate_visual.png)}

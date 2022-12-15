@@ -8,6 +8,7 @@
 .privacy-popup h3,
 .privacy-popup h4,
 .privacy-popup li,
+.privacy-popup span,
 .privacy-popup table th,
 .privacy-popup table td {color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;}
 .privacy-popup {padding: 21.1111vw 0;}
@@ -41,28 +42,26 @@
 .privacy-popup .sec07 .list li:nth-of-type(n+2) {margin-top: 2.7778vw;}
 .privacy-popup .sec08 .list {margin-top: 5.5556vw;}
 .privacy-popup .sec09 .list {margin-top: 5.5556vw;padding-left: 5.5556vw;}
+.privacy-popup .sec09 .list.p-0 {padding: 0;}
 .privacy-popup .sec09 .list li:nth-of-type(n+2) {margin-top: 2.7778vw;}
+.privacy-popup .sec09 .list li.mb-0 {margin: 0;}
 .privacy-popup .sec10 .list {margin-top: 5.5556vw;padding-left: 5.5556vw;}
 .privacy-popup .sec10 .list li:nth-of-type(n+2) {margin-top: 2.7778vw;}
-.privacy-popup .sec10 .table-wrap {overflow-x: auto;overflow-y: hidden;}
-.privacy-popup .sec10 table {width: 250.2222vw;margin: 5.5556vw 0;}
-.privacy-popup .sec10 table thead th {height: 14.4444vw;padding: 0 4.4444vw;border: 1px solid #ebebeb;border-left: 0;background-color: #f9f9f9;color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;vertical-align: middle;}
-.privacy-popup .sec10 table thead tr > th:last-child {border-right: 0;}
-.privacy-popup .sec10 table tbody td {padding: 5.5556vw 4.4444vw;border: 1px solid #ebebeb;border-left: 0;}
-.privacy-popup .sec10 table tbody tr > td:last-child {border-right: 0;}
 .privacy-popup .sec10 div span {display: inline-block;min-height: 27.7167vw;padding: 5.5556vw;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;vertical-align: top;}
 .privacy-popup .sec10 div span:nth-of-type(1) {border-right: 1px solid #ebebeb}
 .privacy-popup .sec11 .list {margin-top: 5.5556vw;padding-left: 5.5556vw;}
 .privacy-popup .sec11 .list li:nth-of-type(n+2) {margin-top: 2.7778vw;}
 .privacy-popup .sec11 .table-wrap {overflow-x: auto;overflow-y: hidden;}
-.privacy-popup .sec11 table {width: 130vw;margin: 5.5556vw 0;}
-.privacy-popup .sec11 table thead th {height: 14.4444vw;padding: 0 4.4444vw;border: 1px solid #ebebeb;border-left: 0;background-color: #f9f9f9;color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;vertical-align: middle;}
-.privacy-popup .sec11 table thead tr > th:last-child {border-right: 0;}
-.privacy-popup .sec11 table tbody td {padding: 5.5556vw 4.4444vw;border: 1px solid #ebebeb;border-left: 0;}
-.privacy-popup .sec11 table tbody tr > td:last-child {border-right: 0;}
 .privacy-popup .sec12 .list {margin-top: 5.5556vw;}
 .privacy-popup .sec12 a, .privacy-popup .sec13 a {color: #666;}
 .privacy-popup .sec12 a span {text-decoration: underline;}
+ 
+.privacy-popup .table-wrap {overflow-x: auto;overflow-y: hidden;}
+.privacy-popup table {width: 250.2222vw;margin: 5.5556vw 0;}
+.privacy-popup table thead th {height: 14.4444vw;padding: 0 4.4444vw;border: 1px solid #ebebeb;border-left: 0;background-color: #f9f9f9;color: #666;font-weight: 500;font-size: var(--small-size);line-height: 5.4444vw;vertical-align: middle;}
+.privacy-popup table thead tr > th:last-child {border-right: 0;}
+.privacy-popup table tbody td {padding: 5.5556vw 4.4444vw;border: 1px solid #ebebeb;border-left: 0;}
+.privacy-popup table tbody tr > td:last-child {border-right: 0;}
 
 /* 이메일무단수집거부 */
 .email_collect_refuse {padding: 21.1111vw 0;}

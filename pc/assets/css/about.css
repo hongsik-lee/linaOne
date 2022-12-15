@@ -5,7 +5,6 @@
 /* overview */
 .overview .visual-sec::after {background: url(../images/ab_over_visual_bg.png) 50% 50% no-repeat;background-size: cover;}
 .overview .introduction-sec {position: relative;height: 133.2rem;padding-top: 20.2rem;background: url(../images/ab_over_intro_bg.jpg) 50% 50% no-repeat;background-size: cover;box-sizing: border-box;background-position:bottom;}
-/* .overview .introduction-sec img {display:block;margin:0 auto;height:70.8rem;padding-left: 4%;} */
 .overview .introduction-sec .img-wrap {position: absolute;top: 50%;left:50%;transform: translate(-50%, -50%);display: flex;align-items: center;justify-content: space-between;width: 84rem;}
 .overview .introduction-sec .img-wrap div:nth-of-type(1) ,.overview .introduction-sec .img-wrap div:nth-of-type(3) {width: 36rem;height: 36rem;border-radius:50%;overflow: hidden;}
 .overview .introduction-sec .img-wrap div:nth-of-type(1) {box-shadow: 30px 34px 174px rgb(21 15 150 / 20%);}
