@@ -20,8 +20,8 @@ $(document).ready(function() {
         endX=event.originalEvent.changedTouches[0].screenX;
         endY=event.originalEvent.changedTouches[0].screenY;
 
-        if(startY-endY > 5) touchDirection = 'top';
-        if(endY-startY > 5) touchDirection = 'bottom';
+        if(startY-endY > 10) touchDirection = 'top';
+        if(endY-startY > 10) touchDirection = 'bottom';
     });
 
     $(window).on('mousewheel', function(e) {
@@ -144,9 +144,9 @@ const visualAnimation = function(order) {
                 'position': 'absolute',
                 'top': (154 / 360 * 100).toFixed(4) + 'vw'
             });
-        
+            
             $visualSec.find('.inner').css({
-                'padding-top': (246 / 360 * 100).toFixed(4) + 'vw'
+                'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw'
             });
         
             $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
@@ -172,11 +172,14 @@ const visualAnimation = function(order) {
             $secWrap.removeClass('depth1');
             $secWrap.removeClass('depth2');
             $secWrap.addClass('active');
+            $('#contents').addClass('fixed');
             $visualSec.find('video').get(0).play();
             break;
         
         case 3:
             $secWrap.removeClass('depth3');
+            $('#contents').removeClass('fixed');
+            $(window).scrollTop(0);
             $('html, body').animate({scrollTop : $('.balance-promise-sec').position().top }, 800);
             break;
     }
