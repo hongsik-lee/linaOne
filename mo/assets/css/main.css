@@ -18,6 +18,7 @@ html, body {position: relative;overflow-x: hidden;}
 /* visual-sec */
 /* .main .visual-sec {pointer-events: none;} */
 
+.main .visual-sec {min-height: 100vh;}
 .main .visual-sec .text-area {position: fixed;top: 42.7778vw;left: 11.1111vw;z-index: 100;}
 .main .visual-sec .page-tit {margin-bottom: 8.3333vw;}
 .main .visual-sec .page-tit span {font-weight: 900;font-size: 13.8889vw;line-height: 16.6667vw;letter-spacing: 0.03rem;}
@@ -35,8 +36,8 @@ html, body {position: relative;overflow-x: hidden;}
 .main .video-wrap .cut-off {position: absolute;top: 0;width: calc((100vw - 88.8889vw) / 2);height: 100%;background-color: #fff;transform:translate3d(0, 0 ,0);z-index: 100;transition: all .5s ease;}
 .main .video-wrap .cut-off.left {left: 0;}
 .main .video-wrap .cut-off.right {right: 0;}
-.main .visual-sec .video-inner {position: relative;width: 100%;height: 640px;background-color: gray}
-.main .visual-sec .video-inner video {position:absolute;top:0;left:0;width:100%;height: 100%;object-fit: cover;}
+.main .visual-sec .video-inner {position: relative;width: 100%;height: 100vh;background-color: gray}
+.main .visual-sec .video-inner video {position:absolute;top:0;left:0;width:100%;height: 100vh;object-fit: cover;}
 
 /* balance-promise-sec */
 .main .balance-promise-sec .inner {padding: 33.3333vw 5.5556vw 50vw;}
