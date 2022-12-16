@@ -39,7 +39,7 @@ $(document).ready(function() {
         if(scrollTop === 0){
             btnDown.stop().fadeIn()
         }else if(scrollStatus > 50){
-            btnDown.stop().fadeOut()
+            btnDown.stop().hide()
         }else{
         }
         scrollStatus = scrollTop
