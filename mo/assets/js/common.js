@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
     });
 
-    if($('.main').length == 0) {
+    if($('.main').length == 0 && $('.foot').length == 0) {
         // 컨텐츠 scroll 공통 효과
         AOS.init({
             easing: 'linear',

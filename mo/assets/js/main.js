@@ -8,8 +8,13 @@ $(document).ready(function() {
     textMotionAnimation();
     getBalanceSecPositionTop();
 
-    $('.visual-sec').find('video').get(0).play();
-    $('.visual-sec').find('video').get(0).pause();
+    const playVideo = $('.visual-sec').find('video').get(0).play();
+
+    if(playVideo !== undefined) {
+        playVideo.then(function(_) {
+            $('.visual-sec').find('video').get(0).pause();
+        })
+    }
 
     $("#contents").on('touchstart',function(event){
         startX = event.originalEvent.changedTouches[0].screenX;
