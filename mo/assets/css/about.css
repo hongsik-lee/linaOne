@@ -116,7 +116,7 @@
 .contact .sub-content.active {display: block;}
 .contact .map-wrap {margin-top:8rem;}
 .contact .map-wrap > img {display: block;width: 100%;}
-.contact .map-wrap > p {margin:7rem 0 1rem 5.6rem;font-size:var(--title-type3);font-weight:700;}
+.contact .map-wrap > p {margin:7rem 0 1rem 5.6rem;font-size:var(--title-type3);font-weight:700;word-break: keep-all;}
 .contact .map-wrap > span {display:block;margin-left:5.6rem;font-size: var(--small-size);font-weight: 500;line-height: 140%;color:#666;}
 .contact .map-wrap > span + .map-info {margin-top: 4rem;}
 .contact .map-info {margin-left: 5.6rem;margin-top: 7rem;}
