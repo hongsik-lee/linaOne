@@ -177,7 +177,7 @@ const visualAnimation = function(order) {
         
         case 3:
             $secWrap.removeClass('depth3');
-            $('html, body').animate({scrollTop : balanceSecRealLt }, 800);
+            $('html, body').animate({scrollTop : $('.balance-promise-sec').position().top }, 800);
             break;
     }
 }
@@ -212,7 +212,7 @@ const visualAnimationReverse = function(order) {
             break;
         
         case 3:
-            $('html, body').animate({scrollTop : balanceSecRealLt }, 800);
+            $('html, body').animate({scrollTop : $('.balance-promise-sec').position().top }, 800);
             break;
     }
 }
