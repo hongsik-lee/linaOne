@@ -75,14 +75,17 @@ const visualSectionAnimation = function() {
         , $videoInner = $visualSec.find('.video-inner');
 
     setTimeout(function() {
+        $visualSec.animate({
+            'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
+        }, 400);
         $videoInner.animate({
-            'top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
-            'width' : (1138 / 360 * 100).toFixed(4) + 'vw',
+            'width': '100vw',
+            'height': '177.7778vw'
         }, 400, function() {
             $contents.removeClass('fixed');
             $visualSec.find('video').get(0).play();
             textMotionAnimation();
-        });
+        })
     }, 700);
 }
 

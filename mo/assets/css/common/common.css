@@ -5,7 +5,8 @@
 header {position:fixed;top:0;height:5.6rem;display: flex;justify-content: space-between;align-items: center;z-index:200;}
 header .logo {width: 43.8889vw;margin-left: -1.111vw;}
 header .logo .img {width: 100%;}
-header > a:last-child img {height: 6.6667vw;}
+header .gnb-btn {display: flex;align-items: center;justify-content: center;width: 6.6667vw;}
+header .gnb-btn img {height: 6.6667vw;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index:500;right:0;}
 
@@ -15,7 +16,7 @@ header > a:last-child img {height: 6.6667vw;}
 #gnb-wrap .nav {padding-top:21.111vw;}
 #gnb-wrap .nav > li {position:relative;min-height: 15.5556vw;font-size:var(--title-type2);font-weight:800;}
 #gnb-wrap .nav > li:after {position:absolute;top:1.389vw;right:1.111vw;width:1.6rem;height:1.6rem;background: url(../../images/common/ico_arrow_down.png);transition:0.3s ease;background-size:cover;content:'';}
-#gnb-wrap .sub-nav {display:none;margin: 2.7778vw 0 5.5556vw;padding:2.7778vw 0;}
+#gnb-wrap .sub-nav {display:none;margin: 4.4444vw 0 10vw;padding:2.7778vw 0;}
 #gnb-wrap .nav > li.active:after {transform: rotate(180deg);}
 #gnb-wrap .sub-nav > li {height: 5.2778vw;}
 #gnb-wrap .sub-nav > li + li {margin-top: 5.5556vw;}

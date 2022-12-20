@@ -5,8 +5,9 @@ let startX, startY, endX, endY;
 
 $(document).ready(function() {
     setSwipter();
-    textMotionAnimation();
-    getBalanceSecPositionTop();
+    // textMotionAnimation();
+    // getBalanceSecPositionTop();
+    visualSectionAnimation();
 
     const playVideo = $('.visual-sec').find('video').get(0).play();
 
@@ -40,7 +41,7 @@ $(document).ready(function() {
         yOffset = $(window).scrollTop();
         textMotionAnimation();
         changeControlStatus();
-        videoSectionScrollAnimation();
+        // videoSectionScrollAnimation();
         relatedInfoSectionAnimation();
 
         $secWrap.each(function(index, elem) {
@@ -59,6 +60,30 @@ $(document).ready(function() {
     // 새로고침시 맨 위로
     $(window).on('beforeunload', function() { $(window).scrollTop(0); });
 });
+
+const visualSectionAnimation = function() {
+    const $contents = $('#contents')
+        , $visualSec = $('.visual-sec')
+        , $videoInner = $visualSec.find('.video-inner');
+
+    let wh = $(window).outerHeight();
+
+    $('.video-wrap').css({
+        'height' : ((wh + 246) / 360 * 100).toFixed(4) + 'vw'
+    })
+    setTimeout(function() {
+        $videoInner.animate({
+            'top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
+        }, 400, function() {
+            $contents.removeClass('fixed');
+            $visualSec.find('video').get(0).play();
+            textMotionAnimation();
+        });
+        $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
+        $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
+            
+    }, 700);
+}
 
 let balanceSecRealLt;
 const getBalanceSecPositionTop = function() {
