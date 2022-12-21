@@ -17,7 +17,6 @@ html, body {position: relative;overflow-x: hidden;}
 
 /* visual-sec */
 /* .main .visual-sec {pointer-events: none;} */
-
 .main .visual-sec {min-height: 100vh;}
 .main .visual-sec .text-area {position: absolute;top: 42.7778vw;left: 11.1111vw;z-index: 100;}
 .main .visual-sec .page-tit {margin-bottom: 8.3333vw;}
@@ -58,17 +57,17 @@ html, body {position: relative;overflow-x: hidden;}
 .main .foundation01-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;font-size: 10vw;line-height: 12vw;}
 .main .foundation01-sec .desc .txtLine span {font-weight: 500;font-size: var(--basic-size);line-height: 6.2222vw;}
 .main .foundation01-sec .img-wrap {position:relative;width: 63.3333vw;height: 111.1111vw;margin-top: 27.7778vw;overflow: hidden;opacity: 0;;transition: transform 1.2s ease .5s, opacity 1.2s ease .5s;z-index: 10;bottom:0}
-.main .foundation01-sec.seen-sec .img-wrap {opacity: 1}
+.main .foundation01-sec .img-wrap.activeMotion {opacity: 1}
+.main .foundation01-sec .img-wrap.activeMotion img {transform: scale(1.1);bottom:0;}
 .main .foundation01-sec .img-wrap img {position:relative;width: 100%;transition: all 1.2s ease .8s;bottom:-10rem}
-.main .foundation01-sec.seen-sec .img-wrap img {transform: scale(1.1);bottom:0;}
 .main .foundation01-sec .circle {position: absolute;top: 177.1667vw;right: 15.1250vw;}
 .main .foundation01-sec .circle svg {width: 2.9167vw;height: 2.9167vw;}
 .main .foundation01-sec .circle02 {position: absolute;top: 102.6667vw;left: 56%;transform: translateX(-50%);z-index: -1;}
 .main .foundation01-sec .circle02 svg {width: 141.6667vw;height: 115.6667vw;}
 .main .foundation01-sec .circle02 path {stroke-dasharray: 3910;stroke-dashoffset: 3910;}
-.main .foundation01-sec.seen-sec .circle02 path {animation: stroke-ani-3 1.5s forwards .5s;}
+.main .foundation01-sec .circle02.activeMotion path {animation: stroke-ani-3 1.5s forwards .5s;}
 .main .foundation01-sec .line {position: absolute;top: 178.555vw;left: 0;width: 0;height: 0.1667vw;background: linear-gradient(270deg, #000000 4.64%, rgba(0, 0, 0, 0.44) 98.49%);z-index: -1;transition: width 1.5s ease .7s;}
-.main .foundation01-sec.seen-sec .line {width: 100%;}
+.main .foundation01-sec .line.activeMotion {width: 100%;}
 @keyframes stroke-ani-3 {
     0% {
         stroke-dashoffset: 3910;
@@ -82,7 +81,7 @@ html, body {position: relative;overflow-x: hidden;}
 .main .foundation02-sec {position: relative;overflow: hidden;}
 .main .foundation02-sec .inner {display: flex;flex-direction: column;justify-content: center;height: 100vh;color: #fff;}
 .main .foundation02-sec .bg {position:absolute;top:0;left:0;width:100%;height:100%;background: url(../images/main_challenge_bg.jpg) 100% 50% no-repeat;background-size: cover;z-index: -1;transition: transform 2s ease .3s;}
-.main .foundation02-sec.seen-sec .bg {transform: scale(1.2)}
+.main .foundation02-sec .bg.activeMotion {opacity: 1;transform: scale(1.2) translate3d(0, 0, 0);}
 .main .foundation02-sec .tit {margin-bottom: 6.6667vw;padding-left: 5.5556vw;}
 .main .foundation02-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 1.1111vw;}
 .main .foundation02-sec .tit .txtLine:nth-of-type(1) span {font-weight: 900;font-size: 10vw;line-height: 11vw;}
@@ -102,17 +101,17 @@ html, body {position: relative;overflow-x: hidden;}
 .main .foundation03-sec .img-wrap::after {content: '';position: absolute;top: 50%;right: -5.5556vw;transform: translateY(-50%);z-index: -1;width: 55.5556vw;height: 100vw;background: url(../images/main_confidence_img_linear.png) 50% 50% no-repeat;background-size: cover;}
 .main .foundation03-sec .img-wrap > div {width: 33.8889vw;height: 33.8889vw;border-radius: 50%;}
 .main .foundation03-sec .img-wrap > div.img {position: relative;right:-8.5vw;overflow: hidden;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.2s ease .3s, opacity 1.2s ease .3s;}
-.main .foundation03-sec.seen-sec .img-wrap > div.img {opacity: 1;transform: translateY(0);}
+.main .foundation03-sec .img-wrap > div.img.activeMotion {opacity: 1;transform: translateY(0);}
 .main .foundation03-sec .img-wrap > div.img img {position: relative;top: -1.6rem;right:0;width: 100%;}
 .main .foundation03-sec .circle {position: absolute;top: 0;right: -8.5vw;display: flex;align-items: center;justify-content: center;width: 48.0556vw;height: 48.0556vw;opacity: 0;background: url(../images/main_circle_img.png) 50% 50% no-repeat;background-size: cover;transition:transform 1.2s ease .8s, opacity 1.2s linear .8s;}
-.main .foundation03-sec.seen-sec .circle {opacity: 1;transform: translate3d(-29.1875vw, 0, 0);}
+.main .foundation03-sec .circle.activeMotion {opacity: 1;transform: translate3d(-29.1875vw, 0, 0);}
 .main .foundation03-sec .circle .line svg {width: 48.0556vw;height: 48.0556vw;}
 .main .foundation03-sec .circle line {stroke-dasharray: 343.4;stroke-dashoffset: 343.4;}
 .main .foundation03-sec .circle line line:nth-of-type(2),.main .foundation03-sec .circle line line:nth-of-type(3) {stroke-dashoffset: 0;}
-.main .foundation03-sec.seen-sec .circle line:nth-of-type(1) {animation: stroke-ani-1 .8s forwards ease 1.5s;}
-.main .foundation03-sec.seen-sec .circle line:nth-of-type(2) {animation: stroke-ani-2 .8s forwards ease 1.5s;}
-.main .foundation03-sec.seen-sec .circle line:nth-of-type(3) {animation: stroke-ani-2 .8s forwards ease 1.5s;}
-.main .foundation03-sec.seen-sec .circle line:nth-of-type(4) {animation: stroke-ani-1 .8s forwards ease 1.5s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(1) {animation: stroke-ani-1 .8s forwards ease 1.5s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(2) {animation: stroke-ani-2 .8s forwards ease 1.5s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(3) {animation: stroke-ani-2 .8s forwards ease 1.5s;}
+.main .foundation03-sec .circle.activeMotion line:nth-of-type(4) {animation: stroke-ani-1 .8s forwards ease 1.5s;}
 @keyframes circle-show-ani-1 { 
     100% {
         opacity: 1; 
@@ -136,7 +135,7 @@ html, body {position: relative;overflow-x: hidden;}
 .main .foundation04-sec {position: relative;overflow:hidden;}
 .main .foundation04-sec .inner {display: flex;flex-direction: column;justify-content: center;height:100vh;color: #fff;}
 .main .foundation04-sec .bg {position:absolute;top:0;left:0;width:100%;height:100%;background: url(../images/main_excellent_bg.jpg) 100% 50% no-repeat;background-size: cover;z-index: -1;transition: transform 2s ease .3s;}
-.main .foundation04-sec.seen-sec .bg {transform: scale(1.2)}
+.main .foundation04-sec .bg.activeMotion {opacity: 1;transform: scale(1.2) translate3d(0, 0, 0);}
 .main .foundation04-sec .tit {margin-bottom: 6.6667vw;padding-left: 5.5556vw;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) {margin-bottom: 1.1111vw;}
 .main .foundation04-sec .tit .txtLine:nth-of-type(1) span {font-weight: 900;font-size: 10vw;line-height: 11vw;}
