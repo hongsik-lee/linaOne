@@ -219,10 +219,13 @@ const foundation03SectionAnimation = function() {
 
     if(!isScreen) {
         if(ratio > 0 && 1 - ratio > 0.5) {
+            // [1222 수정] 해당 섹션에 애니메이션 추가
+            $target.addClass('activeMotion');
             $target.find('.img').addClass('activeMotion');
             $target.find('.circle').addClass('activeMotion');
         }
     } else {
+        $target.removeClass('activeMotion');
         $target.find('.img').removeClass('activeMotion');
         $target.find('.circle').removeClass('activeMotion');
     }

@@ -45,19 +45,26 @@ const visualSectionAnimation = function() {
         , $visualSec = $('.visual-sec')
         , $videoInner = $visualSec.find('.video-inner');
 
+        $videoInner.css({
+            // 'transform': 'scale('+ 1 +')',
+            'width' :  (1138 / 360 * 100).toFixed(4) + 'vw',
+
+        })
     setTimeout(function() {
         $visualSec.animate({
             'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
-        }, 400);
+        }, 700);
         $videoInner.animate({
-            'width' : (1138 / 360 * 100).toFixed(4) + 'vw',
+            // 'width' : (1138 / 360 * 100).toFixed(4) + 'vw',
             // [1222] 핸드폰에서 어색한 모션이 보여서 videoInner 의 속도 삭제
+           
         }, function() {
+            $videoInner.addClass('class')
             $contents.removeClass('fixed');
             $visualSec.find('video').get(0).play();
             textMotionAnimation();
         });
-    }, 700);
+    }, 900);
 }
 
 const foundation01SectionAnimation = function() {

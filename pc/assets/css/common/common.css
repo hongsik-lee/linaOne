@@ -41,7 +41,7 @@ header nav li:nth-of-type(4) .sub_menu_wrap .sub_menu {padding: 1.4583vw 17.708v
 
 .sub_wrap .visual-sec .page-tit {position: absolute;top: 17.4479vw;left: 17%;font-weight: 700;font-size: 6.4583vw;line-height: 6.924vw;overflow: hidden;}
 .sub_wrap .visual-sec .page-tit span {position: relative;font-weight: 700;font-size: 12.4rem;line-height: 13.33rem;font-family: var(--poppins-fonts);overflow: hidden;}
-.sub_wrap .visual-sec .page-tit.type2 {top:11.0104vw;left: 8.7%;line-height:5.5729vw}
+.sub_wrap .visual-sec .page-tit.type2 {top:11.0104vw;left:10.521vw;line-height:5.5729vw}
 .sub_wrap .visual-sec .page-tit.type2 span {display: block;font-size: inherit;font-family: var(--poppins-fonts);line-height: 5.5729vw;}
 .sub_wrap .visual-sec .page-tit-line:last-child span {padding-top:1.3021vw;padding-bottom: 2vw;}
 .sub_wrap .visual-sec .page-tit-line > span {position: relative;bottom: -130px;transition:0.7s}
@@ -167,6 +167,7 @@ footer .list_corp li::after {position: absolute;width: 1.2rem;background: #000;o
 footer .list_corp li:last-child::after {display: none;}
 footer .list_corp li,
 footer .list_corp p {font-size: 0.7292vw;font-weight:400;line-height: 0.8854vw;color:#000;}
+footer .list_corp li a {color:#000} /* [1222] <a> 전화연결 링크 추가 후 색상지정 */
 footer .notice {text-align: right;}
 footer .notice .number {margin-bottom: 0.4167vw;font-size: 2.0833vw;font-weight:800;line-height: 2.5000vw;}
 footer .notice .time {margin-bottom: 3.1250vw;font-size: 0.8854vw;font-weight:500;line-height: 1.0417vw;letter-spacing: 0.01rem;}

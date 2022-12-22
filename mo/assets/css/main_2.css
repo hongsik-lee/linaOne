@@ -93,7 +93,9 @@ html, body {position: relative;overflow-x: hidden;}
 .main .foundation03-sec .tit .txtLine:nth-of-type(n+2) span {font-family: var(--poppins-fonts);font-weight: 700;font-size: 10vw;line-height: 13vw;}
 .main .foundation03-sec .desc .txtLine span {font-weight: 500;font-size: var(--basic-size);line-height: 6.2222vw;}
 .main .foundation03-sec .img-wrap {position: relative;display: flex;justify-content: flex-end;margin-top: 38.8889vw;min-height:33.8889vw;}
-.main .foundation03-sec .img-wrap::before {content: '';position: absolute;top: 0;left: -5.5556vw;width: 16.9444vw;height: 33.8889vw;background: url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;}
+/* [1222] section03 애니메이션 추가 */
+.main .foundation03-sec .img-wrap::before {content: '';position: absolute;top: 0;left:-20vw;width: 16.9444vw;height: 33.8889vw;background: url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;transition:1.2s ease}
+.main .foundation03-sec .img-wrap.activeMotion::before {left: -5.5556vw;}
 .main .foundation03-sec .img-wrap::after {content: '';position: absolute;top: 50%;right: -5.5556vw;transform: translateY(-50%);z-index: -1;width: 55.5556vw;height: 100vw;background: url(../images/main_confidence_img_linear.png) 50% 50% no-repeat;background-size: cover;}
 .main .foundation03-sec .img-wrap > div {width: 33.8889vw;height: 33.8889vw;border-radius: 50%;}
 .main .foundation03-sec .img-wrap > div.img {position: relative;right:-8.5vw;overflow: hidden;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.2s ease .3s, opacity 1.2s ease .3s;}

@@ -97,7 +97,8 @@ div { box-sizing: border-box;}
 
 /* foundation03-sec */
 .main .foundation03-sec {position: relative;display: flex;align-items: center;height: 76.1458vw;}
-.main .foundation03-sec::before{content:'';position: absolute;top: 50%;left:0;transform: translateY(-50%);width: 9.8438vw;height: 19.7917vw;background:url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;}
+.main .foundation03-sec::before{content:'';position: absolute;top: 50%;left:-40rem;transform: translateY(-50%);width: 9.8438vw;height: 19.7917vw;background:url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;transition:1.2s ease}
+.main .foundation03-sec.activeMotion::before {left:0;}
 .main .foundation03-sec::after{content:'';position: absolute;top: 50%;right:0;transform: translateY(-50%);width: 38.5417vw;height: 58.5417vw;background:url(../images/main_confidence_img_linear.jpg) 50% 50% no-repeat;background-size:cover;z-index: -1;}
 .main .foundation03-sec .inner {display:flex;align-items: center;justify-content: space-between;}
 .main .foundation03-sec .tit .txtLine span {display: block;transition: transform .8s ease 1s;font-weight: 800;font-size: 3.5417vw;line-height: 4.6042vw;}
