@@ -113,8 +113,9 @@ const foundation03SectionAnimation = function() {
         , isScreen = isElemOverScreen($target)
         , ratio = getElemScrollRatio($target);
 
-    if(!isScreen) {
-        if(ratio > 0 && $target.find('.desc').hasClass('activeMotion')) {
+        if(!isScreen) {
+        // [1222 수정] 해당 섹션에서 ratio 값 음수로 전환되기에 부등호 변경함 
+        if(ratio < 0 && $target.find('.desc').hasClass('activeMotion')) {
             const timer = setTimeout(function() {
                 $target.find('.img').addClass('activeMotion');
                 $target.find('.circle').addClass('activeMotion');
