@@ -10,7 +10,7 @@ header .gnb-btn img {height: 6.6667vw;}
 #gnb-wrap {height: 100%;width:100%;position: fixed;top: 0;right:-100%;display:flex;flex-direction:column;justify-content:space-between;background-color: #fff; overflow-x: hidden; transition: 0.5s;z-index:1;}
 #gnb-wrap.on {width:100%;z-index:10000;right:0;}
 
-#gnb-wrap header {width:calc(100% - 11.1vw);}
+#gnb-wrap header {width:calc(100% - 11.1vw);background:#fff;}
 #gnb-wrap header > a:first-child {width: 43.8889vw;margin-left: -1.111vw;}
 #gnb-wrap header > a:first-child img {width: 100%;}
 #gnb-wrap .nav {padding-top:21.111vw;overflow-y: scroll;}

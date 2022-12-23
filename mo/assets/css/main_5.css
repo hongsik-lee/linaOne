@@ -16,21 +16,21 @@ html, body {position: relative;overflow-x: hidden;}
 .desc.activeMotion .txtLine > span {transform: translate3d(0, 0, 0);}
 
 /* visual-sec */
-.main .visual-sec {padding-top: 200vw;}
+.main .visual-sec {padding-top: 200vw;transition:.7s ease-in-out}
 .main .visual-sec .text-area {position: absolute;top: 42.7778vw;left: 11.1111vw;z-index: 100;}
 .main .visual-sec .page-tit {margin-bottom: 8.3333vw;}
 .main .visual-sec .page-tit span {font-weight: 900;font-size: 13.8889vw;line-height: 16.6667vw;letter-spacing: 0.03rem;}
 .main .visual-sec .page-tit .txtLine:nth-of-type(n+2) {margin-left: 10vw;}
-.main .visual-sec .page-tit.activeMotion > .txtLine span {transform: translate3d(0, 0, 0);}
-.main .visual-sec .page-tit.activeMotion > .txtLine:nth-of-type(2) span {transition-delay: .2s;}
-.main .visual-sec .page-tit.activeMotion > .txtLine:nth-of-type(3) span {transition-delay: .3s;}
+.main .visual-sec .page-tit.activeMotion > .txtLine span {transform: translate3d(0, 0, 0);transition: 0.7s;transition-delay:0.8s}
+/* .main .visual-sec .page-tit.activeMotion > .txtLine:nth-of-type(2) span {transition-delay: .2s;}
+.main .visual-sec .page-tit.activeMotion > .txtLine:nth-of-type(3) span {transition-delay: .3s;} */
 .main .visual-sec .text-area > .txtLine {margin-left: 10vw;}
 .main .visual-sec .text-area > .txtLine.eng {margin-bottom: 2.2222vw;}
-.main .visual-sec .text-area > .txtLine.eng span {transition-delay: .7s;font-family: var(--poppins-fonts);font-weight: 400;font-size: var(--title-type3);line-height: 6vw;} 
-.main .visual-sec .text-area > .txtLine:last-child span {transition-delay: .9s;font-family: var(--poppins-fonts);font-weight: 600;font-size: 6.6667vw;line-height: 8vw;} 
+.main .visual-sec .text-area > .txtLine.eng span {transition-delay: .7s;font-family: var(--poppins-fonts);font-weight: 400;font-size: var(--title-type3);line-height: 6vw;    transition: transform .6s ease 1.4s;} 
+.main .visual-sec .text-area > .txtLine:last-child span {transition-delay:1.6s;font-family: var(--poppins-fonts);font-weight: 600;font-size: 6.6667vw;line-height: 8vw;} 
 
 .main .visual-sec .video-wrap {position: relative;display: flex;justify-content: center;width: 100%;min-height: 177.7778vw;}
-.main .visual-sec .video-inner {position: absolute;width: 88.8889vw;overflow: hidden;}
+.main .visual-sec .video-inner {position: absolute;width: 1vw;height:1vw;overflow: hidden;transition-duration:1s;bottom:0;}
 .main .video-wrap .video-inner::after {content: '';position:absolute;top:0;left:0;width:100%;height:100%;background: url(../images/main_visual_linear_bg02.png) 50% 50% no-repeat;background-size: cover;}
 .main .visual-sec .video-inner video {width: 100%;transition: .6s;transition-delay:0.6s;}
 .main .visual-sec .video-inner.class video {transform: scale(1.15);}
@@ -97,7 +97,8 @@ html, body {position: relative;overflow-x: hidden;}
 /* [1222] section03 애니메이션 추가 */
 .main .foundation03-sec .img-wrap::before {content: '';position: absolute;top: 0;left: -5.5556vw;width: 16.9444vw;height: 33.8889vw;background: url(../images/main_circle01.svg) 50% 50% no-repeat;background-size: cover;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.4s ease .3s, opacity 1.4s ease .3s;}
 .main .foundation03-sec .img-wrap.activeMotion::before {opacity: 1;transform: translateY(0);}
-.main .foundation03-sec .img-wrap::after {content: '';position: absolute;top: 50%;right: -5.5556vw;transform: translateY(-50%);z-index: -1;width: 55.5556vw;height: 100vw;background: url(../images/main_confidence_img_linear.png) 50% 50% no-repeat;background-size: cover;}
+.main .foundation03-sec .img-wrap::after {content: '';position: absolute;top: 50%;right: -5.5556vw;transform: translateY(-50%);z-index: -1;width: 55.5556vw;height: 100vw;background: url(../images/main_confidence_img_linear.png) 50% 50% no-repeat;transition:.8s ease;background-size: cover;opacity: 0;}
+.main .foundation03-sec .img-wrap.activeMotion::after {opacity: 1;}
 .main .foundation03-sec .img-wrap > div {width: 33.8889vw;height: 33.8889vw;border-radius: 50%;}
 .main .foundation03-sec .img-wrap > div.img {position: relative;right:-8.5vw;overflow: hidden;opacity: 0;transform: translate3d(0, 50%, 0);transition: transform 1.2s ease .3s, opacity 1.2s ease .3s;}
 .main .foundation03-sec .img-wrap > div.img.activeMotion {opacity: 1;transform: translateY(0);}
