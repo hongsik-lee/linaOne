@@ -15,6 +15,10 @@ $(document).ready(function() {
     const $secWrap  = $('.sec-wrap > div');
     $(window).on('scroll mousewheel touchmove', optimizeAnimation(function() {
 
+        if($('#contents').hasClass('fixed')) {
+            $(window).scrollTop(0);
+        }
+
         textMotionAnimation();
         changeControlStatus();
         foundation01SectionAnimation();
@@ -45,24 +49,22 @@ const visualSectionAnimation = function() {
         , $visualSec = $('.visual-sec')
         , $videoInner = $visualSec.find('.video-inner');
 
-    let wh = $(window).outerHeight();
-
-    $('.video-wrap').css({
-        'height' : ((wh + 246) / 360 * 100).toFixed(4) + 'vw'
-    })
-
     setTimeout(function() {
+        $visualSec.animate({
+            'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
+        }, 400);
         $videoInner.animate({
-            'top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
-        }, 400, function() {
-            $contents.removeClass('fixed');
+           'height' : '100%',
+           'width' :  (1138 / 360 * 100).toFixed(4) + 'vw',
+        }, function() {
+            $videoInner.addClass('class')
+            $videoInner.on('transitionend', function() {
+                $contents.removeClass('fixed');
+            });
             $visualSec.find('video').get(0).play();
             textMotionAnimation();
         });
-        $('.cut-off.left').css('transform', 'translate3d(-100%, 0px, 0px)');
-        $('.cut-off.right').css('transform', 'translate3d(100%, 0px, 0px)');
-            
-    }, 700);
+    }, 400);
 }
 
 const foundation01SectionAnimation = function() {
@@ -78,7 +80,7 @@ const foundation01SectionAnimation = function() {
                 $target.find('.line').addClass('activeMotion');
 
                 clearTimeout(timer);
-            }, 400);
+            }, 200);
         }
     } else {
         $target.find('.img-wrap').removeClass('activeMotion');
@@ -122,6 +124,7 @@ const foundation03SectionAnimation = function() {
     if(!isScreen) {
         if(ratio > 0 && $target.find('.desc').hasClass('activeMotion')) {
             const timer = setTimeout(function() {
+                $target.find('.img-wrap').addClass('activeMotion');
                 $target.find('.img').addClass('activeMotion');
                 $target.find('.circle').addClass('activeMotion');
 
@@ -129,6 +132,7 @@ const foundation03SectionAnimation = function() {
             }, 400);
         }
     } else {
+        $target.find('.img-wrap').removeClass('activeMotion');
         $target.find('.img').removeClass('activeMotion');
         $target.find('.circle').removeClass('activeMotion');
     }
@@ -195,9 +199,9 @@ const textMotionAnimation = function() {
 
     $texts.each(function(index, item) {
         if (isElemOverScreen(item, -20)) {
-           $(item).removeClass('activeMotion');
+            $(item).removeClass('activeMotion')
         } else {
-            $(item).addClass('activeMotion');
+            $(item).addClass('activeMotion')
         }
     });
 }
