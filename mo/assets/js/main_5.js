@@ -14,7 +14,11 @@ $(document).ready(function() {
 
     const $secWrap  = $('.sec-wrap > div');
     $(window).on('scroll mousewheel touchmove', optimizeAnimation(function() {
-        
+
+        if($('#contents').hasClass('fixed')) {
+            $(window).scrollTop(0);
+        }
+
         textMotionAnimation();
         changeControlStatus();
         foundation01SectionAnimation();
@@ -45,23 +49,18 @@ const visualSectionAnimation = function() {
         , $visualSec = $('.visual-sec')
         , $videoInner = $visualSec.find('.video-inner');
 
-        $videoInner.css({
-            // 'transform': 'scale('+ 1 +')',
-            // 'width' :  (1138 / 360 * 100).toFixed(4) + 'vw',
-
-        })
     setTimeout(function() {
         $visualSec.animate({
             'padding-top': (246 / 360 * 100).toFixed(4) - 1 + 'vw',
         }, 400);
         $videoInner.animate({
-            // 'width' : (1138 / 360 * 100).toFixed(4) + 'vw',
-            // [1222] 핸드폰에서 어색한 모션이 보여서 videoInner 의 속도 삭제
-           'height' : 100 + '%',
+           'height' : '100%',
            'width' :  (1138 / 360 * 100).toFixed(4) + 'vw',
         }, function() {
             $videoInner.addClass('class')
-            $contents.removeClass('fixed');
+            $videoInner.on('transitionend', function() {
+                $contents.removeClass('fixed');
+            });
             $visualSec.find('video').get(0).play();
             textMotionAnimation();
         });
@@ -81,7 +80,7 @@ const foundation01SectionAnimation = function() {
                 $target.find('.line').addClass('activeMotion');
 
                 clearTimeout(timer);
-            }, 400);
+            }, 200);
         }
     } else {
         $target.find('.img-wrap').removeClass('activeMotion');
@@ -122,11 +121,9 @@ const foundation03SectionAnimation = function() {
         , isScreen = isElemOverScreen($target)
         , ratio = getElemScrollRatio($target);
 
-        if(!isScreen) {
-        // [1222 수정] 해당 섹션에서 ratio 값 음수로 전환되기에 부등호 변경함 
-        if(ratio < 0 && $target.find('.desc').hasClass('activeMotion')) {
+    if(!isScreen) {
+        if(ratio > 0 && $target.find('.desc').hasClass('activeMotion')) {
             const timer = setTimeout(function() {
-                 // [1222 수정] 해당 섹션에 애니메이션 추가
                 $target.find('.img-wrap').addClass('activeMotion');
                 $target.find('.img').addClass('activeMotion');
                 $target.find('.circle').addClass('activeMotion');
