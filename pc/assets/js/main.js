@@ -121,7 +121,7 @@ const changeIndicatorStatus = function() {
 
 const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
 const getVisualSectionSrcollInfo = () => {
-    visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 7
+    visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 5
     visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top;
     visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2;
     visualPosInfo.point = visualPosInfo.startY - (visualPosInfo.endY + visualPosInfo.height);
@@ -129,7 +129,7 @@ const getVisualSectionSrcollInfo = () => {
 
 const videoSectionScrollAnimation = function() {
     const textY = visualPosInfo.endY + visualPosInfo.height
-        , videoY = $('.visual-sec').find('.video-wrap').get(0).getBoundingClientRect().y
+        , videoY = $('.visual-sec').find('.video-wrap').get(0).getBoundingClientRect().y + 5
         , diff = videoY - textY
         , diffRatio = diff / visualPosInfo.point * 100
 
@@ -219,7 +219,6 @@ const foundation03SectionAnimation = function() {
 
     if(!isScreen) {
         if(ratio > 0 && 1 - ratio > 0.5) {
-            // [1222 수정] 해당 섹션에 애니메이션 추가
             $target.addClass('activeMotion');
             $target.find('.img').addClass('activeMotion');
             $target.find('.circle').addClass('activeMotion');
