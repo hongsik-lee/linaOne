@@ -50,7 +50,7 @@
 .interview .interview-box {margin-top: 15rem;}
 .interview .interview-box + .interview-box{margin-top: 12rem;}
 .interview .interview-box.right {padding-left: 2rem;}
-.interview .interview-box.left {padding-right:2rem;margin-bottom:15rem}
+.interview .interview-box.left {padding-right:2rem;}
 .interview .interview-box h2 {margin-bottom:5rem;font-size: var(--basic-size);font-weight: 700;line-height: 140%;}
 .interview .interview-box img {max-width:100%;}
 .interview .interview-box .box-wrap {padding-left:5.6rem;text-align: right;}
@@ -60,9 +60,9 @@
 .interview .interview-box .qna-box .question {margin-bottom: 0.6rem;}
 .interview .interview-box .qna-box:nth-of-type(1) .answer {font-size: var(--title-type3);font-weight:700;line-height:140%;}
 .interview .interview-box .qna-box:nth-of-type(2) .answer {font-size:var(--small-size);line-height: 140%;font-weight: 500;}
-.interview .interview-box.left > img {max-width: 93.750vw;}
-.interview .interview-box.left .qna-box {padding-left: 5.6rem;padding-right: 1rem;}
-.interview .directivity {padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;background-position: bottom;}
+.interview .interview-box.left > img {max-width:78.889vw;}
+.interview .interview-box.left .qna-box {padding-left:7.6rem;padding-right: 1rem;}
+.interview .directivity {margin-top:15rem;padding:15rem 3rem 15rem 2rem;background: url(../images/ab_interview_bg02.png);background-size: cover;background-position: bottom;}
 .interview .directivity h2 {font-size: var(--basic-size);color:#fff;font-weight: 700;line-height: 140%;}
 .interview .directivity .txt-box {margin-top:5rem;padding-left:5.6rem;}
 .interview .directivity .txt-box p {font-size: var(--title-type3);color:#fff;letter-spacing: -0.01em;font-weight:700;line-height: 140%;}

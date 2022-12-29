@@ -53,7 +53,7 @@
 .interview .page-desc-sec .sign {width: 26.875vw;height: 5.2604vw;margin-top: 4.7917vw;}
 .interview .page-sec01 {padding:9.271vw 0 9.219vw;background:url(../images/ab_interview_img01.png);background-size:cover}
 .interview .page-sec01 .inner {padding-left: 16.875vw;}
-.interview .page-sec01 .desc {font-size:1.667vw;line-height:2.292vw;font-weight:700;color:#fff;letter-spacing: -0.03em;}
+.interview .page-sec01 .desc {font-size:1.667vw;line-height:2.292vw;font-weight:700;color:#fff;letter-spacing: -0.03em;word-break: keep-all;}
 .interview .page-sec01 .desc + .desc {margin-top: 4.167vw;}
 .interview .page-sec01 .desc span {display:block;margin-top:0.833vw;font-size: 1.250vw;line-height: 1.750vw;letter-spacing:-0.03em;font-weight:500;color:rgba(255,255,255,.6)}
 .interview .page-interview {margin-top: 13.021vw;}
@@ -66,7 +66,7 @@
 .interview .page-interview li + li {margin-top: 3.125vw;}
 .interview .page-interview p {position: relative}
 .interview .page-interview .question {padding-left:3.125vw;margin-bottom:1.328vw;font-size: 1.667vw;font-weight:700;line-height:2.333vw;}
-.interview .page-interview .answer {padding-left:3.125vw;font-size: 1.042vw;line-height: 1.563vw;font-weight: 500;letter-spacing: 0.02em;}
+.interview .page-interview .answer {padding-left:3.125vw;font-size: 1.042vw;line-height: 1.563vw;font-weight: 500;letter-spacing: 0.02em;word-break: keep-all;}
 .interview .page-interview .answer span {display: block;font-size: 1.042vw;line-height: 1.563vw;font-weight: 500;letter-spacing: 0.02em;}
 .interview .page-interview .answer span:first-child {margin-top: 0.729vw;}
 .interview .page-interview p:after {position:absolute;left:0;top:0;font-size: 1.875vw;font-weight:700;line-height:2.333vw;}
