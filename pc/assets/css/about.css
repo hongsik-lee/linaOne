@@ -61,9 +61,10 @@
 .interview .page-interview .col:last-of-type {justify-content: flex-end;}
 .interview .page-interview .right {display:flex;column-gap:8.438vw;}
 .interview .page-interview .right .subject {width: 8.438vw;font-size: 1.250vw;font-weight:700;line-height: 1.875vw;}
-.interview .page-interview .right img {width: 49.479vw;}
+.interview .page-interview .right img {width: 49.479vw;image-rendering: pixelated}
 .interview .page-interview .right .cont {width: calc(100% - 16.875vw);}
 .interview .page-interview li + li {margin-top: 3.125vw;}
+.interview .page-interview li .txt + .txt {margin-top: 5.729vw;}
 .interview .page-interview p {position: relative}
 .interview .page-interview .question {padding-left:3.125vw;margin-bottom:1.328vw;font-size: 1.667vw;font-weight:700;line-height:2.333vw;}
 .interview .page-interview .answer {padding-left:3.125vw;font-size: 1.042vw;line-height: 1.563vw;font-weight: 500;letter-spacing: 0.02em;word-break: keep-all;}
@@ -72,7 +73,7 @@
 .interview .page-interview p:after {position:absolute;left:0;top:0;font-size: 1.875vw;font-weight:700;line-height:2.333vw;}
 .interview .page-interview .question:after {content: "Q.";}
 .interview .page-interview .answer:after {content: "A.";}
-.interview .page-interview .left img {width: 32.656vw;}
+.interview .page-interview .left img {width:49.479vw;image-rendering: pixelated}
 .interview .page-interview .left .txt {margin-top:3.125vw;padding-left: 16.875vw;}
 .interview .page-interview .left .txt + .txt {margin-top: 5.729vw;}
 .interview .page-sec02 {margin-top:13.021vw;padding:12.500vw 0;background:url(../../assets/images/ab_interview_img04.png);background-size: cover;}
