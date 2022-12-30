@@ -44,9 +44,9 @@
 .interview .content > .desc p.sign span {display:inline-block;margin-right:1.4rem;font-weight: 500;color:#000;font-size: var(--small-size);}
 .interview img.sign {height: 7.4rem;margin-left: -2rem;}
 .interview .interview-sec {padding:15rem 2rem;background:url(../images/ab_interview_bg.png);background-size:cover;}
-.interview .interview-sec p {padding-left:5.6rem;font-size: var(--title-type3);color:#fff;font-weight:700;line-height: 140%;letter-spacing:-0.01em;}
+.interview .interview-sec p {padding-left:5.6rem;font-size: var(--title-type3);color:#fff;font-weight:700;line-height: 140%;letter-spacing:-0.01em;word-break: keep-all;}
 .interview .interview-sec p + p {margin-top: 5rem;}
-.interview .interview-sec span {display: block;padding-left:5.6rem;margin-top:2rem;font-size: var(--small-size);line-height: 140%;color: rgba(255, 255, 255, 0.6);font-weight:500;}
+.interview .interview-sec span {display: block;padding-left:5.6rem;margin-top:2rem;font-size: var(--small-size);line-height: 140%;color: rgba(255, 255, 255, 0.6);font-weight:500;word-break: keep-all;}
 .interview .interview-box {margin-top: 15rem;}
 .interview .interview-box + .interview-box{margin-top: 12rem;}
 .interview .interview-box.right {padding-left: 2rem;}
