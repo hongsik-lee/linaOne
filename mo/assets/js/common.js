@@ -58,7 +58,6 @@ function scrollToTop(){
 }
 function scrollToTarget(){
     let content = document.querySelector('.content')
-    // window.scrollTo({left:0, top:Position(content), behavior: "smooth"} )
     window.scrollTo({left:0, top:600, behavior: "smooth"} )
 }
 
