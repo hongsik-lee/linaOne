@@ -15,9 +15,10 @@
             <h1 class="page-tit">공시실</h1>
             <div class="flexbox">
                 <div class="listbox-group">
-                    <button type="button" class="label" aria-haspopup="listbox" aria-labelledby="listbox_list_button">2022년 하반기</button>
-                    <ul class="listbox-list" role="listbox" aria-labelledby="listbox_option" aria-activedescendant="option-1">
-                        <li class="option-1 focused" role="option" aria-selected="true">2022년 하반기</li>
+                    <span id="listbox_option" class="blind">listbox 선택 요소:</span>
+                    <button type="button" id="listbox_button" aria-haspopup="listbox" aria-labelledby="listbox_option listbox_button">2022년 하반기</button>
+                    <ul id="listbox_option_list" role="listbox" aria-labelledby="listbox_option" aria-activedescendant="option_1">
+                        <li id="option_1" role="option" class="focused" aria-selected="true">2022년 하반기</li>
                     </ul>
                 </div>
             </div>
@@ -26,8 +27,8 @@
                 <div class="table-wrap">
                     <table>
                         <colgroup>
-                            <col width="40%">
-                            <col width="60%">
+                            <col style="width: 40%">
+                            <col style="width: 60%">
                         </colgroup>
                         <tr>
                             <th>대리점명</th>
@@ -49,7 +50,10 @@
                 <div class="table-wrap">
                     <table>
                         <colgroup>
-                            <col width="25%">
+                            <col style="width: 25%">
+                            <col style="width: 25%">
+                            <col style="width: 25%">
+                            <col style="width: 25%">
                         </colgroup>
                         <tr>
                             <th>대리점명</th>

@@ -171,12 +171,12 @@ footer .list_corp li a {color:#000} /* [1222] <a> 전화연결 링크 추가 후
 footer .notice {text-align: right;}
 footer .notice .number {margin-bottom: 0.4167vw;font-size: 2.0833vw;font-weight:800;line-height: 2.5000vw;}
 footer .notice .time {margin-bottom: 3.1250vw;font-size: 0.8854vw;font-weight:500;line-height: 1.0417vw;letter-spacing: 0.01rem;}
-footer .family_site {display:none;position:relative;padding-top: 1.2500vw;width: 15.1042vw;border-bottom: 0.1042vw solid #000;}
-footer .family_site > li {position:relative;padding: 0.6250vw 0 0.8854vw;font-size: 0.8333vw;font-weight: 400;cursor: pointer;}
-footer .family_site > li::before {position: absolute;width: 0.7292vw;height: 0.3646vw;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 0.5208vw;top: auto;bottom: 1.1458vw;transition:.3s;content: '';}
+footer .family_site {position:relative;display:none;padding-top: 1.2500vw;width: 15.1042vw;border-bottom: 0.1042vw solid #000;}
+footer .family_site p {padding: 0.625vw 0 0.8854vw;font-size: 0.8333vw;font-weight: 400;}
+footer .family_site p::before {position: absolute;width: 0.7292vw;height: 0.3646vw;background: url(../../images/common/sitebox_arrow_down.png);background-size: contain;background-repeat: no-repeat;right: 0.5208vw;top: auto;bottom: 1.1458vw;transition:.3s;content: '';}
+footer .family_site:hover p::before {transform: rotate(180deg);}
+footer .family_site:hover .link_site {opacity: 1;bottom: 3.0208vw;z-index: 1;}
 footer .family_site > .link_site {position:absolute;width:100%;padding: 0.6250vw 0;bottom: 3.0208vw;background: #fff;border: 0.6px solid #000;transition:.3s;opacity: 0;bottom:0;z-index:-1;}
 footer .family_site > .link_site li {padding-left: 1.0417vw;height: 2.5000vw;transition:.3s;}
 footer .family_site > .link_site li:hover {background:#F4F4F4}
 footer .family_site > .link_site li a {font-size: 0.8333vw;line-height: 2.5000vw;font-weight: 400;color:#000}
-footer .family_site:hover li::before {transform: rotate(180deg);}
-footer .family_site:hover .link_site {opacity: 1;bottom: 3.0208vw;z-index: 1;}

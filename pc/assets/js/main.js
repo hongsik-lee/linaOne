@@ -1,6 +1,6 @@
 let swiper;
 let yOffset = 0;
-$(document).ready(() => {
+$(document).ready(function() {
     $('.visual-sec').find('video').get(0).play();
     $('.visual-sec').find('video').get(0).pause();
     
@@ -15,11 +15,10 @@ $(document).ready(() => {
     $(document).on('click', '.indicator-group', function(e) {
         const $target = $(e.target)
             , index = $target.index()       
-            , nodeName = e.target.nodeName
-            , $contents = $('#contents').children();
+            , nodeName = e.target.nodeName;
         
         if(nodeName === 'BUTTON') {
-            scrollMovePosition(index)
+            scrollMovePosition(index);
         }
     });
 
@@ -65,10 +64,8 @@ $(document).ready(() => {
         changeIndicatorStatus();
     }));
 
-    // 중간 새로고침시 1픽셀 움직이기
-    if(window.pageYOffset > 0) {
-        window.scrollTo(0, window.pageYOffset + 1);
-    }
+    // 새로고침시 맨 위로
+    $(window).on('beforeunload', function() { $(window).scrollTop(0); });
 });
 
 var delay = 300;
@@ -77,7 +74,6 @@ $(window).on('resize', function(){
     clearTimeout(timer);
     timer = setTimeout(function(){
         getVisualSectionSrcollInfo();
-        console.log('resize is well done')
     }, delay);
 });
 
@@ -165,10 +161,6 @@ const foundation01SectionAnimation = function() {
             $target.find('.circle02').addClass('activeMotion');
             $target.find('.line').addClass('activeMotion');
         }
-        
-        if(ratio < -0.2) {
-            sectionFixedAnimation();
-        }
     } else {
         $target.find('.img-wrap').removeClass('activeMotion');
         $target.find('.circle02').removeClass('activeMotion');
@@ -183,16 +175,37 @@ const foundation02SectionAnimation = function() {
         , isScreen = isElemOverScreen($target)
         , ratio = getElemScrollRatio($target);
         
-    if(!isScreen) {
-        if(ratio > 0) {
-            $target.css("transform",  'scale('+ (1 - ratio / splitValue) +')');
-        } else {
-            isFixedAni = false;
+     const foundation02_init = function(type) {
+        const foundation01PosBottom = $('.foundation01-sec').get(0).getBoundingClientRect().bottom
+            , foundation02PosBottom = $('.foundation02-sec').get(0).getBoundingClientRect().bottom
+
+        if(type === 1) {
+            if(foundation01PosBottom >= foundation02PosBottom) {
+                $('.foundation01-sec').css({
+                    'position': 'relative',
+                    'top': 'auto'
+                });
+            }
+        } else if(type === 2) {
             $('.foundation01-sec').css({
                 'position': 'relative',
                 'top': 'auto'
-            })
+            });
+        }
+    }
+        
+    if(!isScreen) {
+        if(ratio > 0) {
+            sectionFixedAnimation();
+            $target.css("transform",  'scale('+ (1 - ratio / splitValue) +')');
+
+            if($(window).innerWidth() < 1280) foundation02_init(1);
+        } else {
+            isFixedAni = false;
             $target.css("transform",  'scale(1)');
+
+            if($(window).innerWidth() < 1280) foundation02_init(1);
+            else foundation02_init(2);
         }
         if(ratio < 0 && ratio > -1.5) {
             let scaleValue = 1 + Math.abs(ratio) / 5
@@ -202,12 +215,8 @@ const foundation02SectionAnimation = function() {
         }
     } else {
         if(ratio > 1) {
-            currentFixedY = '';
             isFixedAni = false;
-            $('.foundation01-sec').css({
-                'position': 'relative',
-                'top': 'auto'
-            })
+            foundation02_init(2);
         }
     }
 }
@@ -255,13 +264,20 @@ const foundation04SectionAnimation = function() {
 let isFixedAni = false, currentFixedY;
 const sectionFixedAnimation = function() {
     if(!isFixedAni) {
-        const fixedY = $('.foundation01-sec').get(0).getBoundingClientRect().y + 'px'
+        
+        if(!currentFixedY) {
+            const foundation01PosTop = $('.foundation01-sec').position().top;
+            const foundation02PosTop = $('.foundation02-sec').position().top;
+            const fixedY = foundation02PosTop - foundation01PosTop - $(window).innerHeight();
+
+            currentFixedY = currentFixedY || fixedY;
+        }
+
         $('.foundation01-sec').css({
             'position': 'fixed',
-            'top': currentFixedY || fixedY
+            'top': -currentFixedY + 'px'
         });
 
-        currentFixedY = currentFixedY || fixedY;
         isFixedAni = true;
     }
 }
@@ -269,25 +285,25 @@ const sectionFixedAnimation = function() {
 const setSectionFixed = function() {
     const $fixedSec = $('.fixed-sec')
         , $child = $fixedSec.children()
-        , childStyle = window.getComputedStyle($child.get(0));
+        , screenWidth = 1920;
 
     $fixedSec.css({
         'display': 'block',
-        'width': (1903 / 1920 * 100).toFixed(4) + 'vw',
+        'width': (1903 / screenWidth * 100).toFixed(4) + 'vw',
         // 'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
-        'height': (1400 / 1920 * 100).toFixed(4) + 'vw',
+        'height': (1400 / screenWidth * 100).toFixed(4) + 'vw',
         // 'margin': childStyle.margin,
         'padding': 0,
         'box-sizing': 'border-box'
     });
 
     $child.css({
-        'width':  (1903 / 1920 * 100).toFixed(4) + 'vw',
-        'min-width':  (1903 / 1920 * 100).toFixed(4) + 'vw',
-        'height': (1182 / 1920 * 100).toFixed(4) + 'vw',
-        'min-height': (1182 / 1920 * 100).toFixed(4) + 'vw',
+        'width':  (1903 / screenWidth * 100).toFixed(4) + 'vw',
+        'min-width':  (1903 / screenWidth * 100).toFixed(4) + 'vw',
+        'height': (1182 / screenWidth * 100).toFixed(4) + 'vw',
+        'min-height': (1182 / screenWidth * 100).toFixed(4) + 'vw',
         'margin': 0,
-        'padding-bottom': (167 / 1920 * 100).toFixed(4) + 'vw',
+        'padding-bottom': (167 / screenWidth * 100).toFixed(4) + 'vw',
         'transform:': 'translate(0px, 0px)'
     });
 }

@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", function () {
+    loadHeaderAndFooter()
     subPageVisualAnimation();
 
     // 컨텐츠 scroll 공통 효과
@@ -92,8 +93,18 @@ window.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-$(window).scroll(function () {
-    const $counters = $(".counter");
+const loadHeaderAndFooter = function() {
+    fetch('../../pages/include/header.html')
+    .then(res => res.text())
+    .then(data => $('header').append(data));
+
+    fetch('../../pages/include/footer.html')
+    .then(res => res.text())
+    .then(data => $('footer').append(data));
+}
+
+const $counters = $(".counter");
+$(window).scroll(function() {
     if($counters.length > 0) {
 
         $counters.each(function(index, item) {
@@ -163,7 +174,7 @@ const increaseNumberAnimation = function(elem, duration) {
         , type = $target.data('type')
 
     $target.addClass('count-finished');
-    const step = (timestamp) => {
+    const step = function(timestamp) {
         if (!startTimeStamp) startTimeStamp = timestamp;
         const progress = Math.min((timestamp - startTimeStamp) / duration);
         let value;
@@ -270,32 +281,7 @@ const handleRecruitStepClick = function(e) {
         , $accor = $('.recruitTab').find('.accor ul')
         , texts = recruitStepTexts;
 
-    if(targetName === 'A') {
-        let filtered, contents;
-
-        if(dataFilter === 'all') {
-            contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
-        } else {
-            filtered = texts.filter(function(item) { return item['category'] === dataFilter });
-
-            if(filtered.length > 0) {
-                contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
-            } else {
-                let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
-                let html = '';
-                    html += '<li class="filter-item empty" data-category="'+ dataFilter +'">';
-                    html +=     '<div class="acc_tit_area">';
-                    html +=         '<span class="category">'+ category[dataFilter] +'</span>';
-                    html +=         '<h3 class="title">등록된 게시물이 없습니다.</h3>';
-                    html +=     '</div>';
-                    html += '</li>';
-
-                contents = html;
-            }
-        }
-
-        $accor.html(contents);
-    }
+    if(targetName === 'A') recruitDateChange($accor, dataFilter, texts);
 }
 
 const handleTmrRecruitStepClick = function(e) {
@@ -305,32 +291,26 @@ const handleTmrRecruitStepClick = function(e) {
         , $accor = $('.tmr-tab').find('.accor ul')
         , texts = tmrRecruitTexts;
 
-    if(targetName === 'A') {
-        let filtered, contents;
+    if(targetName === 'A') recruitDateChange($accor, dataFilter, texts);
+}
 
-        if(dataFilter === 'all') {
-            contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
+const recruitDateChange = function(target, dataFilter, texts) {
+    let contents;
+    const $target = target;
+
+    if(dataFilter === 'all') {
+        contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
+    } else {
+        let filtered = texts.filter(function(item) { return item['category'] === dataFilter });
+
+        if(filtered.length > 0) {
+            contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
         } else {
-            filtered = texts.filter(function(item) { return item['category'] === dataFilter });
-
-            if(filtered.length > 0) {
-                contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
-            } else {
-                let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
-                let html = '';
-                    html += '<li class="filter-item empty" data-category="'+ dataFilter +'">';
-                    html +=     '<div class="acc_tit_area">';
-                    html +=         '<span class="category">'+ category[dataFilter] +'</span>';
-                    html +=         '<h3 class="title">등록된 게시물이 없습니다.</h3>';
-                    html +=     '</div>';
-                    html += '</li>';
-
-                contents = html;
-            }
+            contents = recruitStepEmptyHTMLString(dataFilter);
         }
-
-        $accor.html(contents);
     }
+
+    $target.html(contents);
 }
 
 const recruitStepHTMLString = function(item) {
@@ -339,9 +319,22 @@ const recruitStepHTMLString = function(item) {
         html += '<li class="filter-item" data-category="'+ item.category +'">';
         html +=     '<div class="acc_tit_area">';
         html +=         '<span class="category">'+ category[item.category] +'</span>';
-        html +=         '<h3 class="title">'+ item.title +'</h3>';
+        html +=         '<p class="title">'+ item.title +'</p>';
         html +=     '</div>';
         html +=     '<div class="cont">' + item.desc + '</div>';
+        html += '</li>';
+    
+    return html;
+}
+
+const recruitStepEmptyHTMLString = function(dataFilter) {
+    let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
+    let html = '';
+        html += '<li class="filter-item empty" data-category="'+ dataFilter +'">';
+        html +=     '<div class="acc_tit_area">';
+        html +=         '<span class="category">'+ category[dataFilter] +'</span>';
+        html +=         '<p class="title">등록된 게시물이 없습니다.</p>';
+        html +=     '</div>';
         html += '</li>';
     
     return html;

@@ -164,7 +164,7 @@ html, body {position: relative;overflow-x: hidden;}
 .main .brand-goal-sec .swiper-wrapper {position: absolute;top: 173.6111vw;left: 5.5556vw;display: flex;height: 83.3333vw;padding-left: 5.5556vw;}
 .main .brand-goal-sec .swiper-slide {position: relative;display: flex;width: 72.2222vw;height: 83.3333vw;margin-right: 5.5556vw;padding: 6.9444vw;border: 0.1667vw solid #000;box-sizing: border-box;background-color: #fff;transition: color .8s ease;}
 .main .brand-goal-sec .swiper-slide::after {content: '';position: absolute;top:0;left:0;width: 100%;height: 100%;background: linear-gradient(7.03deg, #2A23BD -16.68%, #140F70 93.91%);opacity: 0;transition: opacity .3s ease;z-index: -1;}
-.main .brand-goal-sec .swiper-slide h4 span {display: block;font-family: var(--poppins-fonts);font-weight: 700;font-size: 7.7778vw;line-height: 8.5556vw;}
+.main .brand-goal-sec .swiper-slide h3 span {display: block;font-family: var(--poppins-fonts);font-weight: 700;font-size: 7.7778vw;line-height: 8.5556vw;}
 .main .brand-goal-sec .swiper-slide .shapes {position: absolute;right: 6.6667vw;bottom: 6.6667vw;width: 21.6667vw; height: 21.6667vw;}
 .main .brand-goal-sec .swiper-slide .shapes mask {width: 100%; height: 100%;}
 .main .brand-goal-sec .swiper-slide.swiper-slide-active {border:none;color: #fff;}
@@ -179,9 +179,9 @@ html, body {position: relative;overflow-x: hidden;}
 .main .related-info-sec .cont-box:nth-of-type(n+2) {margin-top: 16.6667vw;}
 .main .related-info-sec .cont-box a {display: flex;justify-content: space-between;width:100%;color:#000;}
 .main .related-info-sec .cont-box .desc {font-weight: 400;font-size: var(--small-size);line-height: 5.4444vw;}
-.main .related-info-sec .cont-box h4 {position:relative;display: inline-block;margin-bottom: 3.3333vw;}
-.main .related-info-sec .cont-box.recruit h4 {font-weight: 900;font-size: 7.7778vw;line-height: 10.1111vw;letter-spacing: 0.06rem;}
-.main .related-info-sec .cont-box.contact h4 {font-family: var(--poppins-fonts);font-weight: 700;font-size: 7.7778vw;line-height: 10.1111vw;}
+.main .related-info-sec .cont-box h3 {position:relative;display: inline-block;margin-bottom: 3.3333vw;}
+.main .related-info-sec .cont-box.recruit h3 {font-weight: 900;font-size: 7.7778vw;line-height: 10.1111vw;letter-spacing: 0.06rem;}
+.main .related-info-sec .cont-box.contact h3 {font-family: var(--poppins-fonts);font-weight: 700;font-size: 7.7778vw;line-height: 10.1111vw;}
 .main .related-info-sec .cont-box .ico-arrow-area {position:relative;display: inline-block;width: 8.8889vw;height: 8.8889vw;margin-left: 2.3438vw;overflow: hidden;}
 .main .related-info-sec .cont-box .ico-arrow {position: relative;width:100%;height:100%;transition: transform .6s ease;}
 .main .related-info-sec .cont-box .ico-arrow.hover{left: -100%;}

@@ -29,7 +29,7 @@
 .overview .definition-sec .total-data {margin-top: 6.771vw;}
 .overview .definition-sec .total-data dd {font-weight: 700;font-size: 1.458vw;line-height:2.188vw;letter-spacing: -0.02em;}
 .overview .definition-sec .total-data .info {display: flex;flex-wrap: wrap;}
-.overview .definition-sec .total-data dl {width: 50%;}
+.overview .definition-sec .total-data dl {display: flex;flex-direction: column-reverse;width: 50%;}
 .overview .definition-sec .total-data dl:nth-child(n+3) {margin-top: 4.167vw;}
 .overview .definition-sec .total-data dl:last-child {width: 100%;}
 .overview .definition-sec .total-data dd strong {margin-right:0.208vw;font-weight: 700;font-size:4.688vw;line-height: 7.031vw;}

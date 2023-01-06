@@ -1,74 +1,174 @@
 
 $(document).ready(function() {
-    $(document).on('click', '.popup-close-btn', windowClose);
+    subPageVisualAnimation();
 
-    $('.listbox-group').each(function(index, item) {
-        $(item).on('click', function(e) {
-            handelClickListbox($(this), e);
+    // 서브 페이지 scroll 컨텐츠 공통 효과
+    if($('.main').length == 0 && $('.foot').length == 0) {
+        loadHeaderAndFooter();
+        
+        AOS.init({
+            easing: 'linear',
+            duration:500
         });
-    });
 
-    $(document).on('keydown', '.listbox-list', function(e) {
-        e.preventDefault();
-        handleKeypressListboxList($(this), e);
-    });
+        onElementHeightChange(document.body, function(){
+            AOS.refresh();
+        });
+    }
+
+    $(document).on('click', '.popup-close-btn', windowClose);
 
     $(document).on('click', '.nav > li', function(e) {
         $(this).toggleClass('active').find('.sub-nav').slideToggle(400);
         $(this).siblings('li').removeClass('active').find('.sub-nav').slideUp(400);
     });
 
-    if($('.main').length == 0 && $('.foot').length == 0) {
-        // 컨텐츠 scroll 공통 효과
-        AOS.init({
-            easing: 'linear',
-            duration:500
+    // 채용절차 자주하는질문 filter 
+    $(document).on('click', '#recruitStep', function(e) {
+        handleRecruitStepClick(e);
+    });
+
+    // TMR 채용절차 자주하는 질문 filter
+    $(document).on('click', '#tmrRecruitStep', function(e) {
+        handleTmrRecruitStepClick(e);
+    });
+
+    // 공시실 listbox click event
+    $('.listbox-group').each(function(index, item) {
+        $(item).on('click', function(e) {
+            handelClickListbox($(this), e);
         });
-        onElementHeightChange(document.body, function(){
-            AOS.refresh();
-        });
-    }
+    });
 
-    // scroll button 공통 효과 *추후 업데이트예정입니다
-    let scrollStatus = 0;
-    let btnDown = $('.btn-down');
-    let btnUp = $('.btn-up')
+    // 공시실 listbx keyborad event
+    $(document).on('keydown', 'ul[role="listbox"]', function(e) {
+        e.preventDefault();
+        handleKeypressListboxList($(this), e);
+    });
 
-    $(window).on('scroll', function(){
-        let scrollTop = $(this).scrollTop();
-        if(scrollTop === 0){
-            btnDown.stop().fadeIn()
-        }else if(scrollStatus > 50){
-            btnDown.stop().hide()
-        }else{
+    // 아코디언 공통 click event
+    $(document).on('click', '.acc_tit_area', function(e) {
+        e.preventDefault();
+        handleAccTitAreaClick($(this));
+    });
+
+    // 탭 공통 click event
+    $(document).on('click', '.tab-title', function(e) {
+        handleTabTitleClick(e);
+    });
+
+    // 서브 탭 공통  click evnet
+    $(document).on('click', '.sub-tab-title', function(e) {
+        handleSubTabClick(e);
+    });
+
+    const $counters = $(".counter");
+    $(window).scroll(function() {
+        if($counters && $counters.length > 0) {
+            $counters.each(function(index, item) {
+                const counterTop = $(item).offset().top - window.innerHeight;
+
+                if ($(window).scrollTop() > counterTop) {
+                    const $countNum = $(item).find('.count-num');
+
+                    $countNum.each((index, elem) => {
+                        if(!$(elem).hasClass('count-finished')) {
+                            increaseNumberAnimation(elem, 1000);
+                        }
+                    });
+                }
+            });
         }
-        scrollStatus = scrollTop
-    })
-
-    $(document).on('load', function(){
-        let scrollTop = $('.sub-wrap').scrollTop();
-        if(scrollTop !== 0){
-            btnDown.hide()
-        }
-    })
+    });
 });
 
-function scrollToTop(){
-    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-}
-function scrollToTarget(){
-    let content = document.querySelector('.content')
-    window.scrollTo({left:0, top:600, behavior: "smooth"} )
+const loadHeaderAndFooter = function() {
+    fetch('../../pages/include/header.html')
+    .then(res => res.text())
+    .then(data => $('header').append(data));
+
+    fetch('../../pages/include/gnb_wrap.html')
+    .then(res => res.text())
+    .then(data => $('#gnb-wrap').append(data));
+
+    fetch('../../pages/include/footer.html')
+    .then(res => res.text())
+    .then(data => {
+        $('footer').append(data);
+        const $btnDown = $('footer').find('.btn-down');
+
+        if($(window).scrollTop() !== 0) {
+            $btnDown.css('display', 'none');
+        }
+
+        $(window).scroll(function() {
+            let scrollTop = $(window).scrollTop();
+
+            if($btnDown && $btnDown.length > 0) {
+                if(scrollTop === 0) { 
+                    $btnDown.stop().fadeIn();
+                } else if(scrollTop > 50) {
+                    $btnDown.stop().hide();
+                }
+            }
+        });
+    });
 }
 
-function Position(obj){
-    var currenttop = 0;
-    if (obj.offsetParent){
-     do {
-      currenttop += obj.offsetTop - 60;
-    }while ((obj = obj.offsetParent));
-     return [currenttop];
+const handleTabTitleClick = function(e) {
+    const $target = $(e.target)
+        , idx = $target.index()
+        , $cont = $('.content');
+
+    $target.addClass('active').siblings().removeClass('active');
+    $cont.hide().eq(idx).show();
+
+    if($target.hasClass('clicked')) {
+        $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');
     }
+
+    tabAndSubTabAnimation($target);
+}
+
+const handleSubTabClick = function(e) {
+    const $target = $(e.target)
+        , idx = $target.index()
+        , $subCont = $('.sub-content');
+
+    $target.addClass('active').siblings().removeClass('active');
+    $subCont.hide().eq(idx).show();
+
+    tabAndSubTabAnimation($target);
+}
+
+const tabAndSubTabAnimation = function(target) {
+    const $target = target
+        , $parent = $target.parent('ul')
+        , idx = $target.index()
+        , len = $parent.children().length
+
+    if(len-1 === idx) {
+        $parent.stop(true, true).delay(0).animate({
+            scrollLeft: $target.offset().left + 100
+        }, { queue: false, duration: 1000 });
+    } else if(idx === 0) {
+        $parent.stop(true, true).delay(0).animate({
+            scrollLeft: $target.offset().left + 0
+        }, { queue: false, duration: 200 });
+    }
+}
+
+const subPageVisualAnimation = function() {
+    let $visual = $('.visual');
+    $visual.addClass('active').find('h1').addClass('active');
+}
+
+const scrollToTop = function() {
+    window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+}
+
+const scrollToTarget = function() {
+    window.scrollTo({ left:0, top: 600, behavior: "smooth" });
 }
 
 const onElementHeightChange = function(elm, callback) {
@@ -87,7 +187,7 @@ const onElementHeightChange = function(elm, callback) {
         elm.onElementHeightChangeTimer = setTimeout(run, 200);
     })();
 }
-// header nav animation
+
 const openNav = function() {
     $('#gnb-wrap').addClass('on');
 }
@@ -96,108 +196,120 @@ const closeNav = function() {
     $('#gnb-wrap').removeClass('on');
 
     const $navLis = $('.nav > li');
-    setTimeout(function() {
+    let timer = setTimeout(function() {
         $navLis.each(function(index, item) {
             $(item).removeClass('active').find('.sub-nav').css('display', 'none');
         });
+        clearTimeout(timer);
     }, 300);
  }
 
-// listbox click event
+ const handleAccTitAreaClick = function(item) {
+    const $target = $(item)
+        , $accorActive = $('.acc-active');
+    
+    if($target.hasClass('acc-active')) {
+        $target.removeClass('acc-active');
+    } else {
+        $accorActive.each(function(index, item) {
+            $(item).removeClass('acc-active');
+        });
+        $target.addClass('acc-active');
+    }
+}
+
 let oldListbox, newListbox;
 const handelClickListbox = function(listbox, e) {
     const $listbox = $(listbox)
-        , $label = $listbox.find('.label')
+        , $button = $listbox.find('button[aria-haspopup="listbox"]')
         , target = e.target
         , targetName = target.nodeName;
 
     newListbox = $listbox[0];
     if(oldListbox !== newListbox) {
-        $('.listbox-group.active').find('.label').removeAttr('aria-expanded');
+        $('.listbox-group.active').find('button[aria-haspopup="listbox"]').removeAttr('aria-expanded');
         $('.listbox-group.active').removeClass('active');
     }
 
     if(targetName == 'BUTTON') {
         if(!$listbox.hasClass('active')) {
             $listbox.addClass('active');
-            $listbox.find('.listbox-list').attr('tabindex', '-1').focus();
-            $label.attr('aria-expanded', 'true');
+            $listbox.find('ul[role="listbox"]').attr('tabindex', '-1').focus();
+            $button.attr('aria-expanded', 'true');
         } else {
             $listbox.removeClass('active');
-            $label.removeAttr('aria-expanded');
+            $button.removeAttr('aria-expanded');
         }
     }
 
     if(targetName == 'LI') {
         changeListboxStatus($(target))
 
-        $label.removeAttr('aria-expanded');
+        $button.removeAttr('aria-expanded');
         $listbox.removeClass('active');
     }
 
     oldListbox = $listbox[0];
 };
 
-// listbox keyborad event
 let keypressNum = 0;
 const handleKeypressListboxList = function(listboxList, e) {
     let target;
     const $listboxList = $(listboxList)
         , $listbox = $listboxList.closest('.listbox-group')
-        , $label = $listbox.find('.label')
+        , $button = $listbox.find('button[aria-haspopup="listbox"]')
         , listLen = $listboxList.children().length;
-    
-    switch(e.keyCode){
-        case 40: // key down
-            if($listbox.find('.focused').length > 0) {
-                keypressNum = $listbox.find('.focused').index() + 1;
-                target = $listboxList.children().eq(keypressNum);
-            } else {
-                keypressNum++;
-                target = $listboxList.children().eq(keypressNum - 1);
-            }
 
-            if(keypressNum === listLen) target = $listboxList.children().eq(0);
-    
-            changeListboxStatus(target);
-            break;
-        case 38: // key up
-            if(keypressNum < 0) keypressNum = listLen - 1;
+    if(e.keyCode === 40 || e.key === 'ArrowDown') {
+        if($listbox.find('.focused').length > 0) {
+            keypressNum = $listbox.find('.focused').index() + 1;
+            target = $listboxList.children().eq(keypressNum);
+        } else {
+            keypressNum++;
+            target = $listboxList.children().eq(keypressNum - 1);
+        }
 
-            if($listbox.find('.focused').length > 0) {
-                keypressNum = $listbox.find('.focused').index() - 1;
-                target = $listboxList.children().eq(keypressNum);
-            } else {
-                keypressNum--;
-                target = $listboxList.children().eq(keypressNum);
-            }
+        if(keypressNum === listLen) target = $listboxList.children().eq(0);
 
-            changeListboxStatus(target);
-            break;
-        case 13: // key enter
-            $label.removeAttr('aria-expanded');
-            $label.focus();
-            $listbox.removeClass('active');
+        changeListboxStatus(target);
+    }
 
-            break;
-        case 27: // key exc
-            $label.removeAttr('aria-expanded');
-            $label.focus();
-            $listbox.removeClass('active');
+    if(e.keyCode === 38 || e.key === 'ArrowUp') {
+        if(keypressNum < 0) keypressNum = listLen - 1;
 
-            break;
-    }    
+        if($listbox.find('.focused').length > 0) {
+            keypressNum = $listbox.find('.focused').index() - 1;
+            target = $listboxList.children().eq(keypressNum);
+        } else {
+            keypressNum--;
+            target = $listboxList.children().eq(keypressNum);
+        }
+
+        changeListboxStatus(target);
+    }
+
+    if(e.keyCode === 13 || e.key === 'Enter') {
+        $button.removeAttr('aria-expanded');
+        $button.focus();
+        $listbox.removeClass('active');
+    }
+
+    if(e.keyCode === 27 || e.key === 'Escape') {
+        $button.removeAttr('aria-expanded');
+        $button.focus();
+        $listbox.removeClass('active');
+    }
 }
 
-// listbox status change
+// listbox 상태값 변경
 const changeListboxStatus = function(target) {
     const $target = $(target)
-        , $listboxList = $target.closest('ul')
+        , $listboxList = $target.closest('ul[role="listbox"]')
         , $listbox = $listboxList.closest('.listbox-group')
-        , $label = $listbox.find('.label');
+        , $button = $listbox.find('button[aria-haspopup="listbox"]');
 
     if(!$target.hasClass('focused')) {
-        $listboxList.attr('aria-activedescendant', $(target).attr('class'));
+        $listboxList.attr('aria-activedescendant', $(target).attr('id'));
     }
 
     $target.siblings().removeClass('focused').removeAttr('aria-selected');
@@ -206,10 +318,10 @@ const changeListboxStatus = function(target) {
     $target.removeAttr('tabindex');
     $listboxList.attr('tabindex', '-1').focus();
 
-    $label.text($target.text());
+    $button.text($target.text());
 }
 
-// 창 닫기 
+// 팝업 새창 닫기
 const windowClose = function() {
     const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera
         , type = checkMobile();
@@ -239,102 +351,45 @@ const checkMobile = function() {
     }
 }
 
-// Tab 
-$(document).ready(function(){
-    var $tabTitle = $('.tab-title');
-    var $subTabTitle = $('.sub-tab-title');
-    var $cont = $('.content');
-    var $subCont = $('.sub-content');
-   
-    $cont.hide().eq(0).show();
-    $subCont.hide().eq(0).show();
-
-    $tabTitle.click(function(e){
-        var idx = $(this).index();
-        $tabTitle.removeClass('active');
-        $(this).addClass('active');
-        $cont.hide().eq(idx).show();
-
-
-        if( $tabTitle.length-1 == idx){
-            $tabTitle.parent('ul').stop(true, true).delay(0).animate({
-                scrollLeft:$(this).offset().left + 100
-            }, { queue: false, duration: 1000 })
-        }else if (idx == 0){
-            $tabTitle.parent('ul').stop(true, true).delay(0).animate({
-                scrollLeft:$(this).offset().left + 0
-            }, { queue: false, duration: 200 })
-        }
-        if($(e.target).hasClass('clicked')) {
-            $('.sub-slide-tab').find('[data-filter="all"]').trigger('click');
-        }
-
-    })
-
-    $subTabTitle.click(function(){
-        var idx = $(this).index();
-        $subTabTitle.removeClass('active');
-        $(this).addClass('active');
-        $subCont.hide().eq(idx).show();
-
-        if( $subTabTitle.length-1 == idx){
-            $subTabTitle.parent('ul').stop(true, true).delay(0).animate({
-                scrollLeft:$(this).offset().left + 100
-            }, { queue: false, duration: 1000 })
-        }else if (idx == 0){
-            $subTabTitle.parent('ul').stop(true, true).delay(0).animate({
-                scrollLeft:$(this).offset().left + 0
-            }, { queue: false, duration: 200 })
-        }
-        
-    })
-})
-
-$(window).on('load',function(){
-    let $visual = $('.visual');
-    $visual.addClass('active').find('h1').addClass('active');
- 
-})
-
-// 채용절차 자주하는질문 filter 
-$(document).on('click', '#recruitStep', function(e) {
-    handleRecruitStepClick(e);
-});
-
 const handleRecruitStepClick = function(e) {
     const $target = $(e.target)
-            , targetName = e.target.nodeName
-            , dataFilter = $target.data('filter')
-            , $accor = $('.recruit-sec04').find('.acc-wrap')
-            , texts = recruitStepTexts;
+        , targetName = e.target.nodeName
+        , dataFilter = $target.data('filter')
+        , $accor = $('.recruit-sec04').find('.acc-wrap')
+        , texts = recruitStepTexts;
 
-        if(targetName === 'LI') {
-            let filtered, contents;
+    if(targetName === 'LI') recruitDateChange($accor, dataFilter, texts);
+}
 
-            if(dataFilter === 'all') {
-                contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
-            } else {
-                filtered = texts.filter(function(item) { return item['category'] === dataFilter });
+const handleTmrRecruitStepClick = function(e) {
+    const $target = $(e.target)
+        , targetName = e.target.nodeName
+        , dataFilter = $target.data('filter')
+        , $accor = $('.trm-recruit-sec03').find('.acc-wrap')
+        , texts = tmrRecruitTexts;
+    
+    if(targetName === 'LI') recruitDateChange($accor, dataFilter, texts);
+}
 
-                if(filtered.length > 0) {
-                    contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
-                } else {
-                    let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
-                    let html = '';
-                        html += '<li class="filter-item empty" data-category="'+dataFilter +'">';
-                        html +=     '<div class="txt">';
-                        html +=         '<span class="category">'+ category[dataFilter] +'</span>';
-                        html +=         '<p class="title">등록된 게시물이 없습니다.</p>';
-                        html +=     '</div>';
-                        html += '</li>';
+const recruitDateChange = function(target, dataFilter, texts) {
+    let contents;
+    const $target = target;
 
-                    contents = html;
-                }
-            }
+    if(dataFilter === 'all') {
+        contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
+    } else {
+        let filtered = texts.filter(function(item) { return item['category'] === dataFilter });
 
-            $accor.html(contents);
+        if(filtered.length > 0) {
+            contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
+        } else {
+            contents = recruitStepEmptyHTMLString(dataFilter);
         }
     }
+
+    $target.html(contents);
+}
+
 const recruitStepHTMLString = function(item) {
     let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
     let html = '';
@@ -348,6 +403,20 @@ const recruitStepHTMLString = function(item) {
             
     return html;
 }
+
+const recruitStepEmptyHTMLString = function(dataFilter) {
+    let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
+    let html = '';
+        html += '<li class="filter-item empty" data-category="'+ dataFilter +'">';
+        html +=     '<div class="txt">';
+        html +=         '<span class="category">'+ category[dataFilter] +'</span>';
+        html +=         '<p class="title">등록된 게시물이 없습니다.</p>';
+        html +=     '</div>';
+        html += '</li>';
+    
+    return html;
+}
+
 const recruitStepTexts = [
     {
         category: "select1",
@@ -355,45 +424,6 @@ const recruitStepTexts = [
         desc: "상단 ‘채용 절차’에서 365일 24시간 언제든지 지원 가능합니다. 서류작성 > 1차인터뷰 > 2차인터뷰 > 고용심사 > 처우협상 > 최종합격 순서로 진행됩니다. 경력 및 고용 형태에 따라 채용 절차가 추가되거나 생략될 수 있습니다. 인터뷰는 대면 또는 비대면으로 진행되며, 비대면 면접 진행 시 별도의 화상미팅 Tool에 접속하거나 모바일 앱설치가 필요합니다."
     },
 ];
-// TMR 채용절차 자주하는 질문 filter
-
-$(document).on('click', '#tmrRecruitStep', function(e) {
-    handleTmrRecruitStepClick(e);
-});
-
-const handleTmrRecruitStepClick = function(e) {
-const $target = $(e.target)
-    , targetName = e.target.nodeName
-    , dataFilter = $target.data('filter')
-    , $accor = $('.trm-recruit-sec03').find('.acc-wrap')
-    , texts = tmrRecruitTexts;
-    if(targetName === 'LI') {
-        let filtered, contents;
-
-        if(dataFilter === 'all') {
-            contents = texts.map(function(item) { return recruitStepHTMLString(item) }).join('');
-        } else {
-            filtered = texts.filter(function(item) { return item['category'] === dataFilter });
-
-            if(filtered.length > 0) {
-                contents = filtered.map(function(item) { return recruitStepHTMLString(item) }).join('');
-            } else {
-                let category = { 'select1': '지원 이전',  'select2': '지원서 작성', 'select3': '지원 이후' }
-                let html = '';
-                    html += '<li class="filter-item empty" data-category="'+ dataFilter +'">';
-                    html +=     '<div class="txt">';
-                    html +=         '<span class="category">'+ category[dataFilter] +'</span>';
-                    html +=         '<h3 class="title">등록된 게시물이 없습니다.</h3>';
-                    html +=     '</div>';
-                    html += '</li>';
-
-                contents = html;
-            }
-        }
-
-        $accor.html(contents);
-    }
-}        
 
 const tmrRecruitTexts = [
     {
@@ -458,45 +488,6 @@ const tmrRecruitTexts = [
     },
 ];
     
-// 아코디언
-$(document).on('click', '.acc_tit_area', function(e) {
-    e.preventDefault();
-    handleAccTitAreaClick($(this));
-});
-// 아코디언 공통 스크립트
-const handleAccTitAreaClick = function(item) {
-    const $target = $(item)
-        , $accorActive = $('.acc-active');
-    
-    if($target.hasClass('acc-active')) {
-        $target.removeClass('acc-active');
-    } else {
-        $accorActive.each(function(index, item) {
-            $(item).removeClass('acc-active');
-        });
-        $target.addClass('acc-active');
-    }
-}
-// overview 숫자 counting animation 
-$(window).scroll(function () {
-    const $counters = $(".counter");
-    if($counters.length > 0) {
-
-        $counters.each(function(index, item) {
-            const counterTop = $(item).offset().top - window.innerHeight;
-
-            if ($(window).scrollTop() > counterTop) {
-                const $countNum = $(item).find('.count-num');
-
-                $countNum.each((index, elem) => {
-                    if(!$(elem).hasClass('count-finished')) {
-                        increaseNumberAnimation(elem, 1000);
-                    }
-                });
-            }
-        });
-    }
-});
 // OVERVIEW 숫자 카운팅 에니메이션
 const increaseNumberAnimation = function(elem, duration) {
     let startTimeStamp;
@@ -506,7 +497,7 @@ const increaseNumberAnimation = function(elem, duration) {
         , type = $target.data('type')
 
     $target.addClass('count-finished');
-    const step = (timestamp) => {
+    const step = function(timestamp) {
         if (!startTimeStamp) startTimeStamp = timestamp;
         const progress = Math.min((timestamp - startTimeStamp) / duration);
         let value;

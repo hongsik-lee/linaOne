@@ -77,7 +77,7 @@ background-size: contain;top:2.8rem;content: '';}
 
 /* TMR 인재채용 */
 .sub-wrap.tmr-recruit .visual:before {background-image:url(../images/re_tmr_visual.png)}
-.sub-wrap.tmr-recruit .visual h1 p:last-child {padding-left:7.778vw}
+.sub-wrap.tmr-recruit .visual h1 .txtLine:last-child {padding-left:7.778vw}
 .tmr-recruit .sub-content .desc {margin:8rem 0 15rem;padding-left:7.6rem;font-size:var(--title-type2);font-weight: 700;line-height: 140%;    word-break: keep-all;}
     /* 선택라이나 약속 */
 .sub-sec01 .text-box .text {padding-left:5.6rem;margin-top: 5rem;}
