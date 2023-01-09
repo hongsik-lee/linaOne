@@ -82,14 +82,14 @@ const scrollMovePosition = function(index) {
 
     let posTop = 0;
     if(index === 4) {
-        posTop = $('#contents').children().eq(index).offset().top + $('#contents').children().eq(index).innerHeight() / 4.7
+        posTop = $contents.children().eq(index).offset().top + $contents.children().eq(index).innerHeight() / 4.7
     } else if(index === 6) {
-        posTop = $('#contents').children().eq(index).offset().top + $('#contents').children().eq(index).innerHeight() / 4.1
+        posTop = $contents.children().eq(index).offset().top + $contents.children().eq(index).innerHeight() / 4.1
     } else {
-        posTop = $('#contents').children().eq(index).offset().top;
+        posTop = $contents.children().eq(index).offset().top;
     }
     
-    $('html, body').animate({scrollTop : posTop }, 800);
+    $('html, body').animate({ scrollTop : posTop }, 800);
 }
 
 const changeIndicatorStatus = function() {
@@ -116,7 +116,7 @@ const changeIndicatorStatus = function() {
 }
 
 const visualPosInfo = { startY: 0, endY: 0, height: 0, point: 0, };
-const getVisualSectionSrcollInfo = () => {
+const getVisualSectionSrcollInfo = function() {
     visualPosInfo.startY = $('.visual-sec').find('.video-wrap').position().top + 5
     visualPosInfo.endY = $('.visual-sec').find('.text-area').position().top;
     visualPosInfo.height = $('.visual-sec').find('.page-tit').innerHeight() / 2 + $('.visual-sec').find('.page-tit').find('span:first-child').innerHeight() / 2;
@@ -127,7 +127,7 @@ const videoSectionScrollAnimation = function() {
     const textY = visualPosInfo.endY + visualPosInfo.height
         , videoY = $('.visual-sec').find('.video-wrap').get(0).getBoundingClientRect().y + 5
         , diff = videoY - textY
-        , diffRatio = diff / visualPosInfo.point * 100
+        , diffRatio = diff / visualPosInfo.point * 100;
 
     if(diff > 0) {
         $('.visual-sec').find('video').get(0).pause();
@@ -175,7 +175,7 @@ const foundation02SectionAnimation = function() {
         , isScreen = isElemOverScreen($target)
         , ratio = getElemScrollRatio($target);
         
-     const foundation02_init = function(type) {
+    const foundation02_init = function(type) {
         const foundation01PosBottom = $('.foundation01-sec').get(0).getBoundingClientRect().bottom
             , foundation02PosBottom = $('.foundation02-sec').get(0).getBoundingClientRect().bottom
 
@@ -373,7 +373,7 @@ const setSwipter = function() {
             nextEl: ".control-next",
             prevEl: ".control-prev",
         },
-        on:{
+        on: {
             slideChange() {
                 const index = this.activeIndex
                     , $slide = $(this.slides[index]);
