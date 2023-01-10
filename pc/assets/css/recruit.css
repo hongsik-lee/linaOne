@@ -9,7 +9,7 @@
 .recruit .ico_list {display: flex;width:49.479vw;flex-wrap: wrap;justify-content: space-between;row-gap:4.167vw;}
 .recruit .ico_list li {width:21.354vw;}
 .recruit .ico_list li img {display:block;width:4.688vw;}
-.recruit .ico_list li h4 {margin:2.083vw 0 0.521vw;font-size: 1.250vw;font-weight:700;line-height: 2.042vw;}
+.recruit .ico_list li h3 {margin:2.083vw 0 0.521vw;font-size: 1.250vw;font-weight:700;line-height: 2.042vw;}
 .recruit .ico_list li p {font-size:0.885vw;line-height: 1.458vw;font-weight: 500;color:#666}
 .recruit .btn {display:block;width:13.542vw;height:3.333vw;line-height:3.333vw;color:#fff;font-weight:500;text-align: center;background:#000;}
 .recruit .recruitTab .page-desc-sec {padding-bottom:13.021vw;padding-top: 2.604vw;}
@@ -22,7 +22,7 @@
 .recruit .re_process .ico_list li:after {position:absolute;width:1.302vw;height:2.083vw;top:1.406vw;right:-4.583vw;background:url(../../assets/images/icons/icon_arrow_right.png);background-size:cover;content: '';}
 .recruit .re_process .ico_list li:nth-child(3n):after {display: none;}
 .recruit .re_process .ico_list li img {margin: auto;}
-.recruit .re_process .ico_list li h4 {margin:1.042vw 0;}
+.recruit .re_process .ico_list li h3 {margin:1.042vw 0;}
 .recruit .re_process .notice {padding:2.188vw 0;font-size: 1.042vw;line-height:1.563vw;font-weight:500;color:#666;border-top: 1px solid #ebebeb;border-bottom: 1px solid #ebebeb;}
 .recruit .re_process .btn {margin-top: 5.208vw;font-size:1.042vw;}
 
