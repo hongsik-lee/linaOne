@@ -35,7 +35,18 @@
 .overview .definition-sec .total-data dd strong {margin-right:0.208vw;font-weight: 700;font-size:4.688vw;line-height: 7.031vw;}
 .overview .definition-sec .total-data dd strong:nth-of-type(2) {margin-left: 0.521vw;}
 .overview .definition-sec .total-data dt {margin-top:0.208vw;color: #999;font-weight: 500;font-size:0.885vw;line-height: 1.239vw;}
-.overview .definition-sec .total-data .extra-info {margin-top: 3.125vw;text-align: right;color: #999;font-weight: 400;font-size:0.885vw;line-height: 12.396vw;}
+.overview .definition-sec .total-data .extra-info {margin-top: 3.125vw;text-align: right;color: #999;font-weight: 400;font-size:0.885vw;}
+.overview .about-company-sec {padding-top:13.021vw}
+/* .overview .about-company-sec .inner {display: flex;} */
+.overview .about-company-sec .sub-tit {font-weight: 700;font-size: 1.250vw;line-height: 1.875vw;}
+.overview .about-company-sec .col-wrap .col {display: flex;}
+.overview .about-company-sec .col:first-child {margin-bottom: 5.208vw;}
+.overview .about-company-sec .col:first-child dl:last-child dd strong:nth-of-type(2) {margin-left: 2.083vw;}
+.overview .about-company-sec .col-cont {width:calc(100% - 16.875vw);margin-left: auto;}
+.overview .about-company-sec .col-cont-img {margin-top:7.813vw;}
+.overview .about-company-sec .col-cont-img img {display: block;width: 100%;}
+.overview .about-company-sec .tit {font-weight: 700;font-size: 2.083vw;line-height: 2.917vw;}
+.overview .about-company-sec .btn {display: block;margin-left: 16.875vw; width: 8.385vw;font-size: 0.885vw;font-weight: 500;text-align: center;line-height: 2.604vw;background: #000;color: #fff;}
 
 /* CEO Interview */
 .interview #contents {margin-bottom: 0;}

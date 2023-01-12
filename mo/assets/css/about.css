@@ -32,6 +32,13 @@
 .overview .count-box li strong:nth-of-type(2) {margin-left:1.2rem;}
 .overview .count-box li span {display: block;width:100%;font-size:var(--small-size);color:#999;font-weight: 500;line-height: 140%;}
 .overview .count-box li:last-child span {font-size:3.333vw;font-weight:400;}
+.overview .ab-company-box {margin-top: 15rem;}
+.overview .ab-company-box h2 {margin-bottom:5rem;font-size:var(--basic-size);font-weight:700;line-height: 140%;}
+.overview .ab-company-box p {padding-left:5.6rem;font-size:var(--title-type2);line-height: 140%;font-weight:700;}
+.overview .ab-company-box .img-wrap {padding-left: 5.6rem;margin-top: 5rem;}
+.overview .ab-company-box .img-wrap img {display: block;width: 100%;}
+.overview .ab-company-box .btn {margin-left: 5.6rem;margin-top: 5rem;}
+
 
 /* CEO INTERVIEW */
 .sub-wrap.interview .visual:before {background-image:url(../images/ab_interview_visual.png)}
